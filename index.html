@@ -1181,6 +1181,15 @@
       transition: transform 1.6s var(--ease);
     }
     .proj-slide.is-active .proj-figure-img { transform: scale(1.04); }
+    .proj-slide[data-i="2"] .proj-figure-img {
+      object-fit: contain;
+      padding: clamp(1.5rem, 4vw, 3rem);
+      background:
+        radial-gradient(circle at 78% 22%, rgba(176,223,170,.55), transparent 0 220px),
+        radial-gradient(circle at 18% 82%, rgba(36,150,155,.20), transparent 0 240px),
+        linear-gradient(135deg, #EEF5EA 0%, var(--paper-2) 100%);
+    }
+    .proj-slide[data-i="2"].is-active .proj-figure-img { transform: none; }
     .proj-figure-img.is-missing { display: none; }
     .proj-tag {
       position: absolute;
