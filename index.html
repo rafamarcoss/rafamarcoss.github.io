@@ -1637,7 +1637,14 @@
       .proof-d { display: none; }
       .visual-shell { min-height: 0; perspective: none; transform-style: flat; }
       .hero-visual { position: relative; inset: auto; min-height: 0; transform: none !important; transition: none; }
-      .dash { position: relative; left: auto; top: auto; width: 100%; transform: none !important; animation: none; border-radius: 26px; }
+      .dash { position: relative; left: auto; top: auto; width: 100%; border-radius: 26px; transform: translateY(28px) scale(.96); opacity: 0; animation: dashInMobile .9s var(--ease) .18s forwards; }
+      @keyframes dashInMobile {
+        from { opacity: 0; transform: translateY(28px) scale(.96); }
+        to   { opacity: 1; transform: translateY(0) scale(1); }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .dash { animation: none; opacity: 1; transform: none; }
+      }
       .dash-body { padding: .86rem; }
       .dash-headline { grid-template-columns: 1fr; gap: .6rem; margin-bottom: .65rem; }
       .dash-sub { display: none; }
