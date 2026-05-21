@@ -394,6 +394,8 @@
       background: linear-gradient(95deg, var(--teal), var(--blue) 48%, var(--royal));
       -webkit-background-clip: text;
       background-clip: text;
+      padding-right: .12em;
+      margin-right: -.04em;
     }
 
     @keyframes wordUp {
@@ -1095,8 +1097,8 @@
     .projects-flow {
       position: relative;
       --proj-count: 4;
-      --slide-w: min(72vw, 880px);
-      --slide-h: min(72vh, 620px);
+      --slide-w: min(78vw, 960px);
+      --slide-h: min(82vh, 720px);
       --slide-gap: clamp(1.5rem, 3.5vw, 3.5rem);
       --slide-step: calc(var(--slide-w) + var(--slide-gap));
       height: calc(var(--proj-count) * 125vh);
@@ -1129,7 +1131,7 @@
       box-shadow: 0 30px 80px rgba(11,14,15,.10);
       overflow: hidden;
       display: grid;
-      grid-template-rows: minmax(0, 1.35fr) minmax(0, 1fr);
+      grid-template-rows: minmax(0, 1.05fr) minmax(0, 1fr);
       transform: scale(var(--s, .78)) rotateY(var(--r, 0deg));
       opacity: var(--o, .35);
       transition: transform .42s var(--ease), opacity .32s var(--ease), box-shadow .48s var(--ease);
@@ -1391,9 +1393,18 @@
       flex: 1 1 auto;
       width: 100%;
       height: auto;
-      min-height: 460px;
+      min-height: 0;
+      grid-template-rows: auto auto;
       transform: none !important;
       opacity: 1 !important;
+    }
+    .projects-flow.is-static .proj-figure {
+      aspect-ratio: 16 / 10;
+      min-height: 0;
+    }
+    .projects-flow.is-static .proj-meta {
+      padding: clamp(1.4rem, 3vw, 2.2rem);
+      gap: .7rem;
     }
     .projects-flow.is-static .proj-selector,
     .projects-flow.is-static .proj-progress { display: none; }
