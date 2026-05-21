@@ -1096,7 +1096,7 @@
     /* PROJECTS */
     .projects-flow {
       position: relative;
-      --proj-count: 4;
+      --proj-count: 5;
       --slide-w: min(78vw, 960px);
       --slide-h: min(82vh, 720px);
       --slide-gap: clamp(1.5rem, 3.5vw, 3.5rem);
@@ -1181,7 +1181,7 @@
       transition: transform 1.6s var(--ease);
     }
     .proj-slide.is-active .proj-figure-img { transform: scale(1.04); }
-    .proj-slide[data-i="2"] .proj-figure-img {
+    .proj-slide[data-i="3"] .proj-figure-img {
       object-fit: contain;
       padding: clamp(1.5rem, 4vw, 3rem);
       background:
@@ -1189,7 +1189,7 @@
         radial-gradient(circle at 18% 82%, rgba(36,150,155,.20), transparent 0 240px),
         linear-gradient(135deg, #EEF5EA 0%, var(--paper-2) 100%);
     }
-    .proj-slide[data-i="2"].is-active .proj-figure-img { transform: none; }
+    .proj-slide[data-i="3"].is-active .proj-figure-img { transform: none; }
     .proj-figure-img.is-missing { display: none; }
     .proj-tag {
       position: absolute;
@@ -1746,15 +1746,51 @@
         <p class="section-copy reveal" style="--delay:160ms">Scrollea para navegar entre proyectos. Cada uno con su contexto técnico, stack y enlace al sistema real.</p>
       </div>
 
-      <div class="projects-flow" data-projects style="--proj-count: 4">
+      <div class="projects-flow" data-projects style="--proj-count: 5">
         <div class="projects-stage" role="group" aria-label="Carrusel de proyectos">
           <div class="proj-progress" aria-hidden="true"><div class="proj-progress-fill"></div></div>
 
           <div class="projects-track">
-            <article class="proj-slide is-active" data-i="0" aria-label="SerranoMotor.es">
+            <article class="proj-slide is-active" data-i="0" aria-label="Recovery Fisioterapia">
+              <figure class="proj-figure" data-fallback="Recovery Fisioterapia · web local">
+                <img class="proj-figure-img" src="assets/recoveryfisioterapia.webp" alt="Web de Recovery Fisioterapia Córdoba: home y reserva de cita" loading="lazy" decoding="async" width="1600" height="1000">
+                <span class="proj-tag">01 · Freelance entregado</span>
+              </figure>
+              <div class="proj-meta">
+                <p class="proj-eyebrow">WordPress · SEO local</p>
+                <h3 class="proj-name">Recovery Fisioterapia</h3>
+                <a class="proj-url" href="https://recoveryfisioterapia.es" target="_blank" rel="noopener">recoveryfisioterapia.es <span class="arrow">↗</span></a>
+                <p class="proj-desc">Proyecto freelance completo para clínica de fisioterapia en Córdoba. Desarrollo, optimización y puesta en producción con foco en SEO local.</p>
+                <p class="proj-tech"><strong>Tech:</strong> WordPress optimizado, schema LocalBusiness, GSC verificado, mejoras de Core Web Vitals (LCP/CLS) y citaciones locales para Maps.</p>
+                <ul class="proj-stack"><li>WordPress</li><li>SEO local</li><li>Search Console</li><li>Schema.org</li></ul>
+                <div class="proj-actions">
+                  <a class="proj-btn is-primary" href="https://recoveryfisioterapia.es" target="_blank" rel="noopener">Web en vivo <span class="arrow">↗</span></a>
+                </div>
+              </div>
+            </article>
+
+            <article class="proj-slide" data-i="1" aria-label="FPConnect">
+              <figure class="proj-figure" data-fallback="FPConnect · red social de Formación Profesional">
+                <img class="proj-figure-img" src="assets/fpconnect.webp" alt="Captura de FPConnect: feed y red profesional para Formación Profesional" loading="lazy" decoding="async" width="1600" height="701">
+                <span class="proj-tag">02 · Educación</span>
+              </figure>
+              <div class="proj-meta">
+                <p class="proj-eyebrow">Plataforma educativa · Demo</p>
+                <h3 class="proj-name">FPConnect</h3>
+                <p class="proj-desc">Plataforma web y de escritorio para conectar alumnos de FP, centros educativos y empresas en Andalucía.</p>
+                <p class="proj-tech"><strong>Tech:</strong> React + Vite, React Router, Zustand, Axios/Supabase y Socket.io Client con build estático de demo.</p>
+                <ul class="proj-stack"><li>React</li><li>Vite</li><li>Zustand</li><li>Supabase</li></ul>
+                <div class="proj-actions">
+                  <a class="proj-btn is-primary" href="/fpconnect/" target="_blank" rel="noopener">Demo en vivo <span class="arrow">↗</span></a>
+                  <a class="proj-btn" href="https://github.com/rafamarcoss/FPCONNECT" target="_blank" rel="noopener">Código <span class="arrow">↗</span></a>
+                </div>
+              </div>
+            </article>
+
+            <article class="proj-slide" data-i="2" aria-label="SerranoMotor.es">
               <figure class="proj-figure" data-fallback="SerranoMotor.es · catálogo de recambios">
                 <img class="proj-figure-img" src="assets/serranomotor.webp" alt="Captura de SerranoMotor.es: catálogo de recambios con CTAs de WhatsApp" loading="lazy" decoding="async" width="1600" height="1000">
-                <span class="proj-tag">01 · En curso</span>
+                <span class="proj-tag">03 · En curso</span>
               </figure>
               <div class="proj-meta">
                 <p class="proj-eyebrow">Ecommerce headless · automoción</p>
@@ -1769,10 +1805,27 @@
               </div>
             </article>
 
-            <article class="proj-slide" data-i="1" data-gallery="true" aria-label="TeledevBot">
+            <article class="proj-slide" data-i="3" aria-label="Kit Consulting APPSUR">
+              <figure class="proj-figure" data-fallback="Kit Consulting · Apps Script + Sheets">
+                <img class="proj-figure-img" src="assets/kitconsulting.webp" alt="Mockup del sistema de alertas Kit Consulting: Google Sheets y Apps Script" loading="lazy" decoding="async" width="1600" height="1000">
+                <span class="proj-tag">04 · Interno empresa</span>
+              </figure>
+              <div class="proj-meta">
+                <p class="proj-eyebrow">Automatización interna · APPSUR</p>
+                <h3 class="proj-name">Kit Consulting · APPSUR</h3>
+                <p class="proj-desc">Sistema de alertas automáticas para gestión interna de consultoría. Módulos de proyectos, requerimientos, bolsa de horas, IVA y justificaciones.</p>
+                <p class="proj-tech"><strong>Tech:</strong> triggers diarios de Apps Script sobre Sheets, agregación por proyecto/cliente, alertas vía Gmail API con guards de fines de semana y flags duales para entornos.</p>
+                <ul class="proj-stack"><li>Apps Script</li><li>Gmail API</li><li>Sheets</li><li>Google Workspace</li></ul>
+                <div class="proj-actions">
+                  <button class="proj-btn" type="button" disabled title="Código propiedad de APPSUR">Privado · empresa</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="proj-slide" data-i="4" data-gallery="true" aria-label="TeledevBot">
               <figure class="proj-figure" data-fallback="TeledevBot · DevOps desde Telegram">
                 <img class="proj-figure-img" src="assets/teledev1.webp" data-alt-src="teledev1.webp" alt="TeledevBot: panel de comandos en chat de Telegram" loading="lazy" decoding="async" width="1600" height="1000">
-                <span class="proj-tag">02 · DevOps remoto</span>
+                <span class="proj-tag">05 · DevOps remoto</span>
                 <ul class="proj-thumbs">
                   <li><button type="button" class="is-active" data-src="assets/teledev1.webp" data-alt-src="teledev1.webp" aria-label="Captura 1"><img src="assets/teledev1.webp" data-alt-src="teledev1.webp" alt="" loading="lazy"></button></li>
                   <li><button type="button" data-src="assets/teledev2.webp" data-alt-src="teledev2.webp" aria-label="Captura 2"><img src="assets/teledev2.webp" data-alt-src="teledev2.webp" alt="" loading="lazy"></button></li>
@@ -1792,48 +1845,14 @@
                 </div>
               </div>
             </article>
-
-            <article class="proj-slide" data-i="2" aria-label="Kit Consulting APPSUR">
-              <figure class="proj-figure" data-fallback="Kit Consulting · Apps Script + Sheets">
-                <img class="proj-figure-img" src="assets/kitconsulting.webp" alt="Mockup del sistema de alertas Kit Consulting: Google Sheets y Apps Script" loading="lazy" decoding="async" width="1600" height="1000">
-                <span class="proj-tag">03 · Interno empresa</span>
-              </figure>
-              <div class="proj-meta">
-                <p class="proj-eyebrow">Automatización interna · APPSUR</p>
-                <h3 class="proj-name">Kit Consulting · APPSUR</h3>
-                <p class="proj-desc">Sistema de alertas automáticas para gestión interna de consultoría. Módulos de proyectos, requerimientos, bolsa de horas, IVA y justificaciones.</p>
-                <p class="proj-tech"><strong>Tech:</strong> triggers diarios de Apps Script sobre Sheets, agregación por proyecto/cliente, alertas vía Gmail API con guards de fines de semana y flags duales para entornos.</p>
-                <ul class="proj-stack"><li>Apps Script</li><li>Gmail API</li><li>Sheets</li><li>Google Workspace</li></ul>
-                <div class="proj-actions">
-                  <button class="proj-btn" type="button" disabled title="Código propiedad de APPSUR">Privado · empresa</button>
-                </div>
-              </div>
-            </article>
-
-            <article class="proj-slide" data-i="3" aria-label="Recovery Fisioterapia">
-              <figure class="proj-figure" data-fallback="Recovery Fisioterapia · web local">
-                <img class="proj-figure-img" src="assets/recoveryfisioterapia.webp" alt="Web de Recovery Fisioterapia Córdoba: home y reserva de cita" loading="lazy" decoding="async" width="1600" height="1000">
-                <span class="proj-tag">04 · Freelance entregado</span>
-              </figure>
-              <div class="proj-meta">
-                <p class="proj-eyebrow">WordPress · SEO local</p>
-                <h3 class="proj-name">Recovery Fisioterapia</h3>
-                <a class="proj-url" href="https://recoveryfisioterapia.es" target="_blank" rel="noopener">recoveryfisioterapia.es <span class="arrow">↗</span></a>
-                <p class="proj-desc">Proyecto freelance completo para clínica de fisioterapia en Córdoba. Desarrollo, optimización y puesta en producción con foco en SEO local.</p>
-                <p class="proj-tech"><strong>Tech:</strong> WordPress optimizado, schema LocalBusiness, GSC verificado, mejoras de Core Web Vitals (LCP/CLS) y citaciones locales para Maps.</p>
-                <ul class="proj-stack"><li>WordPress</li><li>SEO local</li><li>Search Console</li><li>Schema.org</li></ul>
-                <div class="proj-actions">
-                  <a class="proj-btn is-primary" href="https://recoveryfisioterapia.es" target="_blank" rel="noopener">Web en vivo <span class="arrow">↗</span></a>
-                </div>
-              </div>
-            </article>
           </div>
 
           <div class="proj-selector" role="tablist" aria-label="Selector de proyectos">
-            <button class="proj-dot is-active" type="button" data-go="0" role="tab" aria-current="true">01 Serrano</button>
-            <button class="proj-dot" type="button" data-go="1" role="tab">02 Teledev</button>
-            <button class="proj-dot" type="button" data-go="2" role="tab">03 Kit</button>
-            <button class="proj-dot" type="button" data-go="3" role="tab">04 Recovery</button>
+            <button class="proj-dot is-active" type="button" data-go="0" role="tab" aria-current="true">01 Recovery</button>
+            <button class="proj-dot" type="button" data-go="1" role="tab">02 FPConnect</button>
+            <button class="proj-dot" type="button" data-go="2" role="tab">03 Serrano</button>
+            <button class="proj-dot" type="button" data-go="3" role="tab">04 Kit</button>
+            <button class="proj-dot" type="button" data-go="4" role="tab">05 Teledev</button>
           </div>
         </div>
       </div>
