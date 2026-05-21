@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-label="Bujías">
+  <rect width="640" height="480" rx="28" fill="#F4F1ED"/>
+  <ellipse cx="320" cy="356" rx="190" ry="44" fill="#D9DEE4"/>
+  <path d="M230 130h58v180h-58z" fill="#1F3F63"/>
+  <path d="M352 130h58v180h-58z" fill="#13283F"/>
+  <rect x="242" y="156" width="34" height="120" rx="10" fill="#D98B19"/>
+  <rect x="364" y="156" width="34" height="120" rx="10" fill="#D98B19"/>
+  <circle cx="259" cy="300" r="18" fill="#D9DEE4"/>
+  <circle cx="381" cy="300" r="18" fill="#D9DEE4"/>
+</svg>

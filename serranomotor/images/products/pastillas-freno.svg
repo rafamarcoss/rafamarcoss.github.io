@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-label="Pastillas de freno">
+  <rect width="640" height="480" rx="28" fill="#F4F1ED"/>
+  <ellipse cx="320" cy="356" rx="190" ry="44" fill="#D9DEE4"/>
+  <rect x="168" y="170" width="146" height="132" rx="22" fill="#13283F"/>
+  <rect x="326" y="170" width="146" height="132" rx="22" fill="#1F3F63"/>
+  <rect x="182" y="184" width="118" height="104" rx="16" fill="#D98B19"/>
+  <rect x="340" y="184" width="118" height="104" rx="16" fill="#D98B19"/>
+  <path d="M200 204h82M200 230h82M200 256h82" stroke="#F4F1ED" stroke-width="8" stroke-linecap="round"/>
+  <path d="M358 204h82M358 230h82M358 256h82" stroke="#F4F1ED" stroke-width="8" stroke-linecap="round"/>
+</svg>

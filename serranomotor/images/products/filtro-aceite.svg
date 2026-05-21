@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-label="Filtro de aceite">
+  <rect width="640" height="480" rx="28" fill="#F4F1ED"/>
+  <ellipse cx="320" cy="356" rx="190" ry="44" fill="#D9DEE4"/>
+  <rect x="210" y="150" width="220" height="170" rx="24" fill="#1F3F63"/>
+  <rect x="228" y="120" width="184" height="42" rx="18" fill="#13283F"/>
+  <rect x="242" y="164" width="156" height="120" rx="18" fill="#244A74"/>
+  <circle cx="286" cy="222" r="22" fill="#D98B19"/>
+  <circle cx="354" cy="222" r="22" fill="#D98B19"/>
+  <path d="M242 282h156" stroke="#D9DEE4" stroke-width="10" stroke-linecap="round"/>
+</svg>

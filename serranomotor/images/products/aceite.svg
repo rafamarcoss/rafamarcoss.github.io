@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-label="Aceite de motor">
+  <rect width="640" height="480" rx="28" fill="#F4F1ED"/>
+  <ellipse cx="320" cy="356" rx="190" ry="44" fill="#D9DEE4"/>
+  <path d="M242 126h124l28 30v150c0 18-14 32-32 32H246c-18 0-32-14-32-32V158z" fill="#1F3F63"/>
+  <path d="M266 126h76v54h-76z" fill="#D98B19"/>
+  <path d="M272 214c26-26 62-32 84-20 22 12 28 44 10 68-18 24-56 36-84 18-24-16-28-44-10-66z" fill="#F4F1ED"/>
+  <path d="M342 248c-24 30-68 34-92 10" stroke="#D98B19" stroke-width="10" stroke-linecap="round"/>
+</svg>

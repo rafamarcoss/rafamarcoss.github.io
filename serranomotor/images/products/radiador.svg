@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-label="Radiador">
+  <rect width="640" height="480" rx="28" fill="#F4F1ED"/>
+  <ellipse cx="320" cy="356" rx="190" ry="44" fill="#D9DEE4"/>
+  <rect x="196" y="148" width="248" height="178" rx="22" fill="#1F3F63"/>
+  <path d="M224 176h192M224 202h192M224 228h192M224 254h192M224 280h192" stroke="#D9DEE4" stroke-width="10" stroke-linecap="round"/>
+  <path d="M444 182h42v110h-42" fill="#D98B19"/>
+</svg>

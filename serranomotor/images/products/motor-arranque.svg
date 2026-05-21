@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-label="Motor de arranque">
+  <rect width="640" height="480" rx="28" fill="#F4F1ED"/>
+  <ellipse cx="320" cy="356" rx="190" ry="44" fill="#D9DEE4"/>
+  <rect x="196" y="188" width="200" height="102" rx="30" fill="#13283F"/>
+  <rect x="366" y="204" width="80" height="70" rx="18" fill="#1F3F63"/>
+  <circle cx="260" cy="239" r="22" fill="#D98B19"/>
+  <circle cx="312" cy="239" r="22" fill="#D98B19"/>
+  <path d="M446 239h46" stroke="#D98B19" stroke-width="14" stroke-linecap="round"/>
+</svg>

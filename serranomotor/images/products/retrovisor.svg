@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-label="Retrovisor de coche">
+  <rect width="640" height="480" rx="28" fill="#F4F1ED"/>
+  <ellipse cx="320" cy="356" rx="190" ry="44" fill="#D9DEE4"/>
+  <path d="M208 178h170c46 0 84 38 84 84s-38 84-84 84H208c-46 0-84-38-84-84s38-84 84-84z" fill="#1F3F63"/>
+  <path d="M228 210h126c24 0 44 20 44 44s-20 44-44 44H228c-24 0-44-20-44-44s20-44 44-44z" fill="#F4F1ED"/>
+  <path d="M410 260l76 42" stroke="#13283F" stroke-width="18" stroke-linecap="round"/>
+</svg>

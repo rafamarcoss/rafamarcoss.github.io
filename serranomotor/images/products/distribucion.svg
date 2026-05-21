@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-label="Correa de distribución">
+  <rect width="640" height="480" rx="28" fill="#F4F1ED"/>
+  <ellipse cx="320" cy="356" rx="190" ry="44" fill="#D9DEE4"/>
+  <path d="M188 214c32-58 92-92 160-92 90 0 168 68 168 152s-78 152-168 152c-68 0-128-34-160-92" fill="none" stroke="#1F3F63" stroke-width="28" stroke-linecap="round"/>
+  <circle cx="320" cy="274" r="72" fill="#D98B19"/>
+  <circle cx="320" cy="274" r="34" fill="#F4F1ED"/>
+</svg>

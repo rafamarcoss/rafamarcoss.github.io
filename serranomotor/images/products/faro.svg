@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-label="Faro delantero">
+  <rect width="640" height="480" rx="28" fill="#F4F1ED"/>
+  <ellipse cx="320" cy="356" rx="190" ry="44" fill="#D9DEE4"/>
+  <path d="M194 148h140c62 0 112 50 112 112s-50 112-112 112H194z" fill="#1F3F63"/>
+  <path d="M238 182h78c42 0 76 34 76 76s-34 76-76 76h-78z" fill="#F4F1ED"/>
+  <circle cx="306" cy="258" r="44" fill="#D98B19"/>
+  <path d="M418 182l52-28v196l-52-28z" fill="#244A74"/>
+</svg>
