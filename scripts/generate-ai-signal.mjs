@@ -96,36 +96,46 @@ function parseJsonResponse(value) {
 }
 
 async function callModel(apiKey, messages, { temperature, maxTokens }) {
-  const response = await fetch(API_URL, {
-    method: 'POST',
-    headers: {
-      Authorization: `Bearer ${apiKey}`,
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      model: MODEL,
-      messages,
-      temperature,
-      max_tokens: maxTokens,
-      reasoning_effort: 'low',
-      response_format: { type: 'json_object' },
-    }),
-    signal: AbortSignal.timeout(180_000),
-  });
+  for (let attempt = 1; attempt <= 2; attempt += 1) {
+    try {
+      const response = await fetch(API_URL, {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${apiKey}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          model: MODEL,
+          messages,
+          temperature,
+          max_tokens: maxTokens,
+          reasoning_effort: 'low',
+          response_format: { type: 'json_object' },
+        }),
+        signal: AbortSignal.timeout(180_000),
+      });
 
-  const payload = await response.json().catch(() => ({}));
-  if (!response.ok) {
-    const detail = payload.error?.message || payload.message || `HTTP ${response.status}`;
-    throw new Error(`OpenCode: ${detail}`);
-  }
+      const payload = await response.json().catch(() => ({}));
+      if (!response.ok) {
+        const detail = payload.error?.message || payload.message || `HTTP ${response.status}`;
+        const error = new Error(`OpenCode: ${detail}`);
+        error.retryable = response.status >= 500;
+        throw error;
+      }
 
-  const content = payload.choices?.[0]?.message?.content;
-  if (!content) {
-    const choice = payload.choices?.[0];
-    const reasoningLength = String(choice?.message?.reasoning || '').length;
-    throw new Error(`OpenCode no devolvió contenido (fin: ${choice?.finish_reason || 'desconocido'}, razonamiento: ${reasoningLength} caracteres)`);
+      const content = payload.choices?.[0]?.message?.content;
+      if (!content) {
+        const choice = payload.choices?.[0];
+        const reasoningLength = String(choice?.message?.reasoning || '').length;
+        throw new Error(`OpenCode no devolvió contenido (fin: ${choice?.finish_reason || 'desconocido'}, razonamiento: ${reasoningLength} caracteres)`);
+      }
+      return parseJsonResponse(content);
+    } catch (error) {
+      if (attempt === 2 || error.retryable === false) throw error;
+      console.warn(`OpenCode falló; reintentando una vez: ${error.message}`);
+      await new Promise((resolve) => setTimeout(resolve, 2_000));
+    }
   }
-  return parseJsonResponse(content);
 }
 
 async function selectNews(apiKey, candidates) {
