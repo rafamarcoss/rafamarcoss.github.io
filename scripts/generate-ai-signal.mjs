@@ -1,6 +1,7 @@
 import { readFile, writeFile } from 'node:fs/promises';
 
-const MODEL = 'deepseek-v4-flash';
+const SELECTION_MODEL = 'deepseek-v4-flash';
+const ARTICLE_MODEL = 'glm-5.2';
 const API_URL = 'https://opencode.ai/zen/go/v1/chat/completions';
 const FEED_PATH = new URL('../news/feed.json', import.meta.url);
 const DRY_RUN = process.argv.includes('--dry-run');
@@ -107,7 +108,7 @@ function parseJsonResponse(value) {
   }
 }
 
-async function callModel(apiKey, messages, { temperature, maxTokens }) {
+async function callModel(apiKey, messages, { model = SELECTION_MODEL, temperature, maxTokens }) {
   for (let attempt = 1; attempt <= 2; attempt += 1) {
     try {
       const response = await fetch(API_URL, {
@@ -117,7 +118,7 @@ async function callModel(apiKey, messages, { temperature, maxTokens }) {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          model: MODEL,
+          model,
           messages,
           temperature,
           max_tokens: maxTokens,
@@ -252,7 +253,7 @@ Escribe entre 3 y 5 secciones. No pongas enlaces ni una lista de fuentes dentro 
 Fecha: ${date}
 Noticias: ${JSON.stringify(input)}`,
     },
-  ], { temperature: 0.35, maxTokens: 24_000 });
+  ], { model: ARTICLE_MODEL, temperature: 0.35, maxTokens: 8_000 });
 
   validateLanguage(spanishResult.article, 'español');
 
@@ -270,7 +271,7 @@ Devuelve solo JSON válido con esta forma:
 
 Edición: ${JSON.stringify(spanishResult.article)}`,
     },
-  ], { temperature: 0.15, maxTokens: 16_000 });
+  ], { model: ARTICLE_MODEL, temperature: 0.15, maxTokens: 8_000 });
 
   validateLanguage(englishResult.article, 'inglés');
   return { es: spanishResult.article, en: englishResult.article };
