@@ -217,30 +217,47 @@ async function writeArticle(apiKey, date, selected) {
     publishedAt,
   }));
 
-  const result = await callModel(apiKey, [
+  const spanishResult = await callModel(apiKey, [
     {
       role: 'system',
-      content: 'Eres el editor de AI Signal. Trabajas únicamente con los hechos facilitados y nunca inventas datos, citas, fuentes ni enlaces.',
+      content: 'Eres el editor de AI Signal. Trabajas únicamente con los hechos facilitados y nunca inventas datos, citas, fuentes ni enlaces. Responde directamente con el JSON solicitado.',
     },
     {
       role: 'user',
-      content: `Convierte estas 10 noticias en una edición diaria de AI Signal, primero en español de España y después en inglés natural.
+      content: `Convierte estas 10 noticias en una edición diaria de AI Signal en español de España.
 
 Construye un hilo editorial que conecte mercados, educación, trabajo, regulación y tecnología. Explica tensiones, oportunidades y límites. Aporta utilidad práctica para profesionales, pequeñas empresas, estudiantes o inversores cuando esté respaldada por las noticias. Si dos fuentes discrepan, indícalo.
 
 Devuelve solo JSON válido con esta forma exacta:
-{"content":{"es":{"title":"máximo 90 caracteres","dek":"2 frases","intro":"1 párrafo","sections":[{"heading":"título","body":"1 o 2 párrafos"}],"takeaways":["3 a 5 ideas concretas"],"closing":"1 párrafo"},"en":{"title":"natural English title","dek":"2 sentences","intro":"1 paragraph","sections":[{"heading":"heading","body":"1 or 2 paragraphs"}],"takeaways":["3 to 5 concrete ideas"],"closing":"1 paragraph"}}}
+{"article":{"title":"máximo 90 caracteres","dek":"2 frases","intro":"1 párrafo","sections":[{"heading":"título","body":"1 o 2 párrafos"}],"takeaways":["3 a 5 ideas concretas"],"closing":"1 párrafo"}}
 
 Escribe entre 3 y 5 secciones. No pongas enlaces ni una lista de fuentes dentro del texto; el sistema los añade después.
 
 Fecha: ${date}
 Noticias: ${JSON.stringify(input)}`,
     },
-  ], { temperature: 0.35, maxTokens: 12_000 });
+  ], { temperature: 0.35, maxTokens: 24_000 });
 
-  validateLanguage(result.content?.es, 'español');
-  validateLanguage(result.content?.en, 'inglés');
-  return result.content;
+  validateLanguage(spanishResult.article, 'español');
+
+  const englishResult = await callModel(apiKey, [
+    {
+      role: 'system',
+      content: 'Eres traductor editorial de español a inglés. Conserva todos los hechos y matices. Responde directamente con el JSON solicitado.',
+    },
+    {
+      role: 'user',
+      content: `Traduce esta edición de AI Signal a inglés natural. Mantén exactamente la misma estructura, número de secciones y conclusiones. No añadas ni elimines información.
+
+Devuelve solo JSON válido con esta forma:
+{"article":{"title":"natural English title","dek":"2 sentences","intro":"1 paragraph","sections":[{"heading":"heading","body":"1 or 2 paragraphs"}],"takeaways":["3 to 5 concrete ideas"],"closing":"1 paragraph"}}
+
+Edición: ${JSON.stringify(spanishResult.article)}`,
+    },
+  ], { temperature: 0.15, maxTokens: 16_000 });
+
+  validateLanguage(englishResult.article, 'inglés');
+  return { es: spanishResult.article, en: englishResult.article };
 }
 
 function madridDate() {
