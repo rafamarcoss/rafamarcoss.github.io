@@ -92,7 +92,19 @@ function parseJsonResponse(value) {
     .trim()
     .replace(/^```(?:json)?\s*/i, '')
     .replace(/\s*```$/, '');
-  return JSON.parse(cleaned);
+  try {
+    return JSON.parse(cleaned);
+  } catch (originalError) {
+    const end = cleaned.lastIndexOf('}');
+    for (let start = cleaned.indexOf('{'); start !== -1 && start < end; start = cleaned.indexOf('{', start + 1)) {
+      try {
+        return JSON.parse(cleaned.slice(start, end + 1));
+      } catch {
+        // Sigue buscando el inicio del objeto final.
+      }
+    }
+    throw originalError;
+  }
 }
 
 async function callModel(apiKey, messages, { temperature, maxTokens }) {
@@ -126,8 +138,12 @@ async function callModel(apiKey, messages, { temperature, maxTokens }) {
       const content = payload.choices?.[0]?.message?.content;
       if (!content) {
         const choice = payload.choices?.[0];
-        const reasoningLength = String(choice?.message?.reasoning || '').length;
-        throw new Error(`OpenCode no devolvió contenido (fin: ${choice?.finish_reason || 'desconocido'}, razonamiento: ${reasoningLength} caracteres)`);
+        const reasoning = String(choice?.message?.reasoning || '');
+        try {
+          return parseJsonResponse(reasoning);
+        } catch {
+          throw new Error(`OpenCode no devolvió JSON (fin: ${choice?.finish_reason || 'desconocido'}, razonamiento: ${reasoning.length} caracteres)`);
+        }
       }
       return parseJsonResponse(content);
     } catch (error) {
