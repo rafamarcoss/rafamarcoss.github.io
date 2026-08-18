@@ -69,8 +69,12 @@ function parseRss(xml, category) {
     .filter((item) => item.title && item.url);
 }
 
+function errorMessage(error) {
+  return error instanceof Error ? error.message : String(error);
+}
+
 async function collectCandidates() {
-  const groups = await Promise.all(feeds.map(async ({ category, url }) => {
+  const results = await Promise.allSettled(feeds.map(async ({ category, url }) => {
     const response = await fetch(url, {
       headers: { 'User-Agent': 'AI-Signal/1.0 (+https://rafaelmarcos.tech)' },
       signal: AbortSignal.timeout(30_000),
@@ -78,6 +82,12 @@ async function collectCandidates() {
     if (!response.ok) throw new Error(`RSS ${category}: HTTP ${response.status}`);
     return parseRss(await response.text(), category);
   }));
+
+  const groups = results.flatMap((result, index) => {
+    if (result.status === 'fulfilled') return [result.value];
+    console.warn(`Fuente omitida (${feeds[index].category}): ${errorMessage(result.reason)}`);
+    return [];
+  });
 
   const seen = new Set();
   return groups.flat().filter((item) => {
@@ -132,13 +142,13 @@ async function callModel(apiKey, messages, { model = SELECTION_MODEL, temperatur
       if (!response.ok) {
         const detail = payload.error?.message || payload.message || `HTTP ${response.status}`;
         const error = new Error(`OpenCode: ${detail}`);
-        error.retryable = response.status >= 500;
+        error.retryable = response.status === 408 || response.status === 429 || response.status >= 500;
         throw error;
       }
 
-      const content = payload.choices?.[0]?.message?.content;
-      if (!content) {
-        const choice = payload.choices?.[0];
+      const choice = payload.choices?.[0];
+      const content = String(choice?.message?.content || '');
+      if (!content.trim()) {
         const reasoning = String(choice?.message?.reasoning || '');
         try {
           return parseJsonResponse(reasoning);
@@ -148,8 +158,9 @@ async function callModel(apiKey, messages, { model = SELECTION_MODEL, temperatur
       }
       return parseJsonResponse(content);
     } catch (error) {
-      if (attempt === 2 || error.retryable === false) throw error;
-      console.warn(`OpenCode falló; reintentando una vez: ${error.message}`);
+      const retryable = error && typeof error === 'object' ? error.retryable : undefined;
+      if (attempt === 2 || retryable === false) throw error;
+      console.warn(`OpenCode falló; reintentando una vez: ${errorMessage(error)}`);
       await new Promise((resolve) => setTimeout(resolve, 2_000));
     }
   }
@@ -334,6 +345,6 @@ async function main() {
 }
 
 main().catch((error) => {
-  console.error(error.message);
+  console.error(error instanceof Error ? error.stack || error.message : String(error));
   process.exitCode = 1;
 });
