@@ -1322,7 +1322,7 @@
     /* PROJECTS */
     .projects-flow {
       position: relative;
-      --proj-count: 5;
+      --proj-count: 6;
       --slide-w: min(78vw, 960px);
       --slide-h: min(82vh, 720px);
       --slide-gap: clamp(1.5rem, 3.5vw, 3.5rem);
@@ -1370,6 +1370,7 @@
       --o: 1;
       box-shadow: 0 50px 130px rgba(8,96,167,.22);
     }
+    .proj-slide[data-i="5"] { grid-template-rows: minmax(0, .72fr) minmax(0, 1.28fr); }
 
     .proj-figure {
       position: relative;
@@ -1417,6 +1418,54 @@
     }
     .proj-slide[data-i="3"].is-active .proj-figure-img { transform: none; }
     .proj-figure-img.is-missing { display: none; }
+    .agent-visual {
+      position: relative;
+      z-index: 1;
+      height: 100%;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      gap: clamp(.45rem, 1vw, .8rem);
+      padding: clamp(.85rem, 1.4vw, 1.2rem) clamp(1.3rem, 3vw, 2.4rem);
+      color: #F4FAF6;
+      background:
+        radial-gradient(circle at 82% 12%, rgba(93,193,160,.32), transparent 30%),
+        radial-gradient(circle at 12% 92%, rgba(8,96,167,.35), transparent 34%),
+        linear-gradient(145deg, #071013, #0D2931 56%, #0A3B49);
+    }
+    .agent-visual::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: .12;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255,255,255,.16) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.16) 1px, transparent 1px);
+      background-size: 30px 30px;
+    }
+    .agent-visual > * { position: relative; z-index: 1; }
+    .agent-visual-head,
+    .agent-visual-foot { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .agent-visual-head { font-family: 'JetBrains Mono', monospace; font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; }
+    .agent-live { display: inline-flex; align-items: center; gap: .4rem; color: var(--mint); }
+    .agent-live::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: currentColor; box-shadow: 0 0 0 5px rgba(176,223,170,.12); }
+    .agent-pipeline { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .65rem; align-items: center; }
+    .agent-node {
+      position: relative;
+      min-width: 0;
+      padding: clamp(.7rem, 1.5vw, 1rem);
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 16px;
+      background: rgba(255,255,255,.07);
+      backdrop-filter: blur(8px);
+    }
+    .agent-node + .agent-node::before { content: '→'; position: absolute; left: -.56rem; top: 50%; color: var(--mint); transform: translate(-50%, -50%); }
+    .agent-node span { display: block; color: var(--mint); font: 700 .62rem 'JetBrains Mono', monospace; }
+    .agent-node strong { display: block; margin-top: .35rem; font-size: clamp(.82rem, 1.3vw, 1.05rem); line-height: 1.05; }
+    .agent-node small { display: block; margin-top: .35rem; color: rgba(244,250,246,.58); font-size: .67rem; line-height: 1.3; }
+    .agent-visual-foot { padding-top: .4rem; border-top: 1px solid rgba(255,255,255,.13); }
+    .agent-visual-foot strong { font-family: var(--font-display); font-size: clamp(.9rem, 1.6vw, 1.25rem); }
+    .agent-visual-foot span { color: rgba(244,250,246,.58); font: 600 .62rem 'JetBrains Mono', monospace; text-align: right; }
     .proj-tag {
       position: absolute;
       top: 1rem;
@@ -1647,6 +1696,9 @@
     @media (max-width: 900px) {
       .projects-flow:not(.is-static) .proj-selector { padding: .35rem; }
       .projects-flow:not(.is-static) .proj-dot { min-width: 34px; padding: .35rem .55rem; font-size: .7rem; }
+      .projects-flow.is-static .proj-slide[data-i="5"] .proj-figure { aspect-ratio: 5 / 4; }
+      .agent-pipeline { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .agent-node + .agent-node::before { display: none; }
     }
 
     /* EDUCATION + CONTACT */
@@ -2097,7 +2149,7 @@
         <p class="section-copy reveal" style="--delay:160ms" data-i18n="workCopy">Casos con contexto, decisiones técnicas y enlace al sistema real. Desliza para verlos.</p>
       </div>
 
-      <div class="projects-flow" data-projects style="--proj-count: 5">
+      <div class="projects-flow" data-projects style="--proj-count: 6">
         <div class="projects-stage" role="group" aria-label="Carrusel de proyectos">
           <div class="proj-progress" aria-hidden="true"><div class="proj-progress-fill"></div></div>
 
@@ -2196,6 +2248,33 @@
                 </div>
               </div>
             </article>
+
+            <article class="proj-slide" data-i="5" aria-label="AI Signal, agente editorial de noticias">
+              <figure class="proj-figure" data-fallback="AI Signal · agente editorial con n8n y DeepSeek">
+                <div class="agent-visual" role="img" aria-label="Flujo del agente: cinco búsquedas RSS, deduplicación, selección con IA y artículo bilingüe">
+                  <div class="agent-visual-head"><span>AI SIGNAL / n8n</span><span class="agent-live">09:00 CET</span></div>
+                  <div class="agent-pipeline">
+                    <div class="agent-node"><span>01 · INPUT</span><strong>5 RSS</strong><small>Hasta 30 candidatas</small></div>
+                    <div class="agent-node"><span>02 · CLEAN</span><strong>Deduplica</strong><small>Títulos y categorías</small></div>
+                    <div class="agent-node"><span>03 · INFERENCE</span><strong>DeepSeek</strong><small>Selecciona el top 10</small></div>
+                    <div class="agent-node"><span>04 · OUTPUT</span><strong>ES / EN</strong><small>Artículo conectado</small></div>
+                  </div>
+                  <div class="agent-visual-foot"><strong>10 señales → 1 briefing</strong><span>OpenCode Go · JSON validado</span></div>
+                </div>
+                <span class="proj-tag" data-i18n="aiAgentTag">06 · Agente editorial IA</span>
+              </figure>
+              <div class="proj-meta">
+                <p class="proj-eyebrow" data-i18n="aiAgentEyebrow">Automatización editorial · IA aplicada</p>
+                <h3 class="proj-name">AI Signal · Daily News Agent</h3>
+                <a class="proj-url" href="news/?slug=ai-signal-2026-08-18&amp;lang=es" data-agent-result>rafaelmarcos.tech/news <span class="arrow">↗</span></a>
+                <p class="proj-desc" data-i18n="aiAgentDesc">Agente diario en n8n que reúne hasta 30 candidatas de cinco búsquedas RSS, elimina duplicados, selecciona 10 y convierte las señales en un artículo conectado en español e inglés.</p>
+                <p class="proj-tech" data-i18n="aiAgentTech"><strong>Tech:</strong> cron diario a las 09:00, Google News RSS, dos cadenas LLM con deepseek-v4-flash vía OpenCode Go, validación JSON y feed estático preparado para GitHub Pages.</p>
+                <ul class="proj-stack"><li>n8n</li><li>DeepSeek</li><li>OpenCode Go</li><li>GitHub Pages</li></ul>
+                <div class="proj-actions">
+                  <a class="proj-btn is-primary" href="news/?slug=ai-signal-2026-08-18&amp;lang=es" data-agent-result data-i18n="aiAgentCta">Ver artículo generado <span class="arrow">↗</span></a>
+                </div>
+              </div>
+            </article>
           </div>
 
           <div class="proj-selector" role="tablist" aria-label="Selector de proyectos">
@@ -2204,6 +2283,7 @@
             <button class="proj-dot" type="button" data-go="2" role="tab">03 Serrano</button>
             <button class="proj-dot" type="button" data-go="3" role="tab">04 Kit</button>
             <button class="proj-dot" type="button" data-go="4" role="tab">05 Teledev</button>
+            <button class="proj-dot" type="button" data-go="5" role="tab">06 AI Signal</button>
           </div>
         </div>
       </div>
@@ -2434,6 +2514,11 @@
         workEyebrow: 'Selected work',
         workTitle: 'Real projects, shipped or in progress.',
         workCopy: 'Cases with context, technical decisions and links to live systems. Scroll to browse.',
+        aiAgentTag: '06 · AI editorial agent',
+        aiAgentEyebrow: 'Editorial automation · applied AI',
+        aiAgentDesc: 'A daily n8n agent that gathers up to 30 candidates from five RSS searches, removes duplicates, selects 10 and turns the signals into one connected article in Spanish and English.',
+        aiAgentTech: '<strong>Tech:</strong> daily 09:00 cron, Google News RSS, two LLM chains using deepseek-v4-flash through OpenCode Go, JSON validation and a static feed prepared for GitHub Pages.',
+        aiAgentCta: 'View generated article <span class="arrow">↗</span>',
         newsEyebrow: 'AI Signal · daily edition',
         newsTitle: 'Connected news, not a list of links.',
         newsCopy: 'Every morning, 10 sources on AI, markets, education and work become one short read: what changed, how it connects and what you can do with it.',
@@ -2491,6 +2576,9 @@
         el.innerHTML = currentLang === 'en' && translations.en[key] ? translations.en[key] : el.dataset.es;
       });
       document.querySelectorAll('[data-lang]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.lang === currentLang)));
+      document.querySelectorAll('[data-agent-result]').forEach(link => {
+        link.href = `news/?slug=ai-signal-2026-08-18&lang=${currentLang}`;
+      });
       document.title = currentLang === 'en'
         ? 'Rafael Marcos — Automation, backend and web products'
         : 'Rafael Marcos — Automatización, backend y producto web';
