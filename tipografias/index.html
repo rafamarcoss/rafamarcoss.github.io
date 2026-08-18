@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#F2F4EE">
+  <title>Laboratorio tipográfico — Rafael Marcos</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&amp;family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&amp;family=Chakra+Petch:wght@600;700&amp;family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&amp;family=Figtree:wght@400;500;600;700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;family=Outfit:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Sora:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;family=Syne:wght@600;700;800&amp;family=Unbounded:wght@600;700&amp;family=Urbanist:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    * { margin: 0; padding: 0; }
+
+    :root {
+      --paper: #F2F4EE;
+      --paper-2: #F8FAF4;
+      --card: rgba(255, 255, 249, .82);
+      --ink: #0B0E0F;
+      --muted: rgba(11, 14, 15, .62);
+      --soft: rgba(11, 14, 15, .42);
+      --line: rgba(11, 14, 15, .13);
+      --mint: #B0DFAA;
+      --teal: #24969B;
+      --blue: #0860A7;
+      --royal: #0234C0;
+      --coral: #C64240;
+      --body: 'Outfit', system-ui, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; background: var(--paper); }
+
+    body {
+      min-height: 100vh;
+      color: var(--ink);
+      font-family: var(--body);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      background:
+        radial-gradient(circle at 10% 4%, rgba(176, 223, 170, .75), transparent 31rem),
+        radial-gradient(circle at 92% 24%, rgba(36, 150, 155, .18), transparent 34rem),
+        linear-gradient(180deg, var(--paper), var(--paper-2));
+    }
+
+    a { color: inherit; }
+    button, input { font: inherit; }
+    ::selection { background: var(--mint); }
+
+    .shell { width: min(1480px, calc(100% - 2rem)); margin: 0 auto; }
+
+    .topbar {
+      position: sticky;
+      top: .75rem;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-top: .75rem;
+      padding: .7rem .8rem .7rem 1rem;
+      border: 1px solid rgba(255, 255, 255, .72);
+      border-radius: 999px;
+      background: rgba(248, 250, 244, .84);
+      box-shadow: 0 16px 50px rgba(11, 14, 15, .08);
+      backdrop-filter: blur(18px);
+    }
+
+    .brand { display: flex; align-items: center; gap: .7rem; font-weight: 700; text-decoration: none; }
+    .brand-mark {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      color: white;
+      font-size: .78rem;
+      background: linear-gradient(135deg, var(--ink), var(--blue), var(--teal));
+    }
+
+    .back {
+      padding: .62rem .9rem;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-size: .82rem;
+      font-weight: 700;
+      text-decoration: none;
+      background: rgba(255, 255, 255, .7);
+    }
+
+    main { padding: clamp(4rem, 9vw, 8rem) 0 6rem; }
+
+    .eyebrow {
+      color: var(--teal);
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+
+    .intro h1 {
+      max-width: 980px;
+      margin-top: 1rem;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(3.1rem, 8vw, 8.7rem);
+      font-weight: 700;
+      line-height: .88;
+      letter-spacing: -.075em;
+    }
+
+    .intro-text {
+      max-width: 720px;
+      margin-top: 1.8rem;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 1.7vw, 1.35rem);
+    }
+
+    .recommendation {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(260px, .85fr);
+      gap: 1rem;
+      margin: clamp(2.5rem, 6vw, 5rem) 0 1rem;
+      padding: clamp(1.35rem, 3vw, 2.4rem);
+      border: 1px solid rgba(2, 52, 192, .16);
+      border-radius: 28px;
+      background: linear-gradient(135deg, rgba(176, 223, 170, .72), rgba(255, 255, 249, .8) 48%, rgba(8, 96, 167, .1));
+      box-shadow: 0 26px 80px rgba(8, 96, 167, .1);
+    }
+
+    .recommendation h2 {
+      margin-top: .55rem;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2rem, 4vw, 4.5rem);
+      line-height: .95;
+      letter-spacing: -.055em;
+    }
+
+    .recommendation p { max-width: 660px; margin-top: 1rem; color: var(--muted); }
+    .reasons { display: grid; gap: .65rem; align-content: center; list-style: none; }
+    .reasons li {
+      padding: .8rem 1rem;
+      border: 1px solid rgba(11, 14, 15, .1);
+      border-radius: 14px;
+      background: rgba(255, 255, 255, .56);
+      font-size: .92rem;
+      font-weight: 600;
+    }
+
+    .tester {
+      position: sticky;
+      top: 5.75rem;
+      z-index: 8;
+      margin: 1rem 0 2rem;
+      padding: .85rem;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(248, 250, 244, .88);
+      box-shadow: 0 14px 40px rgba(11, 14, 15, .08);
+      backdrop-filter: blur(16px);
+    }
+
+    .tester label { display: block; margin: 0 .3rem .5rem; color: var(--soft); font-size: .72rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    .tester input {
+      width: 100%;
+      min-height: 48px;
+      padding: .75rem 1rem;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      color: var(--ink);
+      background: rgba(255, 255, 255, .82);
+      outline: none;
+    }
+    .tester input:focus { border-color: var(--teal); box-shadow: 0 0 0 4px rgba(36, 150, 155, .12); }
+
+    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 1rem; margin: 3rem 0 1.2rem; }
+    .section-head h2 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(2rem, 4vw, 4rem); line-height: .95; letter-spacing: -.055em; }
+    .section-head p { max-width: 460px; color: var(--muted); }
+
+    .samples { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+
+    .sample {
+      --display: 'Syne', sans-serif;
+      --copy: 'Outfit', sans-serif;
+      position: relative;
+      min-width: 0;
+      overflow: hidden;
+      padding: clamp(1.25rem, 3vw, 2.2rem);
+      border: 1px solid var(--line);
+      border-radius: 26px;
+      background: var(--card);
+      box-shadow: 0 20px 65px rgba(11, 14, 15, .06);
+    }
+
+    .sample::after {
+      content: '';
+      position: absolute;
+      width: 220px;
+      height: 220px;
+      right: -100px;
+      bottom: -130px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(36, 150, 155, .17), transparent 68%);
+      pointer-events: none;
+    }
+
+    .sample.recommended { border-color: rgba(2, 52, 192, .36); box-shadow: 0 22px 80px rgba(2, 52, 192, .12); }
+    .sample.recommended::before {
+      content: 'Mi elección';
+      position: absolute;
+      top: 0;
+      right: 1.4rem;
+      padding: .48rem .75rem;
+      border-radius: 0 0 11px 11px;
+      color: white;
+      font-size: .68rem;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      background: var(--royal);
+    }
+
+    .sample-top { display: flex; align-items: center; gap: .7rem; padding-right: 5rem; }
+    .sample-number { color: var(--soft); font-size: .72rem; font-weight: 800; letter-spacing: .12em; }
+    .grade { padding: .3rem .48rem; border-radius: 999px; font-size: .65rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; background: rgba(176, 223, 170, .52); }
+    .grade.medium { background: rgba(8, 96, 167, .1); color: var(--blue); }
+    .grade.low { background: rgba(198, 66, 64, .1); color: var(--coral); }
+
+    .font-name { margin-top: 1.3rem; color: var(--muted); font-size: .86rem; font-weight: 600; }
+    .sample-title {
+      margin-top: .65rem;
+      overflow-wrap: anywhere;
+      font-family: var(--display);
+      font-size: clamp(2.1rem, 4.3vw, 4.7rem);
+      font-weight: 700;
+      line-height: .93;
+      letter-spacing: -.06em;
+    }
+
+    .sample-copy { margin-top: 1.35rem; color: var(--muted); font-family: var(--copy); font-size: 1rem; line-height: 1.62; }
+    .sample-ui { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; margin-top: 1.25rem; font-family: var(--copy); }
+    .sample-ui span { color: var(--soft); font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    .sample-ui strong { font-size: .86rem; }
+    .sample-ui button { padding: .62rem .85rem; border: 0; border-radius: 999px; color: white; font-size: .78rem; font-weight: 700; background: var(--ink); }
+    .alphabet { margin-top: 1.2rem; padding-top: 1rem; border-top: 1px solid var(--line); color: var(--soft); font-family: var(--display); font-size: .82rem; letter-spacing: .025em; }
+
+    .font-space { --display: 'Space Grotesk', sans-serif; }
+    .font-sora { --display: 'Sora', sans-serif; }
+    .font-bricolage { --display: 'Bricolage Grotesque', sans-serif; --copy: 'DM Sans', sans-serif; }
+    .font-manrope { --display: 'Manrope', sans-serif; }
+    .font-jakarta { --display: 'Plus Jakarta Sans', sans-serif; --copy: 'Inter', sans-serif; }
+    .font-archivo { --display: 'Archivo', sans-serif; --copy: 'Inter', sans-serif; }
+    .font-ibm { --display: 'IBM Plex Sans', sans-serif; --copy: 'IBM Plex Sans', sans-serif; }
+    .font-figtree { --display: 'Figtree', sans-serif; --copy: 'Inter', sans-serif; }
+    .font-urban { --display: 'Urbanist', 'Manrope', sans-serif; --copy: 'Inter', sans-serif; }
+    .font-chakra { --display: 'Chakra Petch', sans-serif; }
+    .font-unbounded { --display: 'Unbounded', sans-serif; }
+    .font-unbounded .sample-title { font-size: clamp(1.55rem, 3vw, 3rem); line-height: 1.02; letter-spacing: -.045em; }
+
+    .footer-note { margin-top: 2rem; padding: 1rem 0; color: var(--soft); font-size: .82rem; text-align: center; }
+
+    @media (max-width: 840px) {
+      .recommendation, .samples { grid-template-columns: 1fr; }
+      .section-head { display: block; }
+      .section-head p { margin-top: .75rem; }
+      .tester { top: 5.25rem; }
+    }
+
+    @media (max-width: 560px) {
+      .shell { width: min(100% - 1rem, 1480px); }
+      .topbar { top: .4rem; margin-top: .4rem; }
+      .brand-text { display: none; }
+      main { padding-top: 3.5rem; }
+      .intro h1 { font-size: clamp(3.25rem, 18vw, 5rem); }
+      .recommendation { border-radius: 22px; }
+      .sample { border-radius: 20px; }
+      .sample-title { font-size: clamp(2.2rem, 13vw, 3.8rem); }
+      .sample-top { padding-right: 4.2rem; }
+      .tester { position: static; }
+    }
+
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="Volver al portfolio">
+        <span class="brand-mark">RM</span>
+        <span class="brand-text">Rafael Marcos · Type Lab</span>
+      </a>
+      <a class="back" href="/">← Volver al portfolio</a>
+    </header>
+
+    <main>
+      <section class="intro">
+        <p class="eyebrow">Laboratorio temporal · 12 sistemas</p>
+        <h1>¿Qué letra suena a ti?</h1>
+        <p class="intro-text">Mismo contenido, distintas voces. La tipografía actual, <strong>Syne</strong>, tiene carácter pero pierde legibilidad en titulares largos. Aquí puedes compararla con opciones más claras sin cambiar todavía la web.</p>
+      </section>
+
+      <section class="recommendation" aria-labelledby="pick-title">
+        <div>
+          <p class="eyebrow">Mi recomendación</p>
+          <h2 id="pick-title">Space Grotesk + Outfit</h2>
+          <p>Mantendría Outfit en párrafos y controles. Solo sustituiría Syne por Space Grotesk en títulos. Conserva el tono técnico y geométrico de tu web, pero las palabras largas y las tildes se leen bastante mejor.</p>
+        </div>
+        <ul class="reasons">
+          <li>Personalidad técnica sin parecer una plantilla SaaS.</li>
+          <li>Legible en español e inglés, incluso en móvil.</li>
+          <li>Cambio pequeño: una fuente y una variable CSS.</li>
+        </ul>
+      </section>
+
+      <div class="tester">
+        <label for="headline">Escribe una frase para probarla en las 12 opciones</label>
+        <input id="headline" type="text" value="IA: geopolítica, empleo y tribunales marcan la agenda" autocomplete="off">
+      </div>
+
+      <section aria-labelledby="samples-title">
+        <div class="section-head">
+          <h2 id="samples-title">Compara con calma.</h2>
+          <p>La etiqueta indica mi valoración de legibilidad para titulares largos. El texto del párrafo también cambia cuando la pareja propone otra fuente de cuerpo.</p>
+        </div>
+
+        <div class="samples">
+          <article class="sample recommended font-space">
+            <div class="sample-top"><span class="sample-number">01</span><span class="grade">Legibilidad alta</span></div>
+            <p class="font-name">Space Grotesk + Outfit</p>
+            <h3 class="sample-title">IA: geopolítica, empleo y tribunales marcan la agenda</h3>
+            <p class="sample-copy">Automatizo procesos, conecto APIs y construyo productos web que eliminan trabajo manual. Una voz técnica, directa y fácil de mantener.</p>
+            <div class="sample-ui"><span>18 ago 2026</span><strong>n8n · APIs · IA</strong><button type="button">Leer edición →</button></div>
+            <p class="alphabet">Aa Bb Cc · 0123456789 · á é í ó ú ñ €</p>
+          </article>
+
+          <article class="sample">
+            <div class="sample-top"><span class="sample-number">02</span><span class="grade medium">Actual</span></div>
+            <p class="font-name">Syne + Outfit</p>
+            <h3 class="sample-title">IA: geopolítica, empleo y tribunales marcan la agenda</h3>
+            <p class="sample-copy">Automatizo procesos, conecto APIs y construyo productos web que eliminan trabajo manual. Tiene mucha personalidad, pero se compacta demasiado.</p>
+            <div class="sample-ui"><span>18 ago 2026</span><strong>n8n · APIs · IA</strong><button type="button">Leer edición →</button></div>
+            <p class="alphabet">Aa Bb Cc · 0123456789 · á é í ó ú ñ €</p>
+          </article>
+
+          <article class="sample font-sora">
+            <div class="sample-top"><span class="sample-number">03</span><span class="grade">Legibilidad alta</span></div>
+            <p class="font-name">Sora + Outfit</p>
+            <h3 class="sample-title">IA: geopolítica, empleo y tribunales marcan la agenda</h3>
+            <p class="sample-copy">Automatizo procesos, conecto APIs y construyo productos web que eliminan trabajo manual. Más digital y futurista, sin sacrificar claridad.</p>
+            <div class="sample-ui"><span>18 ago 2026</span><strong>n8n · APIs · IA</strong><button type="button">Leer edición →</button></div>
+            <p class="alphabet">Aa Bb Cc · 0123456789 · á é í ó ú ñ €</p>
+          </article>
+
+          <article class="sample font-bricolage">
+            <div class="sample-top"><span class="sample-number">04</span><span class="grade medium">Con carácter</span></div>
+            <p class="font-name">Bricolage Grotesque + DM Sans</p>
+            <h3 class="sample-title">IA: geopolítica, empleo y tribunales marcan la agenda</h3>
+            <p class="sample-copy">Automatizo procesos, conecto APIs y construyo productos web que eliminan trabajo manual. Editorial, cercana y menos corporativa.</p>
+            <div class="sample-ui"><span>18 ago 2026</span><strong>n8n · APIs · IA</strong><button type="button">Leer edición →</button></div>
+            <p class="alphabet">Aa Bb Cc · 0123456789 · á é í ó ú ñ €</p>
+          </article>
+
+          <article class="sample font-manrope">
+            <div class="sample-top"><span class="sample-number">05</span><span class="grade">Legibilidad alta</span></div>
+            <p class="font-name">Manrope + Outfit</p>
+            <h3 class="sample-title">IA: geopolítica, empleo y tribunales marcan la agenda</h3>
+            <p class="sample-copy">Automatizo procesos, conecto APIs y construyo productos web que eliminan trabajo manual. Limpia, precisa y algo más seria.</p>
+            <div class="sample-ui"><span>18 ago 2026</span><strong>n8n · APIs · IA</strong><button type="button">Leer edición →</button></div>
+            <p class="alphabet">Aa Bb Cc · 0123456789 · á é í ó ú ñ €</p>
+          </article>
+
+          <article class="sample font-jakarta">
+            <div class="sample-top"><span class="sample-number">06</span><span class="grade">Legibilidad alta</span></div>
+            <p class="font-name">Plus Jakarta Sans + Inter</p>
+            <h3 class="sample-title">IA: geopolítica, empleo y tribunales marcan la agenda</h3>
+            <p class="sample-copy">Automatizo procesos, conecto APIs y construyo productos web que eliminan trabajo manual. Amable, profesional y cómoda para servicios.</p>
+            <div class="sample-ui"><span>18 ago 2026</span><strong>n8n · APIs · IA</strong><button type="button">Leer edición →</button></div>
+            <p class="alphabet">Aa Bb Cc · 0123456789 · á é í ó ú ñ €</p>
+          </article>
+
+          <article class="sample font-archivo">
+            <div class="sample-top"><span class="sample-number">07</span><span class="grade">Legibilidad alta</span></div>
+            <p class="font-name">Archivo + Inter</p>
+            <h3 class="sample-title">IA: geopolítica, empleo y tribunales marcan la agenda</h3>
+            <p class="sample-copy">Automatizo procesos, conecto APIs y construyo productos web que eliminan trabajo manual. Sólida y práctica, con un tono más industrial.</p>
+            <div class="sample-ui"><span>18 ago 2026</span><strong>n8n · APIs · IA</strong><button type="button">Leer edición →</button></div>
+            <p class="alphabet">Aa Bb Cc · 0123456789 · á é í ó ú ñ €</p>
+          </article>
+
+          <article class="sample font-ibm">
+            <div class="sample-top"><span class="sample-number">08</span><span class="grade">Legibilidad alta</span></div>
+            <p class="font-name">IBM Plex Sans</p>
+            <h3 class="sample-title">IA: geopolítica, empleo y tribunales marcan la agenda</h3>
+            <p class="sample-copy">Automatizo procesos, conecto APIs y construyo productos web que eliminan trabajo manual. Muy técnica y creíble, con menos gesto visual.</p>
+            <div class="sample-ui"><span>18 ago 2026</span><strong>n8n · APIs · IA</strong><button type="button">Leer edición →</button></div>
+            <p class="alphabet">Aa Bb Cc · 0123456789 · á é í ó ú ñ €</p>
+          </article>
+
+          <article class="sample font-figtree">
+            <div class="sample-top"><span class="sample-number">09</span><span class="grade">Legibilidad alta</span></div>
+            <p class="font-name">Figtree + Inter</p>
+            <h3 class="sample-title">IA: geopolítica, empleo y tribunales marcan la agenda</h3>
+            <p class="sample-copy">Automatizo procesos, conecto APIs y construyo productos web que eliminan trabajo manual. Clara y humana, aunque menos reconocible.</p>
+            <div class="sample-ui"><span>18 ago 2026</span><strong>n8n · APIs · IA</strong><button type="button">Leer edición →</button></div>
+            <p class="alphabet">Aa Bb Cc · 0123456789 · á é í ó ú ñ €</p>
+          </article>
+
+          <article class="sample font-urban">
+            <div class="sample-top"><span class="sample-number">10</span><span class="grade medium">Equilibrada</span></div>
+            <p class="font-name">Urbanist + Inter</p>
+            <h3 class="sample-title">IA: geopolítica, empleo y tribunales marcan la agenda</h3>
+            <p class="sample-copy">Automatizo procesos, conecto APIs y construyo productos web que eliminan trabajo manual. Geométrica y ligera, con aire de producto digital.</p>
+            <div class="sample-ui"><span>18 ago 2026</span><strong>n8n · APIs · IA</strong><button type="button">Leer edición →</button></div>
+            <p class="alphabet">Aa Bb Cc · 0123456789 · á é í ó ú ñ €</p>
+          </article>
+
+          <article class="sample font-chakra">
+            <div class="sample-top"><span class="sample-number">11</span><span class="grade medium">Muy técnica</span></div>
+            <p class="font-name">Chakra Petch + Outfit</p>
+            <h3 class="sample-title">IA: geopolítica, empleo y tribunales marcan la agenda</h3>
+            <p class="sample-copy">Automatizo procesos, conecto APIs y construyo productos web que eliminan trabajo manual. Tiene identidad de interfaz y automatización, pero cansa antes.</p>
+            <div class="sample-ui"><span>18 ago 2026</span><strong>n8n · APIs · IA</strong><button type="button">Leer edición →</button></div>
+            <p class="alphabet">Aa Bb Cc · 0123456789 · á é í ó ú ñ €</p>
+          </article>
+
+          <article class="sample font-unbounded">
+            <div class="sample-top"><span class="sample-number">12</span><span class="grade low">Experimental</span></div>
+            <p class="font-name">Unbounded + Outfit</p>
+            <h3 class="sample-title">IA: geopolítica, empleo y tribunales marcan la agenda</h3>
+            <p class="sample-copy">Automatizo procesos, conecto APIs y construyo productos web que eliminan trabajo manual. Impacta en dos palabras; no funciona bien para tus titulares largos.</p>
+            <div class="sample-ui"><span>18 ago 2026</span><strong>n8n · APIs · IA</strong><button type="button">Leer edición →</button></div>
+            <p class="alphabet">Aa Bb Cc · 0123456789 · á é í ó ú ñ €</p>
+          </article>
+        </div>
+      </section>
+
+      <p class="footer-note">Página temporal · no aparece en Google ni en la navegación pública.</p>
+    </main>
+  </div>
+
+  <script>
+    const input = document.querySelector('#headline');
+    const samples = document.querySelectorAll('.sample-title');
+
+    input.addEventListener('input', () => {
+      const text = input.value.trim() || 'Escribe una frase para comparar';
+      samples.forEach((sample) => { sample.textContent = text; });
+    });
+  </script>
+</body>
+</html>
