@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T04:02:58.075+02:00",
+  "generatedAt": "2026-08-18T11:55:59.933Z",
   "articles": [
     {
       "slug": "ai-signal-2026-08-18",
       "date": "2026-08-18",
-      "generatedAt": "2026-08-18T04:02:58.075+02:00",
+      "generatedAt": "2026-08-18T11:55:59.933Z",
       "categories": [
         "IA General",
         "Trabajo y Negocio",
@@ -16,136 +16,120 @@
       "readingMinutes": 4,
       "content": {
         "es": {
-          "title": "IA: geopolítica, empleo y tribunales marcan la agenda del 18 de agosto",
-          "dek": "La IA ya no es solo una promesa de productividad: está moviendo infraestructuras, reconfigurando empleos y obligando a los tribunales a fijar límites. La edición de hoy conecta esas señales con las oportunidades y los riesgos para empresas, profesionales e inversores.",
-          "intro": "La edición de hoy arranca con una paradoja: mientras una parte del capital institucional empieza a ver grietas en el boom de la IA, las empresas españolas responden a la incertidumbre geopolítica moviendo sus infraestructuras. En paralelo, la automatización aterriza en el trabajo administrativo, la educación superior debate su papel, los despachos de abogados cambian su facturación y la administración pública encuentra un uso social. El hilo común: la IA ya no es un debate abstracto, sino una decisión operativa con ganadores y perdedores.",
+          "title": "La doble cara de la IA: divide mercados y trabajo, integra a los más vulnerables",
+          "dek": "La inteligencia artificial está reescribiendo las reglas del empleo, la inversión y la educación, creando nuevas brechas y oportunidades. Mientras el gasto oculto se dispara, la tecnología busca democratizar desde Wall Street hasta las aulas inclusivas.",
+          "intro": "La expansión de la inteligencia artificial ya no es solo una cuestión de potencia de cálculo, sino un fenómeno que reconfigura la sociedad en múltiples direcciones. Hoy observamos cómo la IA genera una nueva economía del talento que parte el mercado laboral en dos, exige perfiles híbridos en marketing y desafía a los inversores con un gasto oculto multimillonario. Al mismo tiempo, surgen tensiones regulatorias como el rechazo de China a los vínculos emocionales con asistentes, y oportunidades concretas en sectores tan dispares como el reciclaje textil, el ámbito legal y la educación inclusiva, donde la tecnología actúa tanto como barrera como puente.",
           "sections": [
             {
-              "heading": "Geopolítica y capital: el mapa de la IA se reconfigura",
-              "body": "El 97 % de las empresas españolas valora trasladar sus infraestructuras de IA por la incertidumbre geopolítica. Es una señal de que la soberanía de datos y la continuidad operativa pesan más que la eficiencia inmediata. Al mismo tiempo, BofA empieza a ver grietas en el boom, mientras otras lecturas calculan retornos relevantes para Nvidia por sus participaciones en OpenAI y Anthropic. Hay una discrepancia clara entre quien detecta señales de debilidad y quien sigue apostando por retornos. Para un inversor, esto sugiere revisar la concentración de cartera en semiconductores y plataformas de IA, y prestar atención a dónde se alojan los datos y la capacidad de cómputo."
+              "heading": "Mercados y trabajo: el iceberg del gasto y la nueva economía del talento",
+              "body": "El impacto de la IA en los mercados financieros presenta una dualidad evidente. Por un lado, se afirma que la tecnología democratiza Wall Street, permitiendo ganar a un espectro más amplio de empresas e inversores más allá de las grandes tecnológicas conocidas como los 'Siete Magníficos'. Sin embargo, esta aparente democratización convive con un gasto real de las grandes tecnológicas que es unos 3 billones de dólares mayor de lo que parece, formando un iceberg de costes ocultos que los analistas deben calibrar cuidadosamente. En el mercado laboral, esta transformación se traduce en una división radical: el empleo se parte en dos bloques muy diferenciados por el uso de la IA, obligando a los profesionales a reorientar sus competencias. Un ejemplo claro es el marketing, donde emerge un perfil profesional específico que está transformando la disciplina mediante herramientas inteligentes, exigiendo nuevas habilidades a los especialistas del sector."
             },
             {
-              "heading": "Trabajo: la IA ahorra tiempo, pero no a todos por igual",
-              "body": "La IA reduce un 44 % las tareas administrativas y ahorra 60 minutos diarios por empleado, según una estimación reciente. Es el tipo de cifra que justifica inversiones en automatización. Pero un análisis sobre exposición ocupacional en España recuerda que el impacto de la IA es desigual: algunas profesiones ganan un complemento, mientras otras enfrentan un mayor riesgo de sustitución. La oportunidad está en recualificar antes de que llegue el ajuste; el límite, en asumir que la productividad no se distribuye sola."
+              "heading": "Educación: brecha de género frente a inclusión tecnológica",
+              "body": "En el ámbito educativo, la IA refleja tanto el riesgo de exclusión como el potencial de integración. Un ejemplo de la primera cara es la desventaja con la que parten las adolescentes en el aprendizaje de la inteligencia artificial, una brecha de género que los responsables de políticas educativas deben corregir para evitar que la futura economía del talento sea aún más desigual. En el polo opuesto, Madrid ha incorporado la robótica y la IA en diez centros para alumnos con necesidades especiales, demostrando que estas tecnologías pueden ser un apoyo decisivo en la educación inclusiva. Esta tensión entre quien se queda atrás y quien encuentra nuevas vías de aprendizaje define el reto educativo actual, donde la tecnología debe acompañar y no discriminar."
             },
             {
-              "heading": "Educación: la universidad ante la IA, entre la adopción y el recelo",
-              "body": "Mientras una red universitaria impulsa el aprendizaje con IA en México y Perú apoyada en Google Cloud, el debate sobre si la IA es una oportunidad o una amenaza para el aprendizaje sigue abierto. La tensión no es tecnológica, sino pedagógica: sin políticas claras, la herramienta puede convertirse en un atajo que erosiona el pensamiento crítico. La salida no es prohibir, sino definir usos concretos, adaptar la evaluación y formar al profesorado."
-            },
-            {
-              "heading": "Legal: la IA cambia el negocio y castiga la negligencia",
-              "body": "La IA acelera el fin de la facturación por horas en los despachos de abogados, un cambio de modelo que promete precios por resultado y más transparencia. Pero en paralelo, un tribunal impone una multa de 840 euros a un abogado por citar 25 sentencias falsas inventadas por IA. La conclusión es doble: la eficiencia no elimina la responsabilidad profesional, y la verificación de fuentes se convierte en una competencia jurídica básica. Quien automatice sin control asume un riesgo disciplinario y reputacional."
-            },
-            {
-              "heading": "Política pública: la IA también sirve para encontrar vivienda",
-              "body": "Catalunya usará IA para localizar pisos vacíos y sacarlos al mercado. Es un ejemplo de cómo la misma tecnología que mueve infraestructuras y transforma empleos puede aplicarse a un problema social urgente. El límite está en la calidad de los datos y en el equilibrio entre eficiencia administrativa y protección de datos personales. Para el sector público, la lección es que la IA no es solo una herramienta de productividad interna, sino una palanca de política pública."
+              "heading": "Regulación y aplicaciones de nicho: del control emocional al legal y textil",
+              "body": "La interacción humano-máquina sigue chocando con límites éticos y regulatorios. China ha manifestado su preocupación por los vínculos emocionales de sus internautas con la IA, anticipando restricciones que los diseñadores de producto deben tener en cuenta al crear asistentes conversacionales. Frente a los dilemas de los modelos generalistas, surgen soluciones hiperespecializadas: en el sector legal, se ha desarrollado una IA creada por y para abogados que destierra las alucinaciones en los tribunales, complementando el software de gestión que los despachos deben evaluar para 2026. La utilidad práctica también llega a la sostenibilidad, donde la IA aplicada al reciclaje textil mejora la separación y reutilización de prendas, demostrando que el valor de la tecnología reside en su capacidad para resolver problemas industriales concretos."
             }
           ],
           "takeaways": [
-            "Audita qué tareas administrativas son candidatas a automatización y mide el tiempo real liberado antes de ampliar la inversión en IA.",
-            "Si inviertes en IA, diversifica el riesgo: la geopolítica puede mover infraestructuras y las valoraciones muestran señales mixtas.",
-            "En entornos legales y de compliance, establece un proceso obligatorio de verificación humana de cualquier contenido generado por IA.",
-            "Las universidades y centros de formación deben definir usos permitidos y rediseñar la evaluación antes de adoptar herramientas de IA.",
-            "Para profesionales y pymes, prioriza la recualificación en las ocupaciones más expuestas a la IA, no solo en las que ganan tiempo."
+            "Inversores deben mirar más allá de las grandes tecnológicas, pero sin ignorar el iceberg de 3 billones de dólares en costes ocultos del sector.",
+            "Profesionales de marketing y talento deben prepararse para un mercado laboral dividido en dos, donde el dominio de la IA marca la diferencia.",
+            "Abogados pueden empezar a confiar en herramientas de IA específicas para su sector que eliminan alucinaciones y mejoran la gestión del despacho.",
+            "Educadores y responsables de políticas deben abordar urgentemente la brecha de género en el aprendizaje de IA entre adolescentes.",
+            "Empresas de sostenibilidad pueden aplicar IA al reciclaje textil para optimizar la separación y reutilización de ropa."
           ],
-          "closing": "La edición de hoy deja una lectura clara: la IA no avanza en una sola dirección. Hay euforia inversora y cautela geopolítica, ganancias de productividad y riesgos laborales, adopción educativa y sanciones legales. La diferencia entre aprovechar la ola y ser arrastrado por ella estará en la capacidad de verificación, recualificación y diseño institucional. Mañana seguiremos conectando las señales."
+          "closing": "La narrativa de la inteligencia artificial avanza por contrarios: democratiza inversiones pero oculta gigantescos costes, y promete inclusión educativa mientras amenaza con ampliar la brecha de género. Para profesionales, inversores y educadores, el reto no es adoptar la tecnología de forma acrítica, sino entender sus límites regulatorios y aprovechar las herramientas de nicho, desde el derecho hasta el reciclaje, donde la IA ofrece un valor real y verificable."
         },
         "en": {
-          "title": "AI Signal Daily: Geopolitics, Jobs and Courts Shape the AI Agenda",
-          "dek": "AI is no longer just a productivity promise: it is moving infrastructure, reshaping jobs and forcing courts to set limits. Today's edition connects those signals with the opportunities and risks for businesses, professionals and investors.",
-          "intro": "Today's edition starts with a paradox: while some institutional investors begin to see cracks in the AI boom, Spanish companies are responding to geopolitical uncertainty by moving their AI infrastructure. At the same time, automation is landing in administrative work, universities are debating their role, law firms are changing how they bill and governments are finding social uses for AI. The common thread: AI is no longer an abstract debate, but an operational decision with winners and losers.",
+          "title": "The Two Faces of AI: Dividing Markets and Work, Integrating the Most Vulnerable",
+          "dek": "Artificial intelligence is rewriting the rules of employment, investment, and education, creating new gaps and opportunities. While hidden spending skyrockets, the technology seeks to democratize everything from Wall Street to inclusive classrooms.",
+          "intro": "The expansion of artificial intelligence is no longer just a matter of computing power, but a phenomenon that reconfigures society in multiple directions. Today we observe how AI generates a new talent economy that splits the labor market in two, demands hybrid profiles in marketing, and challenges investors with a multi-billion-dollar hidden spending. At the same time, regulatory tensions emerge, such as China's rejection of emotional bonds with assistants, alongside concrete opportunities in sectors as disparate as textile recycling, the legal field, and inclusive education, where the technology acts as both a barrier and a bridge.",
           "sections": [
             {
-              "heading": "Geopolitics and capital: the AI map is being redrawn",
-              "body": "97% of Spanish companies are considering moving their AI infrastructure because of geopolitical uncertainty. That is a sign that data sovereignty and operational continuity now outweigh immediate efficiency. At the same time, BofA is starting to see cracks in the AI boom, while other analyses calculate significant returns for Nvidia from its stakes in OpenAI and Anthropic. There is a clear discrepancy between those seeing cracks and those still calculating returns. For an investor, this suggests reviewing portfolio concentration in semiconductors and AI platforms, and paying attention to where data and computing capacity are located."
+              "heading": "Markets and Work: The Spending Iceberg and the New Talent Economy",
+              "body": "The impact of AI on financial markets presents an evident duality. On one hand, it is claimed that the technology democratizes Wall Street, allowing a broader spectrum of companies and investors to profit beyond the major tech companies known as the 'Magnificent Seven'. However, this apparent democratization coexists with actual spending by big tech that is about $3 trillion higher than it appears, forming an iceberg of hidden costs that analysts must carefully calibrate. In the labor market, this transformation translates into a radical division: employment is split into two very distinct blocks based on the use of AI, forcing professionals to reorient their skills. A clear example is marketing, where a specific professional profile is emerging that is transforming the discipline through intelligent tools, demanding new skills from sector specialists."
             },
             {
-              "heading": "Work: AI saves time, but not for everyone equally",
-              "body": "AI reduces administrative tasks by 44% and saves 60 minutes per employee per day, according to a recent estimate. That is the kind of number that justifies automation investments. But an analysis of occupational exposure in Spain reminds us that AI's impact is uneven: some jobs gain a complement, while others face a higher risk of substitution. The opportunity is to reskill before the adjustment arrives; the limit is assuming productivity will distribute itself."
+              "heading": "Education: Gender Gap versus Technological Inclusion",
+              "body": "In the educational sphere, AI reflects both the risk of exclusion and the potential for integration. An example of the former is the disadvantage teenage girls face in learning artificial intelligence, a gender gap that education policymakers must correct to prevent the future talent economy from becoming even more unequal. At the opposite pole, Madrid has incorporated robotics and AI in ten centers for students with special needs, demonstrating that these technologies can be a decisive support in inclusive education. This tension between those left behind and those finding new learning pathways defines the current educational challenge, where technology must accompany and not discriminate."
             },
             {
-              "heading": "Education: universities between adoption and caution",
-              "body": "While a university network is rolling out AI-powered learning in Mexico and Peru with Google Cloud, the debate over whether AI is an educational opportunity or a threat to learning remains open. The tension is not technological but pedagogical: without clear policies, the tool can become a shortcut that erodes critical thinking. The way out is not to ban AI, but to define concrete use cases, adapt assessment and train faculty."
-            },
-            {
-              "heading": "Legal: AI changes the business model and punishes negligence",
-              "body": "AI is accelerating the end of hourly billing in law firms, a shift that promises outcome-based pricing and more transparency. But in parallel, a court has fined a lawyer €840 for citing 25 fake rulings invented by AI. The conclusion is twofold: efficiency does not remove professional responsibility, and source verification becomes a core legal skill. Automating without control creates disciplinary and reputational risk."
-            },
-            {
-              "heading": "Public policy: AI can also help find housing",
-              "body": "Catalonia will use AI to locate empty homes and bring them to the market. It is an example of how the same technology that moves infrastructure and transforms jobs can be applied to an urgent social problem. The limits lie in data quality and the balance between administrative efficiency and personal data protection. For the public sector, the lesson is that AI is not just an internal productivity tool, but a policy lever."
+              "heading": "Regulation and Niche Applications: From Emotional Control to Legal and Textile",
+              "body": "Human-machine interaction continues to clash with ethical and regulatory limits. China has expressed concern over its internet users' emotional bonds with AI, anticipating restrictions that product designers must consider when creating conversational assistants. Faced with the dilemmas of generalist models, highly specialized solutions are emerging: in the legal sector, an AI created by and for lawyers has been developed that banishes hallucinations in courts, complementing the management software that law firms must evaluate for 2026. Practical utility also reaches sustainability, where AI applied to textile recycling improves the separation and reuse of garments, demonstrating that the value of the technology lies in its ability to solve specific industrial problems."
             }
           ],
           "takeaways": [
-            "Audit which administrative tasks are candidates for automation and measure the real time saved before scaling AI investment.",
-            "If you invest in AI, diversify risk: geopolitics can move infrastructure and valuations are sending mixed signals.",
-            "In legal and compliance settings, require a mandatory human verification step for any AI-generated content.",
-            "Universities and training providers should define permitted uses and redesign assessment before adopting AI tools.",
-            "For professionals and small businesses, prioritise reskilling in the occupations most exposed to AI, not only those that save time."
+            "Investors must look beyond big tech, but without ignoring the $3 trillion iceberg of hidden costs in the sector.",
+            "Marketing and talent professionals must prepare for a labor market split in two, where mastery of AI makes the difference.",
+            "Lawyers can begin to trust sector-specific AI tools that eliminate hallucinations and improve firm management.",
+            "Educators and policymakers must urgently address the gender gap in AI learning among teenagers.",
+            "Sustainability companies can apply AI to textile recycling to optimize the separation and reuse of clothing."
           ],
-          "closing": "Today's edition leaves a clear message: AI is not moving in a single direction. There is investor euphoria and geopolitical caution, productivity gains and labour risks, educational adoption and legal sanctions. The difference between riding the wave and being swept away by it will depend on verification, reskilling and institutional design. We will keep connecting the signals tomorrow."
+          "closing": "The narrative of artificial intelligence advances through contradictions: it democratizes investments but hides gigantic costs, and promises educational inclusion while threatening to widen the gender gap. For professionals, investors, and educators, the challenge is not to adopt the technology uncritically, but to understand its regulatory limits and leverage niche tools, from law to recycling, where AI offers real and verifiable value."
         }
       },
       "sources": [
         {
-          "title": "El 97 % de las empresas españolas valora trasladar sus infraestructuras de IA por la incertidumbre geopolítica - La Voz de Galicia",
-          "url": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxQTmZHZHQxam0ybDEtNWJSMXdQUDduYjFxRFYxNFl0dnJKU00yWjZDVDhWaUgwWWFvUTE3ZXpERnNxa0FENlpnM3I3dzM0ZEhSaUdzVnVBWGNXYllGeFVhNGkyYUFHbEZ5dTF1WmV2b2tjcDlneXVxUW5RMjNHaHUxdEZSRDZxTVJxenRCTnJ0Ym16NHVKME13TnU0a0hoNHB1cnVEdUozeE5taDZPZlhvMHpqeElaN2lfdEkzaVExZ05kZDU3OE1SckJLTmc0dVRhcnpaa0t0SklpVFZqbXV3QWhDbWxpNURnekZvQVdrMFhSLU1lT2lRWDhCRzTSAZgCQVVfeXFMTUNzRFgtNW85M2NNNmhHY0dYYlV3M1Y1bTJkV2FxMk9hVHkwd0pzQXZ0ZXE2Y3BreFN4aG9jZVRKN1V5TThZODgwb1pfUzhLZ0luZUxwZW5FeG5CTHo0Z3JYY0xaaW9GOTRlVExaZzZVNVBmbElMV0liNDZyUk5CaGV0eXhfWFRyQ1NyRjlkUV9RMy05eVFVZ0FsRlQza0l4WEZvSzZEczFFNWRQVkZlTVpLTkpIdXpPOTFvcXBQRmpmUWxxTURZV3lKVTBqR1MyRTE3aFBWNGRMVHZnc0Z2NGJJQVdocl9ZcWg1S1d5NmVUQjIwWmdPR3NqMGRJcjQtTDFkdGNhR3V5TmpjcExCdm1zNFdYU0R4Zg?oc=5",
+          "title": "China no quiere que sus internautas se enamoren de una inteligencia artificial - EL PAÍS",
+          "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNcEVUY21oZVBKbTFNZTN1MjdPQXBSckg0TnJyMnMzTDhRTjVyYVowWXBraWVXeXdpYWdicklOQVF1aDEwOERHMUZQWUZYQkl4ZU80MUxLRnJSemdCa2lWeUJJeUczZHc3V2ZoRG5JUW4yci0zZHRES0ltTy05VjltVDBXZTlINDhOVmZFRThJQm1CUHRQaURCZThaOEFJQUN3LTd2OU5mV2pJQzNKb1RrUUF3RF9SM2pGaTEzQUM0c044SG10TnfSAdoBQVVfeXFMTTZGSkRmSUs4emZDWXl1dFZSWUJuS21NQVlFMmtBU2phSEZoODVhb2h3N0FiVWxkUFdLSklfcVpub05fbzUtbVZUS1NmMVdtS2tXZHZqVGNYOWVJT09rRzlscDJyM3cxUklhWU8tcnNOQXd4Wkh2X0hCTWJoMmRXVjVoZzBjMDRfOEFkTFJaZFdIWFQ4U1l4RVNmNXg1cEoyeGc5eUlBVFNURmZlcDRubXdfa2d0QUhKUGZ5ZEZiTnZRMFZRN0EzZlVybWo2MWlueHVFQ2plSDc0bkE?oc=5",
           "category": "IA General",
-          "publishedAt": "2026-08-17T14:01:29.000Z"
+          "publishedAt": "2026-08-16T03:30:01.000Z"
         },
         {
-          "title": "Catalunya usará la inteligencia artificial para localizar pisos vacíos y sacarlos al mercado - El Periódico",
-          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQSHdVbGp1ZnhaLWVzREIyU0VUUTNmYVBNOGtsaUx6UlhnUzhSbF90TGU5WW5zR2ZpOUUteG11aFFTNzEwSHJtNXdqRGpQTWR2V1ZWUmRHSFEtUzFxZlhhT0JBSHB4d3dsbjZtbkkxOXJSUEVNNHFKdC0zRXliWEdLazRYX19XeXBnN0FIZGZNNi1mT1BSODFveXh2b2tkaGpqLWfSAaIBQVVfeXFMTi1vbUs3NFRvdms5dHN5TWVPNFA5T2I1SWk0MVBBWDFNMTFVSnNSQUsxNDc3aW1KSDQ5bV9HLWNxeFU2ZUpZT3g5Q2J2aTlvaFpjN2JhTWJoVEY5RkYtcGxUNy1RUWVlUzNacXB5SFdsTDdQb2o4NGJia3NTbEF0LTdQNG9aRXFfQjNNMGlSTy1kWW1seXNGbkNUd1phX2thQ3hB?oc=5",
+          "title": "Inteligencia artificial en el reciclaje textil: ¿cómo la IA ayuda a reciclar tu ropa - bbva.com",
+          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNUHNFT2xINXA2dWZsbm81cFllemU5MXlZd1Y4ZkowNnk2bTc1V0ZzZVQwVlByYUxXTXZoR2hBMzdzZUpoVW5RcVR2aE9PcTRiTUw2ZnhSODNld0JKSEVabTRja1BVYU1OQXpoWjBVaU9RS01QenUwNkFxUHhrRlAxWkJibTJaZWlxWmFzMDgxX3FDUnlpeG5FeExnSEo4eDMyelZDQjl5ZnFiSG11MlhWWERQMGtjM2RFMmhiaHpMMA?oc=5",
           "category": "IA General",
-          "publishedAt": "2026-08-17T14:26:45.000Z"
+          "publishedAt": "2026-08-17T02:17:17.000Z"
         },
         {
-          "title": "Inteligencia artificial y mercado de trabajo en España: exposición ocupacional y efectos estimados sobre el empleo - funcas.es",
-          "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNRlRLMU1aV3JWQ0hSVlZNd1VPU3E0dnFnMm9JZU56LUJFcy03STJTU3NMeTl6R25iVUx2U0hPUGpKdzBSblduR0RuVnBzLVA4eVYwOUFXb2ZiMEJFVS12b3dRMkpNWFB4N3F0SjlmVFN3UTFKV3JkVkoxSUZMdkFZc0NHWDExRE5nb3FadUZ5aWRMc2VhWnIwMFp5MWNqQTB0T1kzeEd3bEVLRVhRaDMtc2tETERWczlmTUNHQlk2WlRxNjRIaHFsQWlVbXFjblRaU1ZjWlQydFdQUjk5V1Rn?oc=5",
+          "title": "El empleo se parte en dos: esta es la nueva economía del talento que crea la IA - Expansión",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOT0x6dGJ1SHM2WGZjc2N1ZXBmdEszZlpBT0NYNFZwYjBpaXpiN2MybmFGOXY4TjBVandpaWhNaEZFTnhfeFM0eHdaZHBxN0V6UmJsZ3ZMbjQ3ZW53QmZKQ3ZUaG9hNlRFNjhRbzgyQlAwb2pNdHpFM1pMOXFvVWc3eHhIOTdvTlptbGUxczA2UWdtaGtkSnI5Mkd1Z9IBmwFBVV95cUxOT0x6dGJ1SHM2WGZjc2N1ZXBmdEszZlpBT0NYNFZwYjBpaXpiN2MybmFGOXY4TjBVandpaWhNaEZFTnhfeFM0eHdaZHBxN0V6UmJsZ3ZMbjQ3ZW53QmZKQ3ZUaG9hNlRFNjhRbzgyQlAwb2pNdHpFM1pMOXFvVWc3eHhIOTdvTlptbGUxczA2UWdtaGtkSnI5Mkd1Zw?oc=5",
           "category": "Trabajo y Negocio",
-          "publishedAt": "2026-05-27T11:17:16.000Z"
+          "publishedAt": "2026-08-17T17:04:44.000Z"
         },
         {
-          "title": "IA reduce 44% tareas administrativas y ahorra 60 minutos diarios por empleado - El Ecosistema Startup",
-          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOY0JFT0k0bGUwcC02SExxa0F3b2ZQekRUaEgtTEgyaDJxWlg0SkJTeTdHS0dQaWZUMWxyZ0J6VWE0bkRQVmllYWUwNzFFSFdyQUF3WWlaUUY0d0t6NVBwSjdhdDFsYVY0NVNkRTVYSzZDZlRGME1memlOejkySFlwZ1plNWdCLTJhTWlBUklfSWg0MmFCSlkyellvSE5LcUVCUHBvRmg4S3AtM00?oc=5",
+          "title": "El perfil que está cambiando el marketing con inteligencia artificial - Negocios.com",
+          "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxON0FQSlV6NEtfSXNVR2xKUlkxVkxpc0tBaXliV3BKWkM0NlBkNXlyOWx3LUVjWHRZc2R5bmNxTXFLd3gzcUpxMFpDelBVQVlmNmhkMWN5bHE5ZzFBSjhfcDFBNHJGU0RvR2NfSkhDdmtZMzZQRnB3ZjBhZmk2N1F3TGZ4YkVmY3lTYU5BOGc1b3pwRHVIVzRnUWxvbXo5bVFyYlg0SjgwdmNaNWFCVW95b2dSSmdzaXo0R1FKa2FIMld0djduUlpreNIByAFBVV95cUxON0FQSlV6NEtfSXNVR2xKUlkxVkxpc0tBaXliV3BKWkM0NlBkNXlyOWx3LUVjWHRZc2R5bmNxTXFLd3gzcUpxMFpDelBVQVlmNmhkMWN5bHE5ZzFBSjhfcDFBNHJGU0RvR2NfSkhDdmtZMzZQRnB3ZjBhZmk2N1F3TGZ4YkVmY3lTYU5BOGc1b3pwRHVIVzRnUWxvbXo5bVFyYlg0SjgwdmNaNWFCVW95b2dSSmdzaXo0R1FKa2FIMld0djduUlpreA?oc=5",
           "category": "Trabajo y Negocio",
-          "publishedAt": "2026-08-13T19:27:31.000Z"
+          "publishedAt": "2026-08-18T06:25:15.000Z"
         },
         {
-          "title": "BofA empieza a ver grietas en el boom de la inteligencia artificial - Finanzas.com",
-          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNOFBCSnNkVFZpRXU3TC1fc2dETzVlYk1pbWNiWHF6TmhMby1JYU1ENHVuT0NhMjJUSUJxSXhhMDFrV0l4NmRtT1BWRnZMZU1DVFFtdDUwazNSczBseTliMmMtLWI5UWV4TWtHTjdPbThaZGZzTEhZOVNiUzBHR0R0SG45YXRCN0J6UXBVZlVvUzhFd3dDUFFHN1NKNjRCUWfSAaQBQVVfeXFMTWhzYno4YndBakpuZkhkbVZrODI3YzF1NW1oWUl1RWJTVnViVU5SY3ljTlBybjZfdW00ZkNLTndwVXYyb3dtM2pRenQwVmNkekQxSkJwRTUzSEcyM0xCTG44c2pIRUR5eXJ4MW9JYWRmNzAxMEswT1NjR2dIN0R0YzBZbGF3Z3c4TTJPVmRlODRPTV9pV20yZ1JXZms4V2FxVk1YWkM?oc=5",
+          "title": "La Inteligencia Artificial democratiza Wall Street: ya no sólo ganan los ‘7 Magníficos’ - OkDiario",
+          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOLUR1UGRJQWM1Wk1vU1pjeGtMXzQ2cDVKa05jRmJOVVc0amcxZk4zYzFnM21ETE9naml2QXpPNy1yWDNEVDVOSUJMcTgwcnNuTC1PRFI0amRWdWQtZ2J1Vl80cVFWZEpyODl2dTN0RFZJLXJTd211R2hsZVA0RFdmZWZYUHp2YzJPSFNYQUZ2SDh3dTBZTWRqMXlwV2czMUNHYWJyTGNDcDZybExoU2dyMV81TFpkSjTSAbwBQVVfeXFMT1h4U3RQZjBaQ0d0SWphNjJsZTNVNFlZdUhNejRTQk9TQXluT2lhSXRUdGxkVXlPSnpnYi1EZktHV1hRVW9HcFZJWXd4RlE3YU9tNzJDWEg4cFdRMHFWR1B0Zk00a3gwMEhMWjM4RW93cGE4YWF4cVR1ZWZMX2RjZnRVdEppSmlmUllvQkJ2UVBmTWNlaldoak9JVkJMbmRqenRiYjVUUTgyeHp1OWRxVmRSSWJIU0RaLUI5YVI?oc=5",
           "category": "Finanzas e Inversiones",
-          "publishedAt": "2026-06-20T07:00:00.000Z"
+          "publishedAt": "2026-08-13T20:45:00.000Z"
         },
         {
-          "title": "Boom de la IA: cuánto dinero ganaría Nvidia para sus accionistas con sus inversiones en OpenAI y Anthropic - Ambito",
-          "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQU0loVmN1Y2lNSms5eEFYNlRaalZZRlRWWUVOV2M2bGJWdzQ4akRrSnY0cTExTHk1alFXcVl5TjZxNTdvV1JOdzVyZFJHX19sWmZJaENNbnJZMGNQZ0RDQ2pIVXpGTFVsSE9ScDFmbGFRdVlkYVNyaTJ2T1RjOUhzb2NRUjNaQ0cxRW5LRkdZUjZydmtZUTBXUnJvQmhqX2pINnpSZHdJVnVWUV85RXhJSk9hT2pDc3F3M29BTTNhMDdJY21ITFpKN3dvUdIB0AFBVV95cUxOMEo5ZkFRZXBUYU5jQTg1Q1pWd0d0U0hoZlRIR2p1TkxhTEYwbnlaZk5heERvNHhFb1o5MUctTE5TOGxlOEp4VnVNVjdoT1BFcVdJNWJaZ29TWjdzSW4zYlQwdk5NalVZYmdqMllnaDJ2bGNUbVBiQmhCOVlYano2UUhJTVdfaVl2VWpoVnQ0NWJ5cElIOE02ekVlSFpxTGRvNGI5VXZsaEduZ0FIbFZiUzEwamJteTJKLWpfd1hLYTdqWGJKVkg3VjdrTzQySTZk?oc=5",
+          "title": "El iceberg del gasto en IA, por qué el gasto de las grandes tecnológicas es 3 billones de dólares mayor de lo que parece - Bitfinanzas",
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQcy1Ja1hkWUN6eU0yN0gtYU5QMEhqTnlXUWlPWFZHX0NQVlBNNDNidTJSU05pMGJla3VhbDRYOVpWdTdGQ3JQNmFmb1RNOEI1LUduYXViNlZCSmhvZnRyOFhWRV9ERzA3ZjRGaXVDUWVOUkE4V01zNC1jMUpTSTRXOFVOa0FLMUE?oc=5",
           "category": "Finanzas e Inversiones",
-          "publishedAt": "2026-08-12T20:36:00.000Z"
+          "publishedAt": "2026-08-17T18:32:03.000Z"
         },
         {
-          "title": "La inteligencia artificial acelera el fin de la facturación por horas en los despachos de abogados - Cinco Días",
-          "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQUnkxWmdFQlB4aG96bEJXUnMzQS1LNlBDbW9pNWoxbnZpY1M0ZjNhbm1lTzhHRGVDbm1jQzJrNnVCaVRhOERiaWNWbXJXcDZnNzR4WVNxZzA5UmZOYmdlMHp3Q3FINjFiZTk0eEpKUXF1Q3dKd2trbFpWZ3NKc3k2a0x5OHpFNE1oZGQxTW5hemFnQzZ3Sl8tYTI3M25zYmE5R2lVOWotN29kMnVIZ2JVWHU4Y1V6aWpibFpfSV82RnpPejB4cV9SaElNaVIxQ0d1VUZZeUdUSmFwdmxRNDdhV2JuNTdpNXow0gH8AUFVX3lxTE8tbFFJS0hON1h0UjBNVzdYejVPWGNOdWNfd29aR015alBOM09zRDVsNVBNV1d5ZDViSmFyTXpUcTE4QV9OYmk4enMxcVc1aEt0S1otcFM0QXl2VXQ4VVlUaU9rY29OUUZ4TGd4c0EtcDhvNWQ3Q2JlLURRdTlrYWl5TklDWDFTVjR0V3ozRkNubURKQ24zb2tBMlp2d3NvMzVjS1h0T19mQzB2ZDV6S2tXdzR4c3NKOHBDOXd4MWFNb2o0aEs0Zk1TZGxiOUNYUElhYjBqSzFYZnE0dDU3eGlXMWM5VnFKWXI3M1ZhREM3RGxaaTg0c3ZXaXU4Vg?oc=5",
+          "title": "La inteligencia artificial creada por y para el sector legal que destierra (por fin) las alucinaciones de los tribunales - El Español",
+          "url": "https://news.google.com/rss/articles/CBMilgJBVV95cUxPMndpNFVhdGF5WGZJRUFnVElYaUxudGpuSk10NnNVRHljQjZOdmwxOVpubkh1MXJNbUdfaHBNTGdzQ21FNk5acHplZ3BvWlpnYjdCOW82TXZvQ0xzdk5HTlNsNWlsOVoxZ0M1eEtjbWFSdTczdkt2aDFIeWxzb01XcWNvbDdYQ0NtTHVlazNoaWxGQ1VpRTV0WDFmTHgxUDJQZnF6cUxnbTU3NmtRZlBZT2dJM0tPVUZxWnhyRkk2XzVJdjhCTFpnTDhFd05SM2tJeXhJcW1FM1pJZmtaT0U0cEY2eldIYkxLWTdGVzFhZnEyamtFUU9pV2FidzlRWWNWMFUtSFNzQ2dwRnF6NDVyYnNYdVZTQdIBmwJBVV95cUxOM0RyT2ZPMFg2MGxuSkxSdmtxMklhOWxBTUJ1THFnVW1PdGtWcjBEa2pLMEw3SFFBRXZWOUV5Zm5nTlVTSHlhN1dQUUVud1FmX1JRRHlvNVoxbzFYT0ZNemhBOVozbzhxUWdKY3c4cERWcEdSaXctbVA5dF8ydVhOT1dlWnQ2V0lHVUhILU9nSUpBaldGMF9jVEZQZlZsbmtLaUVDME9OdDBZZmtyd090T0FTVXdQcGlNb3h0TmFCRU9Zb08wU2s3LUlMRUtZVUJvdkhhTUlqRlhhQU43LUE3U2JFc1FpVHZqVHNtWGNTZXZKTU9YVFR3Uy04Tkx6dVUwTFQ2U2hKNWFQaUVNSlQ1ZjBDSEY0dGtZQkhn?oc=5",
           "category": "Legal IA",
-          "publishedAt": "2026-07-24T07:00:00.000Z"
+          "publishedAt": "2026-08-17T00:53:02.000Z"
         },
         {
-          "title": "El TSJC multa con 840 euros a un abogado por citar en un recurso judicial al menos 25 sentencias falsas inventadas por una inteligencia artificial - Infobae",
-          "url": "https://news.google.com/rss/articles/CBMimAJBVV95cUxNajhocmtHdktnalN1bXRZMEdOaW5EQjFRYmI0RHhXX3lvVHpwd2EzVEc3Rk9ZVTJvZHpzMUdYYi1BOWdPU2NFVldTVkdrY1BwN3JkX2N5alNVLUlWZWllLThMN0Q2aVF1UEM5OTlRYUROOVFLUnNtVUJCbFQ2Ynk4WHJkZmtjV0VQR2FOY1JtaFk0SmFGT3hxVXhoVUpKcVlKc1k0empIeFBUeXNzVy1BaEVfMmptakp1cWdrMW1HMXl0d2NTQ0UxTkdBV19LdTV0WlNfLWhVT3lOelNZY0VCZ1V1LWZBOGl3QmdfMFduOEZUS3dnYTRkdHZ4ZDJjUzFTZGFabUlpZ3VIYk9ETkxiZDhZQXNNWkRX0gGzAkFVX3lxTE0tYjVDaUpEOG9VY3NpZV9DV0dqbDFFVEVnbG10RWZ2UC1qdldYTUFOclJWcTMzM1JpS0N2dnJTelVKUGlkd2tzUlo3WXVBd1hwZFlXRnVELWlwSDNNbndydXdjWWV0NHhjUUtMMGpld2IxTDZVbWtXRFR5QndDVkNyZ0xHdWh6cmZ0NzNHcXJVNTZicWtERFFPQ3NvYlVsNW1wSnJzbm9kVmZOMUVnemxYeGQzRW5ZOV9wM0RmbHN1SnNNYk9ROEM5R3dOb2hsRm1SVWZqWEd2cG5haC0zSzNYRUozaWZqSlBSUlNvNmpPNWt1enRLdWVJbGJubmt0a3BWeV9pc21IcHF3WlAtWXp6WEhWRjZac194dExpaUpGa2VVcUh0Y3pVNnNySnNIUlBjTG8?oc=5",
+          "title": "Software para abogados 2026: qué debe tener la herramienta de gestión adecuada para tu despacho - Law&Trends",
+          "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPOHhaZUtmNUlmb010LWZrRmpmUC1MOVZEVURmNzZ0VmpiQ1Vfa2J2Uy0zbDFYSFlHZExXekVwU25sVV9WNmRraHE3RUR0cDhlMmJjTGJlRHFxeWc2WXhMOFNLT1l0b19HUzBLSEVjZ0JLNFdaamZEWVNmeGFJRjB6NGc5TDlJRHJ4TW1hYTdqM2QteW91ZTNRSVJrWm1TdF85cDNnalBEOEZtS0hHaUc5bjVpSzZhTUE1MHU4dkJPOHRIdFE2dmc0dGlibUxVb0NMbk9qRVhhalZ1OTg?oc=5",
           "category": "Legal IA",
-          "publishedAt": "2026-07-29T07:00:00.000Z"
+          "publishedAt": "2026-08-16T22:45:00.000Z"
         },
         {
-          "title": "Laureate impulsa el aprendizaje con IA en sus universidades de México y Perú con Google Cloud - Portal ERP",
-          "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQU1JkLUNCQzBJU0QzWjl6aEZfRzRBV3diTDMxd2VvMWxlbzFoa2hkcFpKM2JqQjVqaVUzZUFrQjJSUUxiT1ZIb1dEbUNLQkktTkZvV3RRSm16Q0FrclZkMnZxTHZObjlSVm5TNFNWVVdpZmowMEhYNlluTzFFS3FINldIU3UwdWhfclpLckNLQ1RCWDl5ZmpyTzlWbm5qRWpGUnphRm5LeVR2Vm1nb29KWW00b1p5ZndwRW9NdkZObmhHU1Fz?oc=5",
+          "title": "Las adolescentes parten con desventaja en el aprendizaje de la inteligencia artificial - EL PAÍS",
+          "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNamF6MUsyWVVoR2lZY2hKLUlySEVVRmZibjgxQVlsRUJ3UHhoQmd5SG1SR3JrTnlKeVhjZTF0bzdmb3k1RUU3bmFtODRIczJSX2tNNVpFcWVORFdTVmc3WDQ0bXJ1RVFnblYtQ09YNHlObzNDeUstVlBnTWpQeF9MajFQdHdzMXRZYk1iSUgxbV9SSmI1YndUU2VyVDFmZTh3TTl0NVJfWFJmbmFLUFY2akZXSkVzdGdOalhpTGRLZ0wxek13dXo0blRXNNIB3wFBVV95cUxNRmluVjVXSndhMzg3VTNoSXNPbWNyZnI4Q01kOTRZaWVlWXBTYkx2RkhrTFVWdFlobEY0amZEUHYtRVFYMWpTdzZPdXdaNU94VFRHQ3BjSERGLVZCWnFHNUtvd2xBRWJ4ZUVkRjNHeEkwQjlmLWN1YVQ3RzNVc3FCZEZxdEFQWEF4Q0cwc2JTRVZRRVNFYTFjVlRoSFdqSHZSbE5QajhzVmdKQk4tQUFZXzFTTjVXaWVKVXRpM0EzY3ZPLURqd2U3d0Q5eFNGZUgweldkUUxBbXBscXhLSzV3?oc=5",
           "category": "Educación IA",
-          "publishedAt": "2026-08-12T18:57:25.000Z"
+          "publishedAt": "2026-08-17T03:30:01.000Z"
         },
         {
-          "title": "El dilema de la universidad ante la IA: ¿oportunidad educativa o amenaza para el aprendizaje? - Vozpopuli",
-          "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOaUlaNWt6ZkN0MnZ2UV9hYmFTZFZYdmlHY0hVZ3plLUFrMnJVbDFDbzMzT0tYOTQzejNIclBsLVl2U04wUHZDOVU0TmFoZVJGUGVTY0NwTndFeENrOEFiUXBBZ3Bpb04wUUZXdGFQaXdzSWM3dk05Q3laZm5UNU96YTVqUjdONGJiejVqUGZJOVc3Y1FGVVVUYzFIa0R2VjhjNHlFQnVabENkVEgyQng3dGRvT0F3OVQtM2daS1A3MUNLUVVzMC1mU2MxYi1wR19xQjl4c9IB2gFBVV95cUxPYnkwUGRQcEUxOVhQNUNpMWRxVEJBSTZyeV9SRVBqeUg5VjJMSkxxRFJwa0kwVFJsTjFQUnhqdERZcm1IX1lsbDRURVhrY1hhOXctdEpNd25KbWRLSjRYU2U0dDk3NkQzQlNOM092WXNOdGsxV2d0aEoyQ3RRR1ZHaTdFZk9QSzNnUENoLWxNNENCVXpzQndYQzhnS2lOc2hpdFpJZ1ZLd25MaGp6MEd5S2hKWW80VGxCY3BBRENzWjdodXQtN0ZyeEdxcjNTdTFWZjhCMVhLR2N4dw?oc=5",
+          "title": "Madrid incorpora la robótica e IA a alumnos con necesidades especiales de diez centros - Servimedia",
+          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPMF9DY0IxcndnZ3hJMTJHSXgwWGpvdVhFdzJSb19qUHNrRnQweWFqOVlwYkRFRDF1eEFDWUtpQVRfTUw1b1Q5c0lWYlVlTTIzOFkwSHZCUEd3Z3VwelphNTZDRkRNNkdxcEtCaWtsc19OZ3Y0OVFiRVdkVjlYaXJxM0tBVUI1YW85Q1Z1QmQtd3ZoSWg5MHI4X3Q2UFBNRXBtVE9qZnlKT1hveVpVaVNtRDdwcmFtYnNQZC1nRQ?oc=5",
           "category": "Educación IA",
-          "publishedAt": "2026-07-12T07:00:00.000Z"
+          "publishedAt": "2026-08-17T16:08:00.000Z"
         }
       ]
     }
