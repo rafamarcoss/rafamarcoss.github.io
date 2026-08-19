@@ -1,42 +1,42 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-19T01:15:01.213Z",
+  "generatedAt": "2026-08-19T01:21:09.733Z",
   "host": "automatizacion",
   "health": "operational",
   "summary": "VM y n8n responden correctamente",
   "metrics": {
-    "uptimeSeconds": 92498,
-    "load1": 0.13,
-    "memoryUsedBytes": 1174765568,
+    "uptimeSeconds": 92866,
+    "load1": 0.06,
+    "memoryUsedBytes": 1204772864,
     "memoryTotalBytes": 8941510656,
-    "diskUsedBytes": 12374654976,
+    "diskUsedBytes": 12375674880,
     "diskTotalBytes": 25180848128,
     "containerRestarts": 0,
     "n8nVersion": "2.35.3",
-    "n8nLatencyMs": 10,
+    "n8nLatencyMs": 35,
     "activeWorkflows": 3,
-    "executions24h": 42,
-    "successfulExecutions24h": 32,
+    "executions24h": 43,
+    "successfulExecutions24h": 33,
     "failedExecutions24h": 10,
     "lastExecution": {
-      "startedAt": "2026-08-19 01:13:25.848",
-      "stoppedAt": "2026-08-19 01:13:38.349",
+      "startedAt": "2026-08-19 01:18:32.964",
+      "stoppedAt": "2026-08-19 01:18:59.431",
       "status": "success",
       "workflowId": "RafaOpsNightSup1"
     }
   },
   "agentLoop": {
     "schemaVersion": 1,
-    "runId": "run_7913bbc7289d",
-    "status": "working",
+    "runId": "run_5404dce9cf53",
+    "status": "ready_for_review",
     "goalLabel": "RafaOps smoke test",
     "iteration": 1,
     "maxIterations": 2,
-    "score": 0,
+    "score": 95,
     "targetScore": 85,
-    "updatedAt": "2026-08-19T01:14:47.471Z",
-    "worktreeId": "f9fe41f4-8fe9-40fe-929f-c4edb6b42eb3::C:/Users/Rafacha/orca/workspaces/rafamarcoss.github.io/night-bbc7289d",
-    "summary": "Codex sigue trabajando."
+    "updatedAt": "2026-08-19T01:18:59.45Z",
+    "worktreeName": "night-dce9cf53",
+    "summary": "NIGHT_AGENT_SMOKE.md was created as the only change; it includes the required no-production-deployment statement and no secrets/external links. No existing files were modified."
   },
   "services": [
     {
@@ -55,13 +55,13 @@
       "id": "n8n-http",
       "name": "n8n healthz",
       "status": "healthy",
-      "detail": "HTTP 200 · 10 ms"
+      "detail": "HTTP 200 · 35 ms"
     },
     {
       "id": "n8n-workflows",
       "name": "Workflows n8n",
       "status": "healthy",
-      "detail": "3 activos · 42 ejecuciones/24 h"
+      "detail": "3 activos · 43 ejecuciones/24 h"
     },
     {
       "id": "power",
@@ -72,8 +72,8 @@
     {
       "id": "night-agent",
       "name": "Night agent",
-      "status": "healthy",
-      "detail": "working · iteración 1/2"
+      "status": "unknown",
+      "detail": "ready_for_review · iteración 1/2"
     }
   ]
 }
