@@ -5,6 +5,7 @@ const STATUS_PATH = new URL('../rafaops/status.json', import.meta.url);
 const TELEMETRY_PATH = new URL('../rafaops/ai-signal-run.json', import.meta.url);
 const FEED_PATH = new URL('../news/feed.json', import.meta.url);
 const SITE_URL = process.env.RAFAOPS_SITE_URL || 'https://rafaelmarcos.tech';
+const PRODUCTION_ARTICLE_MODEL = 'deepseek-v4-pro';
 const startedAt = Date.now();
 
 async function readJson(path, fallback = null) {
@@ -163,7 +164,7 @@ function buildPipeline(telemetry) {
   const pipeline = [
     { id: 'collect', name: 'RSS collector', type: 'tool', model: null },
     { id: 'select-top-10', name: 'News selector', type: 'agent', model: telemetry?.models?.selection || 'deepseek-v4-flash' },
-    { id: 'write-spanish-edition', name: 'Editorial writer', type: 'agent', model: telemetry?.models?.article || 'deepseek-v4-pro' },
+    { id: 'write-spanish-edition', name: 'Editorial writer', type: 'agent', model: PRODUCTION_ARTICLE_MODEL },
     { id: 'validate', name: 'Schema validator', type: 'guardrail', model: null },
     { id: 'translate-english-edition', name: 'Translation agent', type: 'agent', model: telemetry?.models?.translation || 'deepseek-v4-flash' },
     { id: 'publish', name: 'Git publisher', type: 'tool', model: null },
@@ -241,7 +242,7 @@ async function main() {
     checks,
     pipeline: buildPipeline(telemetry),
     routing: {
-      worker: telemetry?.models?.article || 'deepseek-v4-pro',
+      worker: PRODUCTION_ARTICLE_MODEL,
       supervisor: telemetry?.models?.supervisor || 'glm-5.2',
       fallback: telemetry?.models?.fallback || 'deepseek-v4-flash',
       policy: '2 reintentos de transporte → supervisor independiente → fallback de modelo',
