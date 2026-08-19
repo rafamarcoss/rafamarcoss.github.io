@@ -35,6 +35,7 @@
     .pipeline{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));overflow:visible}.step{min-width:0;flex:initial}
     @media(max-width:640px){.pipeline{grid-template-columns:repeat(2,minmax(0,1fr))}}
     .vm-board{padding:1.2rem}.vm-summary{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.25rem .2rem 1rem}.vm-identity{display:flex;align-items:center;gap:.7rem}.vm-icon{width:42px;height:42px;display:grid;place-items:center;border:1px solid rgba(110,156,255,.24);border-radius:13px;color:var(--blue);background:rgba(110,156,255,.08);font:700 .62rem var(--mono)}.vm-name{font:700 .9rem var(--display)}.vm-heartbeat{display:block;margin-top:.25rem;color:var(--muted);font:500 .62rem var(--mono)}.vm-state{padding:.42rem .62rem;border:1px solid rgba(154,230,180,.22);border-radius:999px;color:var(--mint);font:700 .58rem var(--mono);text-transform:uppercase}.vm-state.stale,.vm-state.incident{border-color:rgba(255,107,107,.28);color:var(--red)}.vm-resources{display:grid;grid-template-columns:repeat(3,1fr);gap:.55rem;margin-bottom:.8rem}.resource{padding:.85rem;border:1px solid var(--line);border-radius:15px;background:rgba(5,18,19,.42)}.resource-label{color:var(--muted);font:700 .57rem var(--mono);text-transform:uppercase}.resource-value{display:block;margin-top:.5rem;font:700 1rem var(--display)}.resource-track{height:4px;margin-top:.65rem;border-radius:99px;background:rgba(144,167,165,.12);overflow:hidden}.resource-fill{height:100%;border-radius:inherit;background:linear-gradient(90deg,var(--teal),var(--blue))}.vm-services{display:grid}.vm-services .check{padding:.72rem .2rem}.vm-services .check-icon{width:30px;height:30px}.vm-unavailable{padding:2rem .2rem;color:var(--muted);font-size:.76rem}@media(max-width:520px){.vm-resources{grid-template-columns:1fr}.vm-summary{align-items:flex-start}.vm-state{white-space:nowrap}}
+    .agent-board{padding:1.25rem}.agent-summary{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:1rem}.agent-mark{width:46px;height:46px;display:grid;place-items:center;border:1px solid rgba(255,156,101,.25);border-radius:14px;color:var(--orange);background:rgba(255,156,101,.08);font:700 .62rem var(--mono)}.agent-title{font:750 .95rem var(--display)}.agent-meta{display:block;margin-top:.3rem;color:var(--muted);font:500 .62rem var(--mono)}.agent-score{font:750 1.7rem var(--display);letter-spacing:-.06em}.agent-score small{color:var(--muted);font:500 .62rem var(--mono)}.agent-progress{height:7px;margin-top:1.1rem;border-radius:99px;background:rgba(144,167,165,.12);overflow:hidden}.agent-progress span{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,var(--orange),var(--mint))}.agent-copy{margin-top:1rem;color:var(--muted);font-size:.73rem;line-height:1.55}.agent-footer{display:flex;justify-content:space-between;gap:1rem;margin-top:1rem;padding-top:1rem;border-top:1px solid var(--line);color:var(--muted);font:500 .6rem var(--mono)}@media(max-width:520px){.agent-summary{grid-template-columns:auto 1fr}.agent-score{grid-column:1/-1}.agent-footer{flex-direction:column}}
   </style>
 </head>
 <body>
@@ -85,6 +86,11 @@
       </article>
 
       <article class="panel">
+        <div class="panel-head"><div><span class="panel-kicker">DeepSeek → Orca → Codex</span><h2 data-i18n="nightTitle">Agente nocturno</h2></div><p class="panel-note" data-i18n="nightNote">Itera con tests y deja el resultado listo para revisión humana.</p></div>
+        <div id="agent-board" class="agent-board"><div class="vm-unavailable loading">Esperando una ejecución…</div></div>
+      </article>
+
+      <article class="panel">
         <div class="panel-head"><div><span class="panel-kicker">Recovery policy</span><h2 data-i18n="routing">Enrutamiento de modelos</h2></div><p class="panel-note" data-i18n="routingNote">El modelo caro entra donde aporta razonamiento.</p></div>
         <div id="routing" class="routing"></div>
         <p id="policy" class="policy">—</p>
@@ -121,7 +127,7 @@
   <script>
     const translations = {
       en: {
-        news:'View AI Signal ↗',portfolio:'Portfolio',eyebrow:'Agentic operations control plane',heroA:'Systems fail.',heroB:'Agents respond.',lead:'RafaOps watches my real automations, gathers evidence, supervises retries and changes model when an execution fails validation.',availability:'Availability',realChecks:'real checks',healthy:'Healthy checks',incidents:'Open incidents',humanGate:'with a human approval gate',recoveries:'Recoveries',supervised:'supervised by another agent',lastRun:'Latest run',pipeline:'Agentic pipeline',pipelineNote:'Every block has state, model, validation and a recovery strategy.',systems:'Watched systems',refresh:'Refreshes automatically.',vmTitle:'automatizacion machine',vmNote:'Telemetry sent from Ubuntu without exposing ports.',routing:'Model routing',routingNote:'The expensive model is used where reasoning matters.',incidentHistory:'Incident history',incidentNote:'Traceable detection, recovery and closure.',runs:'Latest rounds',runsNote:'GitHub Actions and manual executions.',controlTitle:'Control before autonomy.',controlCopy:'Agents may investigate, retry and propose a recovery. Publishing code or accepting a fix still requires a human gate.',guardRetry:'Bounded retries',guardRetryCopy:'Two transport attempts. Then the strategy changes.',guardSupervisor:'Independent agent',guardSupervisorCopy:'It receives the validation error and rebuilds the output.',guardFallback:'Model fallback',guardFallbackCopy:'One provider cannot block the whole publication.',guardAudit:'Verifiable trace',guardAuditCopy:'Duration, tokens, errors and recoveries are recorded.'
+        news:'View AI Signal ↗',portfolio:'Portfolio',eyebrow:'Agentic operations control plane',heroA:'Systems fail.',heroB:'Agents respond.',lead:'RafaOps watches my real automations, gathers evidence, supervises retries and changes model when an execution fails validation.',availability:'Availability',realChecks:'real checks',healthy:'Healthy checks',incidents:'Open incidents',humanGate:'with a human approval gate',recoveries:'Recoveries',supervised:'supervised by another agent',lastRun:'Latest run',pipeline:'Agentic pipeline',pipelineNote:'Every block has state, model, validation and a recovery strategy.',systems:'Watched systems',refresh:'Refreshes automatically.',vmTitle:'automatizacion machine',vmNote:'Telemetry sent from Ubuntu without exposing ports.',nightTitle:'Night agent',nightNote:'Iterates with tests and leaves the result ready for human review.',routing:'Model routing',routingNote:'The expensive model is used where reasoning matters.',incidentHistory:'Incident history',incidentNote:'Traceable detection, recovery and closure.',runs:'Latest rounds',runsNote:'GitHub Actions and manual executions.',controlTitle:'Control before autonomy.',controlCopy:'Agents may investigate, retry and propose a recovery. Publishing code or accepting a fix still requires a human gate.',guardRetry:'Bounded retries',guardRetryCopy:'Two transport attempts. Then the strategy changes.',guardSupervisor:'Independent agent',guardSupervisorCopy:'It receives the validation error and rebuilds the output.',guardFallback:'Model fallback',guardFallbackCopy:'One provider cannot block the whole publication.',guardAudit:'Verifiable trace',guardAuditCopy:'Duration, tokens, errors and recoveries are recorded.'
       }
     };
     const escapeHTML = value => String(value ?? '').replace(/[&<>'"]/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
@@ -159,8 +165,9 @@
         : (currentLang === 'en' ? 'Incident detected' : 'Incidente detectado');
       const mainMeasured = (data.checks || []).filter(item => ['healthy','failed'].includes(item.status));
       const mainHealthy = mainMeasured.filter(item => item.status === 'healthy').length;
-      const vmHealthy = (vm?.services || []).filter(item => item.status === 'healthy').length;
-      const vmTotal = (vm?.services || []).length;
+      const vmMeasured = (vm?.services || []).filter(item => ['healthy','failed'].includes(item.status));
+      const vmHealthy = vmMeasured.filter(item => item.status === 'healthy').length;
+      const vmTotal = vmMeasured.length;
       const healthyTotal = mainHealthy + vmHealthy;
       const observedTotal = mainMeasured.length + vmTotal;
       document.getElementById('availability').textContent = `${observedTotal ? Math.round(healthyTotal / observedTotal * 1000) / 10 : 0}%`;
@@ -184,6 +191,7 @@
       </a>`).join('');
 
       renderVm(vm, vmAgeMinutes);
+      renderAgent(vm?.agentLoop);
 
       const routes = [
         ['worker', currentLang === 'en' ? 'Worker' : 'Worker'],
@@ -218,6 +226,24 @@
           <article class="resource"><span class="resource-label">Disk</span><strong class="resource-value">${disk}%</strong><div class="resource-track"><div class="resource-fill" style="width:${disk}%"></div></div></article>
         </div>
         <div class="vm-services">${(vm.services || []).map(item => `<div class="check ${escapeHTML(item.status)}"><span class="check-icon">${item.status === 'healthy' ? 'OK' : item.status === 'failed' ? '!!' : '—'}</span><span><strong class="check-title">${escapeHTML(item.name)}</strong><span class="check-detail">${escapeHTML(item.detail)}</span></span><span class="check-latency">${escapeHTML(item.status)}</span></div>`).join('')}</div>`;
+    }
+
+    function renderAgent(agent) {
+      const board = document.getElementById('agent-board');
+      if (!agent) {
+        board.innerHTML = `<div class="vm-unavailable">${currentLang === 'en' ? 'No agent runs recorded yet.' : 'Todavía no hay ejecuciones registradas.'}</div>`;
+        return;
+      }
+      const active = ['planning','dispatching','working'].includes(agent.status);
+      const statusLabels = currentLang === 'en'
+        ? {ready_for_review:'ready for review',needs_human_review:'human review',working:'working',planning:'planning',dispatching:'dispatching',failed:'failed',stopped:'stopped'}
+        : {ready_for_review:'listo para revisar',needs_human_review:'revisión humana',working:'trabajando',planning:'planificando',dispatching:'asignando',failed:'fallido',stopped:'detenido'};
+      const label = statusLabels[agent.status] || agent.status;
+      const progress = agent.maxIterations ? Math.min(100, Math.round(agent.iteration / agent.maxIterations * 100)) : 0;
+      board.innerHTML = `<div class="agent-summary"><span class="agent-mark">AI</span><span><strong class="agent-title">${escapeHTML(agent.goalLabel || 'Night agent')}</strong><small class="agent-meta">${escapeHTML(label)} · ${escapeHTML(agent.worktreeName || 'worktree pending')}</small></span><span class="agent-score">${agent.score ?? '—'}<small>/100</small></span></div>
+        <div class="agent-progress"><span style="width:${progress}%"></span></div>
+        <p class="agent-copy">${escapeHTML(agent.summary || '')}</p>
+        <div class="agent-footer"><span>${escapeHTML(agent.runId || '—')}</span><span>${currentLang === 'en' ? 'iteration' : 'iteración'} ${agent.iteration || 0}/${agent.maxIterations || 0}${active ? (currentLang === 'en' ? ' · live' : ' · en curso') : (currentLang === 'en' ? ' · human gate' : ' · revisión humana')}</span></div>`;
     }
 
     async function loadVmStatus() {

@@ -1,0 +1,151 @@
+[
+  {
+    "id": "RafaOpsNightSup1",
+    "name": "RafaOps - Night Agent Supervisor",
+    "active": false,
+    "nodes": [
+      {
+        "parameters": {
+          "httpMethod": "POST",
+          "path": "rafaops-night-supervisor",
+          "responseMode": "lastNode",
+          "options": {}
+        },
+        "id": "6c727b80-4a47-4dd2-83d3-6176c0649081",
+        "name": "Receive Agent State",
+        "type": "n8n-nodes-base.webhook",
+        "typeVersion": 2,
+        "position": [-760, 0],
+        "webhookId": "rafaops-night-supervisor"
+      },
+      {
+        "parameters": {
+          "jsCode": "const raw = $json.body ?? $json;\nconst phase = ['plan', 'review', 'question'].includes(raw.phase) ? raw.phase : 'plan';\nconst goal = String(raw.goal || '').trim().slice(0, 12000);\nif (goal.length < 12) throw new Error('goal must contain at least 12 characters');\nconst iteration = Math.max(0, Math.min(20, Number(raw.iteration) || 0));\nconst maxIterations = Math.max(1, Math.min(12, Number(raw.maxIterations) || 4));\nconst acceptance = Array.isArray(raw.acceptance) ? raw.acceptance.slice(0, 12).map(String) : [];\nconst history = Array.isArray(raw.history) ? raw.history.slice(-6) : [];\nconst evidence = raw.evidence && typeof raw.evidence === 'object' ? raw.evidence : {};\nconst question = String(raw.question || '').slice(0, 4000);\nconst schema = { decision: 'continue|accept|human_review', score: 0, taskSpec: 'one focused implementation step; empty when accepted', summary: 'short factual assessment', risks: ['concrete risk'], acceptanceEvidence: ['verified fact'], answer: 'only for question phase' };\nconst system = 'You are the planner and independent supervisor for a long-running coding loop. Codex is your implementation tool. Return JSON only. Never request shell commands, credentials, publishing, merging, destructive filesystem operations, purchases, messages to third parties, or changes outside the assigned repository. Prefer one small verifiable step. Accept only from supplied evidence; do not trust a worker claim without tests or a diff. If evidence is insufficient or a decision needs the owner, choose human_review.';\nconst user = `Phase: ${phase}\\nIteration: ${iteration}/${maxIterations}\\nGoal: ${goal}\\nAcceptance criteria: ${JSON.stringify(acceptance)}\\nHistory: ${JSON.stringify(history)}\\nEvidence: ${JSON.stringify(evidence).slice(0, 18000)}\\nWorker question: ${question}\\n\\nReturn exactly this schema: ${JSON.stringify(schema)}. For plan, produce the first taskSpec. For review, score 0-100 and choose accept only when every acceptance criterion has evidence. For question, put the safest bounded answer in answer; choose human_review when credentials, external side effects, destructive actions or unclear product decisions are involved.`;\nreturn [{ json: { phase, goal, iteration, maxIterations, acceptance, history, evidence, question, system, user, primaryBody: { model: 'deepseek-v4-pro', messages: [{ role: 'system', content: system }, { role: 'user', content: user }], temperature: 0.15, max_tokens: 5000, reasoning_effort: 'high', response_format: { type: 'json_object' } } } }];"
+        },
+        "id": "2caf6320-4112-4562-aea8-477c21879e92",
+        "name": "Build Contract",
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [-540, 0]
+      },
+      {
+        "parameters": {
+          "method": "POST",
+          "url": "https://opencode.ai/zen/go/v1/chat/completions",
+          "sendHeaders": true,
+          "headerParameters": {
+            "parameters": [
+              { "name": "Authorization", "value": "={{ 'Bearer ' + $env.OPENCODE_API_KEY }}" },
+              { "name": "Content-Type", "value": "application/json" }
+            ]
+          },
+          "sendBody": true,
+          "contentType": "raw",
+          "rawContentType": "application/json",
+          "body": "={{ JSON.stringify($json.primaryBody) }}",
+          "options": { "timeout": 240000 }
+        },
+        "id": "f40385dc-ae9f-4fdc-9ac8-513d14049342",
+        "name": "DeepSeek V4 Pro",
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 4.2,
+        "position": [-300, 0],
+        "onError": "continueRegularOutput"
+      },
+      {
+        "parameters": {
+          "jsCode": "const contract = $items('Build Contract')[0].json;\nconst message = $json.choices?.[0]?.message;\nconst raw = String(message?.content || '').trim().replace(/^```(?:json)?\\s*/i, '').replace(/\\s*```$/, '');\nlet result = null;\nlet primaryValid = false;\ntry {\n  result = JSON.parse(raw);\n  const decisionOk = ['continue', 'accept', 'human_review'].includes(result.decision);\n  const scoreOk = Number.isFinite(Number(result.score));\n  const taskOk = result.decision !== 'continue' || String(result.taskSpec || '').trim().length >= 12;\n  const questionOk = contract.phase !== 'question' || result.decision === 'human_review' || String(result.answer || '').trim().length >= 3;\n  primaryValid = decisionOk && scoreOk && taskOk && questionOk;\n} catch {}\nconst fallbackSystem = contract.system + ' The primary planner response was invalid. Recover the orchestration decision from the original request and return the required JSON schema.';\nconst fallbackUser = contract.user + `\\n\\nInvalid primary response: ${raw.slice(0, 6000) || JSON.stringify($json).slice(0, 2000)}`;\nreturn [{ json: { ...contract, primaryValid, decisionResult: primaryValid ? result : null, modelUsed: primaryValid ? 'deepseek-v4-pro' : null, fallbackBody: { model: 'deepseek-v4-flash', messages: [{ role: 'system', content: fallbackSystem }, { role: 'user', content: fallbackUser }], temperature: 0.1, max_tokens: 4000, reasoning_effort: 'low', response_format: { type: 'json_object' } } } }];"
+        },
+        "id": "0de794e2-f0ad-41ee-8569-aaad7e1132c7",
+        "name": "Validate Primary",
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [-60, 0]
+      },
+      {
+        "parameters": {
+          "conditions": {
+            "options": { "caseSensitive": true, "leftValue": "", "typeValidation": "strict", "version": 2 },
+            "conditions": [
+              {
+                "id": "1cf5c0ad-fbf2-46bc-9698-02c118b6062b",
+                "leftValue": "={{ $json.primaryValid }}",
+                "rightValue": true,
+                "operator": { "type": "boolean", "operation": "true", "singleValue": true }
+              }
+            ],
+            "combinator": "and"
+          },
+          "options": {}
+        },
+        "id": "d6ea7f52-e8a8-402e-9335-06a5920aaea1",
+        "name": "Primary Valid?",
+        "type": "n8n-nodes-base.if",
+        "typeVersion": 2.2,
+        "position": [180, 0]
+      },
+      {
+        "parameters": {
+          "method": "POST",
+          "url": "https://opencode.ai/zen/go/v1/chat/completions",
+          "sendHeaders": true,
+          "headerParameters": {
+            "parameters": [
+              { "name": "Authorization", "value": "={{ 'Bearer ' + $env.OPENCODE_API_KEY }}" },
+              { "name": "Content-Type", "value": "application/json" }
+            ]
+          },
+          "sendBody": true,
+          "contentType": "raw",
+          "rawContentType": "application/json",
+          "body": "={{ JSON.stringify($json.fallbackBody) }}",
+          "options": { "timeout": 180000 }
+        },
+        "id": "cab95c17-5505-49a0-bc5e-714bc3672aa0",
+        "name": "DeepSeek V4 Flash Fallback",
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 4.2,
+        "position": [420, 120],
+        "onError": "continueRegularOutput"
+      },
+      {
+        "parameters": {
+          "jsCode": "const contract = $items('Validate Primary')[0].json;\nconst message = $json.choices?.[0]?.message;\nconst raw = String(message?.content || '').trim().replace(/^```(?:json)?\\s*/i, '').replace(/\\s*```$/, '');\nlet result;\nlet valid = false;\ntry {\n  result = JSON.parse(raw);\n  valid = ['continue', 'accept', 'human_review'].includes(result.decision) && Number.isFinite(Number(result.score)) && (result.decision !== 'continue' || String(result.taskSpec || '').trim().length >= 12);\n} catch {}\nif (!valid) result = { decision: 'human_review', score: 0, taskSpec: '', summary: 'Los dos modelos devolvieron una respuesta no válida.', risks: ['Planner unavailable'], acceptanceEvidence: [], answer: '' };\nreturn [{ json: { ...contract, decisionResult: result, modelUsed: valid ? 'deepseek-v4-flash' : 'safe-static-fallback' } }];"
+        },
+        "id": "9f48d605-272f-45ae-807e-1d0c813cc1db",
+        "name": "Validate Fallback",
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [660, 120]
+      },
+      {
+        "parameters": {
+          "jsCode": "const result = $json.decisionResult || {};\nreturn [{ json: { ok: true, phase: $json.phase, decision: result.decision || 'human_review', score: Math.max(0, Math.min(100, Number(result.score) || 0)), taskSpec: String(result.taskSpec || '').slice(0, 12000), summary: String(result.summary || '').slice(0, 4000), risks: Array.isArray(result.risks) ? result.risks.slice(0, 12).map(String) : [], acceptanceEvidence: Array.isArray(result.acceptanceEvidence) ? result.acceptanceEvidence.slice(0, 20).map(String) : [], answer: String(result.answer || '').slice(0, 4000), meta: { model: $json.modelUsed || 'unknown', iteration: $json.iteration, generatedAt: new Date().toISOString() } } }];"
+        },
+        "id": "7d1cc642-5caa-4440-b904-eb8889d251fa",
+        "name": "Return Decision",
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [900, 0]
+      }
+    ],
+    "connections": {
+      "Receive Agent State": { "main": [[{ "node": "Build Contract", "type": "main", "index": 0 }]] },
+      "Build Contract": { "main": [[{ "node": "DeepSeek V4 Pro", "type": "main", "index": 0 }]] },
+      "DeepSeek V4 Pro": { "main": [[{ "node": "Validate Primary", "type": "main", "index": 0 }]] },
+      "Validate Primary": { "main": [[{ "node": "Primary Valid?", "type": "main", "index": 0 }]] },
+      "Primary Valid?": {
+        "main": [
+          [{ "node": "Return Decision", "type": "main", "index": 0 }],
+          [{ "node": "DeepSeek V4 Flash Fallback", "type": "main", "index": 0 }]
+        ]
+      },
+      "DeepSeek V4 Flash Fallback": { "main": [[{ "node": "Validate Fallback", "type": "main", "index": 0 }]] },
+      "Validate Fallback": { "main": [[{ "node": "Return Decision", "type": "main", "index": 0 }]] }
+    },
+    "settings": { "executionOrder": "v1" },
+    "staticData": null,
+    "pinData": {},
+    "tags": []
+  }
+]
