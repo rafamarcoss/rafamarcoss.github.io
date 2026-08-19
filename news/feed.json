@@ -1,7 +1,146 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T11:55:59.933Z",
+  "generatedAt": "2026-08-19T07:49:46.167Z",
   "articles": [
+    {
+      "slug": "ai-signal-2026-08-19",
+      "date": "2026-08-19",
+      "generatedAt": "2026-08-19T07:49:46.167Z",
+      "categories": [
+        "IA General",
+        "Trabajo y Negocio",
+        "Finanzas e Inversiones",
+        "Legal IA",
+        "Educación IA"
+      ],
+      "readingMinutes": 4,
+      "content": {
+        "es": {
+          "title": "IA: gasto oculto, talento dividido y brecha educativa",
+          "dek": "Las grandes tecnológicas gastan 3 billones más de lo que parece, mientras el empleo se parte en dos. China regula los lazos emocionales con chatbots y la educación muestra grietas de género.",
+          "intro": "Desde los mercados financieros hasta las aulas, la inteligencia artificial está generando tanto oportunidades como tensiones. En esta edición conectamos los puntos entre el gasto oculto de las tecnológicas, la polarización del empleo, las innovaciones legales y las brechas educativas.",
+          "sections": [
+            {
+              "heading": "Mercados: el iceberg del gasto y las apuestas privadas",
+              "body": "Bitfinanzas revela que el gasto real de las grandes tecnológicas en IA es 3 billones de dólares mayor de lo que parece, debido a costes ocultos que no aparecen en los balances tradicionales. Mientras tanto, Finanzas.com explica cómo una inversión en Anthropic puede multiplicarse por 4 antes de su salida a bolsa, destacando el potencial de retorno en startups de IA privadas. Esta tensión entre enormes desembolsos de capital y posibles ganancias descomunales obliga a los inversores a evaluar con lupa cada oportunidad, pues no todas las apuestas resultarán rentables."
+            },
+            {
+              "heading": "Trabajo: la nueva economía del talento parte el empleo en dos",
+              "body": "Expansión describe cómo la IA está dividiendo el empleo en dos economías: una de alta demanda de talento tecnológico y otra de trabajos más rutinarios y vulnerables a la automatización. Seguritecnia ofrece una guía práctica para identificar qué trabajos están a salvo de la IA, un recurso útil para profesionales que quieren anticipar cambios en su sector. Además, Negocios.com enumera seis errores comunes en la formación empresarial en IA que frenan la productividad; corregirlos es clave para que las organizaciones no amplíen la brecha de talento."
+            },
+            {
+              "heading": "Educación: herramientas al alcance, pero con brecha de género",
+              "body": "Unite.AI presenta una lista de las 10 mejores herramientas de IA para la educación en agosto de 2026, con opciones para personalizar el aprendizaje y automatizar tareas docentes. Sin embargo, EL PAÍS advierte que las adolescentes parten con desventaja en el aprendizaje de la IA debido a factores sociales y educativos, lo que exige políticas específicas para cerrar la brecha de género. La disponibilidad de tecnología no garantiza por sí sola una adopción equitativa; es necesario un esfuerzo deliberado en las aulas y en el diseño de programas inclusivos."
+            },
+            {
+              "heading": "Regulación y confianza: de China a los tribunales",
+              "body": "China está tomando medidas para evitar que sus internautas se enamoren de inteligencias artificiales, señal de preocupación por el impacto emocional de estos sistemas. En el ámbito legal, El Español informa sobre una IA diseñada para el sector que elimina las alucinaciones en los tribunales, mientras que Dentons aborda cómo la IA está transformando las fusiones y adquisiciones, desde el due diligence legal hasta la creación de un 'Business Value Playbook'. Estos avances reflejan que la adopción fiable de la IA requiere tanto precisión técnica como marcos regulatorios que evolucionen al mismo ritmo."
+            }
+          ],
+          "takeaways": [
+            "Las empresas deben revisar sus programas de formación en IA para evitar los seis errores que frenan la productividad, según Negocios.com.",
+            "Los inversores deben considerar tanto los costes ocultos del gasto en IA como el potencial de retornos en startups privadas, pero evaluando cada caso con rigor.",
+            "Los profesionales deben evaluar la vulnerabilidad de su empleo y desarrollar habilidades alineadas con la economía del talento que describe Expansión.",
+            "Los educadores pueden aprovechar herramientas de IA, pero deben abordar activamente la brecha de género detectada en el aprendizaje de las adolescentes.",
+            "La regulación y la precisión técnica son claves para la adopción fiable de la IA en sectores como el legal, como muestran los casos de China y las nuevas herramientas jurídicas."
+          ],
+          "closing": "La inteligencia artificial está transformando todos los ámbitos, pero el éxito dependerá de cómo gestionemos las tensiones entre inversión, habilidades y confianza. Las noticias de hoy muestran tanto promesas como riesgos; actuar con estrategia informada es la única vía para convertir la disrupción en oportunidad."
+        },
+        "en": {
+          "title": "AI: Hidden Spending, Divided Talent, and the Education Gap",
+          "dek": "Big tech spends 3 trillion more than it appears, while employment splits in two. China regulates emotional bonds with chatbots, and education shows gender gaps.",
+          "intro": "From financial markets to classrooms, artificial intelligence is generating both opportunities and tensions. In this edition, we connect the dots between tech's hidden spending, employment polarization, legal innovations, and educational gaps.",
+          "sections": [
+            {
+              "heading": "Markets: The Spending Iceberg and Private Bets",
+              "body": "Bitfinanzas reveals that big tech's real spending on AI is $3 trillion higher than it appears, due to hidden costs that don't show up on traditional balance sheets. Meanwhile, Finanzas.com explains how an investment in Anthropic could quadruple before its IPO, highlighting the return potential in private AI startups. This tension between massive capital outlays and potential outsized gains forces investors to scrutinize every opportunity, as not all bets will be profitable."
+            },
+            {
+              "heading": "Work: The New Talent Economy Splits Employment in Two",
+              "body": "Expansión describes how AI is splitting employment into two economies: one with high demand for tech talent and another with more routine jobs vulnerable to automation. Seguritecnia offers a practical guide to identifying which jobs are safe from AI, a useful resource for professionals wanting to anticipate changes in their sector. Additionally, Negocios.com lists six common mistakes in corporate AI training that hinder productivity; correcting them is key to preventing organizations from widening the talent gap."
+            },
+            {
+              "heading": "Education: Tools Within Reach, but with a Gender Gap",
+              "body": "Unite.AI presents a list of the top 10 AI tools for education in August 2026, with options to personalize learning and automate teaching tasks. However, EL PAÍS warns that teenage girls start at a disadvantage in learning AI due to social and educational factors, requiring specific policies to close the gender gap. The availability of technology alone does not guarantee equitable adoption; a deliberate effort is needed in classrooms and in the design of inclusive programs."
+            },
+            {
+              "heading": "Regulation and Trust: From China to the Courts",
+              "body": "China is taking steps to prevent its internet users from falling in love with artificial intelligences, a sign of concern over the emotional impact of these systems. In the legal sphere, El Español reports on an AI designed for the sector that eliminates hallucinations in courts, while Dentons addresses how AI is transforming mergers and acquisitions, from legal due diligence to creating a 'Business Value Playbook'. These advances reflect that reliable AI adoption requires both technical precision and regulatory frameworks that evolve at the same pace."
+            }
+          ],
+          "takeaways": [
+            "Companies should review their AI training programs to avoid the six mistakes that hinder productivity, according to Negocios.com.",
+            "Investors should consider both the hidden costs of AI spending and the potential returns in private startups, but evaluate each case rigorously.",
+            "Professionals should assess the vulnerability of their jobs and develop skills aligned with the talent economy described by Expansión.",
+            "Educators can leverage AI tools, but must actively address the gender gap detected in teenage girls' learning.",
+            "Regulation and technical precision are key to reliable AI adoption in sectors like law, as shown by the cases of China and new legal tools."
+          ],
+          "closing": "Artificial intelligence is transforming every field, but success will depend on how we manage the tensions between investment, skills, and trust. Today's news shows both promises and risks; acting with informed strategy is the only way to turn disruption into opportunity."
+        }
+      },
+      "sources": [
+        {
+          "title": "China no quiere que sus internautas se enamoren de una inteligencia artificial - EL PAÍS",
+          "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNcEVUY21oZVBKbTFNZTN1MjdPQXBSckg0TnJyMnMzTDhRTjVyYVowWXBraWVXeXdpYWdicklOQVF1aDEwOERHMUZQWUZYQkl4ZU80MUxLRnJSemdCa2lWeUJJeUczZHc3V2ZoRG5JUW4yci0zZHRES0ltTy05VjltVDBXZTlINDhOVmZFRThJQm1CUHRQaURCZThaOEFJQUN3LTd2OU5mV2pJQzNKb1RrUUF3RF9SM2pGaTEzQUM0c044SG10TnfSAdoBQVVfeXFMTTZGSkRmSUs4emZDWXl1dFZSWUJuS21NQVlFMmtBU2phSEZoODVhb2h3N0FiVWxkUFdLSklfcVpub05fbzUtbVZUS1NmMVdtS2tXZHZqVGNYOWVJT09rRzlscDJyM3cxUklhWU8tcnNOQXd4Wkh2X0hCTWJoMmRXVjVoZzBjMDRfOEFkTFJaZFdIWFQ4U1l4RVNmNXg1cEoyeGc5eUlBVFNURmZlcDRubXdfa2d0QUhKUGZ5ZEZiTnZRMFZRN0EzZlVybWo2MWlueHVFQ2plSDc0bkE?oc=5",
+          "category": "IA General",
+          "publishedAt": "2026-08-16T03:30:01.000Z"
+        },
+        {
+          "title": "¿Sabes qué trabajos están a salvo de la Inteligencia Artificial y si el tuyo es uno de ellos? - Seguritecnia",
+          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOTWJFR243WE5LTndfVTNvbnkxWWRYSVVYdnJ6bE9DSFoyLVBSb3BxYmNhUWJLeVdzQkxYWnZvcmZhdlhJeVBRd2phdkcxdW1PZGZkV0UzRWFaMzZXUHRtY2xLNC1PVkhNMTB6ejQtWHdCYnUyelFUaWJtcC04VUFuNG5YUzkwYzZFa2FnYmotLVlpZw?oc=5",
+          "category": "IA General",
+          "publishedAt": "2026-08-18T14:00:42.000Z"
+        },
+        {
+          "title": "El empleo se parte en dos: esta es la nueva economía del talento que crea la IA - Expansión",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOT0x6dGJ1SHM2WGZjc2N1ZXBmdEszZlpBT0NYNFZwYjBpaXpiN2MybmFGOXY4TjBVandpaWhNaEZFTnhfeFM0eHdaZHBxN0V6UmJsZ3ZMbjQ3ZW53QmZKQ3ZUaG9hNlRFNjhRbzgyQlAwb2pNdHpFM1pMOXFvVWc3eHhIOTdvTlptbGUxczA2UWdtaGtkSnI5Mkd1Z9IBmwFBVV95cUxOT0x6dGJ1SHM2WGZjc2N1ZXBmdEszZlpBT0NYNFZwYjBpaXpiN2MybmFGOXY4TjBVandpaWhNaEZFTnhfeFM0eHdaZHBxN0V6UmJsZ3ZMbjQ3ZW53QmZKQ3ZUaG9hNlRFNjhRbzgyQlAwb2pNdHpFM1pMOXFvVWc3eHhIOTdvTlptbGUxczA2UWdtaGtkSnI5Mkd1Zw?oc=5",
+          "category": "Trabajo y Negocio",
+          "publishedAt": "2026-08-17T17:04:44.000Z"
+        },
+        {
+          "title": "Las empresas forman mal en IA: 6 errores que frenan productividad - Negocios.com",
+          "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOSmlIZjQxU3gtOFExNmozZ2JBX2RkUDhBVFdNV1pNbmMtM0NJb2hiLVNIUmtCV1hfRUpoWFpOVzFkV1QwMlZRamJPSm84eDNTeWxLcjhmUXl1VWhNVjNoWjRKdjItdmZoUlBCN21lUWx6QS1zejQybHBwSnVOclZTMTBpSTltekdKQnhUNzVRcDJfNzRKTkVhS3V3N013cE41bWJvVVR6YmtCcW0ybHowaFNvZzlOS3pCM185VVlPNHVOUGJsUkQw0gHMAUFVX3lxTFBucU9Hd25Fc3ZDdnVQSUpFR0UwaWhmaENvRjJ4SUZNTF9iekZUUF81YkxWaFNaamRUZDk2V2RzNTNiYlAyT3lvbkRNM0NCSHptcDNqNEpDcVM2T2dUMWZ6Wkw4RnhkZXVwa1J5R01TOFhUd1NSMjZMZ2NYM092aG1oTzdPOGdrS2p2U2ZKWExRcVl6Vm9ERlpEWFFLUnRFVVo4MWdvYnEtOWlPNEIxUUd6WFZ4QWhKRG1KTWdsTnMzRjFyZi1neEF3eUpZdw?oc=5",
+          "category": "Trabajo y Negocio",
+          "publishedAt": "2026-08-17T09:18:23.000Z"
+        },
+        {
+          "title": "El iceberg del gasto en IA, por qué el gasto de las grandes tecnológicas es 3 billones de dólares mayor de lo que parece - Bitfinanzas",
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQcy1Ja1hkWUN6eU0yN0gtYU5QMEhqTnlXUWlPWFZHX0NQVlBNNDNidTJSU05pMGJla3VhbDRYOVpWdTdGQ3JQNmFmb1RNOEI1LUduYXViNlZCSmhvZnRyOFhWRV9ERzA3ZjRGaXVDUWVOUkE4V01zNC1jMUpTSTRXOFVOa0FLMUE?oc=5",
+          "category": "Finanzas e Inversiones",
+          "publishedAt": "2026-08-17T18:32:03.000Z"
+        },
+        {
+          "title": "Así se multiplica por 4 una inversión en Anthropic antes incluso de que salga a bolsa - Finanzas.com",
+          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9jREZwQXJ0clAxbW9XbWduVUpaeU9TeWViQVEwY0NFaFBYclViU3ptSTNJTVdpY1FpRlZtMXRwbWxYWXJHX2thWTR3RFViSEc2SXF0WjVuaTJfTFhrcHNVMmFRb3lXVjMwT29zS3VR0gFzQVVfeXFMUFY1SFEtaUFOeDViUnBLU1RzcFJSWTMwUlZyVTl2ZjJTeFNua01WMnQyY1N1cGlUTHY4RUkxUy1WRjNfMmhuVFZTZ1ZOdXJhRFFIa0pxanZfWU93VGNsYjZYVWFFVWkwRkQwYnZqMlhoaDVJdw?oc=5",
+          "category": "Finanzas e Inversiones",
+          "publishedAt": "2026-08-15T02:55:00.000Z"
+        },
+        {
+          "title": "La inteligencia artificial creada por y para el sector legal que destierra (por fin) las alucinaciones de los tribunales - El Español",
+          "url": "https://news.google.com/rss/articles/CBMilgJBVV95cUxPMndpNFVhdGF5WGZJRUFnVElYaUxudGpuSk10NnNVRHljQjZOdmwxOVpubkh1MXJNbUdfaHBNTGdzQ21FNk5acHplZ3BvWlpnYjdCOW82TXZvQ0xzdk5HTlNsNWlsOVoxZ0M1eEtjbWFSdTczdkt2aDFIeWxzb01XcWNvbDdYQ0NtTHVlazNoaWxGQ1VpRTV0WDFmTHgxUDJQZnF6cUxnbTU3NmtRZlBZT2dJM0tPVUZxWnhyRkk2XzVJdjhCTFpnTDhFd05SM2tJeXhJcW1FM1pJZmtaT0U0cEY2eldIYkxLWTdGVzFhZnEyamtFUU9pV2FidzlRWWNWMFUtSFNzQ2dwRnF6NDVyYnNYdVZTQdIBmwJBVV95cUxOM0RyT2ZPMFg2MGxuSkxSdmtxMklhOWxBTUJ1THFnVW1PdGtWcjBEa2pLMEw3SFFBRXZWOUV5Zm5nTlVTSHlhN1dQUUVud1FmX1JRRHlvNVoxbzFYT0ZNemhBOVozbzhxUWdKY3c4cERWcEdSaXctbVA5dF8ydVhOT1dlWnQ2V0lHVUhILU9nSUpBaldGMF9jVEZQZlZsbmtLaUVDME9OdDBZZmtyd090T0FTVXdQcGlNb3h0TmFCRU9Zb08wU2s3LUlMRUtZVUJvdkhhTUlqRlhhQU43LUE3U2JFc1FpVHZqVHNtWGNTZXZKTU9YVFR3Uy04Tkx6dVUwTFQ2U2hKNWFQaUVNSlQ1ZjBDSEY0dGtZQkhn?oc=5",
+          "category": "Legal IA",
+          "publishedAt": "2026-08-17T00:53:02.000Z"
+        },
+        {
+          "title": "M&A en la era de la IA: del Legal Due Diligence al Business Value Playbook - Dentons",
+          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNcWNkQm9hRWd5cVlFZ3hyV1I2ODc2VVJGQmFyQ2NRTlZJX001Z0ZJYnNQcVUwaEpsRzY4bktucF92a0pSNnRubkNGaXMtQlB4VnJMR0hMOG9EQ20yN2czTmtHWHRwZ0J2NEU2ZmxGNHZvdHFJNU84UC14cHJlU28weW9WdjhJNTZXYzNVM24zUGh6OEJ0dnc2WUVzYTNXaFVhSUJUVi11Mng1a2xIaERLV0V5aXZ2QQ?oc=5",
+          "category": "Legal IA",
+          "publishedAt": "2026-08-18T23:59:36.000Z"
+        },
+        {
+          "title": "Las adolescentes parten con desventaja en el aprendizaje de la inteligencia artificial - EL PAÍS",
+          "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNamF6MUsyWVVoR2lZY2hKLUlySEVVRmZibjgxQVlsRUJ3UHhoQmd5SG1SR3JrTnlKeVhjZTF0bzdmb3k1RUU3bmFtODRIczJSX2tNNVpFcWVORFdTVmc3WDQ0bXJ1RVFnblYtQ09YNHlObzNDeUstVlBnTWpQeF9MajFQdHdzMXRZYk1iSUgxbV9SSmI1YndUU2VyVDFmZTh3TTl0NVJfWFJmbmFLUFY2akZXSkVzdGdOalhpTGRLZ0wxek13dXo0blRXNNIB3wFBVV95cUxNRmluVjVXSndhMzg3VTNoSXNPbWNyZnI4Q01kOTRZaWVlWXBTYkx2RkhrTFVWdFlobEY0amZEUHYtRVFYMWpTdzZPdXdaNU94VFRHQ3BjSERGLVZCWnFHNUtvd2xBRWJ4ZUVkRjNHeEkwQjlmLWN1YVQ3RzNVc3FCZEZxdEFQWEF4Q0cwc2JTRVZRRVNFYTFjVlRoSFdqSHZSbE5QajhzVmdKQk4tQUFZXzFTTjVXaWVKVXRpM0EzY3ZPLURqd2U3d0Q5eFNGZUgweldkUUxBbXBscXhLSzV3?oc=5",
+          "category": "Educación IA",
+          "publishedAt": "2026-08-17T03:30:01.000Z"
+        },
+        {
+          "title": "10 Mejores Herramientas de Inteligencia Artificial para la Educación (agosto 2026) - Unite.AI",
+          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9zbzExWTl4VkhIQmc4Zy00UmhMaHZXZ2xSRkZtN2RQTFJDclAxM1owMGptMXZSaVRMdHpxUUF0Z1ZkMmwxSm5nS1M4bko5OUcwUm1ENWk3d2pHenI5VHA5WjJMVzFmZw?oc=5",
+          "category": "Educación IA",
+          "publishedAt": "2026-08-15T07:00:00.000Z"
+        }
+      ]
+    },
     {
       "slug": "ai-signal-2026-08-18",
       "date": "2026-08-18",

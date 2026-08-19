@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "system": "ai-signal",
-  "startedAt": "2026-08-19T00:27:16.637Z",
+  "startedAt": "2026-08-19T07:47:44.249Z",
   "status": "healthy",
   "models": {
     "selection": "deepseek-v4-flash",
-    "article": "rafaops-invalid-model",
+    "article": "deepseek-v4-pro",
     "translation": "deepseek-v4-flash",
     "supervisor": "glm-5.2",
     "fallback": "deepseek-v4-flash"
@@ -19,11 +19,11 @@
       "status": "success",
       "recoveredFromReasoning": false,
       "finishReason": "stop",
-      "durationMs": 60234,
+      "durationMs": 49524,
       "usage": {
         "prompt_tokens": 3107,
-        "completion_tokens": 7139,
-        "total_tokens": 10246,
+        "completion_tokens": 6182,
+        "total_tokens": 9289,
         "prompt_tokens_details": {
           "cached_tokens": 0
         }
@@ -32,27 +32,23 @@
     {
       "task": "write-spanish-edition",
       "role": "worker",
-      "model": "rafaops-invalid-model",
-      "attempt": 1,
-      "status": "failed",
-      "durationMs": 70,
-      "error": "OpenCode: Model rafaops-invalid-model is not supported"
-    },
-    {
-      "task": "write-spanish-edition",
-      "role": "supervisor",
-      "model": "glm-5.2",
+      "model": "deepseek-v4-pro",
       "attempt": 1,
       "status": "success",
       "recoveredFromReasoning": false,
       "finishReason": "stop",
-      "durationMs": 52866,
+      "durationMs": 51274,
       "usage": {
-        "prompt_tokens": 1472,
-        "completion_tokens": 3855,
-        "total_tokens": 5327,
+        "prompt_tokens": 1713,
+        "completion_tokens": 2932,
+        "total_tokens": 4645,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 1713,
         "prompt_tokens_details": {
-          "cached_tokens": 10
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1867
         }
       }
     },
@@ -64,26 +60,18 @@
       "status": "success",
       "recoveredFromReasoning": false,
       "finishReason": "stop",
-      "durationMs": 21521,
+      "durationMs": 20219,
       "usage": {
-        "prompt_tokens": 1182,
-        "completion_tokens": 2606,
-        "total_tokens": 3788,
+        "prompt_tokens": 1137,
+        "completion_tokens": 2999,
+        "total_tokens": 4136,
         "prompt_tokens_details": {
           "cached_tokens": 0
         }
       }
     }
   ],
-  "recoveries": [
-    {
-      "task": "write-spanish-edition",
-      "strategy": "supervised-retry",
-      "model": "glm-5.2",
-      "trigger": "OpenCode: Model rafaops-invalid-model is not supported",
-      "recoveredAt": "2026-08-19T00:29:11.083Z"
-    }
-  ],
+  "recoveries": [],
   "output": {
     "slug": "ai-signal-2026-08-19",
     "sources": 10,
@@ -92,13 +80,13 @@
       "en"
     ]
   },
-  "finishedAt": "2026-08-19T00:29:32.604Z",
-  "durationMs": 135967,
+  "finishedAt": "2026-08-19T07:49:46.169Z",
+  "durationMs": 121920,
   "error": null,
   "metrics": {
-    "modelCalls": 4,
-    "failedAttempts": 1,
-    "supervisedRecoveries": 1,
-    "totalTokens": 19361
+    "modelCalls": 3,
+    "failedAttempts": 0,
+    "supervisedRecoveries": 0,
+    "totalTokens": 18070
   }
 }
