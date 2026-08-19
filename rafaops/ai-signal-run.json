@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "system": "ai-signal",
+  "startedAt": "2026-08-19T00:27:16.637Z",
+  "status": "healthy",
+  "models": {
+    "selection": "deepseek-v4-flash",
+    "article": "rafaops-invalid-model",
+    "translation": "deepseek-v4-flash",
+    "supervisor": "glm-5.2",
+    "fallback": "deepseek-v4-flash"
+  },
+  "attempts": [
+    {
+      "task": "select-top-10",
+      "role": "worker",
+      "model": "deepseek-v4-flash",
+      "attempt": 1,
+      "status": "success",
+      "recoveredFromReasoning": false,
+      "finishReason": "stop",
+      "durationMs": 60234,
+      "usage": {
+        "prompt_tokens": 3107,
+        "completion_tokens": 7139,
+        "total_tokens": 10246,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "task": "write-spanish-edition",
+      "role": "worker",
+      "model": "rafaops-invalid-model",
+      "attempt": 1,
+      "status": "failed",
+      "durationMs": 70,
+      "error": "OpenCode: Model rafaops-invalid-model is not supported"
+    },
+    {
+      "task": "write-spanish-edition",
+      "role": "supervisor",
+      "model": "glm-5.2",
+      "attempt": 1,
+      "status": "success",
+      "recoveredFromReasoning": false,
+      "finishReason": "stop",
+      "durationMs": 52866,
+      "usage": {
+        "prompt_tokens": 1472,
+        "completion_tokens": 3855,
+        "total_tokens": 5327,
+        "prompt_tokens_details": {
+          "cached_tokens": 10
+        }
+      }
+    },
+    {
+      "task": "translate-english-edition",
+      "role": "worker",
+      "model": "deepseek-v4-flash",
+      "attempt": 1,
+      "status": "success",
+      "recoveredFromReasoning": false,
+      "finishReason": "stop",
+      "durationMs": 21521,
+      "usage": {
+        "prompt_tokens": 1182,
+        "completion_tokens": 2606,
+        "total_tokens": 3788,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    }
+  ],
+  "recoveries": [
+    {
+      "task": "write-spanish-edition",
+      "strategy": "supervised-retry",
+      "model": "glm-5.2",
+      "trigger": "OpenCode: Model rafaops-invalid-model is not supported",
+      "recoveredAt": "2026-08-19T00:29:11.083Z"
+    }
+  ],
+  "output": {
+    "slug": "ai-signal-2026-08-19",
+    "sources": 10,
+    "languages": [
+      "es",
+      "en"
+    ]
+  },
+  "finishedAt": "2026-08-19T00:29:32.604Z",
+  "durationMs": 135967,
+  "error": null,
+  "metrics": {
+    "modelCalls": 4,
+    "failedAttempts": 1,
+    "supervisedRecoveries": 1,
+    "totalTokens": 19361
+  }
+}

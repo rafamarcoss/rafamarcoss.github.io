@@ -1,17 +1,17 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-19T00:25:53.727Z",
+  "generatedAt": "2026-08-19T00:29:32.654Z",
   "health": "operational",
-  "summary": "Todos los sistemas críticos responden correctamente.",
+  "summary": "Operativo después de 1 recuperación supervisada.",
   "metrics": {
     "availability": 100,
-    "healthyChecks": 4,
+    "healthyChecks": 3,
     "totalChecks": 5,
     "openIncidents": 0,
-    "supervisedRecoveries": 0,
-    "modelCalls": 0,
-    "totalTokens": 0,
-    "lastRunDurationMs": 431
+    "supervisedRecoveries": 1,
+    "modelCalls": 4,
+    "totalTokens": 19361,
+    "lastRunDurationMs": 135967
   },
   "checks": [
     {
@@ -21,8 +21,8 @@
       "critical": true,
       "status": "healthy",
       "detail": "HTML y marca verificados",
-      "latencyMs": 155,
-      "checkedAt": "2026-08-19T00:25:53.883Z"
+      "latencyMs": 175,
+      "checkedAt": "2026-08-19T00:29:32.829Z"
     },
     {
       "id": "news-page",
@@ -31,8 +31,8 @@
       "critical": true,
       "status": "healthy",
       "detail": "Archivo de noticias disponible",
-      "latencyMs": 227,
-      "checkedAt": "2026-08-19T00:25:53.991Z"
+      "latencyMs": 128,
+      "checkedAt": "2026-08-19T00:29:32.821Z"
     },
     {
       "id": "feed-integrity",
@@ -40,19 +40,19 @@
       "url": "https://rafaelmarcos.tech/news/feed.json",
       "critical": true,
       "status": "healthy",
-      "detail": "10 fuentes · ES/EN · 12 h",
+      "detail": "10 fuentes · ES/EN · 13 h",
       "latencyMs": 0,
-      "checkedAt": "2026-08-19T00:25:53.765Z"
+      "checkedAt": "2026-08-19T00:29:32.694Z"
     },
     {
       "id": "github-actions",
       "name": "GitHub Actions",
       "critical": false,
-      "status": "healthy",
-      "detail": "Última ejecución: success",
-      "latencyMs": 392,
-      "checkedAt": "2026-08-19T00:25:54.157Z",
-      "url": "https://github.com/rafamarcoss/rafamarcoss.github.io/actions/runs/32134005363"
+      "status": "running",
+      "detail": "Ejecución in_progress",
+      "latencyMs": 172,
+      "checkedAt": "2026-08-19T00:29:32.866Z",
+      "url": "https://github.com/rafamarcoss/rafamarcoss.github.io/actions/runs/32201295159"
     },
     {
       "id": "n8n-private",
@@ -61,7 +61,7 @@
       "status": "private",
       "detail": "Runtime aislado; conector local pendiente",
       "latencyMs": null,
-      "checkedAt": "2026-08-19T00:25:53.727Z",
+      "checkedAt": "2026-08-19T00:29:32.654Z",
       "url": null
     }
   ],
@@ -71,60 +71,199 @@
       "name": "RSS collector",
       "type": "tool",
       "model": null,
-      "status": "waiting"
+      "status": "healthy"
     },
     {
       "id": "select-top-10",
       "name": "News selector",
       "type": "agent",
       "model": "deepseek-v4-flash",
-      "status": "waiting"
+      "status": "healthy"
     },
     {
       "id": "write-spanish-edition",
       "name": "Editorial writer",
       "type": "agent",
-      "model": "deepseek-v4-pro",
-      "status": "waiting"
+      "model": "rafaops-invalid-model",
+      "status": "healthy"
     },
     {
       "id": "validate",
       "name": "Schema validator",
       "type": "guardrail",
       "model": null,
-      "status": "waiting"
+      "status": "healthy"
     },
     {
       "id": "translate-english-edition",
       "name": "Translation agent",
       "type": "agent",
       "model": "deepseek-v4-flash",
-      "status": "waiting"
+      "status": "healthy"
     },
     {
       "id": "publish",
       "name": "Git publisher",
       "type": "tool",
       "model": null,
-      "status": "waiting"
+      "status": "healthy"
     },
     {
       "id": "monitor",
       "name": "RafaOps monitor",
       "type": "observer",
       "model": null,
-      "status": "waiting"
+      "status": "healthy"
     }
   ],
   "routing": {
-    "worker": "deepseek-v4-pro",
+    "worker": "rafaops-invalid-model",
     "supervisor": "glm-5.2",
     "fallback": "deepseek-v4-flash",
     "policy": "2 reintentos de transporte → supervisor independiente → fallback de modelo"
   },
-  "latestAgentRun": null,
+  "latestAgentRun": {
+    "schemaVersion": 1,
+    "system": "ai-signal",
+    "startedAt": "2026-08-19T00:27:16.637Z",
+    "status": "healthy",
+    "models": {
+      "selection": "deepseek-v4-flash",
+      "article": "rafaops-invalid-model",
+      "translation": "deepseek-v4-flash",
+      "supervisor": "glm-5.2",
+      "fallback": "deepseek-v4-flash"
+    },
+    "attempts": [
+      {
+        "task": "select-top-10",
+        "role": "worker",
+        "model": "deepseek-v4-flash",
+        "attempt": 1,
+        "status": "success",
+        "recoveredFromReasoning": false,
+        "finishReason": "stop",
+        "durationMs": 60234,
+        "usage": {
+          "prompt_tokens": 3107,
+          "completion_tokens": 7139,
+          "total_tokens": 10246,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "task": "write-spanish-edition",
+        "role": "worker",
+        "model": "rafaops-invalid-model",
+        "attempt": 1,
+        "status": "failed",
+        "durationMs": 70,
+        "error": "OpenCode: Model rafaops-invalid-model is not supported"
+      },
+      {
+        "task": "write-spanish-edition",
+        "role": "supervisor",
+        "model": "glm-5.2",
+        "attempt": 1,
+        "status": "success",
+        "recoveredFromReasoning": false,
+        "finishReason": "stop",
+        "durationMs": 52866,
+        "usage": {
+          "prompt_tokens": 1472,
+          "completion_tokens": 3855,
+          "total_tokens": 5327,
+          "prompt_tokens_details": {
+            "cached_tokens": 10
+          }
+        }
+      },
+      {
+        "task": "translate-english-edition",
+        "role": "worker",
+        "model": "deepseek-v4-flash",
+        "attempt": 1,
+        "status": "success",
+        "recoveredFromReasoning": false,
+        "finishReason": "stop",
+        "durationMs": 21521,
+        "usage": {
+          "prompt_tokens": 1182,
+          "completion_tokens": 2606,
+          "total_tokens": 3788,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      }
+    ],
+    "recoveries": [
+      {
+        "task": "write-spanish-edition",
+        "strategy": "supervised-retry",
+        "model": "glm-5.2",
+        "trigger": "OpenCode: Model rafaops-invalid-model is not supported",
+        "recoveredAt": "2026-08-19T00:29:11.083Z"
+      }
+    ],
+    "output": {
+      "slug": "ai-signal-2026-08-19",
+      "sources": 10,
+      "languages": [
+        "es",
+        "en"
+      ]
+    },
+    "finishedAt": "2026-08-19T00:29:32.604Z",
+    "durationMs": 135967,
+    "error": null,
+    "metrics": {
+      "modelCalls": 4,
+      "failedAttempts": 1,
+      "supervisedRecoveries": 1,
+      "totalTokens": 19361
+    }
+  },
   "incidents": [],
   "runs": [
+    {
+      "id": "32201295159",
+      "source": "workflow_dispatch",
+      "startedAt": "2026-08-19T00:29:32.652Z",
+      "finishedAt": "2026-08-19T00:29:32.654Z",
+      "durationMs": 214,
+      "status": "operational",
+      "checks": [
+        {
+          "id": "website",
+          "status": "healthy",
+          "latencyMs": 175
+        },
+        {
+          "id": "news-page",
+          "status": "healthy",
+          "latencyMs": 128
+        },
+        {
+          "id": "feed-integrity",
+          "status": "healthy",
+          "latencyMs": 0
+        },
+        {
+          "id": "github-actions",
+          "status": "running",
+          "latencyMs": 172
+        },
+        {
+          "id": "n8n-private",
+          "status": "private",
+          "latencyMs": null
+        }
+      ],
+      "url": "https://github.com/rafamarcoss/rafamarcoss.github.io/actions/runs/32201295159"
+    },
     {
       "id": "local-1787099154157",
       "source": "local",
