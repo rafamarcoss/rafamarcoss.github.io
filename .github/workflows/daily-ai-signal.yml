@@ -5,6 +5,20 @@ on:
     - cron: '7 9 * * *'
       timezone: Europe/Madrid
   workflow_dispatch:
+    inputs:
+      chaos_mode:
+        description: 'Recovery scenario'
+        required: true
+        default: none
+        type: choice
+        options:
+          - none
+          - primary_model_failure
+      dry_run:
+        description: 'Validate without replacing the daily edition'
+        required: true
+        default: false
+        type: boolean
 
 permissions:
   contents: write
@@ -26,19 +40,33 @@ jobs:
         with:
           node-version: 24
 
-      - name: Generate daily edition
-        run: node scripts/generate-ai-signal.mjs
+      - name: Generate daily edition with supervision
+        id: generate
+        continue-on-error: true
+        run: node scripts/generate-ai-signal.mjs ${{ inputs.dry_run && '--dry-run' || '' }}
         env:
           OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
+          AI_SIGNAL_ARTICLE_MODEL: ${{ inputs.chaos_mode == 'primary_model_failure' && 'rafaops-invalid-model' || 'deepseek-v4-pro' }}
 
-      - name: Publish feed update
+      - name: Refresh RafaOps state
+        run: node scripts/rafaops-monitor.mjs
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+
+      - name: Publish feed and telemetry
         run: |
-          if git diff --quiet -- news/feed.json; then
-            echo "No feed changes to publish"
+          if git diff --quiet -- news/feed.json rafaops/ai-signal-run.json rafaops/status.json; then
+            echo "No changes to publish"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add news/feed.json
+          git add news/feed.json rafaops/ai-signal-run.json rafaops/status.json
           git commit -m "news: publish daily AI Signal"
           git push
+
+      - name: Surface unrecovered generation failure
+        if: steps.generate.outcome == 'failure'
+        run: |
+          echo "Worker, supervisor and fallback were unable to produce a valid edition"
+          exit 1

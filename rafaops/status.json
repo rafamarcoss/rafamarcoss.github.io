@@ -1,0 +1,201 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-19T00:25:53.727Z",
+  "health": "operational",
+  "summary": "Todos los sistemas críticos responden correctamente.",
+  "metrics": {
+    "availability": 100,
+    "healthyChecks": 4,
+    "totalChecks": 5,
+    "openIncidents": 0,
+    "supervisedRecoveries": 0,
+    "modelCalls": 0,
+    "totalTokens": 0,
+    "lastRunDurationMs": 431
+  },
+  "checks": [
+    {
+      "id": "website",
+      "name": "Portfolio público",
+      "url": "https://rafaelmarcos.tech/",
+      "critical": true,
+      "status": "healthy",
+      "detail": "HTML y marca verificados",
+      "latencyMs": 155,
+      "checkedAt": "2026-08-19T00:25:53.883Z"
+    },
+    {
+      "id": "news-page",
+      "name": "AI Signal",
+      "url": "https://rafaelmarcos.tech/news/",
+      "critical": true,
+      "status": "healthy",
+      "detail": "Archivo de noticias disponible",
+      "latencyMs": 227,
+      "checkedAt": "2026-08-19T00:25:53.991Z"
+    },
+    {
+      "id": "feed-integrity",
+      "name": "Integridad editorial",
+      "url": "https://rafaelmarcos.tech/news/feed.json",
+      "critical": true,
+      "status": "healthy",
+      "detail": "10 fuentes · ES/EN · 12 h",
+      "latencyMs": 0,
+      "checkedAt": "2026-08-19T00:25:53.765Z"
+    },
+    {
+      "id": "github-actions",
+      "name": "GitHub Actions",
+      "critical": false,
+      "status": "healthy",
+      "detail": "Última ejecución: success",
+      "latencyMs": 392,
+      "checkedAt": "2026-08-19T00:25:54.157Z",
+      "url": "https://github.com/rafamarcoss/rafamarcoss.github.io/actions/runs/32134005363"
+    },
+    {
+      "id": "n8n-private",
+      "name": "n8n · VM privada",
+      "critical": false,
+      "status": "private",
+      "detail": "Runtime aislado; conector local pendiente",
+      "latencyMs": null,
+      "checkedAt": "2026-08-19T00:25:53.727Z",
+      "url": null
+    }
+  ],
+  "pipeline": [
+    {
+      "id": "collect",
+      "name": "RSS collector",
+      "type": "tool",
+      "model": null,
+      "status": "waiting"
+    },
+    {
+      "id": "select-top-10",
+      "name": "News selector",
+      "type": "agent",
+      "model": "deepseek-v4-flash",
+      "status": "waiting"
+    },
+    {
+      "id": "write-spanish-edition",
+      "name": "Editorial writer",
+      "type": "agent",
+      "model": "deepseek-v4-pro",
+      "status": "waiting"
+    },
+    {
+      "id": "validate",
+      "name": "Schema validator",
+      "type": "guardrail",
+      "model": null,
+      "status": "waiting"
+    },
+    {
+      "id": "translate-english-edition",
+      "name": "Translation agent",
+      "type": "agent",
+      "model": "deepseek-v4-flash",
+      "status": "waiting"
+    },
+    {
+      "id": "publish",
+      "name": "Git publisher",
+      "type": "tool",
+      "model": null,
+      "status": "waiting"
+    },
+    {
+      "id": "monitor",
+      "name": "RafaOps monitor",
+      "type": "observer",
+      "model": null,
+      "status": "waiting"
+    }
+  ],
+  "routing": {
+    "worker": "deepseek-v4-pro",
+    "supervisor": "glm-5.2",
+    "fallback": "deepseek-v4-flash",
+    "policy": "2 reintentos de transporte → supervisor independiente → fallback de modelo"
+  },
+  "latestAgentRun": null,
+  "incidents": [],
+  "runs": [
+    {
+      "id": "local-1787099154157",
+      "source": "local",
+      "startedAt": "2026-08-19T00:25:53.726Z",
+      "finishedAt": "2026-08-19T00:25:53.727Z",
+      "durationMs": 431,
+      "status": "operational",
+      "checks": [
+        {
+          "id": "website",
+          "status": "healthy",
+          "latencyMs": 155
+        },
+        {
+          "id": "news-page",
+          "status": "healthy",
+          "latencyMs": 227
+        },
+        {
+          "id": "feed-integrity",
+          "status": "healthy",
+          "latencyMs": 0
+        },
+        {
+          "id": "github-actions",
+          "status": "healthy",
+          "latencyMs": 392
+        },
+        {
+          "id": "n8n-private",
+          "status": "private",
+          "latencyMs": null
+        }
+      ],
+      "url": null
+    },
+    {
+      "id": "local-1787098765284",
+      "source": "local",
+      "startedAt": "2026-08-19T00:19:24.953Z",
+      "finishedAt": "2026-08-19T00:19:24.955Z",
+      "durationMs": 331,
+      "status": "operational",
+      "checks": [
+        {
+          "id": "website",
+          "status": "healthy",
+          "latencyMs": 312
+        },
+        {
+          "id": "news-page",
+          "status": "healthy",
+          "latencyMs": 264
+        },
+        {
+          "id": "feed-integrity",
+          "status": "healthy",
+          "latencyMs": 0
+        },
+        {
+          "id": "github-actions",
+          "status": "unknown",
+          "latencyMs": null
+        },
+        {
+          "id": "n8n-private",
+          "status": "private",
+          "latencyMs": null
+        }
+      ],
+      "url": null
+    }
+  ]
+}

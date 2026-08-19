@@ -2149,7 +2149,7 @@
         <p class="section-copy reveal" style="--delay:160ms" data-i18n="workCopy">Casos con contexto, decisiones técnicas y enlace al sistema real. Desliza para verlos.</p>
       </div>
 
-      <div class="projects-flow" data-projects style="--proj-count: 6">
+      <div class="projects-flow" data-projects style="--proj-count: 7">
         <div class="projects-stage" role="group" aria-label="Carrusel de proyectos">
           <div class="proj-progress" aria-hidden="true"><div class="proj-progress-fill"></div></div>
 
@@ -2268,10 +2268,38 @@
                 <h3 class="proj-name">AI Signal · Daily News Agent</h3>
                 <a class="proj-url" href="news/?slug=ai-signal-2026-08-18&amp;lang=es" data-agent-result>rafaelmarcos.tech/news <span class="arrow">↗</span></a>
                 <p class="proj-desc" data-i18n="aiAgentDesc">Agente diario en n8n que reúne hasta 30 candidatas de cinco búsquedas RSS, elimina duplicados, selecciona 10 y convierte las señales en un artículo conectado en español e inglés.</p>
-                <p class="proj-tech" data-i18n="aiAgentTech"><strong>Tech:</strong> cron diario a las 09:00, Google News RSS, dos cadenas LLM con deepseek-v4-flash vía OpenCode Go, validación JSON y feed estático preparado para GitHub Pages.</p>
+                <p class="proj-tech" data-i18n="aiAgentTech"><strong>Tech:</strong> cron diario a las 09:00, Google News RSS, DeepSeek V4 Pro vía OpenCode Go, reintentos supervisados, fallback de modelo, validación JSON y feed estático en GitHub Pages.</p>
                 <ul class="proj-stack"><li>n8n</li><li>DeepSeek</li><li>OpenCode Go</li><li>GitHub Pages</li></ul>
                 <div class="proj-actions">
                   <a class="proj-btn is-primary" href="news/?slug=ai-signal-2026-08-18&amp;lang=es" data-agent-result data-i18n="aiAgentCta">Ver artículo generado <span class="arrow">↗</span></a>
+                </div>
+              </div>
+            </article>
+
+            <article class="proj-slide" data-i="6" aria-label="RafaOps, control plane agentic">
+              <figure class="proj-figure" data-fallback="RafaOps · control plane agentic con supervisión y fallback">
+                <div class="agent-visual" role="img" aria-label="Flujo de recuperación: monitor, diagnóstico, supervisor y fallback">
+                  <div class="agent-visual-head"><span>RAFAOPS / CONTROL PLANE</span><span class="agent-live">LIVE</span></div>
+                  <div class="agent-pipeline">
+                    <div class="agent-node"><span>01 · WATCH</span><strong>Health</strong><small>Web, feed y Actions</small></div>
+                    <div class="agent-node"><span>02 · WORKER</span><strong>DeepSeek Pro</strong><small>Genera y valida</small></div>
+                    <div class="agent-node"><span>03 · RECOVER</span><strong>Supervisor</strong><small>Otro modelo revisa</small></div>
+                    <div class="agent-node"><span>04 · AUDIT</span><strong>Telemetry</strong><small>Tokens, errores y tiempo</small></div>
+                  </div>
+                  <div class="agent-visual-foot"><strong>Detectar → recuperar → verificar</strong><span>GitHub Actions · guardrails</span></div>
+                </div>
+                <span class="proj-tag" data-i18n="rafaopsTag">07 · Agentic operations</span>
+              </figure>
+              <div class="proj-meta">
+                <p class="proj-eyebrow" data-i18n="rafaopsEyebrow">Observabilidad · recuperación automática</p>
+                <h3 class="proj-name">RafaOps · Agentic Control Plane</h3>
+                <a class="proj-url" href="rafaops/">rafaelmarcos.tech/rafaops <span class="arrow">↗</span></a>
+                <p class="proj-desc" data-i18n="rafaopsDesc">Centro de operaciones que vigila sistemas reales, valida cada salida y recupera ejecuciones fallidas mediante reintentos acotados, un agente supervisor y fallback de modelo.</p>
+                <p class="proj-tech" data-i18n="rafaopsTech"><strong>Tech:</strong> DeepSeek V4 Pro, enrutamiento multi-modelo, JSON Schema, telemetría por ejecución, health checks, ledger de incidentes y GitHub Actions como motor programado.</p>
+                <ul class="proj-stack"><li>DeepSeek V4 Pro</li><li>GitHub Actions</li><li>Node.js</li><li>Observability</li></ul>
+                <div class="proj-actions">
+                  <a class="proj-btn is-primary" href="rafaops/" data-i18n="rafaopsCta">Abrir dashboard <span class="arrow">↗</span></a>
+                  <a class="proj-btn" href="https://github.com/rafamarcoss/rafamarcoss.github.io/actions" target="_blank" rel="noopener">Runs <span class="arrow">↗</span></a>
                 </div>
               </div>
             </article>
@@ -2284,6 +2312,7 @@
             <button class="proj-dot" type="button" data-go="3" role="tab">04 Kit</button>
             <button class="proj-dot" type="button" data-go="4" role="tab">05 Teledev</button>
             <button class="proj-dot" type="button" data-go="5" role="tab">06 AI Signal</button>
+            <button class="proj-dot" type="button" data-go="6" role="tab">07 RafaOps</button>
           </div>
         </div>
       </div>
@@ -2441,6 +2470,7 @@
       <a href="mailto:rafaelmarcos2604@gmail.com">Email</a>
       <a href="https://linkedin.com/in/rafael-marcos-serrano" target="_blank" rel="noopener">LinkedIn</a>
       <a href="upwork-match/">Opportunity Match</a>
+      <a href="rafaops/">RafaOps</a>
       <a href="https://github.com/rafamarcoss" target="_blank" rel="noopener">GitHub</a>
     </div>
   </footer>
@@ -2518,8 +2548,13 @@
         aiAgentTag: '06 · AI editorial agent',
         aiAgentEyebrow: 'Editorial automation · applied AI',
         aiAgentDesc: 'A daily n8n agent that gathers up to 30 candidates from five RSS searches, removes duplicates, selects 10 and turns the signals into one connected article in Spanish and English.',
-        aiAgentTech: '<strong>Tech:</strong> daily 09:00 cron, Google News RSS, two LLM chains using deepseek-v4-flash through OpenCode Go, JSON validation and a static feed prepared for GitHub Pages.',
+        aiAgentTech: '<strong>Tech:</strong> daily 09:00 cron, Google News RSS, DeepSeek V4 Pro through OpenCode Go, supervised retries, model fallback, JSON validation and a static feed for GitHub Pages.',
         aiAgentCta: 'View generated article <span class="arrow">↗</span>',
+        rafaopsTag: '07 · Agentic operations',
+        rafaopsEyebrow: 'Observability · automatic recovery',
+        rafaopsDesc: 'An operations centre that watches real systems, validates every output and recovers failed runs through bounded retries, an independent supervisor agent and model fallback.',
+        rafaopsTech: '<strong>Tech:</strong> DeepSeek V4 Pro, multi-model routing, JSON Schema, per-run telemetry, health checks, an incident ledger and GitHub Actions as the scheduled engine.',
+        rafaopsCta: 'Open dashboard <span class="arrow">↗</span>',
         newsEyebrow: 'AI Signal · daily edition',
         newsTitle: 'Connected news, not a list of links.',
         newsCopy: 'Every morning, 10 sources on AI, markets, education and work become one short read: what changed, how it connects and what you can do with it.',
