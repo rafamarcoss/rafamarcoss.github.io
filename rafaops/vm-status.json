@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-19T00:50:12.350Z",
+  "host": "automatizacion",
+  "health": "operational",
+  "summary": "VM y n8n responden correctamente",
+  "metrics": {
+    "uptimeSeconds": 91009,
+    "load1": 0.17,
+    "memoryUsedBytes": 7940251648,
+    "memoryTotalBytes": 8941510656,
+    "diskUsedBytes": 12352270336,
+    "diskTotalBytes": 25180848128,
+    "containerRestarts": 0,
+    "n8nVersion": "2.35.3",
+    "n8nLatencyMs": 0,
+    "activeWorkflows": 2,
+    "executions24h": 45,
+    "successfulExecutions24h": 29,
+    "failedExecutions24h": 16,
+    "lastExecution": {
+      "startedAt": "2026-08-18 16:39:53.529",
+      "stoppedAt": "2026-08-18 16:40:13.043",
+      "status": "success",
+      "workflowId": "6d873e4346e34aa1"
+    }
+  },
+  "services": [
+    {
+      "id": "docker",
+      "name": "Docker Engine",
+      "status": "healthy",
+      "detail": "v28.2.2"
+    },
+    {
+      "id": "n8n-container",
+      "name": "Contenedor n8n",
+      "status": "healthy",
+      "detail": "running · 0 reinicios"
+    },
+    {
+      "id": "n8n-http",
+      "name": "n8n healthz",
+      "status": "healthy",
+      "detail": "HTTP 200 · 0 ms"
+    },
+    {
+      "id": "n8n-workflows",
+      "name": "Workflows n8n",
+      "status": "healthy",
+      "detail": "2 activos · 45 ejecuciones/24 h"
+    },
+    {
+      "id": "power",
+      "name": "Política de energía",
+      "status": "healthy",
+      "detail": "Objetivos de suspensión inactivos"
+    }
+  ]
+}
