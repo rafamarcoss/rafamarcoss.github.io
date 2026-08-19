@@ -1,0 +1,57 @@
+name: RafaOps Monitor
+
+on:
+  schedule:
+    - cron: '15 */6 * * *'
+      timezone: Europe/Madrid
+  workflow_run:
+    workflows: ['Daily AI Signal']
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: write
+
+concurrency:
+  group: rafaops-monitor
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout production
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Run health checks
+        id: monitor
+        run: node scripts/rafaops-monitor.mjs
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+
+      - name: Publish dashboard state
+        run: |
+          if git diff --quiet -- rafaops/status.json; then
+            echo "No dashboard changes to publish"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add rafaops/status.json
+          git commit -m "ops: refresh RafaOps status"
+          git push
+
+      - name: Surface critical incident
+        if: steps.monitor.outputs.health == 'incident'
+        run: |
+          echo "RafaOps detected a critical incident"
+          exit 1
