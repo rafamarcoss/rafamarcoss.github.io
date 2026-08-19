@@ -1,0 +1,17 @@
+{
+  "label": "RafaOps smoke test",
+  "goal": "Create a short NIGHT_AGENT_SMOKE.md file that explains this isolated smoke test and contains no secrets or external links.",
+  "repoPath": "C:/Users/Rafacha/orca/rafamarcoss.github.io",
+  "acceptance": [
+    "NIGHT_AGENT_SMOKE.md exists in the isolated worktree",
+    "The file states that no production deployment was performed",
+    "The repository remains buildable and no existing files are deleted"
+  ],
+  "testCommands": [
+    "git diff --check",
+    "node -e \"const f=require('fs').readFileSync('NIGHT_AGENT_SMOKE.md','utf8'); if(!f.includes('No production deployment was performed')) process.exit(1)\""
+  ],
+  "maxIterations": 2,
+  "maxMinutes": 45,
+  "targetScore": 85
+}

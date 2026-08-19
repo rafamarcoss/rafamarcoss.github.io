@@ -20,6 +20,7 @@ DATABASE = Path("/home/rafamarcoss/n8n-data/storage/database.sqlite")
 OUTPUT = REPOSITORY / "rafaops" / "vm-status.json"
 BRANCH = "rafaops-telemetry"
 DEPLOY_KEY = Path("/home/rafamarcoss/.ssh/rafaops_github_ed25519")
+NIGHT_AGENT_STATUS = Path("/home/rafamarcoss/night-agent-status.json")
 
 
 def run(command: list[str], timeout: int = 15) -> subprocess.CompletedProcess[str]:
@@ -150,12 +151,32 @@ def power_check() -> dict:
     )
 
 
+def night_agent_check() -> tuple[dict, dict | None]:
+    if not NIGHT_AGENT_STATUS.is_file():
+        return service("night-agent", "Night agent", "unknown", "Sin ejecuciones todavía"), None
+    try:
+        payload = json.loads(NIGHT_AGENT_STATUS.read_text(encoding="utf-8"))
+        allowed = {
+            key: payload.get(key)
+            for key in (
+                "schemaVersion", "runId", "status", "goalLabel", "iteration",
+                "maxIterations", "score", "targetScore", "updatedAt", "worktreeName", "summary",
+            )
+        }
+        active = allowed.get("status") in {"planning", "dispatching", "working"}
+        detail = f"{allowed.get('status', 'unknown')} · iteración {allowed.get('iteration', 0)}/{allowed.get('maxIterations', 0)}"
+        return service("night-agent", "Night agent", "healthy" if active else "unknown", detail), allowed
+    except (OSError, ValueError, TypeError) as error:
+        return service("night-agent", "Night agent", "unknown", error.__class__.__name__), None
+
+
 def collect() -> dict:
     now = datetime.now(timezone.utc)
     services, docker_metrics = docker_telemetry()
     http_service, latency = n8n_http_check()
     database_service, n8n_metrics = n8n_database_stats(now)
-    services.extend([http_service, database_service, power_check()])
+    night_service, night_agent = night_agent_check()
+    services.extend([http_service, database_service, power_check(), night_service])
     critical_failed = any(item["status"] == "failed" and item["id"] in {"docker", "n8n-container", "n8n-http"} for item in services)
     return {
         "schemaVersion": 1,
@@ -164,6 +185,7 @@ def collect() -> dict:
         "health": "incident" if critical_failed else "operational",
         "summary": "n8n o Docker necesitan atención" if critical_failed else "VM y n8n responden correctamente",
         "metrics": {**host_metrics(), **docker_metrics, "n8nLatencyMs": latency, **n8n_metrics},
+        "agentLoop": night_agent,
         "services": services,
     }
 
