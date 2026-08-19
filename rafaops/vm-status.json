@@ -1,23 +1,23 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-19T06:45:01.386Z",
+  "generatedAt": "2026-08-19T07:00:01.175Z",
   "host": "automatizacion",
   "health": "operational",
   "summary": "VM y n8n responden correctamente",
   "metrics": {
-    "uptimeSeconds": 112298,
-    "load1": 0.01,
-    "memoryUsedBytes": 1191825408,
+    "uptimeSeconds": 113198,
+    "load1": 0.0,
+    "memoryUsedBytes": 1203703808,
     "memoryTotalBytes": 8941510656,
-    "diskUsedBytes": 12377460736,
+    "diskUsedBytes": 12377538560,
     "diskTotalBytes": 25180848128,
     "containerRestarts": 0,
     "n8nVersion": "2.35.3",
-    "n8nLatencyMs": 40,
+    "n8nLatencyMs": 231,
     "activeWorkflows": 3,
-    "executions24h": 38,
+    "executions24h": 37,
     "successfulExecutions24h": 32,
-    "failedExecutions24h": 6,
+    "failedExecutions24h": 5,
     "lastExecution": {
       "startedAt": "2026-08-19 01:26:24.904",
       "stoppedAt": "2026-08-19 01:26:50.312",
@@ -55,13 +55,13 @@
       "id": "n8n-http",
       "name": "n8n healthz",
       "status": "healthy",
-      "detail": "HTTP 200 · 40 ms"
+      "detail": "HTTP 200 · 231 ms"
     },
     {
       "id": "n8n-workflows",
       "name": "Workflows n8n",
       "status": "healthy",
-      "detail": "3 activos · 38 ejecuciones/24 h"
+      "detail": "3 activos · 37 ejecuciones/24 h"
     },
     {
       "id": "power",
