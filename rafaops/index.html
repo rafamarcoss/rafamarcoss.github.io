@@ -34,6 +34,7 @@
     @media(max-width:640px){.shell{width:min(100% - 1rem,1240px)}.nav-link{display:none}.hero-bottom{align-items:flex-start;flex-direction:column}.metrics{grid-template-columns:repeat(2,1fr)}.metric:last-child{grid-column:1/-1}.pipeline{padding:1rem}.routing{grid-template-columns:1fr}.route:not(:last-child)::after{content:'↓';right:50%;top:auto;bottom:-.65rem}.guardrails{grid-template-columns:1fr}.panel-head{flex-direction:column}.panel-note{text-align:left}.architecture-copy{padding:1.4rem}footer{flex-direction:column}}
     .pipeline{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));overflow:visible}.step{min-width:0;flex:initial}
     @media(max-width:640px){.pipeline{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    .vm-board{padding:1.2rem}.vm-summary{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.25rem .2rem 1rem}.vm-identity{display:flex;align-items:center;gap:.7rem}.vm-icon{width:42px;height:42px;display:grid;place-items:center;border:1px solid rgba(110,156,255,.24);border-radius:13px;color:var(--blue);background:rgba(110,156,255,.08);font:700 .62rem var(--mono)}.vm-name{font:700 .9rem var(--display)}.vm-heartbeat{display:block;margin-top:.25rem;color:var(--muted);font:500 .62rem var(--mono)}.vm-state{padding:.42rem .62rem;border:1px solid rgba(154,230,180,.22);border-radius:999px;color:var(--mint);font:700 .58rem var(--mono);text-transform:uppercase}.vm-state.stale,.vm-state.incident{border-color:rgba(255,107,107,.28);color:var(--red)}.vm-resources{display:grid;grid-template-columns:repeat(3,1fr);gap:.55rem;margin-bottom:.8rem}.resource{padding:.85rem;border:1px solid var(--line);border-radius:15px;background:rgba(5,18,19,.42)}.resource-label{color:var(--muted);font:700 .57rem var(--mono);text-transform:uppercase}.resource-value{display:block;margin-top:.5rem;font:700 1rem var(--display)}.resource-track{height:4px;margin-top:.65rem;border-radius:99px;background:rgba(144,167,165,.12);overflow:hidden}.resource-fill{height:100%;border-radius:inherit;background:linear-gradient(90deg,var(--teal),var(--blue))}.vm-services{display:grid}.vm-services .check{padding:.72rem .2rem}.vm-services .check-icon{width:30px;height:30px}.vm-unavailable{padding:2rem .2rem;color:var(--muted);font-size:.76rem}@media(max-width:520px){.vm-resources{grid-template-columns:1fr}.vm-summary{align-items:flex-start}.vm-state{white-space:nowrap}}
   </style>
 </head>
 <body>
@@ -79,6 +80,11 @@
       </article>
 
       <article class="panel">
+        <div class="panel-head"><div><span class="panel-kicker">VM / outbound heartbeat</span><h2 data-i18n="vmTitle">Máquina automatizacion</h2></div><p class="panel-note" data-i18n="vmNote">Telemetría enviada desde Ubuntu sin exponer puertos.</p></div>
+        <div id="vm-board" class="vm-board"><div class="vm-unavailable loading">Esperando heartbeat de la VM…</div></div>
+      </article>
+
+      <article class="panel">
         <div class="panel-head"><div><span class="panel-kicker">Recovery policy</span><h2 data-i18n="routing">Enrutamiento de modelos</h2></div><p class="panel-note" data-i18n="routingNote">El modelo caro entra donde aporta razonamiento.</p></div>
         <div id="routing" class="routing"></div>
         <p id="policy" class="policy">—</p>
@@ -115,14 +121,18 @@
   <script>
     const translations = {
       en: {
-        news:'View AI Signal ↗',portfolio:'Portfolio',eyebrow:'Agentic operations control plane',heroA:'Systems fail.',heroB:'Agents respond.',lead:'RafaOps watches my real automations, gathers evidence, supervises retries and changes model when an execution fails validation.',availability:'Availability',realChecks:'real checks',healthy:'Healthy checks',incidents:'Open incidents',humanGate:'with a human approval gate',recoveries:'Recoveries',supervised:'supervised by another agent',lastRun:'Latest run',pipeline:'Agentic pipeline',pipelineNote:'Every block has state, model, validation and a recovery strategy.',systems:'Watched systems',refresh:'Refreshes automatically.',routing:'Model routing',routingNote:'The expensive model is used where reasoning matters.',incidentHistory:'Incident history',incidentNote:'Traceable detection, recovery and closure.',runs:'Latest rounds',runsNote:'GitHub Actions and manual executions.',controlTitle:'Control before autonomy.',controlCopy:'Agents may investigate, retry and propose a recovery. Publishing code or accepting a fix still requires a human gate.',guardRetry:'Bounded retries',guardRetryCopy:'Two transport attempts. Then the strategy changes.',guardSupervisor:'Independent agent',guardSupervisorCopy:'It receives the validation error and rebuilds the output.',guardFallback:'Model fallback',guardFallbackCopy:'One provider cannot block the whole publication.',guardAudit:'Verifiable trace',guardAuditCopy:'Duration, tokens, errors and recoveries are recorded.'
+        news:'View AI Signal ↗',portfolio:'Portfolio',eyebrow:'Agentic operations control plane',heroA:'Systems fail.',heroB:'Agents respond.',lead:'RafaOps watches my real automations, gathers evidence, supervises retries and changes model when an execution fails validation.',availability:'Availability',realChecks:'real checks',healthy:'Healthy checks',incidents:'Open incidents',humanGate:'with a human approval gate',recoveries:'Recoveries',supervised:'supervised by another agent',lastRun:'Latest run',pipeline:'Agentic pipeline',pipelineNote:'Every block has state, model, validation and a recovery strategy.',systems:'Watched systems',refresh:'Refreshes automatically.',vmTitle:'automatizacion machine',vmNote:'Telemetry sent from Ubuntu without exposing ports.',routing:'Model routing',routingNote:'The expensive model is used where reasoning matters.',incidentHistory:'Incident history',incidentNote:'Traceable detection, recovery and closure.',runs:'Latest rounds',runsNote:'GitHub Actions and manual executions.',controlTitle:'Control before autonomy.',controlCopy:'Agents may investigate, retry and propose a recovery. Publishing code or accepting a fix still requires a human gate.',guardRetry:'Bounded retries',guardRetryCopy:'Two transport attempts. Then the strategy changes.',guardSupervisor:'Independent agent',guardSupervisorCopy:'It receives the validation error and rebuilds the output.',guardFallback:'Model fallback',guardFallbackCopy:'One provider cannot block the whole publication.',guardAudit:'Verifiable trace',guardAuditCopy:'Duration, tokens, errors and recoveries are recorded.'
       }
     };
     const escapeHTML = value => String(value ?? '').replace(/[&<>'"]/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
     const formatDuration = ms => ms == null ? '—' : ms < 1000 ? `${ms} ms` : `${(ms / 1000).toFixed(ms < 10000 ? 1 : 0)} s`;
     const formatDate = (value, lang = currentLang) => value ? new Intl.DateTimeFormat(lang === 'en' ? 'en-GB' : 'es-ES',{day:'2-digit',month:'short',hour:'2-digit',minute:'2-digit'}).format(new Date(value)) : '—';
+    const VM_STATUS_URL = 'https://api.github.com/repos/rafamarcoss/rafamarcoss.github.io/contents/rafaops/vm-status.json?ref=rafaops-telemetry';
+    const VM_STATUS_FALLBACK_URL = 'https://raw.githubusercontent.com/rafamarcoss/rafamarcoss.github.io/rafaops-telemetry/rafaops/vm-status.json';
     let currentLang = new URLSearchParams(location.search).get('lang') === 'en' ? 'en' : 'es';
     let latestData = null;
+    let latestVm = null;
+    let lastVmFetch = 0;
 
     function applyLanguage(lang) {
       currentLang = lang === 'en' ? 'en' : 'es';
@@ -132,21 +142,30 @@
         if (!element.dataset.es) element.dataset.es = element.textContent;
         element.textContent = currentLang === 'en' ? (translations.en[element.dataset.i18n] || element.dataset.es) : element.dataset.es;
       });
-      if (latestData) render(latestData);
+      if (latestData) render(latestData, latestVm);
     }
 
-    function render(data) {
+    function render(data, vm) {
       latestData = data;
-      const operational = data.health === 'operational';
+      latestVm = vm;
+      const vmAgeMinutes = vm?.generatedAt ? Math.floor((Date.now() - new Date(vm.generatedAt).getTime()) / 60000) : Infinity;
+      const vmOperational = vm?.health === 'operational' && vmAgeMinutes <= 30;
+      const operational = data.health === 'operational' && vmOperational;
       const live = document.getElementById('live');
-      live.className = `live ${escapeHTML(data.health)}`;
+      live.className = `live ${operational ? 'operational' : 'incident'}`;
       document.getElementById('live-copy').classList.remove('loading');
       document.getElementById('live-copy').textContent = operational
         ? (currentLang === 'en' ? 'All critical systems operational' : 'Sistemas críticos operativos')
         : (currentLang === 'en' ? 'Incident detected' : 'Incidente detectado');
-      document.getElementById('availability').textContent = `${data.metrics?.availability ?? 0}%`;
-      document.getElementById('healthy').textContent = data.metrics?.healthyChecks ?? 0;
-      document.getElementById('healthy-foot').textContent = `${data.metrics?.totalChecks ?? 0} ${currentLang === 'en' ? 'systems observed' : 'sistemas observados'}`;
+      const mainMeasured = (data.checks || []).filter(item => ['healthy','failed'].includes(item.status));
+      const mainHealthy = mainMeasured.filter(item => item.status === 'healthy').length;
+      const vmHealthy = (vm?.services || []).filter(item => item.status === 'healthy').length;
+      const vmTotal = (vm?.services || []).length;
+      const healthyTotal = mainHealthy + vmHealthy;
+      const observedTotal = mainMeasured.length + vmTotal;
+      document.getElementById('availability').textContent = `${observedTotal ? Math.round(healthyTotal / observedTotal * 1000) / 10 : 0}%`;
+      document.getElementById('healthy').textContent = healthyTotal;
+      document.getElementById('healthy-foot').textContent = `${observedTotal} ${currentLang === 'en' ? 'systems observed' : 'sistemas observados'}`;
       document.getElementById('open-incidents').textContent = data.metrics?.openIncidents ?? 0;
       document.getElementById('recoveries').textContent = data.metrics?.supervisedRecoveries ?? 0;
       document.getElementById('duration').textContent = formatDuration(data.metrics?.lastRunDurationMs);
@@ -164,6 +183,8 @@
         <span class="check-latency">${check.latencyMs == null ? check.status : `${check.latencyMs}ms`}</span>
       </a>`).join('');
 
+      renderVm(vm, vmAgeMinutes);
+
       const routes = [
         ['worker', currentLang === 'en' ? 'Worker' : 'Worker'],
         ['supervisor', currentLang === 'en' ? 'Supervisor' : 'Supervisor'],
@@ -178,11 +199,47 @@
       document.getElementById('run-list').innerHTML = (data.runs || []).slice(0,5).map(run => `<a class="run" href="${escapeHTML(run.url || '#')}" ${run.url ? 'target="_blank" rel="noopener"' : 'aria-disabled="true"'}><i class="incident-mark"></i><div><h3 class="item-title">${escapeHTML(run.source)} · ${escapeHTML(run.status)}</h3><p class="item-detail">${escapeHTML(run.checks?.length || 0)} checks · ${formatDuration(run.durationMs)}</p></div><time class="item-time">${formatDate(run.finishedAt)}</time></a>`).join('');
     }
 
+    function renderVm(vm, ageMinutes) {
+      const board = document.getElementById('vm-board');
+      if (!vm) {
+        board.innerHTML = `<div class="vm-unavailable">${currentLang === 'en' ? 'VM heartbeat unavailable.' : 'Heartbeat de la VM no disponible.'}</div>`;
+        return;
+      }
+      const stale = ageMinutes > 30;
+      const metrics = vm.metrics || {};
+      const memory = metrics.memoryTotalBytes ? Math.round(metrics.memoryUsedBytes / metrics.memoryTotalBytes * 100) : 0;
+      const disk = metrics.diskTotalBytes ? Math.round(metrics.diskUsedBytes / metrics.diskTotalBytes * 100) : 0;
+      const uptimeHours = Math.floor((metrics.uptimeSeconds || 0) / 3600);
+      const status = stale ? 'stale' : vm.health;
+      board.innerHTML = `<div class="vm-summary"><div class="vm-identity"><span class="vm-icon">VM</span><span><strong class="vm-name">${escapeHTML(vm.host)}</strong><small class="vm-heartbeat">${ageMinutes} min · n8n ${escapeHTML(metrics.n8nVersion || '—')}</small></span></div><span class="vm-state ${escapeHTML(status)}">${stale ? 'stale' : escapeHTML(vm.health)}</span></div>
+        <div class="vm-resources">
+          <article class="resource"><span class="resource-label">Uptime</span><strong class="resource-value">${uptimeHours} h</strong><div class="resource-track"><div class="resource-fill" style="width:${Math.min(100, uptimeHours / 168 * 100)}%"></div></div></article>
+          <article class="resource"><span class="resource-label">RAM</span><strong class="resource-value">${memory}%</strong><div class="resource-track"><div class="resource-fill" style="width:${memory}%"></div></div></article>
+          <article class="resource"><span class="resource-label">Disk</span><strong class="resource-value">${disk}%</strong><div class="resource-track"><div class="resource-fill" style="width:${disk}%"></div></div></article>
+        </div>
+        <div class="vm-services">${(vm.services || []).map(item => `<div class="check ${escapeHTML(item.status)}"><span class="check-icon">${item.status === 'healthy' ? 'OK' : item.status === 'failed' ? '!!' : '—'}</span><span><strong class="check-title">${escapeHTML(item.name)}</strong><span class="check-detail">${escapeHTML(item.detail)}</span></span><span class="check-latency">${escapeHTML(item.status)}</span></div>`).join('')}</div>`;
+    }
+
+    async function loadVmStatus() {
+      if (latestVm && Date.now() - lastVmFetch < 300_000) return latestVm;
+      let response = await fetch(VM_STATUS_URL, {
+        cache:'no-store',
+        headers:{ Accept:'application/vnd.github.raw+json' }
+      });
+      if (!response.ok) response = await fetch(VM_STATUS_FALLBACK_URL, { cache:'no-store' });
+      if (!response.ok) throw new Error(`VM HTTP ${response.status}`);
+      lastVmFetch = Date.now();
+      return response.json();
+    }
+
     async function loadStatus() {
       try {
-        const response = await fetch(`status.json?v=${Date.now()}`, { cache:'no-store' });
-        if (!response.ok) throw new Error(`HTTP ${response.status}`);
-        render(await response.json());
+        const [statusResponse, vmResponse] = await Promise.all([
+          fetch(`status.json?v=${Date.now()}`, { cache:'no-store' }),
+          loadVmStatus().catch(() => null)
+        ]);
+        if (!statusResponse.ok) throw new Error(`HTTP ${statusResponse.status}`);
+        render(await statusResponse.json(), vmResponse);
       } catch (error) {
         document.getElementById('live-copy').classList.remove('loading');
         document.getElementById('live-copy').textContent = currentLang === 'en' ? 'Telemetry unavailable' : 'Telemetría no disponible';
