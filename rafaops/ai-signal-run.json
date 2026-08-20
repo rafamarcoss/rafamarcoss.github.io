@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "system": "ai-signal",
-  "startedAt": "2026-08-19T07:47:44.249Z",
+  "startedAt": "2026-08-20T07:50:18.466Z",
   "status": "healthy",
   "models": {
     "selection": "deepseek-v4-flash",
@@ -19,13 +19,18 @@
       "status": "success",
       "recoveredFromReasoning": false,
       "finishReason": "stop",
-      "durationMs": 49524,
+      "durationMs": 38375,
       "usage": {
-        "prompt_tokens": 3107,
-        "completion_tokens": 6182,
-        "total_tokens": 9289,
+        "prompt_tokens": 3023,
+        "completion_tokens": 5082,
+        "total_tokens": 8105,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 3023,
         "prompt_tokens_details": {
           "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 4018
         }
       }
     },
@@ -34,21 +39,30 @@
       "role": "worker",
       "model": "deepseek-v4-pro",
       "attempt": 1,
+      "status": "failed",
+      "durationMs": 41844,
+      "error": "OpenCode: Internal server error"
+    },
+    {
+      "task": "write-spanish-edition",
+      "role": "worker",
+      "model": "deepseek-v4-pro",
+      "attempt": 2,
       "status": "success",
       "recoveredFromReasoning": false,
       "finishReason": "stop",
-      "durationMs": 51274,
+      "durationMs": 40834,
       "usage": {
-        "prompt_tokens": 1713,
-        "completion_tokens": 2932,
-        "total_tokens": 4645,
-        "prompt_cache_hit_tokens": 0,
-        "prompt_cache_miss_tokens": 1713,
+        "prompt_tokens": 1766,
+        "completion_tokens": 2109,
+        "total_tokens": 3875,
+        "prompt_cache_hit_tokens": 1664,
+        "prompt_cache_miss_tokens": 102,
         "prompt_tokens_details": {
-          "cached_tokens": 0
+          "cached_tokens": 1664
         },
         "completion_tokens_details": {
-          "reasoning_tokens": 1867
+          "reasoning_tokens": 831
         }
       }
     },
@@ -60,33 +74,38 @@
       "status": "success",
       "recoveredFromReasoning": false,
       "finishReason": "stop",
-      "durationMs": 20219,
+      "durationMs": 22039,
       "usage": {
-        "prompt_tokens": 1137,
-        "completion_tokens": 2999,
-        "total_tokens": 4136,
+        "prompt_tokens": 1361,
+        "completion_tokens": 4172,
+        "total_tokens": 5533,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 1361,
         "prompt_tokens_details": {
           "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 3242
         }
       }
     }
   ],
   "recoveries": [],
   "output": {
-    "slug": "ai-signal-2026-08-19",
+    "slug": "ai-signal-2026-08-20",
     "sources": 10,
     "languages": [
       "es",
       "en"
     ]
   },
-  "finishedAt": "2026-08-19T07:49:46.169Z",
-  "durationMs": 121920,
+  "finishedAt": "2026-08-20T07:52:44.405Z",
+  "durationMs": 145939,
   "error": null,
   "metrics": {
-    "modelCalls": 3,
-    "failedAttempts": 0,
+    "modelCalls": 4,
+    "failedAttempts": 1,
     "supervisedRecoveries": 0,
-    "totalTokens": 18070
+    "totalTokens": 17513
   }
 }

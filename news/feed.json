@@ -1,7 +1,154 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-19T07:49:46.167Z",
+  "generatedAt": "2026-08-20T07:52:44.403Z",
   "articles": [
+    {
+      "slug": "ai-signal-2026-08-20",
+      "date": "2026-08-20",
+      "generatedAt": "2026-08-20T07:52:44.403Z",
+      "categories": [
+        "IA General",
+        "Trabajo y Negocio",
+        "Finanzas e Inversiones",
+        "Legal IA",
+        "Educación IA"
+      ],
+      "readingMinutes": 4,
+      "content": {
+        "es": {
+          "title": "Señales de IA: mercados, trabajo, educación y regulación en tensión",
+          "dek": "Las grandes tecnológicas afrontan dudas sobre la rentabilidad de sus apuestas en IA, mientras el empleo se polariza. La regulación y la educación emergen como claves para un desarrollo equilibrado.",
+          "intro": "La inteligencia artificial avanza a un ritmo que desborda los marcos tradicionales de inversión, trabajo y política. Hoy confluyen noticias que muestran la magnitud del gasto en IA, la incertidumbre sobre su retorno, la bifurcación del mercado laboral, la brecha educativa de género y respuestas regulatorias y aplicaciones especializadas. Esta edición conecta esos frentes para ofrecer una visión práctica de las oportunidades y los límites.",
+          "sections": [
+            {
+              "heading": "Mercados: el iceberg del gasto y la sombra de la rentabilidad",
+              "body": "Las grandes tecnológicas han apostado su futuro a la IA, pero los mercados empiezan a inquietarse por la sostenibilidad de esas inversiones. Un análisis de Bitfinanzas revela que el gasto real podría ser hasta 3 billones de dólares mayor de lo reportado, debido a costes ocultos en infraestructura, investigación y adquisiciones. La Vanguardia señala que las dudas sobre cuentas y rentabilidad ya generan volatilidad en el sector. Para los inversores, la clave está en distinguir entre narrativa y fundamentos: no toda inversión en IA se traducirá en beneficios a corto plazo."
+            },
+            {
+              "heading": "Trabajo: paradoja de Jevons frente a economía del talento bifurcada",
+              "body": "El impacto laboral de la IA es objeto de debate. Pictet Asset Management sostiene que, por la paradoja de Jevons, la eficiencia puede generar más demanda y empleo neto. Sin embargo, Expansión describe una economía del talento partida en dos: trabajos de alta cualificación con demanda creciente y puestos de baja cualificación fácilmente automatizables. Ambas visiones no son excluyentes: el crecimiento puede crear nuevas ocupaciones, pero exige una rápida adaptación de competencias. Para los profesionales, la prioridad es invertir en habilidades técnicas y digitales que los sitúen en el segmento de mayor valor."
+            },
+            {
+              "heading": "Educación: personalización con IA y la brecha que persiste",
+              "body": "La IA ofrece herramientas para personalizar el aprendizaje, como el proyecto de innovación que analiza datos para diseñar programas educativos en Teruel. Pero un estudio de EL PAÍS alerta de que las adolescentes parten con desventaja en el aprendizaje de esta tecnología por estereotipos y falta de oportunidades. Si no se interviene, la brecha de género se ampliará en el sector tecnológico. Las instituciones educativas y las empresas edtech deben integrar la IA con enfoque inclusivo, fomentando la participación femenina desde edades tempranas."
+            },
+            {
+              "heading": "Regulación y sector público: de los chatbots emocionales a la vivienda",
+              "body": "China ha decidido limitar las relaciones románticas entre usuarios e inteligencias artificiales, un ejemplo de cómo las políticas públicas moldean el desarrollo afectivo de estas tecnologías. En Cataluña, el gobierno usará IA para localizar pisos vacíos y sacarlos al mercado, analizando datos de consumo de agua y energía. Estas iniciativas muestran el potencial de la IA para resolver problemas sociales, pero también la necesidad de establecer límites éticos y legales. Para las empresas que buscan contratos públicos, la transparencia y el respeto a la privacidad serán decisivos."
+            },
+            {
+              "heading": "Legal tech: fiabilidad y formación abierta",
+              "body": "El sector jurídico avanza en soluciones específicas. Una IA creada para el ámbito legal ha conseguido eliminar las alucinaciones, mejorando la precisión en la investigación. Además, Harvey lanza una certificación gratuita y abierta para ingenieros legales, que combina programación y derecho. Estas herramientas reducen errores y costes, pero exigen profesionales capaces de integrarlas. Para abogados y técnicos, obtener esta certificación puede ser una ventaja competitiva en un mercado que valora cada vez más la intersección entre tecnología y derecho."
+            }
+          ],
+          "takeaways": [
+            "Para inversores: evaluar el gasto real en IA más allá de lo reportado y considerar la incertidumbre sobre la rentabilidad a corto plazo.",
+            "Para trabajadores: desarrollar competencias técnicas y digitales para acceder al segmento de alta cualificación y evitar la automatización.",
+            "Para educadores y empresas edtech: usar la IA para personalizar el aprendizaje, pero con programas que reduzcan la brecha de género en tecnología.",
+            "Para el sector público: la IA puede ayudar en vivienda y otros servicios, pero requiere marcos regulatorios que protejan a los ciudadanos.",
+            "Para profesionales legales: aprovechar las certificaciones gratuitas en IA legal y las herramientas que eliminan alucinaciones para aumentar la eficiencia."
+          ],
+          "closing": "La inteligencia artificial no es una fuerza monolítica: sus efectos dependen de decisiones de inversión, políticas educativas, marcos regulatorios y adopción sectorial. Las tensiones entre optimismo y escepticismo, entre eficiencia y desigualdad, exigen una mirada crítica y pragmática. Solo así se podrá aprovechar su potencial transformador sin dejar a nadie atrás."
+        },
+        "en": {
+          "title": "AI Signals: Markets, Labor, Education, and Regulation in Tension",
+          "dek": "Tech giants face doubts about the profitability of their AI bets, while employment polarizes. Regulation and education emerge as key to balanced development.",
+          "intro": "Artificial intelligence is advancing at a pace that overflows traditional frameworks of investment, work, and policy. Today, news converges showing the magnitude of AI spending, uncertainty about its return, the bifurcation of the labor market, the educational gender gap, and regulatory responses and specialized applications. This edition connects these fronts to offer a practical view of opportunities and limits.",
+          "sections": [
+            {
+              "heading": "Markets: The Spending Iceberg and the Shadow of Profitability",
+              "body": "Tech giants have bet their future on AI, but markets are beginning to worry about the sustainability of these investments. An analysis by Bitfinanzas reveals that real spending could be up to $3 trillion higher than reported, due to hidden costs in infrastructure, research, and acquisitions. La Vanguardia points out that doubts about accounts and profitability are already generating volatility in the sector. For investors, the key is to distinguish between narrative and fundamentals: not every AI investment will translate into short-term profits."
+            },
+            {
+              "heading": "Work: Jevons Paradox vs. Bifurcated Talent Economy",
+              "body": "The labor impact of AI is debated. Pictet Asset Management argues that, due to the Jevons paradox, efficiency can generate more demand and net employment. However, Expansión describes a talent economy split in two: high-skilled jobs with growing demand and low-skilled jobs easily automatable. Both views are not exclusive: growth can create new occupations, but it requires rapid adaptation of skills. For professionals, the priority is to invest in technical and digital skills that place them in the higher-value segment."
+            },
+            {
+              "heading": "Education: Personalization with AI and the Persistent Gap",
+              "body": "AI offers tools to personalize learning, such as the innovation project that analyzes data to design educational programs in Teruel. But a study by EL PAÍS warns that adolescent girls start with a disadvantage in learning this technology due to stereotypes and lack of opportunities. If not intervened, the gender gap will widen in the tech sector. Educational institutions and edtech companies must integrate AI with an inclusive approach, fostering female participation from an early age."
+            },
+            {
+              "heading": "Regulation and Public Sector: From Emotional Chatbots to Housing",
+              "body": "China has decided to limit romantic relationships between users and artificial intelligence, an example of how public policies shape the affective development of these technologies. In Catalonia, the government will use AI to locate empty apartments and bring them to market, analyzing water and energy consumption data. These initiatives show AI's potential to solve social problems, but also the need to establish ethical and legal boundaries. For companies seeking public contracts, transparency and respect for privacy will be decisive."
+            },
+            {
+              "heading": "Legal Tech: Reliability and Open Training",
+              "body": "The legal sector is advancing in specific solutions. An AI created for the legal field has managed to eliminate hallucinations, improving research accuracy. Additionally, Harvey launches a free and open certification for legal engineers, combining programming and law. These tools reduce errors and costs, but require professionals capable of integrating them. For lawyers and technicians, obtaining this certification can be a competitive advantage in a market that increasingly values the intersection between technology and law."
+            }
+          ],
+          "takeaways": [
+            "For investors: evaluate real AI spending beyond what's reported and consider uncertainty about short-term profitability.",
+            "For workers: develop technical and digital skills to access the high-skill segment and avoid automation.",
+            "For educators and edtech companies: use AI to personalize learning, but with programs that reduce the gender gap in technology.",
+            "For the public sector: AI can help with housing and other services, but requires regulatory frameworks that protect citizens.",
+            "For legal professionals: take advantage of free certifications in legal AI and tools that eliminate hallucinations to increase efficiency."
+          ],
+          "closing": "Artificial intelligence is not a monolithic force: its effects depend on investment decisions, educational policies, regulatory frameworks, and sectoral adoption. The tensions between optimism and skepticism, between efficiency and inequality, demand a critical and pragmatic view. Only then can its transformative potential be harnessed without leaving anyone behind."
+        }
+      },
+      "sources": [
+        {
+          "title": "China no quiere que sus internautas se enamoren de una inteligencia artificial - EL PAÍS",
+          "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNcEVUY21oZVBKbTFNZTN1MjdPQXBSckg0TnJyMnMzTDhRTjVyYVowWXBraWVXeXdpYWdicklOQVF1aDEwOERHMUZQWUZYQkl4ZU80MUxLRnJSemdCa2lWeUJJeUczZHc3V2ZoRG5JUW4yci0zZHRES0ltTy05VjltVDBXZTlINDhOVmZFRThJQm1CUHRQaURCZThaOEFJQUN3LTd2OU5mV2pJQzNKb1RrUUF3RF9SM2pGaTEzQUM0c044SG10TnfSAdoBQVVfeXFMTTZGSkRmSUs4emZDWXl1dFZSWUJuS21NQVlFMmtBU2phSEZoODVhb2h3N0FiVWxkUFdLSklfcVpub05fbzUtbVZUS1NmMVdtS2tXZHZqVGNYOWVJT09rRzlscDJyM3cxUklhWU8tcnNOQXd4Wkh2X0hCTWJoMmRXVjVoZzBjMDRfOEFkTFJaZFdIWFQ4U1l4RVNmNXg1cEoyeGc5eUlBVFNURmZlcDRubXdfa2d0QUhKUGZ5ZEZiTnZRMFZRN0EzZlVybWo2MWlueHVFQ2plSDc0bkE?oc=5",
+          "category": "IA General",
+          "publishedAt": "2026-08-16T03:30:01.000Z"
+        },
+        {
+          "title": "Catalunya usará la inteligencia artificial para localizar pisos vacíos y sacarlos al mercado - El Periódico",
+          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQSHdVbGp1ZnhaLWVzREIyU0VUUTNmYVBNOGtsaUx6UlhnUzhSbF90TGU5WW5zR2ZpOUUteG11aFFTNzEwSHJtNXdqRGpQTWR2V1ZWUmRHSFEtUzFxZlhhT0JBSHB4d3dsbjZtbkkxOXJSUEVNNHFKdC0zRXliWEdLazRYX19XeXBnN0FIZGZNNi1mT1BSODFveXh2b2tkaGpqLWfSAaIBQVVfeXFMTi1vbUs3NFRvdms5dHN5TWVPNFA5T2I1SWk0MVBBWDFNMTFVSnNSQUsxNDc3aW1KSDQ5bV9HLWNxeFU2ZUpZT3g5Q2J2aTlvaFpjN2JhTWJoVEY5RkYtcGxUNy1RUWVlUzNacXB5SFdsTDdQb2o4NGJia3NTbEF0LTdQNG9aRXFfQjNNMGlSTy1kWW1seXNGbkNUd1phX2thQ3hB?oc=5",
+          "category": "IA General",
+          "publishedAt": "2026-08-17T14:26:45.000Z"
+        },
+        {
+          "title": "Análisis de Pictet: Inteligencia Artificial, mercado laboral y paradoja de Jevons - RankiaPro",
+          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNVXE5V1JyX3hVbTZCMGhiV1NUUTc1VXF6UzA5dnBYekNjd2pZcWprV0Q3NU9hYVU1bXJMNlZ6X0VDMU9jazdiOURyeHRGWWswem9sRmF0OVJBYUZrZXlCM3gtX2JjbmR3cC1aZW1FY2lHd1BYSWFJM2R4dFZzU25ESHhxaUtPQWU2Y2dOX25sOFhaUzVkNUthdkEyZEN0NVMxU3hwQXlkLUxXNW91by16TUJPZXpKb2FP?oc=5",
+          "category": "Trabajo y Negocio",
+          "publishedAt": "2026-08-19T15:48:47.000Z"
+        },
+        {
+          "title": "El empleo se parte en dos: esta es la nueva economía del talento que crea la IA - Expansión",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOT0x6dGJ1SHM2WGZjc2N1ZXBmdEszZlpBT0NYNFZwYjBpaXpiN2MybmFGOXY4TjBVandpaWhNaEZFTnhfeFM0eHdaZHBxN0V6UmJsZ3ZMbjQ3ZW53QmZKQ3ZUaG9hNlRFNjhRbzgyQlAwb2pNdHpFM1pMOXFvVWc3eHhIOTdvTlptbGUxczA2UWdtaGtkSnI5Mkd1Z9IBmwFBVV95cUxOT0x6dGJ1SHM2WGZjc2N1ZXBmdEszZlpBT0NYNFZwYjBpaXpiN2MybmFGOXY4TjBVandpaWhNaEZFTnhfeFM0eHdaZHBxN0V6UmJsZ3ZMbjQ3ZW53QmZKQ3ZUaG9hNlRFNjhRbzgyQlAwb2pNdHpFM1pMOXFvVWc3eHhIOTdvTlptbGUxczA2UWdtaGtkSnI5Mkd1Zw?oc=5",
+          "category": "Trabajo y Negocio",
+          "publishedAt": "2026-08-17T17:04:44.000Z"
+        },
+        {
+          "title": "Las grandes tecnológicas han apostado su futuro a la IA, pero las dudas sobre sus cuentas y su rentabilidad empiezan a inquietar a los mercados - La Vanguardia",
+          "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxPZDJWWWlsY3RJZnNYYnBhQkZVcjI0NE1lMWR6Vy1leDRDelc3WVNoai04YjVLbnVDU2Z2TW54T0RzQ1lKTkZWMEhXeGNfQkpuSTJXb3lqUW5xWUhnNEp3di1OSG41WnU4eG5aR0lSXzZnaDUtYTdyT0pVTUZtaTdHUVp1Xy1Rd1BwWFpSVDJqc2xFV2VLUmJWX2hRaTBMelRsRVBtYkJNUTJuQ2h4cjQySm1TQ19uNXBQakZLNndVckR5YkV0di0wSkFOS3ROX1NhZmFHWUNlbjhjYkcyOEVEc05YNE81c3lpZDZvdGNnVzQ5U3g4VTZOcV9KWdIB-wFBVV95cUxPZDJWWWlsY3RJZnNYYnBhQkZVcjI0NE1lMWR6Vy1leDRDelc3WVNoai04YjVLbnVDU2Z2TW54T0RzQ1lKTkZWMEhXeGNfQkpuSTJXb3lqUW5xWUhnNEp3di1OSG41WnU4eG5aR0lSXzZnaDUtYTdyT0pVTUZtaTdHUVp1Xy1Rd1BwWFpSVDJqc2xFV2VLUmJWX2hRaTBMelRsRVBtYkJNUTJuQ2h4cjQySm1TQ19uNXBQakZLNndVckR5YkV0di0wSkFOS3ROX1NhZmFHWUNlbjhjYkcyOEVEc05YNE81c3lpZDZvdGNnVzQ5U3g4VTZOcV9KWQ?oc=5",
+          "category": "Finanzas e Inversiones",
+          "publishedAt": "2026-08-20T04:00:00.000Z"
+        },
+        {
+          "title": "El iceberg del gasto en IA, por qué el gasto de las grandes tecnológicas es 3 billones de dólares mayor de lo que parece - Bitfinanzas",
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQcy1Ja1hkWUN6eU0yN0gtYU5QMEhqTnlXUWlPWFZHX0NQVlBNNDNidTJSU05pMGJla3VhbDRYOVpWdTdGQ3JQNmFmb1RNOEI1LUduYXViNlZCSmhvZnRyOFhWRV9ERzA3ZjRGaXVDUWVOUkE4V01zNC1jMUpTSTRXOFVOa0FLMUE?oc=5",
+          "category": "Finanzas e Inversiones",
+          "publishedAt": "2026-08-17T18:32:03.000Z"
+        },
+        {
+          "title": "La inteligencia artificial creada por y para el sector legal que destierra (por fin) las alucinaciones de los tribunales - El Español",
+          "url": "https://news.google.com/rss/articles/CBMilgJBVV95cUxPMndpNFVhdGF5WGZJRUFnVElYaUxudGpuSk10NnNVRHljQjZOdmwxOVpubkh1MXJNbUdfaHBNTGdzQ21FNk5acHplZ3BvWlpnYjdCOW82TXZvQ0xzdk5HTlNsNWlsOVoxZ0M1eEtjbWFSdTczdkt2aDFIeWxzb01XcWNvbDdYQ0NtTHVlazNoaWxGQ1VpRTV0WDFmTHgxUDJQZnF6cUxnbTU3NmtRZlBZT2dJM0tPVUZxWnhyRkk2XzVJdjhCTFpnTDhFd05SM2tJeXhJcW1FM1pJZmtaT0U0cEY2eldIYkxLWTdGVzFhZnEyamtFUU9pV2FidzlRWWNWMFUtSFNzQ2dwRnF6NDVyYnNYdVZTQdIBmwJBVV95cUxOM0RyT2ZPMFg2MGxuSkxSdmtxMklhOWxBTUJ1THFnVW1PdGtWcjBEa2pLMEw3SFFBRXZWOUV5Zm5nTlVTSHlhN1dQUUVud1FmX1JRRHlvNVoxbzFYT0ZNemhBOVozbzhxUWdKY3c4cERWcEdSaXctbVA5dF8ydVhOT1dlWnQ2V0lHVUhILU9nSUpBaldGMF9jVEZQZlZsbmtLaUVDME9OdDBZZmtyd090T0FTVXdQcGlNb3h0TmFCRU9Zb08wU2s3LUlMRUtZVUJvdkhhTUlqRlhhQU43LUE3U2JFc1FpVHZqVHNtWGNTZXZKTU9YVFR3Uy04Tkx6dVUwTFQ2U2hKNWFQaUVNSlQ1ZjBDSEY0dGtZQkhn?oc=5",
+          "category": "Legal IA",
+          "publishedAt": "2026-08-17T00:53:02.000Z"
+        },
+        {
+          "title": "Harvey lanza una certificación gratuita y abierta para ingenieros legales - RRHH Press",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPR3hDdVZDdzdGV19zc0YtN3U2RnBJRmYzcWVFX2JwVUg2dmlhLWtWY1JOQjRpUXg5MmU4cXpJamNya05rdWhLdk4tWDBfTTloWEV5VFZsckVuN3Y1ZXUwSFhGSWR3WFFDSDNtamVZSVlISGpLaWE4Wkg3Z2lEcVBCMU9vYS1kNlVoblpJc2UxUkR3RFc0TkZGTA?oc=5",
+          "category": "Legal IA",
+          "publishedAt": "2026-08-19T07:57:27.000Z"
+        },
+        {
+          "title": "Las adolescentes parten con desventaja en el aprendizaje de la inteligencia artificial - EL PAÍS",
+          "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNamF6MUsyWVVoR2lZY2hKLUlySEVVRmZibjgxQVlsRUJ3UHhoQmd5SG1SR3JrTnlKeVhjZTF0bzdmb3k1RUU3bmFtODRIczJSX2tNNVpFcWVORFdTVmc3WDQ0bXJ1RVFnblYtQ09YNHlObzNDeUstVlBnTWpQeF9MajFQdHdzMXRZYk1iSUgxbV9SSmI1YndUU2VyVDFmZTh3TTl0NVJfWFJmbmFLUFY2akZXSkVzdGdOalhpTGRLZ0wxek13dXo0blRXNNIB3wFBVV95cUxNRmluVjVXSndhMzg3VTNoSXNPbWNyZnI4Q01kOTRZaWVlWXBTYkx2RkhrTFVWdFlobEY0amZEUHYtRVFYMWpTdzZPdXdaNU94VFRHQ3BjSERGLVZCWnFHNUtvd2xBRWJ4ZUVkRjNHeEkwQjlmLWN1YVQ3RzNVc3FCZEZxdEFQWEF4Q0cwc2JTRVZRRVNFYTFjVlRoSFdqSHZSbE5QajhzVmdKQk4tQUFZXzFTTjVXaWVKVXRpM0EzY3ZPLURqd2U3d0Q5eFNGZUgweldkUUxBbXBscXhLSzV3?oc=5",
+          "category": "Educación IA",
+          "publishedAt": "2026-08-17T03:30:01.000Z"
+        },
+        {
+          "title": "Un proyecto de innovación se centra en la IA para diseñar programas educativos - Diario de Teruel",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNWXl4LS0taFlZck04Ml9vRTFxbDVOZHAzcUFKVnY5cTVRdjNHMFdxa0RPSjk2WFZBbUtGOENrRGhUUjBodWUxbVFqS21kaURtVndJRm5QLUctM2dQc1EwdEhmXzFWT3E2azdsUkJCb0hQMm94WjZidGVQdXBRMm0zbW1jdEc3N2tadHloa0MyaEdWaXBQUkpZSTFSZEFraUJGaGtGUV9xbDhJenNqaGk1SGtwU00?oc=5",
+          "category": "Educación IA",
+          "publishedAt": "2026-08-19T17:05:21.000Z"
+        }
+      ]
+    },
     {
       "slug": "ai-signal-2026-08-19",
       "date": "2026-08-19",
