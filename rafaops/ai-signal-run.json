@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "system": "ai-signal",
-  "startedAt": "2026-08-20T07:50:18.466Z",
+  "startedAt": "2026-08-21T07:51:07.532Z",
   "status": "healthy",
   "models": {
     "selection": "deepseek-v4-flash",
@@ -16,21 +16,30 @@
       "role": "worker",
       "model": "deepseek-v4-flash",
       "attempt": 1,
+      "status": "failed",
+      "durationMs": 46687,
+      "error": "OpenCode: Internal server error"
+    },
+    {
+      "task": "select-top-10",
+      "role": "worker",
+      "model": "deepseek-v4-flash",
+      "attempt": 2,
       "status": "success",
       "recoveredFromReasoning": false,
       "finishReason": "stop",
-      "durationMs": 38375,
+      "durationMs": 28542,
       "usage": {
-        "prompt_tokens": 3023,
-        "completion_tokens": 5082,
-        "total_tokens": 8105,
+        "prompt_tokens": 2955,
+        "completion_tokens": 4379,
+        "total_tokens": 7334,
         "prompt_cache_hit_tokens": 0,
-        "prompt_cache_miss_tokens": 3023,
+        "prompt_cache_miss_tokens": 2955,
         "prompt_tokens_details": {
           "cached_tokens": 0
         },
         "completion_tokens_details": {
-          "reasoning_tokens": 4018
+          "reasoning_tokens": 3726
         }
       }
     },
@@ -39,30 +48,21 @@
       "role": "worker",
       "model": "deepseek-v4-pro",
       "attempt": 1,
-      "status": "failed",
-      "durationMs": 41844,
-      "error": "OpenCode: Internal server error"
-    },
-    {
-      "task": "write-spanish-edition",
-      "role": "worker",
-      "model": "deepseek-v4-pro",
-      "attempt": 2,
       "status": "success",
       "recoveredFromReasoning": false,
       "finishReason": "stop",
-      "durationMs": 40834,
+      "durationMs": 68966,
       "usage": {
-        "prompt_tokens": 1766,
-        "completion_tokens": 2109,
-        "total_tokens": 3875,
-        "prompt_cache_hit_tokens": 1664,
-        "prompt_cache_miss_tokens": 102,
+        "prompt_tokens": 1348,
+        "completion_tokens": 4271,
+        "total_tokens": 5619,
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 1092,
         "prompt_tokens_details": {
-          "cached_tokens": 1664
+          "cached_tokens": 256
         },
         "completion_tokens_details": {
-          "reasoning_tokens": 831
+          "reasoning_tokens": 2953
         }
       }
     },
@@ -74,38 +74,38 @@
       "status": "success",
       "recoveredFromReasoning": false,
       "finishReason": "stop",
-      "durationMs": 22039,
+      "durationMs": 17393,
       "usage": {
-        "prompt_tokens": 1361,
-        "completion_tokens": 4172,
-        "total_tokens": 5533,
+        "prompt_tokens": 1401,
+        "completion_tokens": 3242,
+        "total_tokens": 4643,
         "prompt_cache_hit_tokens": 0,
-        "prompt_cache_miss_tokens": 1361,
+        "prompt_cache_miss_tokens": 1401,
         "prompt_tokens_details": {
           "cached_tokens": 0
         },
         "completion_tokens_details": {
-          "reasoning_tokens": 3242
+          "reasoning_tokens": 2292
         }
       }
     }
   ],
   "recoveries": [],
   "output": {
-    "slug": "ai-signal-2026-08-20",
+    "slug": "ai-signal-2026-08-21",
     "sources": 10,
     "languages": [
       "es",
       "en"
     ]
   },
-  "finishedAt": "2026-08-20T07:52:44.405Z",
-  "durationMs": 145939,
+  "finishedAt": "2026-08-21T07:53:53.059Z",
+  "durationMs": 165527,
   "error": null,
   "metrics": {
     "modelCalls": 4,
     "failedAttempts": 1,
     "supervisedRecoveries": 0,
-    "totalTokens": 17513
+    "totalTokens": 17596
   }
 }
