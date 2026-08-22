@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-22T07:41:18.902Z",
+  "generatedAt": "2026-08-22T07:41:31.053Z",
   "health": "operational",
   "summary": "Operativo después de 1 recuperación supervisada.",
   "metrics": {
     "availability": 100,
-    "healthyChecks": 3,
+    "healthyChecks": 4,
     "totalChecks": 5,
     "openIncidents": 0,
     "supervisedRecoveries": 1,
@@ -21,8 +21,8 @@
       "critical": true,
       "status": "healthy",
       "detail": "HTML y marca verificados",
-      "latencyMs": 190,
-      "checkedAt": "2026-08-22T07:41:19.092Z"
+      "latencyMs": 184,
+      "checkedAt": "2026-08-22T07:41:31.237Z"
     },
     {
       "id": "news-page",
@@ -31,8 +31,8 @@
       "critical": true,
       "status": "healthy",
       "detail": "Archivo de noticias disponible",
-      "latencyMs": 139,
-      "checkedAt": "2026-08-22T07:41:19.082Z"
+      "latencyMs": 130,
+      "checkedAt": "2026-08-22T07:41:31.231Z"
     },
     {
       "id": "feed-integrity",
@@ -42,16 +42,16 @@
       "status": "healthy",
       "detail": "10 fuentes · ES/EN · 0 h",
       "latencyMs": 0,
-      "checkedAt": "2026-08-22T07:41:18.944Z"
+      "checkedAt": "2026-08-22T07:41:31.102Z"
     },
     {
       "id": "github-actions",
       "name": "GitHub Actions",
       "critical": false,
-      "status": "running",
-      "detail": "Ejecución in_progress",
-      "latencyMs": 223,
-      "checkedAt": "2026-08-22T07:41:19.167Z",
+      "status": "healthy",
+      "detail": "Última ejecución: success",
+      "latencyMs": 229,
+      "checkedAt": "2026-08-22T07:41:31.331Z",
       "url": "https://github.com/rafamarcoss/rafamarcoss.github.io/actions/runs/32560127561"
     },
     {
@@ -61,7 +61,7 @@
       "status": "private",
       "detail": "Runtime aislado; conector local pendiente",
       "latencyMs": null,
-      "checkedAt": "2026-08-22T07:41:18.902Z",
+      "checkedAt": "2026-08-22T07:41:31.053Z",
       "url": null
     }
   ],
@@ -233,6 +233,42 @@
   },
   "incidents": [],
   "runs": [
+    {
+      "id": "32560270434",
+      "source": "workflow_run",
+      "startedAt": "2026-08-22T07:41:31.051Z",
+      "finishedAt": "2026-08-22T07:41:31.053Z",
+      "durationMs": 281,
+      "status": "operational",
+      "checks": [
+        {
+          "id": "website",
+          "status": "healthy",
+          "latencyMs": 184
+        },
+        {
+          "id": "news-page",
+          "status": "healthy",
+          "latencyMs": 130
+        },
+        {
+          "id": "feed-integrity",
+          "status": "healthy",
+          "latencyMs": 0
+        },
+        {
+          "id": "github-actions",
+          "status": "healthy",
+          "latencyMs": 229
+        },
+        {
+          "id": "n8n-private",
+          "status": "private",
+          "latencyMs": null
+        }
+      ],
+      "url": "https://github.com/rafamarcoss/rafamarcoss.github.io/actions/runs/32560270434"
+    },
     {
       "id": "32560127561",
       "source": "schedule",
@@ -916,42 +952,6 @@
         }
       ],
       "url": "https://github.com/rafamarcoss/rafamarcoss.github.io/actions/runs/32229478927"
-    },
-    {
-      "id": "32217112008",
-      "source": "schedule",
-      "startedAt": "2026-08-19T04:48:55.029Z",
-      "finishedAt": "2026-08-19T04:48:55.031Z",
-      "durationMs": 553,
-      "status": "operational",
-      "checks": [
-        {
-          "id": "website",
-          "status": "healthy",
-          "latencyMs": 551
-        },
-        {
-          "id": "news-page",
-          "status": "healthy",
-          "latencyMs": 463
-        },
-        {
-          "id": "feed-integrity",
-          "status": "healthy",
-          "latencyMs": 0
-        },
-        {
-          "id": "github-actions",
-          "status": "healthy",
-          "latencyMs": 452
-        },
-        {
-          "id": "n8n-private",
-          "status": "private",
-          "latencyMs": null
-        }
-      ],
-      "url": "https://github.com/rafamarcoss/rafamarcoss.github.io/actions/runs/32217112008"
     }
   ]
 }
