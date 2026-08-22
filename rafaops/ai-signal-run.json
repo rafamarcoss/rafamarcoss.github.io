@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "system": "ai-signal",
-  "startedAt": "2026-08-21T07:51:07.532Z",
+  "startedAt": "2026-08-22T07:38:24.852Z",
   "status": "healthy",
   "models": {
     "selection": "deepseek-v4-flash",
@@ -16,31 +16,15 @@
       "role": "worker",
       "model": "deepseek-v4-flash",
       "attempt": 1,
-      "status": "failed",
-      "durationMs": 46687,
-      "error": "OpenCode: Internal server error"
-    },
-    {
-      "task": "select-top-10",
-      "role": "worker",
-      "model": "deepseek-v4-flash",
-      "attempt": 2,
       "status": "success",
       "recoveredFromReasoning": false,
       "finishReason": "stop",
-      "durationMs": 28542,
+      "durationMs": 44703,
       "usage": {
-        "prompt_tokens": 2955,
-        "completion_tokens": 4379,
-        "total_tokens": 7334,
-        "prompt_cache_hit_tokens": 0,
-        "prompt_cache_miss_tokens": 2955,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "completion_tokens_details": {
-          "reasoning_tokens": 3726
-        }
+        "prompt_tokens": 2951,
+        "completion_tokens": 3131,
+        "total_tokens": 6082,
+        "prompt_tokens_details": {}
       }
     },
     {
@@ -48,21 +32,34 @@
       "role": "worker",
       "model": "deepseek-v4-pro",
       "attempt": 1,
+      "status": "failed",
+      "durationMs": 36497,
+      "error": "OpenCode: HTTP 503"
+    },
+    {
+      "task": "write-spanish-edition",
+      "role": "worker",
+      "model": "deepseek-v4-pro",
+      "attempt": 2,
+      "status": "failed",
+      "durationMs": 38331,
+      "error": "OpenCode: Internal server error"
+    },
+    {
+      "task": "write-spanish-edition",
+      "role": "supervisor",
+      "model": "glm-5.2",
+      "attempt": 1,
       "status": "success",
       "recoveredFromReasoning": false,
       "finishReason": "stop",
-      "durationMs": 68966,
+      "durationMs": 42152,
       "usage": {
-        "prompt_tokens": 1348,
-        "completion_tokens": 4271,
-        "total_tokens": 5619,
-        "prompt_cache_hit_tokens": 256,
-        "prompt_cache_miss_tokens": 1092,
+        "prompt_tokens": 1339,
+        "completion_tokens": 2747,
+        "total_tokens": 4086,
         "prompt_tokens_details": {
-          "cached_tokens": 256
-        },
-        "completion_tokens_details": {
-          "reasoning_tokens": 2953
+          "cached_tokens": 10
         }
       }
     },
@@ -74,38 +71,39 @@
       "status": "success",
       "recoveredFromReasoning": false,
       "finishReason": "stop",
-      "durationMs": 17393,
+      "durationMs": 9687,
       "usage": {
-        "prompt_tokens": 1401,
-        "completion_tokens": 3242,
-        "total_tokens": 4643,
-        "prompt_cache_hit_tokens": 0,
-        "prompt_cache_miss_tokens": 1401,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "completion_tokens_details": {
-          "reasoning_tokens": 2292
-        }
+        "prompt_tokens": 1113,
+        "completion_tokens": 2427,
+        "total_tokens": 3540,
+        "prompt_tokens_details": {}
       }
     }
   ],
-  "recoveries": [],
+  "recoveries": [
+    {
+      "task": "write-spanish-edition",
+      "strategy": "supervised-retry",
+      "model": "glm-5.2",
+      "trigger": "OpenCode: Internal server error",
+      "recoveredAt": "2026-08-22T07:41:09.160Z"
+    }
+  ],
   "output": {
-    "slug": "ai-signal-2026-08-21",
+    "slug": "ai-signal-2026-08-22",
     "sources": 10,
     "languages": [
       "es",
       "en"
     ]
   },
-  "finishedAt": "2026-08-21T07:53:53.059Z",
-  "durationMs": 165527,
+  "finishedAt": "2026-08-22T07:41:18.850Z",
+  "durationMs": 173999,
   "error": null,
   "metrics": {
-    "modelCalls": 4,
-    "failedAttempts": 1,
-    "supervisedRecoveries": 0,
-    "totalTokens": 17596
+    "modelCalls": 5,
+    "failedAttempts": 2,
+    "supervisedRecoveries": 1,
+    "totalTokens": 13708
   }
 }

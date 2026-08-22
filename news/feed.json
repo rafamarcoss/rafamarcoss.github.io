@@ -1,7 +1,138 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-21T07:53:53.055Z",
+  "generatedAt": "2026-08-22T07:41:18.848Z",
   "articles": [
+    {
+      "slug": "ai-signal-2026-08-22",
+      "date": "2026-08-22",
+      "generatedAt": "2026-08-22T07:41:18.848Z",
+      "categories": [
+        "IA General",
+        "Trabajo y Negocio",
+        "Finanzas e Inversiones",
+        "Legal IA",
+        "Educación IA"
+      ],
+      "readingMinutes": 4,
+      "content": {
+        "es": {
+          "title": "IA divide mercados, trabajo y educación: oportunidades y límites",
+          "dek": "La inteligencia artificial redefine la economía del talento y el sector legal, mientras los inversores dudan de la rentabilidad a corto plazo. Al mismo tiempo, su uso en educación revela riesgos para el aprendizaje y la igualdad.",
+          "intro": "La integración de la inteligencia artificial avanza en múltiples frentes, creando un panorama de oportunidades contrastadas con límites significativos. Mientras las grandes tecnológicas enfrentan escepticismo en los mercados por su rentabilidad, figuras como Warren Buffett mantienen la confianza en empresas como Alphabet. En el ámbito laboral y legal, la IA promete eficiencia, pero exige una formación adecuada que muchas empresas aún no dominan. Paralelamente, la educación se enfrenta al reto de que la herramienta reduzca el rendimiento académico y agrave brechas de género, todo ello mientras la administración pública explota su utilidad para resolver problemas sociales como la vivienda.",
+          "sections": [
+            {
+              "heading": "Mercados e inversión: entre el escepticismo y la confianza",
+              "body": "Las grandes tecnológicas han apostado su futuro a la IA, pero los mercados empiezan a inquietarse por las dudas sobre sus cuentas y rentabilidad. Sin embargo, esta cautela del mercado contrasta con la visión de inversores de referencia: Warren Buffett ha invertido en Alphabet, lo que indica una confianza subyacente en el valor a largo plazo de las empresas impulsadas por IA. Además, el mercado evoluciona de los simples asistentes virtuales hacia un boom de los agentes de IA, abriendo nuevas oportunidades de negocio y automatización."
+            },
+            {
+              "heading": "Trabajo y sector legal: la nueva economía del talento",
+              "body": "El impacto en el empleo está partiendo el mercado en dos, creando una nueva economía del talento que los profesionales de recursos humanos deben gestionar estratégicamente. En este contexto, la formación es clave, pero las empresas están cometiendo seis errores comunes al entrenar a sus empleados en IA, lo que frena la productividad. El sector legal es un claro ejemplo de transformación: la IA está cambiando el negocio de los bufetes de abogados. Para ello, se ha creado una inteligencia artificial específica que destierra las alucinaciones en los tribunales, mejorando la fiabilidad y resolviendo un problema crítico del sector."
+            },
+            {
+              "heading": "Educación y sociedad: límites en el aprendizaje y brechas de género",
+              "body": "La adopción tecnológica en las aulas presenta tensiones evidentes. Utilizar la IA para hacer deberes y trabajos reduce un 20% el aprendizaje de los estudiantes, un dato crucial para educadores y empresas edtech. A esta limitación se suma una brecha de género: las adolescentes parten con desventaja en el aprendizaje de la inteligencia artificial, lo que exige políticas para corregir esta desigualdad. En contraste con estos retos educativos, la administración pública demuestra utilidad práctica; Catalunya usará la IA para localizar pisos vacíos y sacarlos al mercado, mostrando cómo la tecnología puede servir al interés general."
+            }
+          ],
+          "takeaways": [
+            "Los inversores deben sopesar la cautela del mercado sobre la rentabilidad tecnológica frente a las apuestas a largo plazo como la de Buffett en Alphabet.",
+            "Las empresas deben revisar sus programas de formación en IA para evitar los seis errores comunes que frenan la productividad de sus empleados.",
+            "Los bufetes de abogados pueden optimizar su negocio adoptando IA especializada que elimina las alucinaciones en entornos judiciales.",
+            "Los educadores deben limitar el uso de IA en tareas escolares para evitar la caída del 20% en el rendimiento académico.",
+            "Las administraciones públicas pueden aprovechar la IA para gestionar problemas estructurales, como la localización de viviendas vacías."
+          ],
+          "closing": "La inteligencia artificial ya no es una promesa futura, sino una realidad que segmenta el empleo, transforma sectores consolidados y redibuja el aprendizaje. Para profesionales, inversores y estudiantes, el éxito dependerá de equilibrar la adopción de sus ventajas operativas con una gestión rigurosa de sus riesgos educativos y de mercado. La clave está en aplicar la tecnología con criterio, asegurando que la eficiencia no comprometa el desarrollo del talento ni la fiabilidad de la información."
+        },
+        "en": {
+          "title": "AI Splits Markets, Work, and Education: Opportunities and Limits",
+          "dek": "Artificial intelligence is redefining the talent economy and the legal sector, while investors doubt short-term profitability. At the same time, its use in education reveals risks to learning and equality.",
+          "intro": "The integration of artificial intelligence is advancing on multiple fronts, creating a landscape of opportunities contrasted with significant limits. While big tech faces market skepticism over profitability, figures like Warren Buffett maintain confidence in companies like Alphabet. In the workplace and legal sphere, AI promises efficiency but requires proper training that many companies have yet to master. Meanwhile, education faces the challenge of the tool reducing academic performance and worsening gender gaps, all while public administration exploits its utility to solve social problems like housing.",
+          "sections": [
+            {
+              "heading": "Markets and Investment: Between Skepticism and Confidence",
+              "body": "Big tech has bet its future on AI, but markets are beginning to worry about doubts over their accounts and profitability. However, this market caution contrasts with the view of benchmark investors: Warren Buffett has invested in Alphabet, indicating underlying confidence in the long-term value of AI-driven companies. Furthermore, the market is evolving from simple virtual assistants toward a boom in AI agents, opening new business and automation opportunities."
+            },
+            {
+              "heading": "Work and the Legal Sector: The New Talent Economy",
+              "body": "The impact on employment is splitting the market in two, creating a new talent economy that HR professionals must manage strategically. In this context, training is key, but companies are making six common mistakes when training their employees in AI, which hampers productivity. The legal sector is a clear example of transformation: AI is changing the business of law firms. To this end, a specific AI has been created that eliminates hallucinations in courtrooms, improving reliability and solving a critical problem in the sector."
+            },
+            {
+              "heading": "Education and Society: Limits in Learning and Gender Gaps",
+              "body": "Technological adoption in classrooms presents evident tensions. Using AI to do homework and assignments reduces student learning by 20%, a crucial fact for educators and edtech companies. This limitation is compounded by a gender gap: teenage girls start at a disadvantage in learning AI, requiring policies to correct this inequality. In contrast to these educational challenges, public administration demonstrates practical utility; Catalonia will use AI to locate empty apartments and bring them to market, showing how technology can serve the public interest."
+            }
+          ],
+          "takeaways": [
+            "Investors must weigh market caution on tech profitability against long-term bets like Buffett's on Alphabet.",
+            "Companies should review their AI training programs to avoid the six common mistakes that hamper employee productivity.",
+            "Law firms can optimize their business by adopting specialized AI that eliminates hallucinations in judicial settings.",
+            "Educators should limit AI use in school assignments to avoid the 20% drop in academic performance.",
+            "Public administrations can leverage AI to manage structural problems, such as locating vacant housing."
+          ],
+          "closing": "Artificial intelligence is no longer a future promise but a reality that segments employment, transforms established sectors, and redraws learning. For professionals, investors, and students, success will depend on balancing the adoption of its operational advantages with rigorous management of its educational and market risks. The key is to apply technology judiciously, ensuring that efficiency does not compromise talent development or information reliability."
+        }
+      },
+      "sources": [
+        {
+          "title": "Catalunya usará la inteligencia artificial para localizar pisos vacíos y sacarlos al mercado - El Periódico",
+          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQSHdVbGp1ZnhaLWVzREIyU0VUUTNmYVBNOGtsaUx6UlhnUzhSbF90TGU5WW5zR2ZpOUUteG11aFFTNzEwSHJtNXdqRGpQTWR2V1ZWUmRHSFEtUzFxZlhhT0JBSHB4d3dsbjZtbkkxOXJSUEVNNHFKdC0zRXliWEdLazRYX19XeXBnN0FIZGZNNi1mT1BSODFveXh2b2tkaGpqLWfSAaIBQVVfeXFMTi1vbUs3NFRvdms5dHN5TWVPNFA5T2I1SWk0MVBBWDFNMTFVSnNSQUsxNDc3aW1KSDQ5bV9HLWNxeFU2ZUpZT3g5Q2J2aTlvaFpjN2JhTWJoVEY5RkYtcGxUNy1RUWVlUzNacXB5SFdsTDdQb2o4NGJia3NTbEF0LTdQNG9aRXFfQjNNMGlSTy1kWW1seXNGbkNUd1phX2thQ3hB?oc=5",
+          "category": "IA General",
+          "publishedAt": "2026-08-17T14:26:45.000Z"
+        },
+        {
+          "title": "De los asistentes virtuales al boom de los agentes de IA - Bankinter",
+          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1WSGhaSW00N01CYUR0VUVYRVRXQUJZQ2NNVGNvalhpOThISEEzNnd1cDJiQ2ptbUN4TEJDSDNwVkNOR05abG1wOGVxbXpTOEJTRTFER3JWTHA5aDdFQ1JUeXNHdVZkc3NCVUxnM0djZjQ?oc=5",
+          "category": "IA General",
+          "publishedAt": "2026-08-21T08:55:07.000Z"
+        },
+        {
+          "title": "El empleo se parte en dos: esta es la nueva economía del talento que crea la IA - Expansión",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOT0x6dGJ1SHM2WGZjc2N1ZXBmdEszZlpBT0NYNFZwYjBpaXpiN2MybmFGOXY4TjBVandpaWhNaEZFTnhfeFM0eHdaZHBxN0V6UmJsZ3ZMbjQ3ZW53QmZKQ3ZUaG9hNlRFNjhRbzgyQlAwb2pNdHpFM1pMOXFvVWc3eHhIOTdvTlptbGUxczA2UWdtaGtkSnI5Mkd1Z9IBmwFBVV95cUxOT0x6dGJ1SHM2WGZjc2N1ZXBmdEszZlpBT0NYNFZwYjBpaXpiN2MybmFGOXY4TjBVandpaWhNaEZFTnhfeFM0eHdaZHBxN0V6UmJsZ3ZMbjQ3ZW53QmZKQ3ZUaG9hNlRFNjhRbzgyQlAwb2pNdHpFM1pMOXFvVWc3eHhIOTdvTlptbGUxczA2UWdtaGtkSnI5Mkd1Zw?oc=5",
+          "category": "Trabajo y Negocio",
+          "publishedAt": "2026-08-17T17:04:44.000Z"
+        },
+        {
+          "title": "Las empresas forman mal en IA: 6 errores que frenan productividad - Negocios.com",
+          "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOSmlIZjQxU3gtOFExNmozZ2JBX2RkUDhBVFdNV1pNbmMtM0NJb2hiLVNIUmtCV1hfRUpoWFpOVzFkV1QwMlZRamJPSm84eDNTeWxLcjhmUXl1VWhNVjNoWjRKdjItdmZoUlBCN21lUWx6QS1zejQybHBwSnVOclZTMTBpSTltekdKQnhUNzVRcDJfNzRKTkVhS3V3N013cE41bWJvVVR6YmtCcW0ybHowaFNvZzlOS3pCM185VVlPNHVOUGJsUkQw0gHMAUFVX3lxTFBucU9Hd25Fc3ZDdnVQSUpFR0UwaWhmaENvRjJ4SUZNTF9iekZUUF81YkxWaFNaamRUZDk2V2RzNTNiYlAyT3lvbkRNM0NCSHptcDNqNEpDcVM2T2dUMWZ6Wkw4RnhkZXVwa1J5R01TOFhUd1NSMjZMZ2NYM092aG1oTzdPOGdrS2p2U2ZKWExRcVl6Vm9ERlpEWFFLUnRFVVo4MWdvYnEtOWlPNEIxUUd6WFZ4QWhKRG1KTWdsTnMzRjFyZi1neEF3eUpZdw?oc=5",
+          "category": "Trabajo y Negocio",
+          "publishedAt": "2026-08-17T09:18:23.000Z"
+        },
+        {
+          "title": "Las grandes tecnológicas han apostado su futuro a la IA, pero las dudas sobre sus cuentas y su rentabilidad empiezan a inquietar a los mercados - La Vanguardia",
+          "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxPZDJWWWlsY3RJZnNYYnBhQkZVcjI0NE1lMWR6Vy1leDRDelc3WVNoai04YjVLbnVDU2Z2TW54T0RzQ1lKTkZWMEhXeGNfQkpuSTJXb3lqUW5xWUhnNEp3di1OSG41WnU4eG5aR0lSXzZnaDUtYTdyT0pVTUZtaTdHUVp1Xy1Rd1BwWFpSVDJqc2xFV2VLUmJWX2hRaTBMelRsRVBtYkJNUTJuQ2h4cjQySm1TQ19uNXBQakZLNndVckR5YkV0di0wSkFOS3ROX1NhZmFHWUNlbjhjYkcyOEVEc05YNE81c3lpZDZvdGNnVzQ5U3g4VTZOcV9KWdIB-wFBVV95cUxPZDJWWWlsY3RJZnNYYnBhQkZVcjI0NE1lMWR6Vy1leDRDelc3WVNoai04YjVLbnVDU2Z2TW54T0RzQ1lKTkZWMEhXeGNfQkpuSTJXb3lqUW5xWUhnNEp3di1OSG41WnU4eG5aR0lSXzZnaDUtYTdyT0pVTUZtaTdHUVp1Xy1Rd1BwWFpSVDJqc2xFV2VLUmJWX2hRaTBMelRsRVBtYkJNUTJuQ2h4cjQySm1TQ19uNXBQakZLNndVckR5YkV0di0wSkFOS3ROX1NhZmFHWUNlbjhjYkcyOEVEc05YNE81c3lpZDZvdGNnVzQ5U3g4VTZOcV9KWQ?oc=5",
+          "category": "Finanzas e Inversiones",
+          "publishedAt": "2026-08-20T04:00:00.000Z"
+        },
+        {
+          "title": "¿Por qué Warren Buffett invirtió en Alphabet? - Estrategias de Inversión",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQTTAtVnN0elJwams3VGlPbi1nQ0o4dFlaY2VKNVZWWHo5VEN4TkpPNFJBMGZvYUMxRG94ZXAwM2pKYVRuVFk0MGNSYWdyaWRJN1JQdGwtMk5jMFB2NWZIcHBQVjVDelZTZzNhNl9BU2llQzl6M0VjTzNvRExvbmw5Q3pvcnJKNzExd3dDVGQ0SW9RQ1NXX3JTX2FzUdIBmwFBVV95cUxQTTAtVnN0elJwams3VGlPbi1nQ0o4dFlaY2VKNVZWWHo5VEN4TkpPNFJBMGZvYUMxRG94ZXAwM2pKYVRuVFk0MGNSYWdyaWRJN1JQdGwtMk5jMFB2NWZIcHBQVjVDelZTZzNhNl9BU2llQzl6M0VjTzNvRExvbmw5Q3pvcnJKNzExd3dDVGQ0SW9RQ1NXX3JTX2FzUQ?oc=5",
+          "category": "Finanzas e Inversiones",
+          "publishedAt": "2026-08-20T05:50:00.000Z"
+        },
+        {
+          "title": "La inteligencia artificial creada por y para el sector legal que destierra (por fin) las alucinaciones de los tribunales - El Español",
+          "url": "https://news.google.com/rss/articles/CBMilgJBVV95cUxPMndpNFVhdGF5WGZJRUFnVElYaUxudGpuSk10NnNVRHljQjZOdmwxOVpubkh1MXJNbUdfaHBNTGdzQ21FNk5acHplZ3BvWlpnYjdCOW82TXZvQ0xzdk5HTlNsNWlsOVoxZ0M1eEtjbWFSdTczdkt2aDFIeWxzb01XcWNvbDdYQ0NtTHVlazNoaWxGQ1VpRTV0WDFmTHgxUDJQZnF6cUxnbTU3NmtRZlBZT2dJM0tPVUZxWnhyRkk2XzVJdjhCTFpnTDhFd05SM2tJeXhJcW1FM1pJZmtaT0U0cEY2eldIYkxLWTdGVzFhZnEyamtFUU9pV2FidzlRWWNWMFUtSFNzQ2dwRnF6NDVyYnNYdVZTQdIBmwJBVV95cUxOM0RyT2ZPMFg2MGxuSkxSdmtxMklhOWxBTUJ1THFnVW1PdGtWcjBEa2pLMEw3SFFBRXZWOUV5Zm5nTlVTSHlhN1dQUUVud1FmX1JRRHlvNVoxbzFYT0ZNemhBOVozbzhxUWdKY3c4cERWcEdSaXctbVA5dF8ydVhOT1dlWnQ2V0lHVUhILU9nSUpBaldGMF9jVEZQZlZsbmtLaUVDME9OdDBZZmtyd090T0FTVXdQcGlNb3h0TmFCRU9Zb08wU2s3LUlMRUtZVUJvdkhhTUlqRlhhQU43LUE3U2JFc1FpVHZqVHNtWGNTZXZKTU9YVFR3Uy04Tkx6dVUwTFQ2U2hKNWFQaUVNSlQ1ZjBDSEY0dGtZQkhn?oc=5",
+          "category": "Legal IA",
+          "publishedAt": "2026-08-17T00:53:02.000Z"
+        },
+        {
+          "title": "La IA transforma los bufetes de abogados: así cambia el negocio - Business Insider España",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPbWxMMllCbGpkZmNBUGlKb3FuSjctQVF4ZDVGTXFoLS02ZHhhZUFHSmF0Rjhla1BpQ2huN2QxdnVVWHpYazZNSzdTZzFLSjctY1o5ZjR1T3FqNFM2NmRSTWh2WkVzTmptRGs0QURQX2xDQ1RQN0xVcEFIUy1vUXNoWEJIeGhENjU5SnZITkNDMUVycVdrMTJaYmlHdnQ1NDlBNFpOR0lpNFlXazFlNnZPYnJCLU7SAbQBQVVfeXFMT21sTDJZQmxqZGZjQVBpSm9xbko3LUFReGQ1Rk1xaC0tNmR4YWVBR0phdEY4ZWtQaUNobjdkMXZ1VVh6WGs2TUs3U2cxS0o3LWNaOWY0dU9xajRTNjZkUk1odlpFc05qbURrNEFEUF9sQ0NUUDdMVXBBSFMtb1FzaFhCSHhoRDY1OUp2SE5DQzFFcnFXazEyWmJpR3Z0NTQ5QTRaTkdJaTRZV2sxZTZ2T2JyQi1O?oc=5",
+          "category": "Legal IA",
+          "publishedAt": "2026-08-22T03:30:00.000Z"
+        },
+        {
+          "title": "Utilizar la IA para hacer deberes y trabajos reduce un 20% el aprendizaje - La Vanguardia",
+          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQU1V1ZTV5WVJiMFVNSzNKdUxBdkliR3pvT0ZldTZIT00yd0NNY0l6ejdYRUN4emN1ZkdPT1pCQjBGUmNxeHp4VnhrXzhlR2M3amkyLTRtanZQM1NMbVBqb1MxQlZCQndkbnhMX3NoU2pkbHY4YzFMN1FqSjJFNFF0cE51VGtWaS1pVHh3ZUNQX2dQNnZDSG1HV1pkR2RieTVMN2Vic0hVbWZhUnPSAbABQVVfeXFMTUZKQUgxZDBjZTUyMzVpMDJJZnFDanZiUWNJSURNY0xLRFhYUGRmb3BFeXlfSTQ4QXVDcGJWTXB3Yk10dVoyTkJPYTktT3ZCR3ZBRkNpVzBfZHVLVnF1dC1MWDJUMDNrN296TUJ5RVowaEk1ZmxhWExQZ0Ixc1ZVOHFPZHRvSHFDMEdTdmd2VlYtbm5jd1RPUm00TTBMSXItaFRSZ1NhN1Z1V0twNF9SYXo?oc=5",
+          "category": "Educación IA",
+          "publishedAt": "2026-08-21T04:05:00.000Z"
+        },
+        {
+          "title": "Las adolescentes parten con desventaja en el aprendizaje de la inteligencia artificial - EL PAÍS",
+          "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNamF6MUsyWVVoR2lZY2hKLUlySEVVRmZibjgxQVlsRUJ3UHhoQmd5SG1SR3JrTnlKeVhjZTF0bzdmb3k1RUU3bmFtODRIczJSX2tNNVpFcWVORFdTVmc3WDQ0bXJ1RVFnblYtQ09YNHlObzNDeUstVlBnTWpQeF9MajFQdHdzMXRZYk1iSUgxbV9SSmI1YndUU2VyVDFmZTh3TTl0NVJfWFJmbmFLUFY2akZXSkVzdGdOalhpTGRLZ0wxek13dXo0blRXNNIB3wFBVV95cUxNRmluVjVXSndhMzg3VTNoSXNPbWNyZnI4Q01kOTRZaWVlWXBTYkx2RkhrTFVWdFlobEY0amZEUHYtRVFYMWpTdzZPdXdaNU94VFRHQ3BjSERGLVZCWnFHNUtvd2xBRWJ4ZUVkRjNHeEkwQjlmLWN1YVQ3RzNVc3FCZEZxdEFQWEF4Q0cwc2JTRVZRRVNFYTFjVlRoSFdqSHZSbE5QajhzVmdKQk4tQUFZXzFTTjVXaWVKVXRpM0EzY3ZPLURqd2U3d0Q5eFNGZUgweldkUUxBbXBscXhLSzV3?oc=5",
+          "category": "Educación IA",
+          "publishedAt": "2026-08-17T03:30:01.000Z"
+        }
+      ]
+    },
     {
       "slug": "ai-signal-2026-08-21",
       "date": "2026-08-21",
