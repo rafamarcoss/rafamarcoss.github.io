@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visual Lab — Rafael Marcos</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#F2F4EE">
+  <link rel="icon" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..900&family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="visual-lab.css">
+</head>
+<body>
+  <nav class="shell" aria-label="Navigation">
+    <a class="brand" href="/"><span class="mark">RM</span><span>Rafael Marcos.</span></a>
+    <a class="back" href="/">← Portfolio</a>
+  </nav>
+
+  <header class="shell">
+    <p class="eyebrow">Rafael Marcos · Experimental</p>
+    <h1 class="masthead">Visual <span class="grad">Lab</span></h1>
+    <p class="lead">Experimental UI playground. Isolated, noindex, no production impact.</p>
+  </header>
+
+  <section class="shell controls" aria-label="Experiment controls">
+    <div class="controls-head">
+      <p class="controls-label">Control panel</p>
+      <p class="controls-hint">Compare motion states live.</p>
+    </div>
+    <div class="toggle-group">
+      <label class="toggle">
+        <input type="checkbox" id="toggle-motion" checked>
+        <span class="toggle-track" aria-hidden="true"><span class="toggle-thumb"></span></span>
+        <span class="toggle-label">Motion enabled</span>
+      </label>
+      <label class="toggle">
+        <input type="checkbox" id="toggle-reduced">
+        <span class="toggle-track" aria-hidden="true"><span class="toggle-thumb"></span></span>
+        <span class="toggle-label">Reduced motion simulation</span>
+      </label>
+    </div>
+  </section>
+
+  <main class="shell">
+    <section id="motion" class="lab-section">
+      <div class="section-head">
+        <h2>01 — Motion</h2>
+        <p>Hover · Scroll · Layout · Spring</p>
+      </div>
+
+      <div class="exp-grid">
+        <figure class="exp">
+          <figcaption class="exp-head">
+            <span class="exp-name">ORIGINAL</span>
+            <span class="exp-desc">Current behavior</span>
+          </figcaption>
+          <div class="card">
+            <span class="no">A · STATIC</span>
+            <h3>No movement</h3>
+            <p>A plain card. This is the production baseline — no hover transform, no response.</p>
+            <div class="pills"><span>n8n</span><span>APIs</span></div>
+          </div>
+        </figure>
+
+        <figure class="exp">
+          <figcaption class="exp-head">
+            <span class="exp-name">SUBTLE LIFT</span>
+            <span class="exp-desc">Minimal movement + border response</span>
+          </figcaption>
+          <div class="card exp-lift">
+            <span class="no">B · CSS TRANSITION</span>
+            <h3>-3px on hover</h3>
+            <p>A restrained translateY with a soft border and shadow response. Professional, calm.</p>
+            <div class="pills"><span>n8n</span><span>APIs</span></div>
+          </div>
+        </figure>
+
+        <figure class="exp">
+          <figcaption class="exp-head">
+            <span class="exp-name">SPRING</span>
+            <span class="exp-desc">Physical interaction using spring easing</span>
+          </figcaption>
+          <div class="card exp-spring">
+            <span class="no">C · MOTION SPRING</span>
+            <h3>Natural lift</h3>
+            <p>A small scale and lift driven by a spring. No bounce, just physical feel.</p>
+            <div class="pills"><span>n8n</span><span>APIs</span></div>
+          </div>
+        </figure>
+
+        <figure class="exp">
+          <figcaption class="exp-head">
+            <span class="exp-name">POINTER RESPONSE</span>
+            <span class="exp-desc">Subtle pointer-driven feedback</span>
+          </figcaption>
+          <div class="card exp-pointer">
+            <span class="no">D · CURSOR</span>
+            <h3>Light follows</h3>
+            <p>A restrained radial highlight tracks the cursor. No neon, no glow — just lighting.</p>
+            <div class="pills"><span>n8n</span><span>APIs</span></div>
+          </div>
+        </figure>
+
+        <figure class="exp">
+          <figcaption class="exp-head">
+            <span class="exp-name">SCROLL REVEAL</span>
+            <span class="exp-desc">Entrance animation</span>
+          </figcaption>
+          <div class="exp-scroll">
+            <div class="reveal-item"><span>01</span><p>Fades in on view</p></div>
+            <div class="reveal-item"><span>02</span><p>Small upward drift</p></div>
+            <div class="reveal-item"><span>03</span><p>Runs once</p></div>
+          </div>
+        </figure>
+
+        <figure class="exp">
+          <figcaption class="exp-head">
+            <span class="exp-name">BUTTON MICROINTERACTION</span>
+            <span class="exp-desc">Hover · press · focus · spring</span>
+          </figcaption>
+          <div class="exp-button">
+            <button type="button" class="lab-btn">Cuéntame tu proyecto <span class="arrow">↗</span></button>
+            <p class="btn-hint">Inspired by the homepage CTA.</p>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <section id="kokonut" class="lab-section">
+      <div class="section-head">
+        <h2>02 — Kokonut UI</h2>
+        <p>Components · Cards · SaaS UI</p>
+      </div>
+      <div class="placeholder">Coming in next experiment</div>
+    </section>
+
+    <section id="bklit" class="lab-section">
+      <div class="section-head">
+        <h2>03 — Bklit UI</h2>
+        <p>Charts · Metrics · Telemetry</p>
+      </div>
+      <div class="placeholder">Coming in next experiment</div>
+    </section>
+  </main>
+
+  <footer class="shell">
+    <span>© 2026 Rafael Marcos Serrano</span>
+    <span class="footer-note">isolated lab · noindex</span>
+  </footer>
+
+  <script type="module" src="visual-lab.js"></script>
+</body>
+</html>
