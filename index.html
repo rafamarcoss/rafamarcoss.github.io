@@ -1792,6 +1792,22 @@
     .footer-links a { transition: color .18s ease; }
     .footer-links a:hover { color: var(--teal); }
 
+    .seo-note {
+      margin-top: 1.2rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: .5rem;
+      padding: 1rem 1.4rem;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: rgba(255, 255, 249, .5);
+      color: var(--muted);
+      font-size: .95rem;
+    }
+    .seo-note a { color: var(--blue); font-weight: 650; }
+    .seo-note a:hover { color: var(--teal); }
+
     /* RESPONSIVE */
     @media (max-width: 1180px) {
       .hero { grid-template-columns: 1fr; padding-top: 7.6rem; }
@@ -1945,7 +1961,9 @@
     <ul class="nav-links">
       <li><a href="#services" data-i18n="navServices">Servicios</a></li>
       <li><a href="#projects" data-i18n="navWork">Proyectos</a></li>
+      <li><a href="/articles/" data-i18n="navArticles">Artículos</a></li>
       <li><a href="#news" data-i18n="navNews">Noticias</a></li>
+      <li><a href="/copywriting/" data-i18n="navCopywriting">Copywriting</a></li>
       <li><a href="#about" data-i18n="navAbout">Sobre mí</a></li>
       <li><a href="#contact" data-i18n="navContact">Contacto</a></li>
     </ul>
@@ -1965,7 +1983,9 @@
   <div id="mobile-nav" class="mobile-nav" hidden>
     <a href="#services" data-i18n="navServices">Servicios</a>
     <a href="#projects" data-i18n="navWork">Proyectos</a>
+    <a href="/articles/" data-i18n="navArticles">Artículos</a>
     <a href="#news" data-i18n="navNews">Noticias</a>
+    <a href="/copywriting/" data-i18n="navCopywriting">Copywriting</a>
     <a href="#about" data-i18n="navAbout">Sobre mí</a>
     <a href="#contact" data-i18n="navContact">Contacto</a>
   </div>
@@ -2102,6 +2122,10 @@
           <div class="service-tags"><span class="pill hi">WordPress</span><span class="pill">Next.js</span><span class="pill">SEO</span></div>
         </article>
       </div>
+      <p class="seo-note reveal" style="--delay: 240ms">
+        <span data-i18n="seoNote">Nueva línea profesional:</span>
+        <a href="/copywriting/" data-i18n="seoNoteLink">Technical SEO Content para SaaS, IA y tecnología →</a>
+      </p>
     </section>
 
     <section id="about" class="section shell">
@@ -2469,6 +2493,8 @@
       <a href="https://wa.me/34661532071" target="_blank" rel="noopener">WhatsApp</a>
       <a href="mailto:rafaelmarcos2604@gmail.com">Email</a>
       <a href="https://linkedin.com/in/rafael-marcos-serrano" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="articles/">Artículos</a>
+      <a href="copywriting/">Copywriting</a>
       <a href="upwork-match/">Opportunity Match</a>
       <a href="rafaops/">RafaOps</a>
       <a href="https://github.com/rafamarcoss" target="_blank" rel="noopener">GitHub</a>
@@ -2487,6 +2513,8 @@
         skip: 'Skip to content',
         navServices: 'Services',
         navWork: 'Work',
+        navArticles: 'Articles',
+        navCopywriting: 'Copywriting',
         navNews: 'News',
         navAbout: 'About',
         navContact: 'Contact',
@@ -2529,6 +2557,8 @@
         serviceTwoCopy: 'I design endpoints, sync data and build small services that connect tools without unnecessary infrastructure.',
         serviceThreeTitle: 'Websites that convert',
         serviceThreeCopy: 'Fast, accessible landing pages, WordPress sites and catalogues prepared for SEO, lead capture and tracking.',
+        seoNote: 'New professional line:',
+        seoNoteLink: 'Technical SEO Content for SaaS, AI and technology →',
         aboutEyebrow: 'About',
         aboutTitle: 'Technical delivery with business judgement.',
         aboutCopy: 'I understand the problem before choosing a tool, then turn it into a system that is simple to operate, measure and maintain.',

@@ -2,6 +2,18 @@
 
 Portfolio estático de Rafael Marcos, publicado con GitHub Pages.
 
+## Contenido (Articles + Copywriting)
+
+- `/articles/` — artículos SEO evergreen en inglés, generados como HTML estático a partir de Markdown.
+- `/copywriting/` — landing del servicio de SEO Content Writing para SaaS, IA y tecnología.
+- Los artículos se escriben en `content/articles/*.md` (con frontmatter) y se compilan con:
+
+```bash
+node scripts/build-articles.mjs
+```
+
+Esto genera `articles/*.html`, `sitemap.xml` y `robots.txt`. Añadir un artículo nuevo es crear un `.md` y volver a ejecutar el build.
+
 ## RafaOps
 
 `/rafaops/` es el control plane del laboratorio de automatización. Vigila el portfolio, AI Signal, la integridad del feed y GitHub Actions. Cada ejecución publica estado verificable en `rafaops/status.json`.

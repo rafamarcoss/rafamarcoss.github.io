@@ -1,0 +1,44 @@
+import { readFileSync, readdirSync, existsSync } from 'node:fs';
+import { join } from 'node:path';
+
+const ROOT = process.cwd();
+
+const articleDirs = readdirSync('articles').filter((d) => d !== 'index.html' && existsSync(join('articles', d, 'index.html')));
+const files = ['index.html', 'articles/index.html', 'copywriting/index.html', 'news/index.html', ...articleDirs.map((d) => `articles/${d}/index.html`)];
+
+let ok = true;
+for (const f of files) {
+  const html = readFileSync(f, 'utf8');
+  const h1 = (html.match(/<h1[\s>]/g) || []).length;
+  const canonical = html.includes('rel="canonical"');
+  const jsonld = html.includes('application/ld+json');
+  const og = html.includes('og:title');
+  const desc = html.includes('name="description"');
+  const good = h1 === 1 && canonical && jsonld && og && desc;
+  if (!good) ok = false;
+  console.log(`${good ? 'OK  ' : 'FAIL'} h1=${h1} canonical=${canonical} jsonld=${jsonld} og=${og} desc=${desc} | ${f}`);
+}
+
+// check internal links resolve
+console.log('\n=== enlaces internos rotos ===');
+const targetDirs = new Set(['articles', 'copywriting', 'news', 'rafaops', 'upwork-match', 'fpconnect', 'serranomotor', 'assets']);
+function checkHref(href, from) {
+  if (!href.startsWith('/') || href.startsWith('//')) return;
+  const clean = href.split('#')[0].split('?')[0];
+  if (!clean || clean === '/') return;
+  const rel = clean.replace(/^\//, '');
+  const parts = rel.split('/');
+  const first = parts[0];
+  const candidates = [rel, rel.endsWith('/') ? rel + 'index.html' : rel + '/index.html', rel + '.html'];
+  const found = candidates.some((c) => existsSync(join(ROOT, c)));
+  if (!found) console.log(`  BROKEN ${href}  (from ${from})`);
+}
+
+for (const f of ['index.html', 'articles/index.html', 'copywriting/index.html', ...articleDirs.map((d) => `articles/${d}/index.html`)]) {
+  const html = readFileSync(f, 'utf8');
+  const hrefs = [...html.matchAll(/href="([^"]+)"/g)].map((m) => m[1]);
+  for (const h of hrefs) checkHref(h, f);
+}
+
+console.log(ok ? '\nTODAS LAS PÁGINAS OK' : '\nHAY PÁGINAS CON PROBLEMAS');
+process.exit(ok ? 0 : 1);

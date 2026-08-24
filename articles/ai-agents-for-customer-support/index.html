@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Agents for Customer Support: How They Work and When to Use Them — Rafael Marcos</title>
+<meta name="description" content="A practical breakdown of how AI support agents work — the model, tools, context and guardrails — and where they actually fit in a support team.">
+<meta name="author" content="Rafael Marcos">
+<meta name="theme-color" content="#F2F4EE">
+<link rel="canonical" href="https://rafaelmarcos.tech/articles/ai-agents-for-customer-support/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AI Agents for Customer Support: How They Work and When to Use Them">
+<meta property="og:description" content="A practical breakdown of how AI support agents work — the model, tools, context and guardrails — and where they actually fit in a support team.">
+<meta property="og:url" content="https://rafaelmarcos.tech/articles/ai-agents-for-customer-support/">
+<meta property="og:site_name" content="Rafael Marcos">
+<meta property="article:published_time" content="2026-08-24">
+<meta property="article:modified_time" content="2026-08-24">
+<meta property="article:author" content="Rafael Marcos">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="AI Agents for Customer Support: How They Work and When to Use Them">
+<meta name="twitter:description" content="A practical breakdown of how AI support agents work — the model, tools, context and guardrails — and where they actually fit in a support team.">
+<link rel="icon" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..900&family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400..800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","headline":"AI Agents for Customer Support: How They Work and When to Use Them","description":"A practical breakdown of how AI support agents work — the model, tools, context and guardrails — and where they actually fit in a support team.","datePublished":"2026-08-24","dateModified":"2026-08-24","mainEntityOfPage":{"@type":"WebPage","@id":"https://rafaelmarcos.tech/articles/ai-agents-for-customer-support/"},"author":{"@type":"Person","name":"Rafael Marcos","url":"https://rafaelmarcos.tech/"},"publisher":{"@type":"Person","name":"Rafael Marcos"}}
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box}*{margin:0;padding:0}
+:root{--paper:#F2F4EE;--card:rgba(255,255,249,.76);--ink:#0B0E0F;--muted:rgba(11,14,15,.64);--line:rgba(11,14,15,.13);--mint:#B0DFAA;--teal:#24969B;--blue:#0860A7;--royal:#0234C0;--coral:#C64240;--display:'Plus Jakarta Sans',sans-serif;--body:'Inter',sans-serif}
+html{scroll-behavior:smooth;background:var(--paper);overflow-x:hidden}
+body{min-height:100vh;overflow-x:hidden;color:var(--ink);font-family:var(--body);line-height:1.75;background:radial-gradient(circle at 12% 2%,rgba(176,223,170,.7),transparent 28rem),radial-gradient(circle at 90% 22%,rgba(36,150,155,.2),transparent 32rem),var(--paper)}
+a{color:inherit;text-decoration:none}.shell{width:min(1120px,calc(100% - 2rem));margin-inline:auto}
+nav{position:sticky;top:.7rem;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-top:.7rem;padding:.55rem .7rem;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,249,.82);backdrop-filter:blur(18px);box-shadow:0 16px 54px rgba(8,96,167,.09)}
+.brand{display:flex;align-items:center;gap:.65rem;font-family:var(--display);font-weight:800;letter-spacing:-.04em}.mark{width:42px;height:42px;display:grid;place-items:center;border-radius:50%;color:#fff;background:linear-gradient(135deg,var(--ink),var(--blue),var(--teal))}
+.nav-links{display:flex;align-items:center;gap:.4rem;list-style:none}.nav-links a{display:inline-flex;align-items:center;min-height:38px;padding:0 .8rem;border-radius:999px;color:rgba(11,14,15,.62);font:700 .72rem 'JetBrains Mono',monospace;letter-spacing:.09em;text-transform:uppercase}.nav-links a:hover,.nav-links a.on{color:var(--ink);background:rgba(255,255,249,.72)}
+.back{display:inline-flex;align-items:center;padding:0 1rem;min-height:38px;border:1px solid var(--line);border-radius:999px;font:700 .72rem 'JetBrains Mono',monospace}
+main{padding:2.5rem 0 6rem}.crumbs{display:flex;flex-wrap:wrap;gap:.4rem;align-items:center;color:var(--muted);font:700 .72rem 'JetBrains Mono',monospace}.crumbs a{color:var(--teal)}.crumbs span{opacity:.5}
+.article-head{max-width:820px;padding:3rem 0 2rem}.chip{display:inline-flex;padding:.35rem .7rem;border:1px solid var(--line);border-radius:999px;font:700 .68rem 'JetBrains Mono',monospace;text-transform:uppercase}.chip.cat{background:var(--cat,rgba(176,223,170,.48));border-color:transparent}.article-head h1{margin-top:1.1rem;font:800 clamp(2.4rem,6vw,4.2rem)/1.02 var(--display);letter-spacing:-.05em}.dek{margin-top:1.2rem;color:var(--muted);font-size:clamp(1.1rem,2vw,1.3rem);line-height:1.6}.meta{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.5rem;color:var(--muted);font:700 .72rem 'JetBrains Mono',monospace}
+.article-layout{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:3rem;align-items:start}.body{max-width:760px;font-size:1.06rem}.body h2{margin:3rem 0 1rem;font:700 clamp(1.7rem,3.5vw,2.5rem)/1.05 var(--display);letter-spacing:-.04em}.body h3{margin:2.2rem 0 .7rem;font:700 1.25rem var(--display);letter-spacing:-.02em}.body p{margin:1rem 0;color:rgba(11,14,15,.86)}.body ul,.body ol{margin:1rem 0 1rem 1.4rem;display:grid;gap:.5rem}.body li{color:rgba(11,14,15,.86)}.body li::marker{color:var(--teal);font-weight:700}.body code{font:600 .9em 'JetBrains Mono',monospace;background:rgba(11,14,15,.06);padding:.1rem .4rem;border-radius:6px}.body a{color:var(--blue);text-decoration:underline;text-underline-offset:2px}.body a:hover{color:var(--teal)}.body strong{font-weight:700}
+.table-wrap{margin:1.5rem 0;overflow-x:auto;border:1px solid var(--line);border-radius:16px}.table-wrap table{width:100%;border-collapse:collapse;font-size:.92rem}.table-wrap th{text-align:left;padding:.8rem 1rem;font:700 .72rem 'JetBrains Mono',monospace;text-transform:uppercase;background:rgba(11,14,15,.04)}.table-wrap td{padding:.8rem 1rem;border-top:1px solid var(--line);vertical-align:top;color:rgba(11,14,15,.86)}
+aside{position:sticky;top:6rem;display:grid;gap:1rem}.aside-card{padding:1.3rem;border:1px solid var(--line);border-radius:22px;background:var(--card)}.aside-card h3{font:700 .9rem 'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.08em;color:var(--teal)}.aside-card ul{list-style:none;display:grid;gap:.7rem;margin-top:1rem}.aside-card a{font-weight:650;line-height:1.35}.aside-card a:hover{color:var(--blue)}
+.cta{margin-top:3rem;padding:2rem;border-radius:28px;color:#fff;background:linear-gradient(145deg,var(--ink),#0D3140,var(--blue))}.cta h2{font:700 1.6rem var(--display);letter-spacing:-.02em}.cta p{margin-top:.6rem;color:rgba(255,255,255,.72)}.cta a{display:inline-block;margin-top:1rem;padding:.7rem 1.2rem;border-radius:999px;background:var(--paper);color:var(--ink);font:700 .8rem 'JetBrains Mono',monospace}
+footer{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding:2rem 0;color:var(--muted);border-top:1px solid var(--line)}
+@media(max-width:900px){.article-layout{grid-template-columns:1fr}aside{position:static}}
+@media(max-width:640px){.nav-links{display:none}.shell{width:min(100% - 1rem,1120px)}.body{font-size:1rem}.article-head h1{font-size:2.3rem}}
+</style>
+</head>
+<body>
+<nav class="shell" aria-label="Navigation">
+  <a class="brand" href="/"><span class="mark">RM</span><span>Rafael Marcos.</span></a>
+  <ul class="nav-links">
+    <li><a href="/articles/">Articles</a></li>
+    <li><a href="/news/">News</a></li>
+    <li><a href="/copywriting/">Copywriting</a></li>
+  </ul>
+  <a class="back" href="/">← Portfolio</a>
+</nav>
+
+<main class="shell">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/articles/">Articles</a><span>/</span><span>AI</span></nav>
+  <article>
+    <header class="article-head">
+      <span class="chip cat" style="--cat:rgba(176,223,170,.48)">AI</span>
+      <h1>AI Agents for Customer Support: How They Work and When to Use Them</h1>
+      <p class="dek">A practical breakdown of how AI support agents work — the model, tools, context and guardrails — and where they actually fit in a support team.</p>
+      <div class="meta"><time datetime="2026-08-24">24 August 2026</time><span>·</span><span>7 min read</span><span>·</span><span>Rafael Marcos</span></div>
+      <div class="meta"><span class="chip">ai agents</span><span class="chip">customer support</span><span class="chip">llm</span><span class="chip">tools</span><span class="chip">crm</span><span class="chip">human handoff</span></div>
+    </header>
+    <div class="article-layout">
+      <div class="body"><p>An AI support agent is not a chatbot with a better personality. It is a system that combines a language model with the tools your support team already uses, so it can read a ticket, look up the customer's account, decide what to do, and either resolve the issue or hand it off cleanly to a human.</p>
+<p>The difference matters. A canned chatbot answers from a fixed script. An agent reasons about the ticket in front of it, calls functions, and adapts its response to the data it retrieves. That is what makes it useful for support, and also what makes it harder to build correctly.</p>
+<p>This guide explains how support agents work under the hood, where they fit in a real support stack, and when they are — and are not — the right tool.</p>
+<h2>What an AI support agent actually is</h2>
+<p>At the core, a support agent is a large language model (LLM) wrapped in an execution loop. Each turn looks roughly like this:</p>
+<ol><li>The model reads the customer's message plus any context it has been given.</li><li>It decides whether to answer directly or to call a tool — for example, search the knowledge base, query the CRM, or create a ticket.</li><li>If it calls a tool, the tool returns data, and the model uses that data to write the next step.</li><li>The loop repeats until the model considers the ticket resolved or decides a human is needed.</li></ol>
+<p>This is why the term "agent" is accurate: the model is not just generating text, it is choosing actions. The quality of the agent depends less on the model's fluency and more on how well those actions are defined and constrained.</p>
+<h2>The core components</h2>
+<p>A production support agent has four pieces, and each one fails in its own way.</p>
+<h3>The model</h3>
+<p>The model is the reasoning engine. It turns an unstructured customer message into a decision: answer, retrieve, act, or escalate. Most teams start with a general-purpose LLM and tune behavior through the system prompt rather than fine-tuning.</p>
+<p>The system prompt defines who the agent is, what it can do, and — critically — what it must never do. For support, that means rules like "never promise refunds", "never invent policy", and "escalate anything involving billing disputes".</p>
+<h3>Tools and integrations</h3>
+<p>Tools are the agent's hands. The most useful ones for support are:</p>
+<ul><li><strong>Knowledge base search</strong> — retrieve relevant help articles to ground the answer.</li><li><strong>CRM lookup</strong> — find the customer, their plan, and their history.</li><li><strong>Ticket actions</strong> — create, update, tag, and assign tickets.</li><li><strong>Order or billing lookups</strong> — check status without exposing raw systems.</li></ul>
+<p>Each tool needs a clear description so the model knows when to use it. A vague tool description produces an agent that guesses; a precise one produces an agent that acts.</p>
+<h3>Knowledge and context</h3>
+<p>An agent with no context hallucinates. Grounding is what prevents it. The two main techniques are retrieval (searching a knowledge base and passing the top results into the prompt) and structured context (the CRM record, the conversation history, the current ticket fields).</p>
+<p>Grounding also means showing the agent its own limits: when it does not find an answer in the knowledge base, it should say so and escalate, not invent one.</p>
+<h3>Guardrails and boundaries</h3>
+<p>Guardrails are the difference between a support agent and a liability. They usually take three forms:</p>
+<ul><li><strong>Prompt-level rules</strong> — instructions about tone, policy and what not to do.</li><li><strong>Action limits</strong> — an allowlist of tools, so the model cannot touch systems it should not.</li><li><strong>Post-hoc checks</strong> — validating the output before it reaches the customer, for example checking that a generated answer does not conflict with policy.</li></ul>
+<h2>How a ticket is handled, step by step</h2>
+<p>Here is a realistic flow for a subscription SaaS:</p>
+<ol><li>A customer writes: "I was charged twice this month."</li><li>The agent retrieves the customer's record from the CRM and sees the billing history.</li><li>It searches the knowledge base for the refund policy.</li><li>Because billing disputes are a high-risk area, the guardrails route this to a human instead of letting the agent promise a refund.</li><li>The agent drafts a summary of what it found — account, charges, relevant policy — and attaches it to the ticket before handoff.</li></ol>
+<p>Notice what happened: the agent did useful work (gathering and summarizing) but did not make a risky decision. That division of labour is where support agents are strongest.</p>
+<h2>Where agents fit in a support stack</h2>
+<p>A support agent is not a replacement for your CRM or help desk; it is a layer on top of them. The agent reads from and writes to the systems you already have:</p>
+<ul><li>The <strong>help desk</strong> (Zendesk, Intercom, Freshdesk, or a custom tool) holds the ticket state.</li><li>The <strong>CRM</strong> (HubSpot, Salesforce, Pipedrive) holds the customer context.</li><li>The <strong>knowledge base</strong> holds the ground truth for answers.</li><li>The <strong>agent</strong> sits in the middle, coordinating these through APIs and webhooks.</li></ul>
+<p>This is why integration quality matters more than model choice. An agent connected to a clean, well-structured CRM will outperform a more powerful model connected to nothing.</p>
+<h2>When an AI support agent is the right choice</h2>
+<p>Support agents work well when:</p>
+<ul><li>The team handles a high volume of repetitive, well-documented questions.</li><li>The answer can be found in a knowledge base or looked up in a system.</li><li>The cost of a wrong answer is low, or a human review step is in place.</li><li>Tickets currently wait in a queue for simple triage or routing.</li></ul>
+<p>In these cases, an agent reduces first-response time and lets humans spend their hours on the tickets that actually need judgement.</p>
+<h2>When they are not</h2>
+<p>Agents are a poor fit when:</p>
+<ul><li>The product is high-stakes — medical, financial, legal — where an incorrect answer is expensive.</li><li>The answers depend on unwritten knowledge held only in people's heads.</li><li>The customer relationship is sensitive, and automation would feel like a downgrade.</li><li>The data is messy, so the agent cannot ground its answers reliably.</li></ul>
+<p>A good rule of thumb: use an agent for the parts of support that are lookups, triage, and summarization; keep humans on judgement, exceptions, and anything irreversible.</p>
+<h2>Human handoff is a feature, not a fallback</h2>
+<p>The best support agents treat escalation as a first-class path. A clean handoff includes:</p>
+<ul><li>Why the agent is escalating.</li><li>What it already knows (account, history, steps taken).</li><li>What the customer was told.</li></ul>
+<p>This way the human agent does not redo the work. Handoff should be triggered by explicit rules — billing, refunds, legal, VIP accounts — and by the model's own confidence when it cannot find a grounded answer.</p>
+<h2>A practical way to start</h2>
+<p>Start small and boring:</p>
+<ol><li>Pick one repetitive, low-risk category of tickets.</li><li>Write down the exact steps a human follows to resolve them.</li><li>Turn those steps into tools and a system prompt.</li><li>Run the agent in shadow mode — it drafts replies, a human approves.</li><li>Only after the approval rate is high, let it act on the safe categories.</li></ol>
+<p>This keeps the scope small enough to validate, and it gives you the data to know when the agent is genuinely helping.</p>
+<h2>Frequently asked questions</h2>
+<p><strong>Does an AI support agent need a vector database?</strong></p>
+<p>Not at first. Many support use cases work with keyword or hybrid search over a help centre. A vector database becomes useful when the knowledge base is large and queries are semantic, but it is an optimization, not a starting requirement.</p>
+<p><strong>What is the difference between an agent and a bot?</strong></p>
+<p>A bot follows a fixed flow or matches keywords against canned answers. An agent reasons, calls tools, and adapts. Bots are deterministic and cheap; agents are flexible and need more control.</p>
+<p><strong>How do I stop the agent from making up answers?</strong></p>
+<p>Ground every answer in retrieved context, and add a rule that says: if the answer is not in the retrieved material, escalate instead of answering.</p>
+<h2>Keep it boring, then expand</h2>
+<p>The teams that get real value from support agents are the ones that start with a narrow, well-understood problem and expand only after they can measure the result. The model matters, but the integration, the guardrails, and the handoff path matter more.</p>
+<p>If you are building or evaluating an agent for a SaaS product and want a second opinion on the architecture, <a href="/copywriting/">I help SaaS teams design automation and AI workflows</a>.</p></div>
+      <aside><div class="aside-card"><h3>Related</h3><ul><li><a href="/articles/ai-agents-vs-traditional-automation/">AI Agents vs Traditional Automation: What's the Difference?</a></li><li><a href="/articles/crm-automation-7-workflows/">CRM Automation: 7 Workflows That Save Sales Teams Hours Every Week</a></li></ul></div></aside>
+    </div>
+    <section class="cta"><h2>Need this kind of content for your product?</h2><p>I write SEO articles for SaaS, AI and automation companies — grounded in how the tech actually works.</p><a href="/copywriting/">See my copywriting service →</a></section>
+  </article>
+</main>
+
+<footer class="shell"><span>© 2026 Rafael Marcos Serrano</span><a href="mailto:rafaelmarcos2604@gmail.com">rafaelmarcos2604@gmail.com</a></footer>
+</body>
+</html>
