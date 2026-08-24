@@ -105,7 +105,7 @@ Most business processes answer "yes" to the first question. The genuinely agent-
 
 **Is an AI agent just automation with a prompt?**
 
-No. Automation has a fixed flow; an agent chooses its own steps. The prompt sets the agent's behaviour, but the agent still decides what to do at each turn, which is a fundamentally different execution model.
+No. Automation has a fixed flow; an agent can choose among allowed tools and actions based on context. The prompt sets the agent's behaviour, but the agent still decides what to do at each turn, which is a fundamentally different execution model.
 
 **Do agents replace all my workflows?**
 
@@ -119,4 +119,4 @@ Traditional automation is easier to debug because it is deterministic. Agents ne
 
 The pragmatic rule is: start with traditional automation, and reach for an agent only when a workflow genuinely cannot do the job. Most of the time, the boring tool is the right one — and that is a feature, not a limitation.
 
-If you are designing a system that mixes both, [I help teams choose and build the right automation for SaaS and AI products](/copywriting/).
+Need technically accurate content about AI or automation? I write [SEO content for products I actually build with](/copywriting/).

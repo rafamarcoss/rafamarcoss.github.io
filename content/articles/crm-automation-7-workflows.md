@@ -119,4 +119,4 @@ Automating a process that is not understood yet. If a human could not write down
 
 These seven workflows save hours because they remove mechanical work from a rep's day. They do not replace selling. Build them one at a time, keep them visible, and treat the CRM as the single source of truth.
 
-If you need help wiring these into your stack, [I build CRM and SaaS automations end to end](/copywriting/).
+Need technically accurate content about CRM or sales automation? I write [SEO content for products I actually understand](/copywriting/).

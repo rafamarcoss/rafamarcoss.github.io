@@ -36,7 +36,7 @@ APIs are the foundation because they allow programmatic, structured access to a 
 
 ### Webhooks
 
-A webhook is an API call in reverse. Instead of your automation asking "has anything changed?", the SaaS tool pushes an event to a URL you provide: "a new payment happened" or "a user signed up".
+A webhook is an event-driven HTTP callback: instead of repeatedly asking whether something changed, another system sends your endpoint an event when it happens.
 
 Webhooks matter because they make automation event-driven and near real-time. A polling approach has to keep asking; a webhook fires the moment the event occurs.
 
@@ -122,4 +122,4 @@ SaaS automation is deterministic: fixed rules, predictable output. AI agents add
 
 SaaS automation is not a single tool you buy; it is a discipline — knowing which system owns which data, and connecting them so the data moves reliably. Get the plumbing right, and everything else, including AI, becomes much easier.
 
-If you are planning automation across a SaaS stack and want help designing it, [I build SaaS and AI automations and write about them](/copywriting/).
+Need technically accurate content about SaaS or automation? I write [SEO content for products I actually build with](/copywriting/).

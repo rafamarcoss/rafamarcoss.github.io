@@ -49,7 +49,7 @@ Each tool needs a clear description so the model knows when to use it. A vague t
 
 ### Knowledge and context
 
-An agent with no context hallucinates. Grounding is what prevents it. The two main techniques are retrieval (searching a knowledge base and passing the top results into the prompt) and structured context (the CRM record, the conversation history, the current ticket fields).
+An agent without reliable context is far more likely to hallucinate or produce ungrounded answers. Grounding is one of the main ways to reduce that risk. The two main techniques are retrieval (searching a knowledge base and passing the top results into the prompt) and structured context (the CRM record, the conversation history, the current ticket fields).
 
 Grounding also means showing the agent its own limits: when it does not find an answer in the knowledge base, it should say so and escalate, not invent one.
 
@@ -146,4 +146,4 @@ Ground every answer in retrieved context, and add a rule that says: if the answe
 
 The teams that get real value from support agents are the ones that start with a narrow, well-understood problem and expand only after they can measure the result. The model matters, but the integration, the guardrails, and the handoff path matter more.
 
-If you are building or evaluating an agent for a SaaS product and want a second opinion on the architecture, [I help SaaS teams design automation and AI workflows](/copywriting/).
+Need technically accurate content about AI agents or SaaS? I write [SEO content for products I actually build with](/copywriting/).
