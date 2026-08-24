@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "system": "ai-signal",
-  "startedAt": "2026-08-23T07:40:38.260Z",
-  "status": "failed",
+  "startedAt": "2026-08-24T08:01:57.056Z",
+  "status": "healthy",
   "models": {
     "selection": "deepseek-v4-flash",
     "article": "deepseek-v4-pro",
@@ -10,17 +10,79 @@
     "supervisor": "glm-5.2",
     "fallback": "deepseek-v4-flash"
   },
-  "attempts": [],
+  "attempts": [
+    {
+      "task": "select-top-10",
+      "role": "worker",
+      "model": "deepseek-v4-flash",
+      "attempt": 1,
+      "status": "success",
+      "recoveredFromReasoning": false,
+      "finishReason": "stop",
+      "durationMs": 49288,
+      "usage": {
+        "prompt_tokens": 2901,
+        "completion_tokens": 4027,
+        "total_tokens": 6928,
+        "prompt_tokens_details": {}
+      }
+    },
+    {
+      "task": "write-spanish-edition",
+      "role": "worker",
+      "model": "deepseek-v4-pro",
+      "attempt": 1,
+      "status": "success",
+      "recoveredFromReasoning": false,
+      "finishReason": "stop",
+      "durationMs": 69935,
+      "usage": {
+        "prompt_tokens": 1566,
+        "completion_tokens": 3777,
+        "total_tokens": 5343,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 1566,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2607
+        }
+      }
+    },
+    {
+      "task": "translate-english-edition",
+      "role": "worker",
+      "model": "deepseek-v4-flash",
+      "attempt": 1,
+      "status": "success",
+      "recoveredFromReasoning": false,
+      "finishReason": "stop",
+      "durationMs": 25824,
+      "usage": {
+        "prompt_tokens": 1242,
+        "completion_tokens": 2899,
+        "total_tokens": 4141,
+        "prompt_tokens_details": {}
+      }
+    }
+  ],
   "recoveries": [],
-  "finishedAt": "2026-08-23T07:40:45.147Z",
-  "durationMs": 6887,
-  "error": {
-    "message": "RSS Legal IA: HTTP 503"
+  "output": {
+    "slug": "ai-signal-2026-08-24",
+    "sources": 10,
+    "languages": [
+      "es",
+      "en"
+    ]
   },
+  "finishedAt": "2026-08-24T08:04:22.770Z",
+  "durationMs": 145714,
+  "error": null,
   "metrics": {
-    "modelCalls": 0,
+    "modelCalls": 3,
     "failedAttempts": 0,
     "supervisedRecoveries": 0,
-    "totalTokens": 0
+    "totalTokens": 16412
   }
 }
