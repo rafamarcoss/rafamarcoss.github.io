@@ -1,5 +1,8 @@
 {
   "scripts": {
+    "build:articles": "node scripts/build-articles.mjs",
+    "build:news": "node scripts/build-ai-signal-pages.mjs",
+    "validate": "node scripts/validate-site.mjs",
     "gsc:submit": "node scripts/gsc-submit-sitemap.mjs",
     "gsc:inspect": "node scripts/gsc-inspect.mjs"
   },
