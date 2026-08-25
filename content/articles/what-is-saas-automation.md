@@ -2,6 +2,7 @@
 title: "What Is SaaS Automation? A Practical Guide for Growing Teams"
 description: "SaaS automation connects the tools your team uses so data moves without manual work. A practical guide to APIs, webhooks, CRM, workflows and where AI fits."
 date: 2026-08-24
+updated: 2026-08-25
 category: "SaaS"
 tags: ["saas", "automation", "api", "webhooks", "crm", "workflow", "ai"]
 slug: "what-is-saas-automation"
@@ -123,3 +124,13 @@ SaaS automation is deterministic: fixed rules, predictable output. AI agents add
 SaaS automation is not a single tool you buy; it is a discipline — knowing which system owns which data, and connecting them so the data moves reliably. Get the plumbing right, and everything else, including AI, becomes much easier.
 
 Need technically accurate content about SaaS or automation? I write [SEO content for products I actually build with](/copywriting/).
+
+## A real example from my work
+
+RafaOps connects scheduled scripts, RSS collection, model calls, a JSON feed and a public status page. Each part has one job and the generated run telemetry makes failures visible. It is a compact example of SaaS automation: systems exchange structured data, while the workflow controls when and how each action happens.
+
+## Primary sources
+
+- [Stripe: webhooks](https://docs.stripe.com/webhooks)
+- [MDN: using the Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
+- [n8n: workflow automation](https://docs.n8n.io/)

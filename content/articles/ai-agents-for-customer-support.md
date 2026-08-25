@@ -2,6 +2,7 @@
 title: "AI Agents for Customer Support: How They Work and When to Use Them"
 description: "A practical breakdown of how AI support agents work — the model, tools, context and guardrails — and where they actually fit in a support team."
 date: 2026-08-24
+updated: 2026-08-25
 category: "AI"
 tags: ["ai agents", "customer support", "llm", "tools", "crm", "human handoff"]
 slug: "ai-agents-for-customer-support"
@@ -147,3 +148,13 @@ Ground every answer in retrieved context, and add a rule that says: if the answe
 The teams that get real value from support agents are the ones that start with a narrow, well-understood problem and expand only after they can measure the result. The model matters, but the integration, the guardrails, and the handoff path matter more.
 
 Need technically accurate content about AI agents or SaaS? I write [SEO content for products I actually build with](/copywriting/).
+
+## A boundary I use in my own work
+
+RafaOps, the workflow behind AI Signal, separates model work from deterministic work. Models select and draft from a fixed set of sources; the script validates the output shape, writes the edition and records the run. The same boundary matters in support: use the model to interpret and prepare work, then keep data changes and risky decisions behind explicit rules.
+
+## Primary sources
+
+- [OpenAI: function calling](https://platform.openai.com/docs/guides/function-calling)
+- [OpenAI: building agents](https://platform.openai.com/docs/guides/agents)
+- [Anthropic: building effective agents](https://www.anthropic.com/engineering/building-effective-agents)

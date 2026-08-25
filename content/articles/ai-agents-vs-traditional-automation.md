@@ -2,6 +2,7 @@
 title: "AI Agents vs Traditional Automation: What's the Difference?"
 description: "Traditional automation follows rules; AI agents make decisions. A clear comparison of how each works, what each is good at, and how to choose."
 date: 2026-08-24
+updated: 2026-08-25
 category: "Automation"
 tags: ["ai agents", "automation", "workflow", "rules", "triggers", "tools"]
 slug: "ai-agents-vs-traditional-automation"
@@ -120,3 +121,13 @@ Traditional automation is easier to debug because it is deterministic. Agents ne
 The pragmatic rule is: start with traditional automation, and reach for an agent only when a workflow genuinely cannot do the job. Most of the time, the boring tool is the right one — and that is a feature, not a limitation.
 
 Need technically accurate content about AI or automation? I write [SEO content for products I actually build with](/copywriting/).
+
+## A real example from my work
+
+The Kit Consulting alert system is traditional automation: scheduled checks, weekend guards and explicit flags decide when a notification is sent. RafaOps adds an agent-shaped layer only where language needs interpretation: selecting and drafting a daily AI briefing from collected sources. Rules protect the operational workflow, while the model works inside a narrow task.
+
+## Primary sources
+
+- [n8n: workflow automation](https://docs.n8n.io/)
+- [OpenAI: function calling](https://platform.openai.com/docs/guides/function-calling)
+- [Anthropic: building effective agents](https://www.anthropic.com/engineering/building-effective-agents)

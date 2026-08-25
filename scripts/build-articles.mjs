@@ -11,6 +11,8 @@ const CONTENT_DIR = join(ROOT, 'content', 'articles');
 const ARTICLES_DIR = join(ROOT, 'articles');
 const SITE = 'https://rafaelmarcos.tech';
 const AUTHOR = 'Rafael Marcos';
+const OG_DIR = join(ROOT, 'assets', 'og');
+const NEWS_FEED = join(ROOT, 'news', 'feed.json');
 
 const CATEGORY_COLORS = {
   'AI': 'rgba(176,223,170,.48)',
@@ -122,6 +124,7 @@ main{padding:2.5rem 0 6rem}.crumbs{display:flex;flex-wrap:wrap;gap:.4rem;align-i
 .article-head{max-width:820px;padding:3rem 0 2rem}.chip{display:inline-flex;padding:.35rem .7rem;border:1px solid var(--line);border-radius:999px;font:700 .68rem 'JetBrains Mono',monospace;text-transform:uppercase}.chip.cat{background:var(--cat,rgba(176,223,170,.48));border-color:transparent}.article-head h1{margin-top:1.1rem;font:800 clamp(2.4rem,6vw,4.2rem)/1.02 var(--display);letter-spacing:-.05em}.dek{margin-top:1.2rem;color:var(--muted);font-size:clamp(1.1rem,2vw,1.3rem);line-height:1.6}.meta{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.5rem;color:var(--muted);font:700 .72rem 'JetBrains Mono',monospace}
 .article-layout{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:3rem;align-items:start}.body{max-width:760px;font-size:1.06rem}.body h2{margin:3rem 0 1rem;font:700 clamp(1.7rem,3.5vw,2.5rem)/1.05 var(--display);letter-spacing:-.04em}.body h3{margin:2.2rem 0 .7rem;font:700 1.25rem var(--display);letter-spacing:-.02em}.body p{margin:1rem 0;color:rgba(11,14,15,.86)}.body ul,.body ol{margin:1rem 0 1rem 1.4rem;display:grid;gap:.5rem}.body li{color:rgba(11,14,15,.86)}.body li::marker{color:var(--teal);font-weight:700}.body code{font:600 .9em 'JetBrains Mono',monospace;background:rgba(11,14,15,.06);padding:.1rem .4rem;border-radius:6px}.body a{color:var(--blue);text-decoration:underline;text-underline-offset:2px}.body a:hover{color:var(--teal)}.body strong{font-weight:700}
 .table-wrap{margin:1.5rem 0;overflow-x:auto;border:1px solid var(--line);border-radius:16px}.table-wrap table{width:100%;border-collapse:collapse;font-size:.92rem}.table-wrap th{text-align:left;padding:.8rem 1rem;font:700 .72rem 'JetBrains Mono',monospace;text-transform:uppercase;background:rgba(11,14,15,.04)}.table-wrap td{padding:.8rem 1rem;border-top:1px solid var(--line);vertical-align:top;color:rgba(11,14,15,.86)}
+.diagram{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;margin:1.6rem 0;padding:1rem;border:1px solid var(--line);border-radius:20px;background:rgba(255,255,249,.62)}.diagram-step{position:relative;min-height:92px;padding:1rem;border-radius:14px;background:rgba(11,14,15,.045);font:700 .8rem/1.35 'JetBrains Mono',monospace}.diagram-step:not(:last-child)::after{content:'→';position:absolute;right:-.55rem;top:50%;z-index:1;color:var(--teal);font:800 1.1rem var(--display)}.diagram-label{display:block;margin-bottom:.4rem;color:var(--teal);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase}@media(max-width:640px){.diagram{grid-template-columns:1fr}.diagram-step:not(:last-child)::after{content:'↓';right:50%;top:auto;bottom:-.85rem}}
 aside{position:sticky;top:6rem;display:grid;gap:1rem}.aside-card{padding:1.3rem;border:1px solid var(--line);border-radius:22px;background:var(--card)}.aside-card h3{font:700 .9rem 'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.08em;color:var(--teal)}.aside-card ul{list-style:none;display:grid;gap:.7rem;margin-top:1rem}.aside-card a{font-weight:650;line-height:1.35}.aside-card a:hover{color:var(--blue)}
 .cta{margin-top:3rem;padding:2rem;border-radius:28px;color:#fff;background:linear-gradient(145deg,var(--ink),#0D3140,var(--blue))}.cta h2{font:700 1.6rem var(--display);letter-spacing:-.02em}.cta p{margin-top:.6rem;color:rgba(255,255,255,.72)}.cta a{display:inline-block;margin-top:1rem;padding:.7rem 1.2rem;border-radius:999px;background:var(--paper);color:var(--ink);font:700 .8rem 'JetBrains Mono',monospace}
 footer{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding:2rem 0;color:var(--muted);border-top:1px solid var(--line)}
@@ -133,7 +136,8 @@ function articleHtml(article, all) {
   const { data, body } = article;
   const slug = data.slug;
   const url = `${SITE}/articles/${slug}/`;
-  const htmlBody = markdownToHtml(body);
+  const htmlBody = `${articleDiagram(slug)}${markdownToHtml(body)}`;
+  const ogImage = `${SITE}/assets/og/${slug}.svg`;
   const reading = Math.max(1, Math.round(body.split(/\s+/).length / 200));
   const catColor = CATEGORY_COLORS[data.category] || CATEGORY_COLORS.AI;
   const date = data.date || '2026-08-24';
@@ -160,10 +164,14 @@ function articleHtml(article, all) {
 <meta property="og:description" content="${escapeHtml(data.description)}">
 <meta property="og:url" content="${url}">
 <meta property="og:site_name" content="Rafael Marcos">
+<meta property="og:image" content="${ogImage}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="article:published_time" content="${date}">
 <meta property="article:modified_time" content="${updated}">
 <meta property="article:author" content="${escapeHtml(data.author || AUTHOR)}">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="${ogImage}">
 <meta name="twitter:title" content="${escapeHtml(data.title)}">
 <meta name="twitter:description" content="${escapeHtml(data.description)}">
 <link rel="icon" href="/favicon.svg">
@@ -207,6 +215,24 @@ function articleHtml(article, all) {
 <footer class="shell"><span>© 2026 Rafael Marcos Serrano</span><a href="mailto:rafaelmarcos2604@gmail.com">rafaelmarcos2604@gmail.com</a></footer>
 </body>
 </html>`;
+}
+
+function articleDiagram(slug) {
+  const diagrams = {
+    'ai-agents-for-customer-support': ['Ticket', 'Retrieve context', 'Guardrails', 'Human handoff'],
+    'ai-agents-vs-traditional-automation': ['Event', 'Rules first', 'Agent only if judgement is needed', 'Logged outcome'],
+    'crm-automation-7-workflows': ['Lead or event', 'CRM rule', 'Action', 'Audit trail'],
+    'what-is-saas-automation': ['Source app', 'Webhook or API', 'Workflow', 'System of record'],
+  };
+  const steps = diagrams[slug];
+  if (!steps) return '';
+  return `<figure class="diagram" aria-label="${escapeHtml(steps.join(' to '))}">${steps.map((step, index) => `<div class="diagram-step"><span class="diagram-label">${index + 1}</span>${escapeHtml(step)}</div>`).join('')}</figure>`;
+}
+
+function ogSvg(article) {
+  const title = escapeHtml(article.data.title).replace(/&quot;/g, '"');
+  const description = escapeHtml(article.data.description).replace(/&quot;/g, '"');
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630"><rect width="1200" height="630" fill="#F2F4EE"/><circle cx="1060" cy="70" r="300" fill="#B0DFAA" opacity=".8"/><circle cx="1030" cy="560" r="290" fill="#24969B" opacity=".2"/><rect x="70" y="64" width="142" height="42" rx="21" fill="#0B0E0F"/><text x="94" y="91" fill="#F2F4EE" font-family="Arial, sans-serif" font-size="19" font-weight="700">RAFAEL MARCOS</text><text x="70" y="190" fill="#24969B" font-family="Arial, sans-serif" font-size="22" font-weight="700">${escapeHtml(article.data.category).toUpperCase()}</text><foreignObject x="70" y="220" width="900" height="220"><div xmlns="http://www.w3.org/1999/xhtml" style="font:700 62px/1.06 Arial,sans-serif;letter-spacing:-2px;color:#0B0E0F">${title}</div></foreignObject><foreignObject x="70" y="490" width="820" height="80"><div xmlns="http://www.w3.org/1999/xhtml" style="font:28px/1.3 Arial,sans-serif;color:#334155">${description}</div></foreignObject></svg>`;
 }
 
 function indexHtml(articles) {
@@ -277,14 +303,17 @@ main{padding-top:4rem}.head{padding:2rem 0 3rem}.head .eyebrow{color:var(--teal)
 }
 
 function sitemapXml(articles) {
+  const news = existsSync(NEWS_FEED) ? JSON.parse(readFileSync(NEWS_FEED, 'utf8')).articles || [] : [];
   const urls = [
-    ['', '1.0'],
-    ['copywriting/', '0.9'],
-    ['articles/', '0.9'],
-    ['news/', '0.6'],
-    ...articles.map((a) => [`articles/${a.data.slug}/`, '0.8']),
+    ['', '1.0', '2026-08-25'],
+    ['copywriting/', '0.9', '2026-08-25'],
+    ['articles/', '0.9', '2026-08-25'],
+    ['news/', '0.6', '2026-08-25'],
+    ['rafaops/', '0.7', '2026-08-25'],
+    ...articles.map((a) => [`articles/${a.data.slug}/`, '0.8', a.data.updated || a.data.date]),
+    ...news.map((item) => [`news/${item.slug}/`, '0.6', item.date || item.generatedAt?.slice(0, 10)]),
   ];
-  const entries = urls.map(([path, prio]) => `  <url><loc>${SITE}/${path}</loc><changefreq>monthly</changefreq><priority>${prio}</priority></url>`).join('\n');
+  const entries = urls.map(([path, prio, lastmod]) => `  <url><loc>${SITE}/${path}</loc><lastmod>${lastmod}</lastmod><changefreq>monthly</changefreq><priority>${prio}</priority></url>`).join('\n');
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${entries}\n</urlset>\n`;
 }
 
@@ -309,10 +338,12 @@ function main() {
   });
 
   mkdirSync(ARTICLES_DIR, { recursive: true });
+  mkdirSync(OG_DIR, { recursive: true });
   for (const a of articles) {
     const dir = join(ARTICLES_DIR, a.data.slug);
     mkdirSync(dir, { recursive: true });
     writeFileSync(join(dir, 'index.html'), articleHtml(a, articles), 'utf8');
+    writeFileSync(join(OG_DIR, `${a.data.slug}.svg`), ogSvg(a), 'utf8');
   }
   writeFileSync(join(ARTICLES_DIR, 'index.html'), indexHtml(articles), 'utf8');
   writeFileSync(join(ROOT, 'sitemap.xml'), sitemapXml(articles), 'utf8');

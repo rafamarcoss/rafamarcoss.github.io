@@ -1,4 +1,5 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { buildAiSignalPages } from './build-ai-signal-pages.mjs';
 
 const SELECTION_MODEL = process.env.AI_SIGNAL_SELECTION_MODEL || 'deepseek-v4-flash';
 const ARTICLE_MODEL = process.env.AI_SIGNAL_ARTICLE_MODEL || 'deepseek-v4-pro';
@@ -459,6 +460,7 @@ async function main() {
   const articles = [article, ...(feed.articles || []).filter((item) => item.slug !== article.slug)].slice(0, 90);
   const nextFeed = { version: 1, generatedAt: article.generatedAt, articles };
   await writeFile(FEED_PATH, `${JSON.stringify(nextFeed, null, 2)}\n`, 'utf8');
+  await buildAiSignalPages();
   console.log(`Feed actualizado: ${article.slug}`);
 }
 

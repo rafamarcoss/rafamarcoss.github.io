@@ -4,7 +4,8 @@ import { join } from 'node:path';
 const ROOT = process.cwd();
 
 const articleDirs = readdirSync('articles').filter((d) => d !== 'index.html' && existsSync(join('articles', d, 'index.html')));
-const files = ['index.html', 'articles/index.html', 'copywriting/index.html', 'news/index.html', ...articleDirs.map((d) => `articles/${d}/index.html`)];
+const newsDirs = readdirSync('news').filter((d) => d !== 'index.html' && existsSync(join('news', d, 'index.html')));
+const files = ['index.html', 'articles/index.html', 'copywriting/index.html', 'news/index.html', ...articleDirs.map((d) => `articles/${d}/index.html`), ...newsDirs.map((d) => `news/${d}/index.html`)];
 
 let ok = true;
 for (const f of files) {

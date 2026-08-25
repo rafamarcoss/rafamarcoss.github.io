@@ -2,6 +2,7 @@
 title: "CRM Automation: 7 Workflows That Save Sales Teams Hours Every Week"
 description: "Seven concrete CRM automation workflows — from lead assignment to reporting — with the triggers, conditions and integrations each one needs."
 date: 2026-08-24
+updated: 2026-08-25
 category: "CRM"
 tags: ["crm", "automation", "lead assignment", "follow-up", "api", "webhooks", "reporting"]
 slug: "crm-automation-7-workflows"
@@ -120,3 +121,13 @@ Automating a process that is not understood yet. If a human could not write down
 These seven workflows save hours because they remove mechanical work from a rep's day. They do not replace selling. Build them one at a time, keep them visible, and treat the CRM as the single source of truth.
 
 Need technically accurate content about CRM or sales automation? I write [SEO content for products I actually understand](/copywriting/).
+
+## A real example from my work
+
+For Kit Consulting I built a scheduled alert system around projects, requirements, hours, VAT and justifications. It uses explicit state flags and weekend guards so an alert is traceable and does not fire just because a date exists. CRM workflows need the same discipline: a clear source of truth, idempotent checks and a record of each action.
+
+## Primary sources
+
+- [HubSpot: workflow actions](https://knowledge.hubspot.com/workflows/choose-your-workflow-actions)
+- [Salesforce: Flow Builder](https://help.salesforce.com/s/articleView?id=platform.flow.htm&type=5)
+- [n8n: workflow automation](https://docs.n8n.io/)
