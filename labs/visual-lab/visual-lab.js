@@ -1,11 +1,13 @@
 import { animate, inView } from 'https://cdn.jsdelivr.net/npm/motion@12/+esm';
 
+const systemReducedQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
 const state = {
   motion: true,
-  reduced: window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+  systemReduced: systemReducedQuery.matches,
+  simulatedReduced: false,
 };
 
-const enabled = () => state.motion && !state.reduced;
+const enabled = () => state.motion && !state.systemReduced && !state.simulatedReduced;
 
 const springCard = document.querySelector('.exp-spring');
 const pointerCard = document.querySelector('.exp-pointer');
@@ -44,7 +46,7 @@ function setupReveal() {
     el.style.transform = 'translateY(14px)';
   });
   revealUnsub = inView('.reveal-item', (el) => {
-    animate(el, { opacity: 1, y: 0 }, { duration: 0.7, easing: [0.22, 1, 0.36, 1] });
+    animate(el, { opacity: 1, y: 0 }, { duration: 0.7, ease: [0.22, 1, 0.36, 1] });
   }, { once: true });
 }
 function teardownReveal() {
@@ -62,13 +64,16 @@ function bindButton() {
     if (enabled()) animate(labBtn, { y: -2 }, { type: 'spring', stiffness: 380, damping: 18 });
   });
   labBtn.addEventListener('pointerleave', () => {
-    if (enabled()) animate(labBtn, { y: 0 }, { type: 'spring', stiffness: 300, damping: 20 });
+    if (enabled()) animate(labBtn, { y: 0, scale: 1 }, { type: 'spring', stiffness: 300, damping: 20 });
   });
   labBtn.addEventListener('pointerdown', () => {
     if (enabled()) animate(labBtn, { scale: 0.97 }, { duration: 0.12 });
   });
   labBtn.addEventListener('pointerup', () => {
-    if (enabled()) animate(labBtn, { scale: 1 }, { type: 'spring', stiffness: 400, damping: 16 });
+    if (enabled()) animate(labBtn, { scale: 1, y: 0 }, { type: 'spring', stiffness: 400, damping: 16 });
+  });
+  labBtn.addEventListener('pointercancel', () => {
+    if (enabled()) animate(labBtn, { scale: 1, y: 0 }, { type: 'spring', stiffness: 400, damping: 16 });
   });
 }
 
@@ -77,8 +82,9 @@ const motionToggle = document.getElementById('toggle-motion');
 const reducedToggle = document.getElementById('toggle-reduced');
 
 function apply() {
-  const off = !state.motion || state.reduced;
+  const off = !enabled();
   document.body.classList.toggle('lab-motion-off', off);
+  document.body.classList.toggle('lab-reduced', state.systemReduced || state.simulatedReduced);
   if (off) {
     [springCard, labBtn].forEach((el) => { if (el) el.style.transform = ''; });
     teardownReveal();
@@ -88,10 +94,11 @@ function apply() {
 }
 
 motionToggle.addEventListener('change', () => { state.motion = motionToggle.checked; apply(); });
-reducedToggle.addEventListener('change', () => { state.reduced = reducedToggle.checked; apply(); });
+reducedToggle.addEventListener('change', () => { state.simulatedReduced = reducedToggle.checked; apply(); });
+systemReducedQuery.addEventListener('change', (event) => { state.systemReduced = event.matches; apply(); });
 
 motionToggle.checked = state.motion;
-reducedToggle.checked = state.reduced;
+reducedToggle.checked = state.simulatedReduced;
 
 bindSpringCard();
 bindPointer();

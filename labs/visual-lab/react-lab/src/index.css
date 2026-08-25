@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+:root {
+  --background: #F2F4EE;
+  --foreground: #0B0E0F;
+  --card: #FFFFF9;
+  --card-foreground: #0B0E0F;
+  --popover: #FFFFF9;
+  --popover-foreground: #0B0E0F;
+  --primary: #0860A7;
+  --primary-foreground: #FFFFFF;
+  --secondary: #E7EAE2;
+  --secondary-foreground: #0B0E0F;
+  --muted: #EDF0E8;
+  --muted-foreground: rgba(11, 14, 15, 0.64);
+  --accent: #24969B;
+  --accent-foreground: #FFFFFF;
+  --destructive: #C64240;
+  --destructive-foreground: #FFFFFF;
+  --border: rgba(11, 14, 15, 0.13);
+  --input: rgba(11, 14, 15, 0.16);
+  --ring: #0860A7;
+  --radius: 0.75rem;
+
+  --ink: #0B0E0F;
+  --mint: #B0DFAA;
+  --teal: #24969B;
+  --blue: #0860A7;
+  --royal: #0234C0;
+  --coral: #C64240;
+
+  --chart-1: #24969B;
+  --chart-2: #0860A7;
+  --chart-3: #C64240;
+  --chart-4: #B0DFAA;
+  --chart-5: #0234C0;
+  --chart-background: #F2F4EE;
+  --chart-foreground: rgba(11, 14, 15, 0.78);
+  --chart-foreground-muted: rgba(11, 14, 15, 0.5);
+  --chart-line-primary: #24969B;
+  --chart-line-secondary: #0860A7;
+  --chart-crosshair: rgba(11, 14, 15, 0.35);
+  --chart-grid: rgba(11, 14, 15, 0.1);
+  --chart-brush-border: rgba(11, 14, 15, 0.18);
+  --chart-tooltip-background: rgba(11, 14, 15, 0.92);
+  --chart-tooltip-foreground: #FFFFFF;
+  --chart-tooltip-muted: rgba(255, 255, 255, 0.7);
+  --chart-marker-background: #FFFFF9;
+  --chart-marker-border: rgba(11, 14, 15, 0.25);
+  --chart-marker-foreground: rgba(11, 14, 15, 0.85);
+  --chart-marker-badge-background: rgba(11, 14, 15, 0.08);
+  --chart-marker-badge-foreground: rgba(11, 14, 15, 0.85);
+  --chart-label: rgba(11, 14, 15, 0.55);
+  --chart-indicator-color: #24969B;
+  --chart-indicator-secondary-color: #0860A7;
+  --chart-segment-background: rgba(11, 14, 15, 0.06);
+  --chart-segment-line: rgba(11, 14, 15, 0.18);
+  --chart-scale-01: rgba(176, 223, 170, 0.85);
+  --chart-scale-02: rgba(176, 223, 170, 0.65);
+  --chart-scale-03: rgba(176, 223, 170, 0.45);
+  --chart-scale-04: rgba(176, 223, 170, 0.28);
+  --chart-scale-05: rgba(176, 223, 170, 0.16);
+  --chart-scale-pattern-color: rgba(11, 14, 15, 0.25);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ink: var(--ink);
+  --color-mint: var(--mint);
+  --color-teal: var(--teal);
+  --color-blue: var(--blue);
+  --color-royal: var(--royal);
+  --color-coral: var(--coral);
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+}
+
+@theme {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-display: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+* { box-sizing: border-box; }
+html { background: var(--background); }
+body {
+  margin: 0;
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  background:
+    radial-gradient(circle at 12% 2%, rgba(176, 223, 170, 0.55), transparent 28rem),
+    radial-gradient(circle at 90% 22%, rgba(36, 150, 155, 0.14), transparent 32rem),
+    var(--background);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}

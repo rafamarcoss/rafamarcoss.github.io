@@ -177,6 +177,18 @@ main { padding-bottom: 6rem; }
   background: rgba(255, 255, 249, 0.4);
 }
 
+.lab-link {
+  display: flex; flex-direction: column; gap: 0.4rem;
+  margin-top: 1.2rem; padding: 1.6rem;
+  border: 1px solid var(--line); border-radius: 28px;
+  background: var(--card); box-shadow: var(--shadow-soft);
+  transition: transform .22s ease, border-color .22s ease;
+}
+.lab-link:hover { transform: translateY(-3px); border-color: rgba(36, 150, 155, .35); }
+.lab-link-name { font: 800 1.15rem var(--font-display); letter-spacing: -.02em; }
+.lab-link-desc { color: var(--muted); font-size: .92rem; }
+.lab-link-go { margin-top: .5rem; color: var(--teal); font: 700 .75rem var(--font-mono); }
+
 /* footer */
 footer { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; padding: 2rem 0; color: var(--muted); border-top: 1px solid var(--line); }
 .footer-note { font: 700 0.7rem var(--font-mono); letter-spacing: 0.08em; text-transform: uppercase; }
