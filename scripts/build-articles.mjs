@@ -5,6 +5,7 @@
 import { readFileSync, writeFileSync, mkdirSync, readdirSync, existsSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { Resvg } from '@resvg/resvg-js';
 
 const ROOT = resolve(fileURLToPath(import.meta.url), '..', '..');
 const CONTENT_DIR = join(ROOT, 'content', 'articles');
@@ -137,7 +138,7 @@ function articleHtml(article, all) {
   const slug = data.slug;
   const url = `${SITE}/articles/${slug}/`;
   const htmlBody = `${articleDiagram(slug)}${markdownToHtml(body)}`;
-  const ogImage = `${SITE}/assets/og/${slug}.svg`;
+  const ogImage = `${SITE}/assets/og/${slug}.png`;
   const reading = Math.max(1, Math.round(body.split(/\s+/).length / 200));
   const catColor = CATEGORY_COLORS[data.category] || CATEGORY_COLORS.AI;
   const date = data.date || '2026-08-24';
@@ -170,7 +171,7 @@ function articleHtml(article, all) {
 <meta property="article:published_time" content="${date}">
 <meta property="article:modified_time" content="${updated}">
 <meta property="article:author" content="${escapeHtml(data.author || AUTHOR)}">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="${ogImage}">
 <meta name="twitter:title" content="${escapeHtml(data.title)}">
 <meta name="twitter:description" content="${escapeHtml(data.description)}">
@@ -229,10 +230,25 @@ function articleDiagram(slug) {
   return `<figure class="diagram" aria-label="${escapeHtml(steps.join(' to '))}">${steps.map((step, index) => `<div class="diagram-step"><span class="diagram-label">${index + 1}</span>${escapeHtml(step)}</div>`).join('')}</figure>`;
 }
 
+function svgTitle(text) {
+  const words = String(text).split(/\s+/);
+  const lines = [];
+  let line = '';
+  for (const word of words) {
+    if (`${line} ${word}`.trim().length > 31 && line) { lines.push(line); line = word; }
+    else line = `${line} ${word}`.trim();
+  }
+  if (line) lines.push(line);
+  return lines.slice(0, 3).map((lineText, index) => `<tspan x="70" dy="${index ? 72 : 0}">${escapeHtml(lineText)}</tspan>`).join('');
+}
+
 function ogSvg(article) {
-  const title = escapeHtml(article.data.title).replace(/&quot;/g, '"');
-  const description = escapeHtml(article.data.description).replace(/&quot;/g, '"');
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630"><rect width="1200" height="630" fill="#F2F4EE"/><circle cx="1060" cy="70" r="300" fill="#B0DFAA" opacity=".8"/><circle cx="1030" cy="560" r="290" fill="#24969B" opacity=".2"/><rect x="70" y="64" width="142" height="42" rx="21" fill="#0B0E0F"/><text x="94" y="91" fill="#F2F4EE" font-family="Arial, sans-serif" font-size="19" font-weight="700">RAFAEL MARCOS</text><text x="70" y="190" fill="#24969B" font-family="Arial, sans-serif" font-size="22" font-weight="700">${escapeHtml(article.data.category).toUpperCase()}</text><foreignObject x="70" y="220" width="900" height="220"><div xmlns="http://www.w3.org/1999/xhtml" style="font:700 62px/1.06 Arial,sans-serif;letter-spacing:-2px;color:#0B0E0F">${title}</div></foreignObject><foreignObject x="70" y="490" width="820" height="80"><div xmlns="http://www.w3.org/1999/xhtml" style="font:28px/1.3 Arial,sans-serif;color:#334155">${description}</div></foreignObject></svg>`;
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630"><rect width="1200" height="630" fill="#F2F4EE"/><circle cx="1060" cy="70" r="300" fill="#B0DFAA" opacity=".8"/><circle cx="1030" cy="560" r="290" fill="#24969B" opacity=".2"/><rect x="70" y="64" width="142" height="42" rx="21" fill="#0B0E0F"/><text x="94" y="91" fill="#F2F4EE" font-family="Arial, sans-serif" font-size="19" font-weight="700">RAFAEL MARCOS</text><text x="70" y="190" fill="#24969B" font-family="Arial, sans-serif" font-size="22" font-weight="700">${escapeHtml(article.data.category).toUpperCase()}</text><text x="70" y="275" fill="#0B0E0F" font-family="Arial, sans-serif" font-size="62" font-weight="700">${svgTitle(article.data.title)}</text></svg>`;
+}
+
+function writeOgPng(svg, filename) {
+  const png = new Resvg(svg, { fitTo: { mode: 'width', value: 1200 } }).render().asPng();
+  writeFileSync(filename, png);
 }
 
 function indexHtml(articles) {
@@ -309,6 +325,7 @@ function sitemapXml(articles) {
     ['copywriting/', '0.9', '2026-08-25'],
     ['articles/', '0.9', '2026-08-25'],
     ['news/', '0.6', '2026-08-25'],
+    ['news/archive/', '0.6', '2026-08-25'],
     ['rafaops/', '0.7', '2026-08-25'],
     ...articles.map((a) => [`articles/${a.data.slug}/`, '0.8', a.data.updated || a.data.date]),
     ...news.map((item) => [`news/${item.slug}/`, '0.6', item.date || item.generatedAt?.slice(0, 10)]),
@@ -343,7 +360,9 @@ function main() {
     const dir = join(ARTICLES_DIR, a.data.slug);
     mkdirSync(dir, { recursive: true });
     writeFileSync(join(dir, 'index.html'), articleHtml(a, articles), 'utf8');
-    writeFileSync(join(OG_DIR, `${a.data.slug}.svg`), ogSvg(a), 'utf8');
+    const svg = ogSvg(a);
+    writeFileSync(join(OG_DIR, `${a.data.slug}.svg`), svg, 'utf8');
+    writeOgPng(svg, join(OG_DIR, `${a.data.slug}.png`));
   }
   writeFileSync(join(ARTICLES_DIR, 'index.html'), indexHtml(articles), 'utf8');
   writeFileSync(join(ROOT, 'sitemap.xml'), sitemapXml(articles), 'utf8');
