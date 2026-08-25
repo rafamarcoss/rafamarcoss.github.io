@@ -1,7 +1,154 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-24T08:04:22.767Z",
+  "generatedAt": "2026-08-25T07:54:58.834Z",
   "articles": [
+    {
+      "slug": "ai-signal-2026-08-25",
+      "date": "2026-08-25",
+      "generatedAt": "2026-08-25T07:54:58.834Z",
+      "categories": [
+        "IA General",
+        "Trabajo y Negocio",
+        "Finanzas e Inversiones",
+        "Legal IA",
+        "Educación IA"
+      ],
+      "readingMinutes": 4,
+      "content": {
+        "es": {
+          "title": "La IA redefine trabajo, justicia y educación: claves del día",
+          "dek": "La exigencia de competencias en IA choca con la necesidad de controles éticos. Inversiones millonarias y casos prácticos marcan la agenda.",
+          "intro": "La inteligencia artificial avanza a un ritmo que obliga a profesionales, empresas e instituciones a adaptarse con urgencia. Mientras gigantes tecnológicos movilizan capital y las empresas despliegan agentes internos, surgen tensiones sobre transparencia, formación y el impacto en el aprendizaje. Esta edición conecta los frentes laboral, financiero, legal, educativo y sanitario para extraer lecciones prácticas.",
+          "sections": [
+            {
+              "heading": "Trabajo: la fluidez en IA ya no es opcional",
+              "body": "El experto Jon Hernández advierte de que en dos años quien no sea fluido en inteligencia artificial quedará fuera del mercado laboral. Esta urgencia se refleja en la identificación de cinco habilidades clave para la vuelta al trabajo en 2026, entre ellas la capacidad de priorizar y el criterio para usar IA de forma eficaz.\n\nEl caso de Serveo, con 733 agentes de IA creados por sus propios empleados, demuestra que la adopción interna es viable y genera valor. Las empresas que capacitan a su plantilla para construir soluciones propias pueden acelerar la transformación digital con menor dependencia externa."
+            },
+            {
+              "heading": "Mercados: capital masivo y valoración de gigantes",
+              "body": "La movilización de más de 14.100 millones de dólares por parte de Alibaba y SoftBank refleja una apuesta decidida por la inteligencia artificial. Estas inversiones indican hacia dónde se orienta el capital institucional y qué regiones buscan liderar la próxima ola tecnológica.\n\nPara el inversor particular, el análisis sobre si Meta es la mejor acción de IA para comprar y mantener plantea una cuestión de valoración y horizonte temporal. Aunque el sector promete crecimiento, ninguna compañía está exenta de riesgos regulatorios o de ejecución, por lo que conviene diversificar y monitorizar los fundamentales."
+            },
+            {
+              "heading": "Regulación: transparencia judicial y negligencia profesional",
+              "body": "Dos noticias del ámbito legal muestran una paradoja: por un lado, se plantea si un abogado puede exigir que un juez revele si ha utilizado IA para redactar una sentencia; por otro, los abogados coinciden en que no usar IA podría constituir negligencia profesional. Esta tensión refleja la necesidad de adoptar la tecnología sin renunciar a la rendición de cuentas.\n\nLa exigencia de transparencia en el poder judicial choca con la presión por incorporar herramientas de IA en la práctica diaria. Los profesionales del derecho deberán equilibrar eficiencia y ética, y las instituciones tendrán que definir protocolos claros para evitar conflictos de confianza."
+            },
+            {
+              "heading": "Educación: alfabetización sin caer en la dependencia",
+              "body": "Mientras Microsoft y la Universidad San Jorge colaboran para llevar la alfabetización en IA a las aulas, un estudio advierte de que usar IA para hacer deberes reduce el aprendizaje en un 20%. La clave está en enseñar a utilizar la tecnología como apoyo, no como sustituto del esfuerzo cognitivo.\n\nEste contraste no implica una contradicción: la alfabetización en IA prepara a los estudiantes para un mundo digital, pero los educadores deben diseñar actividades que exijan pensamiento crítico y eviten la delegación total en la máquina. El reto es integrar la herramienta sin mermar las capacidades básicas."
+            },
+            {
+              "heading": "Salud: formación y auditorías como garantía",
+              "body": "En radiología, los profesionales reclaman más formación y auditorías para integrar la IA en el diagnóstico por imagen. Esta exigencia subraya que la adopción tecnológica en entornos críticos debe ir acompañada de supervisión humana y protocolos de calidad.\n\nLa demanda de auditorías pone límites a una implementación acelerada: no basta con disponer de algoritmos precisos; es necesario verificar su rendimiento en la práctica clínica y formar a los especialistas para interpretar sus resultados. La confianza del paciente depende de esos controles."
+            }
+          ],
+          "takeaways": [
+            "Adquirir competencias en IA es urgente para mantener la empleabilidad; prioriza el criterio y la capacidad de priorizar sobre el uso mecánico.",
+            "Las empresas pueden potenciar la innovación capacitando a empleados para crear agentes internos, como demuestra el caso de Serveo.",
+            "Los inversores deben evaluar el potencial de gigantes como Meta, pero diversificar ante la volatilidad y los riesgos del sector.",
+            "En sectores regulados como el legal, adoptar IA sin transparencia puede generar riesgos; se necesitan marcos claros de uso y divulgación.",
+            "En educación, la alfabetización en IA debe combinarse con estrategias pedagógicas que eviten la dependencia y preserven el aprendizaje profundo."
+          ],
+          "closing": "La IA exige un equilibrio entre velocidad y prudencia. Los casos de hoy muestran que el valor no está solo en la tecnología, sino en cómo se integra con criterio, formación y control. Para profesionales, empresas y estudiantes, la lección es clara: adoptar sin entender los límites es tan arriesgado como ignorar el cambio."
+        },
+        "en": {
+          "title": "AI Redefines Work, Justice, and Education: Key Insights of the Day",
+          "dek": "The demand for AI skills clashes with the need for ethical controls. Million-dollar investments and practical cases set the agenda.",
+          "intro": "Artificial intelligence is advancing at a pace that forces professionals, companies, and institutions to adapt urgently. While tech giants mobilize capital and companies deploy internal agents, tensions arise over transparency, training, and the impact on learning. This edition connects the labor, financial, legal, educational, and healthcare fronts to extract practical lessons.",
+          "sections": [
+            {
+              "heading": "Work: AI Fluency Is No Longer Optional",
+              "body": "Expert Jon Hernández warns that within two years, anyone not fluent in artificial intelligence will be left out of the job market. This urgency is reflected in the identification of five key skills for returning to work in 2026, including the ability to prioritize and the judgment to use AI effectively.\n\nThe case of Serveo, with 733 AI agents created by its own employees, shows that internal adoption is viable and generates value. Companies that train their workforce to build their own solutions can accelerate digital transformation with less external dependence."
+            },
+            {
+              "heading": "Markets: Massive Capital and Valuation of Giants",
+              "body": "The mobilization of more than $14.1 billion by Alibaba and SoftBank reflects a decisive bet on artificial intelligence. These investments indicate where institutional capital is heading and which regions seek to lead the next technological wave.\n\nFor the individual investor, the analysis of whether Meta is the best AI stock to buy and hold raises a question of valuation and time horizon. Although the sector promises growth, no company is exempt from regulatory or execution risks, so it is advisable to diversify and monitor fundamentals."
+            },
+            {
+              "heading": "Regulation: Judicial Transparency and Professional Negligence",
+              "body": "Two news items from the legal field show a paradox: on one hand, it is raised whether a lawyer can demand that a judge disclose whether they have used AI to draft a ruling; on the other, lawyers agree that not using AI could constitute professional negligence. This tension reflects the need to adopt technology without giving up accountability.\n\nThe demand for transparency in the judiciary clashes with the pressure to incorporate AI tools into daily practice. Legal professionals will need to balance efficiency and ethics, and institutions will have to define clear protocols to avoid conflicts of trust."
+            },
+            {
+              "heading": "Education: Literacy Without Falling into Dependence",
+              "body": "While Microsoft and San Jorge University collaborate to bring AI literacy to classrooms, a study warns that using AI to do homework reduces learning by 20%. The key is to teach using technology as support, not as a substitute for cognitive effort.\n\nThis contrast does not imply a contradiction: AI literacy prepares students for a digital world, but educators must design activities that require critical thinking and avoid total delegation to the machine. The challenge is to integrate the tool without diminishing basic skills."
+            },
+            {
+              "heading": "Health: Training and Audits as a Guarantee",
+              "body": "In radiology, professionals demand more training and audits to integrate AI into diagnostic imaging. This demand underscores that technological adoption in critical environments must be accompanied by human oversight and quality protocols.\n\nThe demand for audits sets limits on accelerated implementation: having precise algorithms is not enough; it is necessary to verify their performance in clinical practice and train specialists to interpret their results. Patient trust depends on those controls."
+            }
+          ],
+          "takeaways": [
+            "Acquiring AI skills is urgent to maintain employability; prioritize judgment and the ability to prioritize over mechanical use.",
+            "Companies can boost innovation by training employees to create internal agents, as demonstrated by the Serveo case.",
+            "Investors should evaluate the potential of giants like Meta, but diversify given the volatility and risks of the sector.",
+            "In regulated sectors like the legal field, adopting AI without transparency can generate risks; clear frameworks for use and disclosure are needed.",
+            "In education, AI literacy must be combined with pedagogical strategies that avoid dependence and preserve deep learning."
+          ],
+          "closing": "AI demands a balance between speed and prudence. Today's cases show that value lies not only in technology, but in how it is integrated with judgment, training, and control. For professionals, companies, and students, the lesson is clear: adopting without understanding the limits is as risky as ignoring change."
+        }
+      },
+      "sources": [
+        {
+          "title": "Radiología reclama formación y auditorías para integrar IA - Univadis",
+          "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPdmRtV05ZWkItTEd0aFNneUg2Y21kZ1FORWVQTkJFYTNBRUtFWHU3U0FWR1NZVERjSjA0QUhxa3lKTXBQRk51eFNyeGNhRzdhUFd4QXZON1lOT2ZKTmpIN21oZzZqNEpFSTVPMFA5WkNlYUtuSnp4ZVhzUTAyRy14OVRzS3NmTTF2ZHk5cDNnajJfZjhNQlhlbkxzQkNMUDRkWE9wVDlabURpN2NVRjBoQWJDd1BQbmlPZXY4TkR3UGl6ME50eUNtZVNYeVZOLVNLc255bFJubGdnLWZlNW5iSQ?oc=5",
+          "category": "IA General",
+          "publishedAt": "2026-08-24T11:36:43.000Z"
+        },
+        {
+          "title": "Jon Hernández, experto en IA: «En dos años, aquella persona que no sea fluida en inteligencia artificial está fuera del mercado laboral» - La Razón",
+          "url": "https://news.google.com/rss/articles/CBMivwJBVV95cUxPOVNZbG14U3VMaEdUUVpWU2p1dUk4OHdTb1ZyZGtxMnhMRG5GUE9rZFhPZFB1RFpGY3lBQUhOME5Ya29rQ2dCWk5pRWhiVzZmVWprb3gwU2tLWVYzM2tySk1rbTVJN1VZVUZJdVVhb21oUy16SFgySHJFTDEzU1VOYXQ5dDZHRy15bGVORGtkd0ZFODM4c3FFUW9CbkpkdG52TEY3YlhvcU5fVlhBS2NQSWFJY2t0VG5jalgydzM4dUJiVGpUMFNTcDZDTEZPUHBESExINVp4TmxDcXRvX3RtSG1UOGNaLVRxcVpzQ1VMamtGX2NydC05dkkzOEdmUVBjUEt6SEhsS01PYlkxVldtenVpa2N0ZzJpVmQ4cktLR09yVE0zUndMNUhrbFk4UHRFZHFCZVlRdkFBZEFHUlFJ?oc=5",
+          "category": "IA General",
+          "publishedAt": "2026-08-23T12:01:00.000Z"
+        },
+        {
+          "title": "Cinco habilidades que marcarán la vuelta al trabajo en 2026: desde la capacidad para priorizar hasta el criterio para usar IA - 20Minutos",
+          "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOYzBaR1cydzB0bjREZ29aRlBWanQzY09yNVIyby02dWFwemN4QUlUdUQtTGtKQ3VOTFpIQ0hZLU5JUnZycDhjWkJfQ1ZWY1hMcGRlYlQ5TUxlVFJiNEd1M3huT3hoUGxnSFN6d0U4NG11dkZlejhjRVFRSFppQVFDaVVza2ZmYjdfLW4td3M2ZFlPYUVTbEFwYkd2bi1aVTZsR1g5RHAxanZTWXRiU3hId3lubHJXWlZTRGhHM3RwTy1zeEJaejlYbldqRUx5dzVJMHdUMzdVdmVXN1IxbWUwdUJ6UXNucUtCSGpiMEZ4c2ZSUdIB8gFBVV95cUxOYzBaR1cydzB0bjREZ29aRlBWanQzY09yNVIyby02dWFwemN4QUlUdUQtTGtKQ3VOTFpIQ0hZLU5JUnZycDhjWkJfQ1ZWY1hMcGRlYlQ5TUxlVFJiNEd1M3huT3hoUGxnSFN6d0U4NG11dkZlejhjRVFRSFppQVFDaVVza2ZmYjdfLW4td3M2ZFlPYUVTbEFwYkd2bi1aVTZsR1g5RHAxanZTWXRiU3hId3lubHJXWlZTRGhHM3RwTy1zeEJaejlYbldqRUx5dzVJMHdUMzdVdmVXN1IxbWUwdUJ6UXNucUtCSGpiMEZ4c2ZSUQ?oc=5",
+          "category": "Trabajo y Negocio",
+          "publishedAt": "2026-08-24T10:49:09.000Z"
+        },
+        {
+          "title": "Serveo despliega 733 agentes de IA creados por empleados - La Ecuación Digital",
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOQ29QS19iMzB3cThDV2dxSDlkSUp3elAxQlFNYjVuWkxONGYtTm9yNUtnSjE4SExGV1U5S0VOaEhSb0dBVHBRYUJ0dHJWM0lnWFYtWGpRWjk0ZjNaTlhPUXdSZ3V0Y3BYaC1ZbkI5MjdmOUs5SXZtM1ZQSDBZOFhKVFhiVzRfLXBEUnlhRWtCdzZRTFRlR0NSdmstNHNQczdjQ0xaYQ?oc=5",
+          "category": "Trabajo y Negocio",
+          "publishedAt": "2026-08-23T17:27:37.000Z"
+        },
+        {
+          "title": "Alibaba y SoftBank movilizan más de 14.100 millones para acelerar su apuesta por la inteligencia artificial - EL PAÍS",
+          "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPSUFfd0J6OGstUnpPclpPaEhYNV9tdVk1cGh3TTU1Tkd2bEJNYVZtRi1MeWpFX0tVaHh0bFhleEtVZE00dFkzSUNGUUpMQUw0N1d0NHBUbDVjblhpb3M3a24wRWV4Q1E4X1Z6X1BBZEpkYVozZUNEc0hBSWhFRzUtM0owTDdiSk9oOTNpNXpHWHVSaXlSVGtJSlJ2OWRCX1BJc0k2bHJDME9fV0NLOWV0TXJLdjBJTVRfOXNGZ1JJeVdtX29KZlNMd0FPWFFEWVhRdXdneFBuYnpZc0xHUWZaV1FwNWTSAYcCQVVfeXFMUDE5TnRtOEpEX0MxdWVOMGlIZFBRUW5rM3FDQzZjWFFkTWhZRXBQXy1kQTY0Y1JuZnBOMWV1eFZDeHFibjdxXzNtSlpxRG5palcwXzZlckpEYkp3N2IzSk5lbHlUYTk5SG1SNFZwQ3ZCRDI4aFRUaUMzV21WeFpVbFdYUlBqQ3hTZ1Y1anQ2a0Y4dksxdGJvSjdqNGVmNXEycnZMV2dqUTFZWDhwQk5UUElDYmU4QkpDVUt5bTdveHB2MDJJUEJjcEhIeTlqVVpHX2d4YWVidEV5ZmlDTHNSbkZhQ2ZmZXdpWnQxN2tvSU1SU2tObVNHUFZ6NnI2dEhlZWFCX2U1YTQ?oc=5",
+          "category": "Finanzas e Inversiones",
+          "publishedAt": "2026-08-24T08:49:17.000Z"
+        },
+        {
+          "title": "¿Es Meta la mejor acción de IA para comprar y mantener? - Estrategias de Inversión",
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNcmw4MFM2X3NKWWxwYURQWjRUWlBoU3B5cVJZWndXZW0xb2hoWHd2OUtsa1MwN2FkS01ZY1pKREZfTzdTXzlJdmtQakQ4MzdqOXFBb0d1cW1yZEJGMTh6dXQ1Y2N3MXJ0WVRReWJaZmt5RHVaeWpvOTdGeV80dmVFMW1Xa3JhVVVZYlZUUHBiS3RwTGduWlBnVUkyaWtMNTcxVXhsZdIBpAFBVV95cUxNcmw4MFM2X3NKWWxwYURQWjRUWlBoU3B5cVJZWndXZW0xb2hoWHd2OUtsa1MwN2FkS01ZY1pKREZfTzdTXzlJdmtQakQ4MzdqOXFBb0d1cW1yZEJGMTh6dXQ1Y2N3MXJ0WVRReWJaZmt5RHVaeWpvOTdGeV80dmVFMW1Xa3JhVVVZYlZUUHBiS3RwTGduWlBnVUkyaWtMNTcxVXhsZQ?oc=5",
+          "category": "Finanzas e Inversiones",
+          "publishedAt": "2026-08-25T05:30:00.000Z"
+        },
+        {
+          "title": "¿Puede un abogado pedir que un juez diga si ha utilizado inteligencia artificial para redactar una sentencia? - Law&Trends",
+          "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPRTVUaE9DUUhJNjRjTGdTcWhOaGdBS2lnQk1SSjY5NHU5eWVzbWV2S2o3Y2lPakZvV3UwOC1WanBZQzVFaUVzbERFdjZ5c0FRNzlzVkE4UmU5eG9CeWJmRU81OThEM0l2SzF4Z2xGN2J1UG9XdTZ3amRjdnF2RE1UcGN2U2gtU1B1N3lIakNfMFFuN0NzR2ZVdVdLWlFMT2RpOXRaZmE3bUVrQWZIWlhnTEEtS1N2WVh1N1hGSE9FcEQ1TEgtTXpMaEpOend4QVNvZHRtbnBWZ0RYV051WDBkQTBzLVF5Nm5RQ2dvNw?oc=5",
+          "category": "Legal IA",
+          "publishedAt": "2026-08-22T22:21:00.000Z"
+        },
+        {
+          "title": "Los abogados coinciden: “Un profesional puede incurrir en negligencia por no usar inteligencia artificial” - El Español",
+          "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQbzNtUUUzaHNkYi1LWmR0ajJURnFmVTFnTkJoaFotdW5XY2Y1d1FRSzVMalZ5aWlkWlI3OWdaYjRWaE1KYWU1anlsRGtza1VjWnBETWFoY3diRjJvSjNNOGpIX1JPeUhVdHQzaktKZFF4RXB5OV81Y3NycUtxd0Q0VnVsOUFZLURaZEtKV2RuYXBaOFYxMG16cHZPakJJa2FVdWhiVS1obk43Z1hRcU1GSkxCbERldXFhaDRZVXhqTWE4a09XaTZ3YlhvWXVqcHNydDhFeUVYVmR6ZElrWEVWZldPeGRmWG5qUUHSAe8BQVVfeXFMTjM1SHVPWWlEYzcyd2hjZ1hxU3c0b2ZuT2lCSkpuNXk3STdfOHpnakszRVZReHBVOWxDeWduZTRDYXE3RC0tRmd4YlJvNXVNY281dk1KblZhTDFab2JIQ3FwcEdkdW91WGhSV3l4a2N0dEkyMEZkTE5Gd1Q2cEVuQjRkek0ybnp3UHNfb2dydGdoWHdjd3loOHBBMEJERldRT1J6MTNYdTVUekJLcDlhY1lucWczTFJTVGRTcjFpYnJNSVlCdlo2ZVBHYktuRjNFRmt6NWhWN2VUNnVFeVdKWVVKV3RZb21qUDJqLWxoWjQ?oc=5",
+          "category": "Legal IA",
+          "publishedAt": "2026-08-21T08:08:03.000Z"
+        },
+        {
+          "title": "Utilizar la IA para hacer deberes y trabajos reduce un 20% el aprendizaje - La Vanguardia",
+          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQU1V1ZTV5WVJiMFVNSzNKdUxBdkliR3pvT0ZldTZIT00yd0NNY0l6ejdYRUN4emN1ZkdPT1pCQjBGUmNxeHp4VnhrXzhlR2M3amkyLTRtanZQM1NMbVBqb1MxQlZCQndkbnhMX3NoU2pkbHY4YzFMN1FqSjJFNFF0cE51VGtWaS1pVHh3ZUNQX2dQNnZDSG1HV1pkR2RieTVMN2Vic0hVbWZhUnPSAbABQVVfeXFMTUZKQUgxZDBjZTUyMzVpMDJJZnFDanZiUWNJSURNY0xLRFhYUGRmb3BFeXlfSTQ4QXVDcGJWTXB3Yk10dVoyTkJPYTktT3ZCR3ZBRkNpVzBfZHVLVnF1dC1MWDJUMDNrN296TUJ5RVowaEk1ZmxhWExQZ0Ixc1ZVOHFPZHRvSHFDMEdTdmd2VlYtbm5jd1RPUm00TTBMSXItaFRSZ1NhN1Z1V0twNF9SYXo?oc=5",
+          "category": "Educación IA",
+          "publishedAt": "2026-08-21T04:05:00.000Z"
+        },
+        {
+          "title": "Microsoft y USJ llevan la alfabetización en IA a las aulas - La Ecuación Digital",
+          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPajlDbHBOYmZ1WXhsOXNLWjZBRExjSlR1Vnk2T1lrUEhtZWJGc0p6WkxXT0kwQl9HZ0tjYldkWmJQR0JrSHV2R0FwNzliWHllLW5jY2ZKWXdqVHVqai1XR2ZJVEZKajU2cC1XTklsV0g1ZjRHbGg2TnBSaktsblFIbUU3TXZQR0hORU5hMlhJY3V3bkkya0xIckdZUVozazJfcGdYRUYzaGowdEktWWFBNE5B?oc=5",
+          "category": "Educación IA",
+          "publishedAt": "2026-08-23T16:54:54.000Z"
+        }
+      ]
+    },
     {
       "slug": "ai-signal-2026-08-24",
       "date": "2026-08-24",

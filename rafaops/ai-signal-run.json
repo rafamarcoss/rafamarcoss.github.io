@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "system": "ai-signal",
-  "startedAt": "2026-08-24T08:01:57.056Z",
+  "startedAt": "2026-08-25T07:51:49.203Z",
   "status": "healthy",
   "models": {
     "selection": "deepseek-v4-flash",
@@ -19,11 +19,11 @@
       "status": "success",
       "recoveredFromReasoning": false,
       "finishReason": "stop",
-      "durationMs": 49288,
+      "durationMs": 60744,
       "usage": {
-        "prompt_tokens": 2901,
-        "completion_tokens": 4027,
-        "total_tokens": 6928,
+        "prompt_tokens": 2704,
+        "completion_tokens": 2942,
+        "total_tokens": 5646,
         "prompt_tokens_details": {}
       }
     },
@@ -32,21 +32,30 @@
       "role": "worker",
       "model": "deepseek-v4-pro",
       "attempt": 1,
+      "status": "failed",
+      "durationMs": 32394,
+      "error": "OpenCode: Internal server error"
+    },
+    {
+      "task": "write-spanish-edition",
+      "role": "worker",
+      "model": "deepseek-v4-pro",
+      "attempt": 2,
       "status": "success",
       "recoveredFromReasoning": false,
       "finishReason": "stop",
-      "durationMs": 69935,
+      "durationMs": 73134,
       "usage": {
-        "prompt_tokens": 1566,
-        "completion_tokens": 3777,
-        "total_tokens": 5343,
-        "prompt_cache_hit_tokens": 0,
-        "prompt_cache_miss_tokens": 1566,
+        "prompt_tokens": 1575,
+        "completion_tokens": 3229,
+        "total_tokens": 4804,
+        "prompt_cache_hit_tokens": 1536,
+        "prompt_cache_miss_tokens": 39,
         "prompt_tokens_details": {
-          "cached_tokens": 0
+          "cached_tokens": 1536
         },
         "completion_tokens_details": {
-          "reasoning_tokens": 2607
+          "reasoning_tokens": 1964
         }
       }
     },
@@ -58,31 +67,31 @@
       "status": "success",
       "recoveredFromReasoning": false,
       "finishReason": "stop",
-      "durationMs": 25824,
+      "durationMs": 20190,
       "usage": {
-        "prompt_tokens": 1242,
-        "completion_tokens": 2899,
-        "total_tokens": 4141,
+        "prompt_tokens": 1328,
+        "completion_tokens": 3360,
+        "total_tokens": 4688,
         "prompt_tokens_details": {}
       }
     }
   ],
   "recoveries": [],
   "output": {
-    "slug": "ai-signal-2026-08-24",
+    "slug": "ai-signal-2026-08-25",
     "sources": 10,
     "languages": [
       "es",
       "en"
     ]
   },
-  "finishedAt": "2026-08-24T08:04:22.770Z",
-  "durationMs": 145714,
+  "finishedAt": "2026-08-25T07:54:58.837Z",
+  "durationMs": 189634,
   "error": null,
   "metrics": {
-    "modelCalls": 3,
-    "failedAttempts": 0,
+    "modelCalls": 4,
+    "failedAttempts": 1,
     "supervisedRecoveries": 0,
-    "totalTokens": 16412
+    "totalTokens": 15138
   }
 }
