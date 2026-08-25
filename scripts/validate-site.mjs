@@ -5,7 +5,8 @@ const ROOT = process.cwd();
 
 const articleDirs = readdirSync('articles').filter((d) => d !== 'index.html' && existsSync(join('articles', d, 'index.html')));
 const newsDirs = readdirSync('news').filter((d) => d !== 'index.html' && existsSync(join('news', d, 'index.html')));
-const files = ['index.html', 'articles/index.html', 'copywriting/index.html', 'news/index.html', ...articleDirs.map((d) => `articles/${d}/index.html`), ...newsDirs.map((d) => `news/${d}/index.html`)];
+const projectFiles = ['projects/portfolio-automation/index.html'];
+const files = ['index.html', 'articles/index.html', 'copywriting/index.html', 'news/index.html', ...projectFiles, ...articleDirs.map((d) => `articles/${d}/index.html`), ...newsDirs.map((d) => `news/${d}/index.html`)];
 
 let ok = true;
 for (const f of files) {
@@ -35,7 +36,7 @@ function checkHref(href, from) {
   if (!found) console.log(`  BROKEN ${href}  (from ${from})`);
 }
 
-for (const f of ['index.html', 'articles/index.html', 'copywriting/index.html', ...articleDirs.map((d) => `articles/${d}/index.html`)]) {
+for (const f of ['index.html', 'articles/index.html', 'copywriting/index.html', ...projectFiles, ...articleDirs.map((d) => `articles/${d}/index.html`)]) {
   const html = readFileSync(f, 'utf8');
   const hrefs = [...html.matchAll(/href="([^"]+)"/g)].map((m) => m[1]);
   for (const h of hrefs) checkHref(h, f);

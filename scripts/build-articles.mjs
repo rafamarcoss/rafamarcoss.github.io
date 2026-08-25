@@ -14,6 +14,7 @@ const SITE = 'https://rafaelmarcos.tech';
 const AUTHOR = 'Rafael Marcos';
 const OG_DIR = join(ROOT, 'assets', 'og');
 const NEWS_FEED = join(ROOT, 'news', 'feed.json');
+const PORTFOLIO_AUTOMATION = { data: { title: 'rafaelmarcos.tech — Automated Portfolio Infrastructure', category: 'Infrastructure' } };
 
 const CATEGORY_COLORS = {
   'AI': 'rgba(176,223,170,.48)',
@@ -327,6 +328,7 @@ function sitemapXml(articles) {
     ['news/', '0.6', '2026-08-25'],
     ['news/archive/', '0.6', '2026-08-25'],
     ['rafaops/', '0.7', '2026-08-25'],
+    ['projects/portfolio-automation/', '0.8', '2026-08-25'],
     ...articles.map((a) => [`articles/${a.data.slug}/`, '0.8', a.data.updated || a.data.date]),
     ...news.map((item) => [`news/${item.slug}/`, '0.6', item.date || item.generatedAt?.slice(0, 10)]),
   ];
@@ -356,6 +358,9 @@ function main() {
 
   mkdirSync(ARTICLES_DIR, { recursive: true });
   mkdirSync(OG_DIR, { recursive: true });
+  const projectOg = ogSvg(PORTFOLIO_AUTOMATION);
+  writeFileSync(join(OG_DIR, 'portfolio-automation.svg'), projectOg, 'utf8');
+  writeOgPng(projectOg, join(OG_DIR, 'portfolio-automation.png'));
   for (const a of articles) {
     const dir = join(ARTICLES_DIR, a.data.slug);
     mkdirSync(dir, { recursive: true });
