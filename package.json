@@ -1,5 +1,12 @@
 {
+  "scripts": {
+    "gsc:submit": "node scripts/gsc-submit-sitemap.mjs",
+    "gsc:inspect": "node scripts/gsc-inspect.mjs"
+  },
   "devDependencies": {
     "@resvg/resvg-js": "^2.6.2"
+  },
+  "dependencies": {
+    "googleapis": "^176.0.0"
   }
 }

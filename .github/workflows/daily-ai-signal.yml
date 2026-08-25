@@ -53,15 +53,15 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
 
-      - name: Publish feed and telemetry
+      - name: Publish feed, static editions and telemetry
         run: |
-          if git diff --quiet -- news/feed.json rafaops/ai-signal-run.json rafaops/status.json; then
+          if test -z "$(git status --porcelain -- news/ rafaops/ai-signal-run.json rafaops/status.json)"; then
             echo "No changes to publish"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add news/feed.json rafaops/ai-signal-run.json rafaops/status.json
+          git add news/ rafaops/ai-signal-run.json rafaops/status.json
           git commit -m "news: publish daily AI Signal"
           git push
 
