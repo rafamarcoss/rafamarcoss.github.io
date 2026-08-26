@@ -2,7 +2,7 @@ import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { createGscClients } from './gsc-auth.mjs';
 
-const SITE_URL = 'https://rafaelmarcos.tech/';
+const SITE_URL = 'sc-domain:rafaelmarcos.tech';
 const SITEMAP_PATH = resolve('sitemap.xml');
 const REPORT_PATH = resolve('reports/gsc-index-status.json');
 const PAUSE_MS = 350;

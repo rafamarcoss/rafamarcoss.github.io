@@ -12,9 +12,9 @@ Esta integración usa solo la API oficial de Google Search Console. Envía el si
 
 ## Search Console
 
-Abre la propiedad URL-prefix exacta `https://rafaelmarcos.tech/` y añade el email de la Service Account como usuario de la propiedad. Dale permisos suficientes para enviar sitemaps y usar URL Inspection; el rol Owner evita limitaciones de permisos.
+La propiedad es una **Domain Property**: `sc-domain:rafaelmarcos.tech`. Añade el email de la Service Account como usuario de la propiedad con acceso completo (rol Owner / Full access) para enviar sitemaps y usar URL Inspection.
 
-La propiedad debe coincidir exactamente con la configurada por los scripts, incluido `https://` y la barra final.
+Los scripts usan exactamente `sc-domain:rafaelmarcos.tech` como `siteUrl`; el sitemap enviado es `https://rafaelmarcos.tech/sitemap.xml`.
 
 ## GitHub Actions
 
