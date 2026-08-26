@@ -83,7 +83,7 @@ A support agent is not a replacement for your CRM or help desk; it is a layer on
 - The **knowledge base** holds the ground truth for answers.
 - The **agent** sits in the middle, coordinating these through APIs and webhooks.
 
-This is why integration quality matters more than model choice. An agent connected to a clean, well-structured CRM will outperform a more powerful model connected to nothing.
+This is why integration quality matters more than model choice. An agent connected to a clean, well-structured CRM will outperform a more powerful model connected to nothing. The sales side follows the same principle, and [CRM automation](/articles/crm-automation-7-workflows/) shows how to keep one system as the source of truth.
 
 ## When an AI support agent is the right choice
 
@@ -107,6 +107,8 @@ Agents are a poor fit when:
 
 A good rule of thumb: use an agent for the parts of support that are lookups, triage, and summarization; keep humans on judgement, exceptions, and anything irreversible.
 
+The same boundary between fixed workflows and reasoning agents — and how to pick — is the subject of [AI agents vs traditional automation](/articles/ai-agents-vs-traditional-automation/).
+
 ## Human handoff is a feature, not a fallback
 
 The best support agents treat escalation as a first-class path. A clean handoff includes:
@@ -127,7 +129,7 @@ Start small and boring:
 4. Run the agent in shadow mode — it drafts replies, a human approves.
 5. Only after the approval rate is high, let it act on the safe categories.
 
-This keeps the scope small enough to validate, and it gives you the data to know when the agent is genuinely helping.
+This keeps the scope small enough to validate, and it gives you the data to know when the agent is genuinely helping. For the wider picture of wiring tools and data together, [what SaaS automation is](/articles/what-is-saas-automation/) is a practical reference for growing teams.
 
 ## Frequently asked questions
 

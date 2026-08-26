@@ -96,7 +96,7 @@ footer{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;paddin
 <h2>Where agents fit in a support stack</h2>
 <p>A support agent is not a replacement for your CRM or help desk; it is a layer on top of them. The agent reads from and writes to the systems you already have:</p>
 <ul><li>The <strong>help desk</strong> (Zendesk, Intercom, Freshdesk, or a custom tool) holds the ticket state.</li><li>The <strong>CRM</strong> (HubSpot, Salesforce, Pipedrive) holds the customer context.</li><li>The <strong>knowledge base</strong> holds the ground truth for answers.</li><li>The <strong>agent</strong> sits in the middle, coordinating these through APIs and webhooks.</li></ul>
-<p>This is why integration quality matters more than model choice. An agent connected to a clean, well-structured CRM will outperform a more powerful model connected to nothing.</p>
+<p>This is why integration quality matters more than model choice. An agent connected to a clean, well-structured CRM will outperform a more powerful model connected to nothing. The sales side follows the same principle, and <a href="/articles/crm-automation-7-workflows/">CRM automation</a> shows how to keep one system as the source of truth.</p>
 <h2>When an AI support agent is the right choice</h2>
 <p>Support agents work well when:</p>
 <ul><li>The team handles a high volume of repetitive, well-documented questions.</li><li>The answer can be found in a knowledge base or looked up in a system.</li><li>The cost of a wrong answer is low, or a human review step is in place.</li><li>Tickets currently wait in a queue for simple triage or routing.</li></ul>
@@ -105,6 +105,7 @@ footer{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;paddin
 <p>Agents are a poor fit when:</p>
 <ul><li>The product is high-stakes — medical, financial, legal — where an incorrect answer is expensive.</li><li>The answers depend on unwritten knowledge held only in people's heads.</li><li>The customer relationship is sensitive, and automation would feel like a downgrade.</li><li>The data is messy, so the agent cannot ground its answers reliably.</li></ul>
 <p>A good rule of thumb: use an agent for the parts of support that are lookups, triage, and summarization; keep humans on judgement, exceptions, and anything irreversible.</p>
+<p>The same boundary between fixed workflows and reasoning agents — and how to pick — is the subject of <a href="/articles/ai-agents-vs-traditional-automation/">AI agents vs traditional automation</a>.</p>
 <h2>Human handoff is a feature, not a fallback</h2>
 <p>The best support agents treat escalation as a first-class path. A clean handoff includes:</p>
 <ul><li>Why the agent is escalating.</li><li>What it already knows (account, history, steps taken).</li><li>What the customer was told.</li></ul>
@@ -112,7 +113,7 @@ footer{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;paddin
 <h2>A practical way to start</h2>
 <p>Start small and boring:</p>
 <ol><li>Pick one repetitive, low-risk category of tickets.</li><li>Write down the exact steps a human follows to resolve them.</li><li>Turn those steps into tools and a system prompt.</li><li>Run the agent in shadow mode — it drafts replies, a human approves.</li><li>Only after the approval rate is high, let it act on the safe categories.</li></ol>
-<p>This keeps the scope small enough to validate, and it gives you the data to know when the agent is genuinely helping.</p>
+<p>This keeps the scope small enough to validate, and it gives you the data to know when the agent is genuinely helping. For the wider picture of wiring tools and data together, <a href="/articles/what-is-saas-automation/">what SaaS automation is</a> is a practical reference for growing teams.</p>
 <h2>Frequently asked questions</h2>
 <p><strong>Does an AI support agent need a vector database?</strong></p>
 <p>Not at first. Many support use cases work with keyword or hybrid search over a help centre. A vector database becomes useful when the knowledge base is large and queries are semantic, but it is an optimization, not a starting requirement.</p>

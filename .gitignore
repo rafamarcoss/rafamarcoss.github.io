@@ -1,6 +1,7 @@
 __pycache__/
 *.pyc
 node_modules/
+reports/
 node_modules/
 reports/
 *.service-account.json

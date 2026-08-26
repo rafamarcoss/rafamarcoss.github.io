@@ -37,9 +37,25 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Download previous report
+        uses: actions/download-artifact@v4
+        with:
+          name: gsc-index-report
+          path: reports/previous/
+        continue-on-error: true
+
       - name: Submit sitemap
         if: ${{ inputs.submit_sitemap == true }}
         run: npm run gsc:submit
 
       - name: Inspect sitemap URLs
+        env:
+          GSC_PREVIOUS_REPORT: reports/previous/gsc-index-status.json
         run: npm run gsc:inspect
+
+      - name: Upload report
+        uses: actions/upload-artifact@v4
+        with:
+          name: gsc-index-report
+          path: reports/gsc-index-status.json
+          if-no-files-found: warn

@@ -81,7 +81,7 @@ The pattern is the same in each case: language in, judgement out. That is exactl
 
 ## The practical answer: they are complementary
 
-The strongest systems combine both. Automation handles the deterministic plumbing; agents handle the parts that need reasoning.
+The strongest systems combine both. Automation handles the deterministic plumbing; agents handle the parts that need reasoning. The plumbing side — connecting tools and data across a SaaS stack — is covered in [what SaaS automation is](/articles/what-is-saas-automation/).
 
 A realistic example in customer support:
 
