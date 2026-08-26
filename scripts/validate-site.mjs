@@ -4,8 +4,10 @@ import { join } from 'node:path';
 const ROOT = process.cwd();
 
 const articleDirs = readdirSync('articles').filter((d) => d !== 'index.html' && existsSync(join('articles', d, 'index.html')));
-const newsDirs = readdirSync('news').filter((d) => d !== 'index.html' && existsSync(join('news', d, 'index.html')));
-const files = ['index.html', 'articles/index.html', 'copywriting/index.html', 'news/index.html', ...articleDirs.map((d) => `articles/${d}/index.html`), ...newsDirs.map((d) => `news/${d}/index.html`)];
+const newsDirs = readdirSync('news').filter((d) => d !== 'index.html' && d !== 'archive' && existsSync(join('news', d, 'index.html')));
+const projectFiles = ['projects/portfolio-automation/index.html'];
+const normalFiles = ['index.html', 'articles/index.html', 'copywriting/index.html', 'news/index.html', 'news/archive/index.html', 'rafaops/index.html', ...projectFiles, ...articleDirs.map((d) => `articles/${d}/index.html`), ...newsDirs.map((d) => `news/${d}/index.html`)];
+const files = normalFiles;
 
 let ok = true;
 for (const f of files) {
@@ -15,10 +17,16 @@ for (const f of files) {
   const jsonld = html.includes('application/ld+json');
   const og = html.includes('og:title');
   const desc = html.includes('name="description"');
-  const good = h1 === 1 && canonical && jsonld && og && desc;
+  const globalNav = f === 'index.html'
+    ? html.includes('navServices') && html.includes('navCta') && html.includes('data-lang="en"') && html.includes('mobile-menu-toggle') && html.includes('aria-expanded="false"')
+    : html.includes('data-site-nav') && html.includes('data-site-nav-i18n="services"') && html.includes('data-site-nav-i18n="cta"') && html.includes('data-site-nav-lang="en"') && html.includes('data-site-nav-toggle') && html.includes('aria-expanded="false"');
+  const good = h1 === 1 && canonical && jsonld && og && desc && globalNav;
   if (!good) ok = false;
-  console.log(`${good ? 'OK  ' : 'FAIL'} h1=${h1} canonical=${canonical} jsonld=${jsonld} og=${og} desc=${desc} | ${f}`);
+  console.log(`${good ? 'OK  ' : 'FAIL'} h1=${h1} canonical=${canonical} jsonld=${jsonld} og=${og} desc=${desc} nav=${globalNav} | ${f}`);
 }
+
+const lab = readFileSync('labs/visual-lab/index.html', 'utf8');
+if (!lab.includes('noindex, nofollow')) { ok = false; console.log('FAIL Visual Lab must remain noindex, nofollow'); }
 
 // check internal links resolve
 console.log('\n=== enlaces internos rotos ===');
@@ -35,7 +43,7 @@ function checkHref(href, from) {
   if (!found) console.log(`  BROKEN ${href}  (from ${from})`);
 }
 
-for (const f of ['index.html', 'articles/index.html', 'copywriting/index.html', ...articleDirs.map((d) => `articles/${d}/index.html`)]) {
+for (const f of normalFiles) {
   const html = readFileSync(f, 'utf8');
   const hrefs = [...html.matchAll(/href="([^"]+)"/g)].map((m) => m[1]);
   for (const h of hrefs) checkHref(h, f);

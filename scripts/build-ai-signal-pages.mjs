@@ -2,6 +2,7 @@
 // Convierte news/feed.json en páginas estáticas indexables. Sin dependencias.
 
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { siteNav } from './site-nav.mjs';
 
 const SITE = 'https://rafaelmarcos.tech';
 const FEED = new URL('../news/feed.json', import.meta.url);
@@ -30,12 +31,14 @@ function layout({ title, description, canonical, body, schema }) {
   <meta property="og:url" content="${canonical}">
   <meta name="twitter:card" content="summary">
   <script type="application/ld+json">${schema}</script>
-  <style>body{max-width:760px;margin:0 auto;padding:32px 20px;background:#f2f4ee;color:#0b0e0f;font:18px/1.65 Inter,system-ui,sans-serif}a{color:#0860a7}nav{display:flex;gap:16px;font-weight:700;font-size:14px}h1{font-size:clamp(2.2rem,7vw,4.4rem);line-height:1.02;letter-spacing:-.05em;margin:48px 0 16px}h2{margin-top:42px;line-height:1.15}.dek,.meta{color:#52606a}.dek{font-size:1.25rem}.meta{font-size:.9rem}.takeaways, .sources{padding:20px 24px;background:#fff;border-radius:18px}.sources li{margin:.6rem 0}footer{margin-top:50px;padding-top:24px;border-top:1px solid #cbd5d0;color:#52606a;font-size:.9rem}</style>
+  <style>body{max-width:760px;margin:0 auto;padding:0 20px 32px;background:#f2f4ee;color:#0b0e0f;font:18px/1.65 Inter,system-ui,sans-serif}a{color:#0860a7}h1{font-size:clamp(2.2rem,7vw,4.4rem);line-height:1.02;letter-spacing:-.05em;margin:48px 0 16px}h2{margin-top:42px;line-height:1.15}.dek,.meta{color:#52606a}.dek{font-size:1.25rem}.meta{font-size:.9rem}.takeaways, .sources{padding:20px 24px;background:#fff;border-radius:18px}.sources li{margin:.6rem 0}footer{margin-top:50px;padding-top:24px;border-top:1px solid #cbd5d0;color:#52606a;font-size:.9rem}</style>
+  <link rel="stylesheet" href="/assets/site-nav.css">
 </head>
 <body>
-  <nav><a href="/">Rafael Marcos</a><a href="/news/">AI Signal</a><a href="/news/archive/">Archivo</a></nav>
+  ${siteNav('news')}
   ${body}
   <footer>AI Signal · briefing editorial generado a partir de fuentes enlazadas.</footer>
+  <script src="/assets/site-nav.js"></script>
 </body>
 </html>`;
 }

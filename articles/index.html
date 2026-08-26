@@ -42,17 +42,10 @@ main{padding-top:4rem}.head{padding:2rem 0 3rem}.head .eyebrow{color:var(--teal)
 .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.card{display:flex;flex-direction:column;justify-content:space-between;min-height:260px;padding:1.7rem;border:1px solid var(--line);border-radius:30px;background:var(--card);box-shadow:0 20px 62px rgba(11,14,15,.06);transition:.25s}.card:hover{transform:translateY(-5px);border-color:rgba(36,150,155,.35)}.card-top{display:flex;justify-content:space-between;align-items:center;gap:1rem;color:var(--muted);font:700 .7rem 'JetBrains Mono',monospace}.card h2{margin-top:1rem;font:700 clamp(1.4rem,2.6vw,2rem)/1.05 var(--display);letter-spacing:-.04em}.card p{margin-top:.9rem;color:var(--muted)}.card-meta{margin-top:1.4rem;color:var(--teal);font:700 .75rem 'JetBrains Mono',monospace}
 @media(max-width:800px){.grid{grid-template-columns:1fr}}
 </style>
+<link rel="stylesheet" href="/assets/site-nav.css">
 </head>
 <body>
-<nav class="shell" aria-label="Navigation">
-  <a class="brand" href="/"><span class="mark">RM</span><span>Rafael Marcos.</span></a>
-  <ul class="nav-links">
-    <li><a href="/articles/" class="on">Articles</a></li>
-    <li><a href="/news/">News</a></li>
-    <li><a href="/copywriting/">Copywriting</a></li>
-  </ul>
-  <a class="back" href="/">← Portfolio</a>
-</nav>
+<nav class="site-nav" data-site-nav aria-label="Primary navigation"><a class="site-brand" href="/"><span class="site-brand-mark">RM</span><span>Rafael Marcos</span></a><div class="site-nav-links"><a href="/#services" data-site-nav-i18n="services">Servicios</a><a href="/#projects" data-site-nav-i18n="work">Proyectos</a><a href="/articles/" data-site-nav-i18n="articles" aria-current="page">Artículos</a><a href="/news/" data-site-nav-i18n="news">Noticias</a><a href="/copywriting/" data-site-nav-i18n="copywriting">Copywriting</a><a href="/#about" data-site-nav-i18n="about">Sobre mí</a><a href="/#contact" data-site-nav-i18n="contact">Contacto</a></div><div class="site-nav-controls"><div class="site-lang" role="group" aria-label="Language selector"><button type="button" data-site-nav-lang="es" aria-pressed="true">ES</button><button type="button" data-site-nav-lang="en" aria-pressed="false">EN</button></div><a class="site-nav-cta" href="/#contact" data-site-nav-i18n="cta">Hablemos ↗</a><button class="site-mobile-toggle" type="button" data-site-nav-toggle aria-expanded="false" aria-controls="site-mobile-menu" aria-label="Abrir menú">☰</button></div><div class="site-mobile-menu" id="site-mobile-menu" data-site-mobile-menu data-open="false"><div class="site-mobile-links"><a href="/#services" data-site-nav-i18n="services">Servicios</a><a href="/#projects" data-site-nav-i18n="work">Proyectos</a><a href="/articles/" data-site-nav-i18n="articles" aria-current="page">Artículos</a><a href="/news/" data-site-nav-i18n="news">Noticias</a><a href="/copywriting/" data-site-nav-i18n="copywriting">Copywriting</a><a href="/#about" data-site-nav-i18n="about">Sobre mí</a><a href="/#contact" data-site-nav-i18n="contact">Contacto</a></div><a class="site-nav-cta" href="/#contact" data-site-nav-i18n="cta">Hablemos ↗</a></div></nav>
 
 <main class="shell">
   <header class="head">
@@ -84,5 +77,6 @@ main{padding-top:4rem}.head{padding:2rem 0 3rem}.head .eyebrow{color:var(--teal)
 </main>
 
 <footer class="shell"><span>© 2026 Rafael Marcos Serrano</span><a href="mailto:rafaelmarcos2604@gmail.com">rafaelmarcos2604@gmail.com</a></footer>
+<script src="/assets/site-nav.js"></script>
 </body>
 </html>

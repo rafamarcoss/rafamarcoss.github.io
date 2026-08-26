@@ -38,19 +38,10 @@
     @media(max-width:800px){.archive,.article-body{grid-template-columns:1fr}aside{position:static}.source-list a{grid-template-columns:1fr auto}.source-cat{grid-column:1/-1}.brand>span:last-child{display:none}}
     @media(max-width:520px){.shell{width:min(100% - 1rem,1120px)}.back{padding:0 .7rem}.masthead{font-size:3.7rem}.article-head h1{font-size:2.6rem;overflow-wrap:normal;letter-spacing:-.06em}.edition-card{min-height:240px;padding:1.25rem}}
   </style>
+  <link rel="stylesheet" href="/assets/site-nav.css">
 </head>
 <body>
-  <nav class="shell" aria-label="Navegación">
-    <a class="brand" href="../"><span class="mark">RM</span><span>Rafael Marcos.</span></a>
-    <div class="nav-actions">
-      <a class="back" href="../#news" data-ui="back">← Portfolio</a>
-      <a class="back" href="archive/">Archivo</a>
-      <div class="lang" role="group" aria-label="Idioma">
-        <button type="button" data-lang="es" aria-pressed="true">ES</button>
-        <button type="button" data-lang="en" aria-pressed="false">EN</button>
-      </div>
-    </div>
-  </nav>
+  <nav class="site-nav" data-site-nav aria-label="Primary navigation"><a class="site-brand" href="/"><span class="site-brand-mark">RM</span><span>Rafael Marcos</span></a><div class="site-nav-links"><a href="/#services" data-site-nav-i18n="services">Servicios</a><a href="/#projects" data-site-nav-i18n="work">Proyectos</a><a href="/articles/" data-site-nav-i18n="articles">Artículos</a><a href="/news/" data-site-nav-i18n="news" aria-current="page">Noticias</a><a href="/copywriting/" data-site-nav-i18n="copywriting">Copywriting</a><a href="/#about" data-site-nav-i18n="about">Sobre mí</a><a href="/#contact" data-site-nav-i18n="contact">Contacto</a></div><div class="site-nav-controls"><div class="site-lang" role="group" aria-label="Language selector"><button type="button" data-site-nav-lang="es" aria-pressed="true">ES</button><button type="button" data-site-nav-lang="en" aria-pressed="false">EN</button></div><a class="site-nav-cta" href="/#contact" data-site-nav-i18n="cta">Hablemos ↗</a><button class="site-mobile-toggle" type="button" data-site-nav-toggle aria-expanded="false" aria-controls="site-mobile-menu" aria-label="Abrir menú">☰</button></div><div class="site-mobile-menu" id="site-mobile-menu" data-site-mobile-menu data-open="false"><div class="site-mobile-links"><a href="/#services" data-site-nav-i18n="services">Servicios</a><a href="/#projects" data-site-nav-i18n="work">Proyectos</a><a href="/articles/" data-site-nav-i18n="articles">Artículos</a><a href="/news/" data-site-nav-i18n="news" aria-current="page">Noticias</a><a href="/copywriting/" data-site-nav-i18n="copywriting">Copywriting</a><a href="/#about" data-site-nav-i18n="about">Sobre mí</a><a href="/#contact" data-site-nav-i18n="contact">Contacto</a></div><a class="site-nav-cta" href="/#contact" data-site-nav-i18n="cta">Hablemos ↗</a></div></nav>
 
   <header class="shell">
     <p class="eyebrow">Rafael Marcos · Daily briefing</p>
@@ -68,7 +59,7 @@
       en: { back:'← Portfolio', lead:'A daily read connecting AI, markets, education, work and regulation. Automated selection, editorial judgement and visible sources.', loading:'Loading editions…', read:'Read edition', minutes:'min read', takeaways:'What to do with this', sources:'Sources for this edition', missing:'This edition could not be found.' }
     };
     const params = new URLSearchParams(location.search);
-    let lang = params.get('lang') === 'en' ? 'en' : 'es';
+    let lang = localStorage.getItem('site-language') === 'en' ? 'en' : 'es';
     let feed = { articles: [] };
     const esc = value => String(value ?? '').replace(/[&<>'"]/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
     const safeUrl = value => { try { const url = new URL(value); return ['http:','https:'].includes(url.protocol) ? url.href : '#'; } catch { return '#'; } };
@@ -77,14 +68,13 @@
     function applyUi() {
       document.documentElement.lang = lang;
       document.querySelectorAll('[data-ui]').forEach(el => { const value = ui[lang][el.dataset.ui]; if (value) el.textContent = value; });
-      document.querySelectorAll('[data-lang]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.lang === lang)));
     }
 
     function renderArchive() {
       document.title = 'AI Signal — Rafael Marcos';
       const cards = feed.articles.map(article => {
         const content = article.content?.[lang] || article.content?.es || {};
-        return `<a class="edition-card" href="?slug=${encodeURIComponent(article.slug)}&lang=${lang}"><div><div class="meta"><span>${esc((article.categories||[]).slice(0,2).join(' · '))}</span><time>${esc(formatDate(article.date))}</time></div><h2>${esc(content.title)}</h2><p>${esc(content.dek)}</p></div><span class="read">${ui[lang].read} →</span></a>`;
+        return `<a class="edition-card" href="?slug=${encodeURIComponent(article.slug)}"><div><div class="meta"><span>${esc((article.categories||[]).slice(0,2).join(' · '))}</span><time>${esc(formatDate(article.date))}</time></div><h2>${esc(content.title)}</h2><p>${esc(content.dek)}</p></div><span class="read">${ui[lang].read} →</span></a>`;
       }).join('');
       document.getElementById('content').innerHTML = `<section class="archive">${cards || `<p class="status">${ui[lang].missing}</p>`}</section>`;
     }
@@ -107,9 +97,10 @@
       renderArticle(article);
     }
 
-    document.querySelectorAll('[data-lang]').forEach(button => button.addEventListener('click', () => { lang = button.dataset.lang; params.set('lang',lang); history.replaceState({},'',`${location.pathname}?${params}`); render(); }));
+    window.addEventListener('site-language-change', event => { lang = event.detail.lang; render(); });
     applyUi();
     fetch('feed.json',{cache:'no-store'}).then(response => { if(!response.ok) throw new Error(response.status); return response.json(); }).then(data => { feed=data; render(); }).catch(() => { document.getElementById('content').innerHTML=`<p class="status">${ui[lang].missing}</p>`; });
   </script>
+  <script src="/assets/site-nav.js"></script>
 </body>
 </html>

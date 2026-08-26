@@ -51,17 +51,10 @@ footer{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;paddin
 @media(max-width:900px){.article-layout{grid-template-columns:1fr}aside{position:static}}
 @media(max-width:640px){.nav-links{display:none}.shell{width:min(100% - 1rem,1120px)}.body{font-size:1rem}.article-head h1{font-size:2.3rem}}
 </style>
+<link rel="stylesheet" href="/assets/site-nav.css">
 </head>
 <body>
-<nav class="shell" aria-label="Navigation">
-  <a class="brand" href="/"><span class="mark">RM</span><span>Rafael Marcos.</span></a>
-  <ul class="nav-links">
-    <li><a href="/articles/">Articles</a></li>
-    <li><a href="/news/">News</a></li>
-    <li><a href="/copywriting/">Copywriting</a></li>
-  </ul>
-  <a class="back" href="/">← Portfolio</a>
-</nav>
+<nav class="site-nav" data-site-nav aria-label="Primary navigation"><a class="site-brand" href="/"><span class="site-brand-mark">RM</span><span>Rafael Marcos</span></a><div class="site-nav-links"><a href="/#services" data-site-nav-i18n="services">Servicios</a><a href="/#projects" data-site-nav-i18n="work">Proyectos</a><a href="/articles/" data-site-nav-i18n="articles" aria-current="page">Artículos</a><a href="/news/" data-site-nav-i18n="news">Noticias</a><a href="/copywriting/" data-site-nav-i18n="copywriting">Copywriting</a><a href="/#about" data-site-nav-i18n="about">Sobre mí</a><a href="/#contact" data-site-nav-i18n="contact">Contacto</a></div><div class="site-nav-controls"><div class="site-lang" role="group" aria-label="Language selector"><button type="button" data-site-nav-lang="es" aria-pressed="true">ES</button><button type="button" data-site-nav-lang="en" aria-pressed="false">EN</button></div><a class="site-nav-cta" href="/#contact" data-site-nav-i18n="cta">Hablemos ↗</a><button class="site-mobile-toggle" type="button" data-site-nav-toggle aria-expanded="false" aria-controls="site-mobile-menu" aria-label="Abrir menú">☰</button></div><div class="site-mobile-menu" id="site-mobile-menu" data-site-mobile-menu data-open="false"><div class="site-mobile-links"><a href="/#services" data-site-nav-i18n="services">Servicios</a><a href="/#projects" data-site-nav-i18n="work">Proyectos</a><a href="/articles/" data-site-nav-i18n="articles" aria-current="page">Artículos</a><a href="/news/" data-site-nav-i18n="news">Noticias</a><a href="/copywriting/" data-site-nav-i18n="copywriting">Copywriting</a><a href="/#about" data-site-nav-i18n="about">Sobre mí</a><a href="/#contact" data-site-nav-i18n="contact">Contacto</a></div><a class="site-nav-cta" href="/#contact" data-site-nav-i18n="cta">Hablemos ↗</a></div></nav>
 
 <main class="shell">
   <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/articles/">Articles</a><span>/</span><span>AI</span></nav>
@@ -141,5 +134,6 @@ footer{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;paddin
 </main>
 
 <footer class="shell"><span>© 2026 Rafael Marcos Serrano</span><a href="mailto:rafaelmarcos2604@gmail.com">rafaelmarcos2604@gmail.com</a></footer>
+<script src="/assets/site-nav.js"></script>
 </body>
 </html>

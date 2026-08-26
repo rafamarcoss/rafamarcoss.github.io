@@ -6,6 +6,7 @@ import { readFileSync, writeFileSync, mkdirSync, readdirSync, existsSync } from 
 import { join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { Resvg } from '@resvg/resvg-js';
+import { siteNav } from './site-nav.mjs';
 
 const ROOT = resolve(fileURLToPath(import.meta.url), '..', '..');
 const CONTENT_DIR = join(ROOT, 'content', 'articles');
@@ -14,6 +15,7 @@ const SITE = 'https://rafaelmarcos.tech';
 const AUTHOR = 'Rafael Marcos';
 const OG_DIR = join(ROOT, 'assets', 'og');
 const NEWS_FEED = join(ROOT, 'news', 'feed.json');
+const PORTFOLIO_AUTOMATION = { data: { title: 'rafaelmarcos.tech — Automated Portfolio Infrastructure', category: 'Infrastructure' } };
 
 const CATEGORY_COLORS = {
   'AI': 'rgba(176,223,170,.48)',
@@ -183,17 +185,10 @@ function articleHtml(article, all) {
 {"@context":"https://schema.org","@type":"BlogPosting","headline":${JSON.stringify(data.title)},"description":${JSON.stringify(data.description)},"datePublished":${JSON.stringify(date)},"dateModified":${JSON.stringify(updated)},"mainEntityOfPage":{"@type":"WebPage","@id":${JSON.stringify(url)}},"author":{"@type":"Person","name":${JSON.stringify(data.author || AUTHOR)},"url":"https://rafaelmarcos.tech/"},"publisher":{"@type":"Person","name":${JSON.stringify(data.author || AUTHOR)}}}
 </script>
 <style>${CSS}</style>
+<link rel="stylesheet" href="/assets/site-nav.css">
 </head>
 <body>
-<nav class="shell" aria-label="Navigation">
-  <a class="brand" href="/"><span class="mark">RM</span><span>Rafael Marcos.</span></a>
-  <ul class="nav-links">
-    <li><a href="/articles/">Articles</a></li>
-    <li><a href="/news/">News</a></li>
-    <li><a href="/copywriting/">Copywriting</a></li>
-  </ul>
-  <a class="back" href="/">← Portfolio</a>
-</nav>
+${siteNav('articles')}
 
 <main class="shell">
   <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/articles/">Articles</a><span>/</span><span>${escapeHtml(data.category)}</span></nav>
@@ -214,6 +209,7 @@ function articleHtml(article, all) {
 </main>
 
 <footer class="shell"><span>© 2026 Rafael Marcos Serrano</span><a href="mailto:rafaelmarcos2604@gmail.com">rafaelmarcos2604@gmail.com</a></footer>
+<script src="/assets/site-nav.js"></script>
 </body>
 </html>`;
 }
@@ -292,17 +288,10 @@ main{padding-top:4rem}.head{padding:2rem 0 3rem}.head .eyebrow{color:var(--teal)
 .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.card{display:flex;flex-direction:column;justify-content:space-between;min-height:260px;padding:1.7rem;border:1px solid var(--line);border-radius:30px;background:var(--card);box-shadow:0 20px 62px rgba(11,14,15,.06);transition:.25s}.card:hover{transform:translateY(-5px);border-color:rgba(36,150,155,.35)}.card-top{display:flex;justify-content:space-between;align-items:center;gap:1rem;color:var(--muted);font:700 .7rem 'JetBrains Mono',monospace}.card h2{margin-top:1rem;font:700 clamp(1.4rem,2.6vw,2rem)/1.05 var(--display);letter-spacing:-.04em}.card p{margin-top:.9rem;color:var(--muted)}.card-meta{margin-top:1.4rem;color:var(--teal);font:700 .75rem 'JetBrains Mono',monospace}
 @media(max-width:800px){.grid{grid-template-columns:1fr}}
 </style>
+<link rel="stylesheet" href="/assets/site-nav.css">
 </head>
 <body>
-<nav class="shell" aria-label="Navigation">
-  <a class="brand" href="/"><span class="mark">RM</span><span>Rafael Marcos.</span></a>
-  <ul class="nav-links">
-    <li><a href="/articles/" class="on">Articles</a></li>
-    <li><a href="/news/">News</a></li>
-    <li><a href="/copywriting/">Copywriting</a></li>
-  </ul>
-  <a class="back" href="/">← Portfolio</a>
-</nav>
+${siteNav('articles')}
 
 <main class="shell">
   <header class="head">
@@ -314,6 +303,7 @@ main{padding-top:4rem}.head{padding:2rem 0 3rem}.head .eyebrow{color:var(--teal)
 </main>
 
 <footer class="shell"><span>© 2026 Rafael Marcos Serrano</span><a href="mailto:rafaelmarcos2604@gmail.com">rafaelmarcos2604@gmail.com</a></footer>
+<script src="/assets/site-nav.js"></script>
 </body>
 </html>`;
 }
@@ -327,6 +317,7 @@ function sitemapXml(articles) {
     ['news/', '0.6', '2026-08-25'],
     ['news/archive/', '0.6', '2026-08-25'],
     ['rafaops/', '0.7', '2026-08-25'],
+    ['projects/portfolio-automation/', '0.8', '2026-08-25'],
     ...articles.map((a) => [`articles/${a.data.slug}/`, '0.8', a.data.updated || a.data.date]),
     ...news.map((item) => [`news/${item.slug}/`, '0.6', item.date || item.generatedAt?.slice(0, 10)]),
   ];
@@ -356,6 +347,9 @@ function main() {
 
   mkdirSync(ARTICLES_DIR, { recursive: true });
   mkdirSync(OG_DIR, { recursive: true });
+  const projectOg = ogSvg(PORTFOLIO_AUTOMATION);
+  writeFileSync(join(OG_DIR, 'portfolio-automation.svg'), projectOg, 'utf8');
+  writeOgPng(projectOg, join(OG_DIR, 'portfolio-automation.png'));
   for (const a of articles) {
     const dir = join(ARTICLES_DIR, a.data.slug);
     mkdirSync(dir, { recursive: true });

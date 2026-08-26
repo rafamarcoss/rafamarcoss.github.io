@@ -6,13 +6,21 @@
   <meta name="description" content="RafaOps: control plane agentic para monitorizar, diagnosticar y recuperar las automatizaciones de Rafael Marcos.">
   <meta name="theme-color" content="#071315">
   <link rel="canonical" href="https://rafaelmarcos.tech/rafaops/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="RafaOps — Agentic control plane">
+  <meta property="og:description" content="Operational monitoring, incident evidence and bounded recovery for Rafael Marcos' automations.">
+  <meta property="og:url" content="https://rafaelmarcos.tech/rafaops/">
+  <meta property="og:image" content="https://rafaelmarcos.tech/assets/og/portfolio-automation.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://rafaelmarcos.tech/assets/og/portfolio-automation.png">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"RafaOps — Agentic control plane","url":"https://rafaelmarcos.tech/rafaops/","description":"Operational monitoring and bounded recovery for Rafael Marcos' automations."}</script>
   <title>RafaOps — Agentic control plane</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@500..800&display=swap" rel="stylesheet">
   <style>
     *,*::before,*::after{box-sizing:border-box}*{margin:0;padding:0}
-    :root{--night:#071315;--night-2:#0c2022;--panel:rgba(13,35,37,.78);--panel-solid:#0d2325;--paper:#eef5ed;--muted:#90a7a5;--line:rgba(207,237,225,.12);--mint:#9ae6b4;--teal:#43c4bc;--blue:#6e9cff;--orange:#ff9c65;--red:#ff6b6b;--display:'Plus Jakarta Sans',sans-serif;--body:'Inter',sans-serif;--mono:'JetBrains Mono',monospace}
+    :root{--night:#071315;--night-2:#0c2022;--panel:rgba(13,35,37,.78);--panel-solid:#0d2325;--paper:#eef5ed;--muted:#90a7a5;--line:rgba(207,237,225,.12);--mint:#9ae6b4;--teal:#43c4bc;--blue:#6e9cff;--orange:#ff9c65;--red:#ff6b6b;--display:'Plus Jakarta Sans',sans-serif;--body:'Inter',sans-serif;--mono:'JetBrains Mono',monospace;--site-nav-bg:rgba(7,19,21,.88);--site-nav-ink:#eef5ed;--site-nav-muted:#90a7a5;--site-nav-line:rgba(207,237,225,.16);--site-nav-accent:#43c4bc}
     html{scroll-behavior:smooth;background:var(--night)}
     body{min-height:100vh;color:var(--paper);font-family:var(--body);background:radial-gradient(circle at 12% 4%,rgba(67,196,188,.15),transparent 28rem),radial-gradient(circle at 92% 18%,rgba(110,156,255,.12),transparent 31rem),var(--night);overflow-x:hidden}
     body::before{content:'';position:fixed;inset:0;pointer-events:none;opacity:.38;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(#000,transparent 85%)}
@@ -37,19 +45,10 @@
     .vm-board{padding:1.2rem}.vm-summary{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.25rem .2rem 1rem}.vm-identity{display:flex;align-items:center;gap:.7rem}.vm-icon{width:42px;height:42px;display:grid;place-items:center;border:1px solid rgba(110,156,255,.24);border-radius:13px;color:var(--blue);background:rgba(110,156,255,.08);font:700 .62rem var(--mono)}.vm-name{font:700 .9rem var(--display)}.vm-heartbeat{display:block;margin-top:.25rem;color:var(--muted);font:500 .62rem var(--mono)}.vm-state{padding:.42rem .62rem;border:1px solid rgba(154,230,180,.22);border-radius:999px;color:var(--mint);font:700 .58rem var(--mono);text-transform:uppercase}.vm-state.stale,.vm-state.incident{border-color:rgba(255,107,107,.28);color:var(--red)}.vm-resources{display:grid;grid-template-columns:repeat(3,1fr);gap:.55rem;margin-bottom:.8rem}.resource{padding:.85rem;border:1px solid var(--line);border-radius:15px;background:rgba(5,18,19,.42)}.resource-label{color:var(--muted);font:700 .57rem var(--mono);text-transform:uppercase}.resource-value{display:block;margin-top:.5rem;font:700 1rem var(--display)}.resource-track{height:4px;margin-top:.65rem;border-radius:99px;background:rgba(144,167,165,.12);overflow:hidden}.resource-fill{height:100%;border-radius:inherit;background:linear-gradient(90deg,var(--teal),var(--blue))}.vm-services{display:grid}.vm-services .check{padding:.72rem .2rem}.vm-services .check-icon{width:30px;height:30px}.vm-unavailable{padding:2rem .2rem;color:var(--muted);font-size:.76rem}@media(max-width:520px){.vm-resources{grid-template-columns:1fr}.vm-summary{align-items:flex-start}.vm-state{white-space:nowrap}}
     .agent-board{padding:1.25rem}.agent-summary{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:1rem}.agent-mark{width:46px;height:46px;display:grid;place-items:center;border:1px solid rgba(255,156,101,.25);border-radius:14px;color:var(--orange);background:rgba(255,156,101,.08);font:700 .62rem var(--mono)}.agent-title{font:750 .95rem var(--display)}.agent-meta{display:block;margin-top:.3rem;color:var(--muted);font:500 .62rem var(--mono)}.agent-score{font:750 1.7rem var(--display);letter-spacing:-.06em}.agent-score small{color:var(--muted);font:500 .62rem var(--mono)}.agent-progress{height:7px;margin-top:1.1rem;border-radius:99px;background:rgba(144,167,165,.12);overflow:hidden}.agent-progress span{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,var(--orange),var(--mint))}.agent-copy{margin-top:1rem;color:var(--muted);font-size:.73rem;line-height:1.55}.agent-footer{display:flex;justify-content:space-between;gap:1rem;margin-top:1rem;padding-top:1rem;border-top:1px solid var(--line);color:var(--muted);font:500 .6rem var(--mono)}@media(max-width:520px){.agent-summary{grid-template-columns:auto 1fr}.agent-score{grid-column:1/-1}.agent-footer{flex-direction:column}}
   </style>
+  <link rel="stylesheet" href="/assets/site-nav.css">
 </head>
 <body>
-  <nav class="shell">
-    <a class="brand" href="../"><span class="brand-mark">R/O</span><span>RafaOps</span></a>
-    <div class="nav-actions">
-      <a class="nav-link" href="../news/" data-i18n="news">Ver AI Signal ↗</a>
-      <a class="nav-link" href="../" data-i18n="portfolio">Portfolio</a>
-      <div class="lang" aria-label="Language selector">
-        <button type="button" data-lang="es" aria-pressed="true">ES</button>
-        <button type="button" data-lang="en" aria-pressed="false">EN</button>
-      </div>
-    </div>
-  </nav>
+  <nav class="site-nav" data-site-nav aria-label="Primary navigation"><a class="site-brand" href="/"><span class="site-brand-mark">RM</span><span>Rafael Marcos</span></a><div class="site-nav-links"><a href="/#services" data-site-nav-i18n="services">Servicios</a><a href="/#projects" data-site-nav-i18n="work">Proyectos</a><a href="/articles/" data-site-nav-i18n="articles">Artículos</a><a href="/news/" data-site-nav-i18n="news">Noticias</a><a href="/copywriting/" data-site-nav-i18n="copywriting">Copywriting</a><a href="/#about" data-site-nav-i18n="about">Sobre mí</a><a href="/#contact" data-site-nav-i18n="contact">Contacto</a></div><div class="site-nav-controls"><div class="site-lang" role="group" aria-label="Language selector"><button type="button" data-site-nav-lang="es" aria-pressed="true">ES</button><button type="button" data-site-nav-lang="en" aria-pressed="false">EN</button></div><a class="site-nav-cta" href="/#contact" data-site-nav-i18n="cta">Hablemos ↗</a><button class="site-mobile-toggle" type="button" data-site-nav-toggle aria-expanded="false" aria-controls="site-mobile-menu" aria-label="Abrir menú">☰</button></div><div class="site-mobile-menu" id="site-mobile-menu" data-site-mobile-menu data-open="false"><div class="site-mobile-links"><a href="/#services" data-site-nav-i18n="services">Servicios</a><a href="/#projects" data-site-nav-i18n="work">Proyectos</a><a href="/articles/" data-site-nav-i18n="articles">Artículos</a><a href="/news/" data-site-nav-i18n="news">Noticias</a><a href="/copywriting/" data-site-nav-i18n="copywriting">Copywriting</a><a href="/#about" data-site-nav-i18n="about">Sobre mí</a><a href="/#contact" data-site-nav-i18n="contact">Contacto</a></div><a class="site-nav-cta" href="/#contact" data-site-nav-i18n="cta">Hablemos ↗</a></div></nav>
 
   <header class="shell">
     <p class="eyebrow" data-i18n="eyebrow">Agentic operations control plane</p>
@@ -135,7 +134,7 @@
     const formatDate = (value, lang = currentLang) => value ? new Intl.DateTimeFormat(lang === 'en' ? 'en-GB' : 'es-ES',{day:'2-digit',month:'short',hour:'2-digit',minute:'2-digit'}).format(new Date(value)) : '—';
     const VM_STATUS_URL = 'https://api.github.com/repos/rafamarcoss/rafamarcoss.github.io/contents/rafaops/vm-status.json?ref=rafaops-telemetry';
     const VM_STATUS_FALLBACK_URL = 'https://raw.githubusercontent.com/rafamarcoss/rafamarcoss.github.io/rafaops-telemetry/rafaops/vm-status.json';
-    let currentLang = new URLSearchParams(location.search).get('lang') === 'en' ? 'en' : 'es';
+    let currentLang = localStorage.getItem('site-language') === 'en' ? 'en' : 'es';
     let latestData = null;
     let latestVm = null;
     let lastVmFetch = 0;
@@ -143,7 +142,6 @@
     function applyLanguage(lang) {
       currentLang = lang === 'en' ? 'en' : 'es';
       document.documentElement.lang = currentLang;
-      document.querySelectorAll('[data-lang]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.lang === currentLang)));
       document.querySelectorAll('[data-i18n]').forEach(element => {
         if (!element.dataset.es) element.dataset.es = element.textContent;
         element.textContent = currentLang === 'en' ? (translations.en[element.dataset.i18n] || element.dataset.es) : element.dataset.es;
@@ -273,10 +271,11 @@
       }
     }
 
-    document.querySelectorAll('[data-lang]').forEach(button => button.addEventListener('click', () => applyLanguage(button.dataset.lang)));
     applyLanguage(currentLang);
+    window.addEventListener('site-language-change', event => applyLanguage(event.detail.lang));
     loadStatus();
     setInterval(loadStatus, 60_000);
   </script>
+  <script src="/assets/site-nav.js"></script>
 </body>
 </html>
