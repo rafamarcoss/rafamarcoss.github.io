@@ -17,9 +17,10 @@ for (const f of files) {
   const jsonld = html.includes('application/ld+json');
   const og = html.includes('og:title');
   const desc = html.includes('name="description"');
-  const globalNav = f === 'index.html'
-    ? html.includes('navServices') && html.includes('navCta') && html.includes('data-lang="en"') && html.includes('mobile-menu-toggle') && html.includes('aria-expanded="false"')
-    : html.includes('data-site-nav') && html.includes('data-site-nav-i18n="services"') && html.includes('data-site-nav-i18n="cta"') && html.includes('data-site-nav-lang="en"') && html.includes('data-site-nav-toggle') && html.includes('aria-expanded="false"');
+  const v2Nav = html.includes('data-i18n="navSystems"') && html.includes('data-i18n="navCta"') && html.includes('data-lang="en"') && html.includes('data-nav-toggle') && html.includes('aria-expanded="false"');
+  const legacyNav = html.includes('data-site-nav') && html.includes('data-site-nav-i18n="services"') && html.includes('data-site-nav-i18n="cta"') && html.includes('data-site-nav-lang="en"') && html.includes('data-site-nav-toggle') && html.includes('aria-expanded="false"');
+  // V2 nav: home + articles (index y detalle). El resto de páginas mantienen la nav legacy hasta su migración.
+  const globalNav = (f === 'index.html' || f.startsWith('articles/')) ? v2Nav : legacyNav;
   const good = h1 === 1 && canonical && jsonld && og && desc && globalNav;
   if (!good) ok = false;
   console.log(`${good ? 'OK  ' : 'FAIL'} h1=${h1} canonical=${canonical} jsonld=${jsonld} og=${og} desc=${desc} nav=${globalNav} | ${f}`);
