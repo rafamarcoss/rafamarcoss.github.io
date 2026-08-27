@@ -1,7 +1,146 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-26T07:56:04.782Z",
+  "generatedAt": "2026-08-27T18:15:45.386Z",
   "articles": [
+    {
+      "slug": "ai-signal-2026-08-27",
+      "date": "2026-08-27",
+      "generatedAt": "2026-08-27T18:15:45.386Z",
+      "categories": [
+        "IA General",
+        "Trabajo y Negocio",
+        "Finanzas e Inversiones",
+        "Legal IA",
+        "Educación IA"
+      ],
+      "readingMinutes": 5,
+      "content": {
+        "es": {
+          "title": "AI Signal: la IA transforma trabajo, educación, finanzas y justicia",
+          "dek": "La adopción de la IA acelera la productividad laboral, pero también genera brechas y dilemas éticos. Inversiones millonarias y nuevas exigencias profesionales marcan una semana clave.",
+          "intro": "La inteligencia artificial está redefiniendo múltiples esferas de la sociedad. Desde el ahorro de tres horas semanales por trabajador hasta la reducción del 20% en el aprendizaje escolar, las noticias de esta semana revelan un panorama lleno de oportunidades y tensiones. En esta edición de AI Signal, conectamos los ámbitos del trabajo, las finanzas, la regulación y la educación para entender cómo la IA está moldeando nuestro presente y futuro.",
+          "sections": [
+            {
+              "heading": "Trabajo: tres horas ganadas, pero con brechas crecientes",
+              "body": "Según La Vanguardia, la adopción de la IA permite a los trabajadores ganar tres horas por semana, un beneficio tangible que mejora la productividad individual. Sin embargo, Forbes España advierte de que la IA ya impulsa tres de cada diez tareas empresariales, ampliando la brecha de productividad entre organizaciones. Esto sugiere que, mientras algunos profesionales disfrutan de más tiempo libre, las empresas que integran la IA a gran escala están dejando atrás a las que no lo hacen. Para no quedarse rezagados, 20Minutos destaca cinco habilidades clave para la vuelta al trabajo en 2026, entre ellas la capacidad de priorizar y el criterio para usar la IA. La tensión es clara: la tecnología ofrece eficiencia, pero exige una adaptación continua y puede aumentar las desigualdades si no se gestiona adecuadamente."
+            },
+            {
+              "heading": "Finanzas e inversión: el capital fluye hacia la IA",
+              "body": "El sector financiero está apostando fuerte por la inteligencia artificial. EL PAÍS informa de que Alibaba y SoftBank han movilizado más de 14.100 millones de dólares para acelerar su inversión en IA, una señal de confianza que los inversores deben tener en cuenta. Por su parte, El Mundo analiza cómo la banca se está preparando ante las amenazas y oportunidades de esta revolución, sugiriendo que las entidades que no se adapten podrían perder competitividad. En el ámbito personal, BBVA ofrece pautas para usar la IA en las finanzas personales, destacando la importancia de utilizarla para tomar mejores decisiones sin ceder el control. Para los inversores, el mensaje es doble: hay oportunidades en el sector tecnológico, pero también riesgos en los sectores que no se modernicen."
+            },
+            {
+              "heading": "Regulación y justicia: la IA como estándar de diligencia",
+              "body": "El mundo legal está viviendo un cambio de paradigma. Según El Español, los abogados coinciden en que un profesional puede incurrir en negligencia por no usar inteligencia artificial, lo que implica que la IA se está convirtiendo en un estándar de diligencia profesional. Sin embargo, esta obligación de adoptar la tecnología choca con la necesidad de transparencia: Law&Trends plantea si un abogado puede pedir que un juez revele si ha utilizado IA para redactar una sentencia. Esta cuestión refleja la tensión entre eficiencia y rendición de cuentas en el sistema judicial. Para los profesionales del derecho, la adopción de IA ya no es opcional, pero debe ir acompañada de marcos claros que garanticen la confianza en las decisiones automatizadas."
+            },
+            {
+              "heading": "Educación: el doble filo de la IA en las aulas",
+              "body": "En el ámbito educativo, los datos son contradictorios. La Vanguardia alerta de que utilizar la IA para hacer deberes y trabajos reduce un 20% el aprendizaje, lo que preocupa a educadores y padres. Por otro lado, el blog de Google muestra cómo las universidades de América Latina están integrando la IA en sus programas, lo que sugiere que la solución no es prohibirla, sino enseñar a usarla de forma crítica y responsable. La clave está en distinguir entre un uso que sustituye el esfuerzo intelectual y otro que lo complementa. Los estudiantes deben aprender a aprovechar la IA como una herramienta de apoyo, mientras que las instituciones deben adaptar sus métodos de evaluación para promover un aprendizaje genuino."
+            }
+          ],
+          "takeaways": [
+            "Adoptar IA en el trabajo puede ahorrar hasta tres horas semanales, pero requiere desarrollar criterio para usarla eficazmente.",
+            "Las organizaciones que integran IA en sus tareas están ampliando su ventaja productiva; las pymes deben acelerar su adopción para no quedarse atrás.",
+            "El sector financiero ve en la IA una oportunidad de inversión masiva; los particulares pueden usarla para mejorar decisiones financieras manteniendo el control.",
+            "Los profesionales del derecho deben incorporar la IA para evitar negligencia, pero la transparencia sobre su uso en sentencias es un debate abierto.",
+            "En educación, usar la IA para hacer deberes reduce el aprendizaje, por lo que es clave enseñar a utilizarla como herramienta de apoyo, no de sustitución."
+          ],
+          "closing": "La IA está transformando el trabajo, las finanzas, la justicia y la educación, ofreciendo eficiencia y nuevas oportunidades, pero también planteando desafíos éticos y prácticos. La convergencia de estas áreas demuestra que ningún sector es inmune a su influencia. El reto para profesionales, empresas, estudiantes e inversores es adoptar la tecnología de manera consciente, equilibrando sus beneficios con la necesidad de mantener el control y la responsabilidad humana."
+        },
+        "en": {
+          "title": "AI Signal: AI Transforms Work, Education, Finance, and Justice",
+          "dek": "AI adoption accelerates workplace productivity but also creates gaps and ethical dilemmas. Million-dollar investments and new professional demands mark a key week.",
+          "intro": "Artificial intelligence is redefining multiple spheres of society. From saving three hours per worker each week to a 20% reduction in school learning, this week's news reveals a landscape full of opportunities and tensions. In this edition of AI Signal, we connect the realms of work, finance, regulation, and education to understand how AI is shaping our present and future.",
+          "sections": [
+            {
+              "heading": "Work: Three Hours Gained, but Growing Gaps",
+              "body": "According to La Vanguardia, AI adoption allows workers to gain three hours per week, a tangible benefit that improves individual productivity. However, Forbes España warns that AI already drives three out of ten business tasks, widening the productivity gap between organizations. This suggests that while some professionals enjoy more free time, companies integrating AI on a large scale are leaving behind those that do not. To avoid falling behind, 20Minutos highlights five key skills for returning to work in 2026, including the ability to prioritize and the judgment to use AI. The tension is clear: technology offers efficiency but demands continuous adaptation and can increase inequalities if not managed properly."
+            },
+            {
+              "heading": "Finance and Investment: Capital Flows Toward AI",
+              "body": "The financial sector is betting heavily on artificial intelligence. EL PAÍS reports that Alibaba and SoftBank have mobilized more than $14.1 billion to accelerate their AI investment, a sign of confidence that investors should take into account. Meanwhile, El Mundo analyzes how banking is preparing for the threats and opportunities of this revolution, suggesting that institutions that do not adapt could lose competitiveness. On a personal level, BBVA offers guidelines for using AI in personal finance, highlighting the importance of using it to make better decisions without ceding control. For investors, the message is twofold: there are opportunities in the tech sector, but also risks in sectors that do not modernize."
+            },
+            {
+              "heading": "Regulation and Justice: AI as a Standard of Diligence",
+              "body": "The legal world is experiencing a paradigm shift. According to El Español, lawyers agree that a professional can incur negligence by not using artificial intelligence, implying that AI is becoming a standard of professional diligence. However, this obligation to adopt technology clashes with the need for transparency: Law&Trends raises whether a lawyer can ask a judge to reveal if they have used AI to draft a ruling. This issue reflects the tension between efficiency and accountability in the judicial system. For legal professionals, AI adoption is no longer optional, but it must be accompanied by clear frameworks that ensure trust in automated decisions."
+            },
+            {
+              "heading": "Education: The Double-Edged Sword of AI in Classrooms",
+              "body": "In education, the data is contradictory. La Vanguardia warns that using AI to do homework and assignments reduces learning by 20%, which worries educators and parents. On the other hand, Google's blog shows how Latin American universities are integrating AI into their programs, suggesting that the solution is not to ban it but to teach critical and responsible use. The key is to distinguish between use that replaces intellectual effort and use that complements it. Students must learn to leverage AI as a support tool, while institutions must adapt their assessment methods to promote genuine learning."
+            }
+          ],
+          "takeaways": [
+            "Adopting AI at work can save up to three hours per week, but requires developing judgment to use it effectively.",
+            "Organizations that integrate AI into their tasks are expanding their productive advantage; SMEs must accelerate adoption to avoid falling behind.",
+            "The financial sector sees AI as a massive investment opportunity; individuals can use it to improve financial decisions while maintaining control.",
+            "Legal professionals must incorporate AI to avoid negligence, but transparency about its use in rulings is an open debate.",
+            "In education, using AI to do homework reduces learning, so it is key to teach its use as a support tool, not a substitute."
+          ],
+          "closing": "AI is transforming work, finance, justice, and education, offering efficiency and new opportunities, but also posing ethical and practical challenges. The convergence of these areas shows that no sector is immune to its influence. The challenge for professionals, businesses, students, and investors is to adopt technology consciously, balancing its benefits with the need to maintain control and human responsibility."
+        }
+      },
+      "sources": [
+        {
+          "title": "La adopción de la IA hace ganar al trabajador tres horas por semana - La Vanguardia",
+          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQamtMT0M3ZHVheXRZWi1pdjRJOXVteEFHM2RkYkh5Z2xST3hmQ0lpWnZZYklwcUh4TS1ndC03anJCNkJ0dHVnb2dQN21GaTUyZ0lhZ1JETkVxN2VGenVjYkNjSl9rTm5ic0dwWU1fdDBrWlBqLTdIU3dWZGZOdlYtZE9kN2VOWnpqM3NDREFnVFpIclQyR2h6QlhsdHZ2UFpBM2VjeWRLZFItamfSAbABQVVfeXFMT3hKWDh4Q1hvbHZXZ05Od3RObUVyWkZfanY2WXVDcm9GSFQ5V1cxTFdNOVJialY0V1hpVkx5QXgtcWw0MkFJeURNMWVELVRPaVNsUXphc3FleDQ5dGVGVW9IbnFHSjZ1UWpjQ1Ntd0lhdlRfV25lcE16NTdtVmwtb3E5TzFOS2RaYXdEVnhGaEFhRURNcGpLVkdCUm9TY1hobmhoWEVQcDZiZTY4UVR5cUo?oc=5",
+          "category": "IA General",
+          "publishedAt": "2026-08-26T16:29:20.000Z"
+        },
+        {
+          "title": "La banca ante la IA: así se preparan las entidades ante las amenazas y oportunidades de la última gran revolución del sector - El Mundo",
+          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQbHVVeXM1NXN4MHVmUXIyNkZDZlNEQU43RUtMQzJQRmhsTG9OcUtKNkxzOWlRbHJQaHdlVXlWRE9INGNENkZ0MjhWa1l3MlpWeUVhUGNxNzlpNVZ6Q2F6Unh2TE0zb1Y3bnYxdnp3ZmhTaW1mejZmLUNyUkF2VUlNWEh5YWxSczhE0gGIAUFVX3lxTE9yVjA1SWNSUXVPNWZOeHZoT2RMdkx6bksxLXViUHFERmc4Um5oTnJGaHgyZXNYMnAwVFlTSjB1V09saW5nX2VKRkl0bXE4Y2lwTWo5U2RkdVB6Vzh3RE9fMmtHR1FfcWYzLVNTTXQ4UXBMVFZiZkk1eUstYmJDekZaSEJJcGtpUkQ?oc=5",
+          "category": "IA General",
+          "publishedAt": "2026-08-23T22:09:00.000Z"
+        },
+        {
+          "title": "La IA ya impulsa tres de cada diez tareas empresariales y amplía la brecha de productividad entre las organizaciones - Forbes España",
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOMDhpOVJaVWViLWxMOGdSQUR1eWxpdzdNZEUxMGFMeWdsZS1MMmlldVRjU2F2RzkzZUhMTE9fTFdXT3hrQmJYblFhcTRQVFNvNUpYVHo5MDFvZkwwVTBnbGlod00tNnBvTm1hbHp5VlU0ZFpyNUJYZ3FPRHQwT3VGNEZtMXBBMEZiQ0MwZw?oc=5",
+          "category": "Trabajo y Negocio",
+          "publishedAt": "2026-08-25T12:09:16.000Z"
+        },
+        {
+          "title": "Cinco habilidades que marcarán la vuelta al trabajo en 2026: desde la capacidad para priorizar hasta el criterio para usar IA - 20Minutos",
+          "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOYzBaR1cydzB0bjREZ29aRlBWanQzY09yNVIyby02dWFwemN4QUlUdUQtTGtKQ3VOTFpIQ0hZLU5JUnZycDhjWkJfQ1ZWY1hMcGRlYlQ5TUxlVFJiNEd1M3huT3hoUGxnSFN6d0U4NG11dkZlejhjRVFRSFppQVFDaVVza2ZmYjdfLW4td3M2ZFlPYUVTbEFwYkd2bi1aVTZsR1g5RHAxanZTWXRiU3hId3lubHJXWlZTRGhHM3RwTy1zeEJaejlYbldqRUx5dzVJMHdUMzdVdmVXN1IxbWUwdUJ6UXNucUtCSGpiMEZ4c2ZSUdIB8gFBVV95cUxOYzBaR1cydzB0bjREZ29aRlBWanQzY09yNVIyby02dWFwemN4QUlUdUQtTGtKQ3VOTFpIQ0hZLU5JUnZycDhjWkJfQ1ZWY1hMcGRlYlQ5TUxlVFJiNEd1M3huT3hoUGxnSFN6d0U4NG11dkZlejhjRVFRSFppQVFDaVVza2ZmYjdfLW4td3M2ZFlPYUVTbEFwYkd2bi1aVTZsR1g5RHAxanZTWXRiU3hId3lubHJXWlZTRGhHM3RwTy1zeEJaejlYbldqRUx5dzVJMHdUMzdVdmVXN1IxbWUwdUJ6UXNucUtCSGpiMEZ4c2ZSUQ?oc=5",
+          "category": "Trabajo y Negocio",
+          "publishedAt": "2026-08-24T10:49:09.000Z"
+        },
+        {
+          "title": "Alibaba y SoftBank movilizan más de 14.100 millones para acelerar su apuesta por la inteligencia artificial - EL PAÍS",
+          "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPSUFfd0J6OGstUnpPclpPaEhYNV9tdVk1cGh3TTU1Tkd2bEJNYVZtRi1MeWpFX0tVaHh0bFhleEtVZE00dFkzSUNGUUpMQUw0N1d0NHBUbDVjblhpb3M3a24wRWV4Q1E4X1Z6X1BBZEpkYVozZUNEc0hBSWhFRzUtM0owTDdiSk9oOTNpNXpHWHVSaXlSVGtJSlJ2OWRCX1BJc0k2bHJDME9fV0NLOWV0TXJLdjBJTVRfOXNGZ1JJeVdtX29KZlNMd0FPWFFEWVhRdXdneFBuYnpZc0xHUWZaV1FwNWTSAYcCQVVfeXFMUDE5TnRtOEpEX0MxdWVOMGlIZFBRUW5rM3FDQzZjWFFkTWhZRXBQXy1kQTY0Y1JuZnBOMWV1eFZDeHFibjdxXzNtSlpxRG5palcwXzZlckpEYkp3N2IzSk5lbHlUYTk5SG1SNFZwQ3ZCRDI4aFRUaUMzV21WeFpVbFdYUlBqQ3hTZ1Y1anQ2a0Y4dksxdGJvSjdqNGVmNXEycnZMV2dqUTFZWDhwQk5UUElDYmU4QkpDVUt5bTdveHB2MDJJUEJjcEhIeTlqVVpHX2d4YWVidEV5ZmlDTHNSbkZhQ2ZmZXdpWnQxN2tvSU1SU2tObVNHUFZ6NnI2dEhlZWFCX2U1YTQ?oc=5",
+          "category": "Finanzas e Inversiones",
+          "publishedAt": "2026-08-24T08:49:17.000Z"
+        },
+        {
+          "title": "Inteligencia artificial y finanzas personales: cómo usarla para decidir mejor sin ceder el control - BBVA",
+          "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOOXFKRW0tOHN2OENIRkZFZFJSYmZ5eWFzZTl3YkJwOERCVU95RnZKTmVVSm1tU3RoWTNBWTdXRDZBS0RhTVBFM0dVOE5TbWxGSDV6ck5iRlhtdEgwQmhxSzVFZHZwbnNhcDQ1RzAyYWRtbDJvNm1PdVJsazVoOVFBaEZFaldfNUp2ck55UC1UamtYNXlRM1oyekwxMV9YWkl2MlkzYzJPOGdfaE5BZ1c3eExsTUxNejk1bkgtejd1a0tqdVkxb0xzd2ZrUkxFYkNnX1lIQ3VR?oc=5",
+          "category": "Finanzas e Inversiones",
+          "publishedAt": "2026-08-26T18:05:53.000Z"
+        },
+        {
+          "title": "Los abogados coinciden: “Un profesional puede incurrir en negligencia por no usar inteligencia artificial” - El Español",
+          "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQbzNtUUUzaHNkYi1LWmR0ajJURnFmVTFnTkJoaFotdW5XY2Y1d1FRSzVMalZ5aWlkWlI3OWdaYjRWaE1KYWU1anlsRGtza1VjWnBETWFoY3diRjJvSjNNOGpIX1JPeUhVdHQzaktKZFF4RXB5OV81Y3NycUtxd0Q0VnVsOUFZLURaZEtKV2RuYXBaOFYxMG16cHZPakJJa2FVdWhiVS1obk43Z1hRcU1GSkxCbERldXFhaDRZVXhqTWE4a09XaTZ3YlhvWXVqcHNydDhFeUVYVmR6ZElrWEVWZldPeGRmWG5qUUHSAe8BQVVfeXFMTjM1SHVPWWlEYzcyd2hjZ1hxU3c0b2ZuT2lCSkpuNXk3STdfOHpnakszRVZReHBVOWxDeWduZTRDYXE3RC0tRmd4YlJvNXVNY281dk1KblZhTDFab2JIQ3FwcEdkdW91WGhSV3l4a2N0dEkyMEZkTE5Gd1Q2cEVuQjRkek0ybnp3UHNfb2dydGdoWHdjd3loOHBBMEJERldRT1J6MTNYdTVUekJLcDlhY1lucWczTFJTVGRTcjFpYnJNSVlCdlo2ZVBHYktuRjNFRmt6NWhWN2VUNnVFeVdKWVVKV3RZb21qUDJqLWxoWjQ?oc=5",
+          "category": "Legal IA",
+          "publishedAt": "2026-08-21T08:08:03.000Z"
+        },
+        {
+          "title": "¿Puede un abogado pedir que un juez diga si ha utilizado inteligencia artificial para redactar una sentencia? - Law&Trends",
+          "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPRTVUaE9DUUhJNjRjTGdTcWhOaGdBS2lnQk1SSjY5NHU5eWVzbWV2S2o3Y2lPakZvV3UwOC1WanBZQzVFaUVzbERFdjZ5c0FRNzlzVkE4UmU5eG9CeWJmRU81OThEM0l2SzF4Z2xGN2J1UG9XdTZ3amRjdnF2RE1UcGN2U2gtU1B1N3lIakNfMFFuN0NzR2ZVdVdLWlFMT2RpOXRaZmE3bUVrQWZIWlhnTEEtS1N2WVh1N1hGSE9FcEQ1TEgtTXpMaEpOend4QVNvZHRtbnBWZ0RYV051WDBkQTBzLVF5Nm5RQ2dvNw?oc=5",
+          "category": "Legal IA",
+          "publishedAt": "2026-08-22T22:21:00.000Z"
+        },
+        {
+          "title": "Utilizar la IA para hacer deberes y trabajos reduce un 20% el aprendizaje - La Vanguardia",
+          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQU1V1ZTV5WVJiMFVNSzNKdUxBdkliR3pvT0ZldTZIT00yd0NNY0l6ejdYRUN4emN1ZkdPT1pCQjBGUmNxeHp4VnhrXzhlR2M3amkyLTRtanZQM1NMbVBqb1MxQlZCQndkbnhMX3NoU2pkbHY4YzFMN1FqSjJFNFF0cE51VGtWaS1pVHh3ZUNQX2dQNnZDSG1HV1pkR2RieTVMN2Vic0hVbWZhUnPSAbABQVVfeXFMTUZKQUgxZDBjZTUyMzVpMDJJZnFDanZiUWNJSURNY0xLRFhYUGRmb3BFeXlfSTQ4QXVDcGJWTXB3Yk10dVoyTkJPYTktT3ZCR3ZBRkNpVzBfZHVLVnF1dC1MWDJUMDNrN296TUJ5RVowaEk1ZmxhWExQZ0Ixc1ZVOHFPZHRvSHFDMEdTdmd2VlYtbm5jd1RPUm00TTBMSXItaFRSZ1NhN1Z1V0twNF9SYXo?oc=5",
+          "category": "Educación IA",
+          "publishedAt": "2026-08-21T04:05:00.000Z"
+        },
+        {
+          "title": "¿Cómo están integrando las universidades de América Latina la inteligencia artificial? - blog.google",
+          "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNVUIzSUF0OXlUSHBYVExDT2t5MUZWQkdPMGU0Wkpkb2tGaXRpTEctMGhVUTFTNmRLNkhFNnUzMkhRYWFjcV81NTJpcE5VTEFWVDB2NENNYVB4QnRSUXZEZHpzV3ZwY2g2Ty1VajUtZEFkaFVNZ0ZGQWRUaVM0U1o2SS1nUHFQeU1jeHZoTGFhc2VZYTdZTkRuNnhrYXBOakZveEd6ZU5mZGdjM0xzSTFpTmxiZmY2dXd2ZmQwbHQ1V1ZVeGd6Q1NIb2VMeEx4c1pVaGRwbUlwQQ?oc=5",
+          "category": "Educación IA",
+          "publishedAt": "2026-08-24T15:03:32.000Z"
+        }
+      ]
+    },
     {
       "slug": "ai-signal-2026-08-26",
       "date": "2026-08-26",
