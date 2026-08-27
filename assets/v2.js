@@ -3,10 +3,15 @@
   'use strict';
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-  /* ---- i18n (page provides window.V2_I18N = { en: {key: html} }) ---- */
+  /* ---- i18n (page provides window.V2_I18N = { meta: {title, description}, en: {key: html} }) ---- */
   const dict = window.V2_I18N && window.V2_I18N.en ? window.V2_I18N.en : null;
   const nodes = Array.from(document.querySelectorAll('[data-i18n]'));
   nodes.forEach(el => { el.dataset.es = el.innerHTML; });
+
+  /* ES metadata captured once from the document — no duplicated strings */
+  const descMeta = document.querySelector('meta[name="description"]');
+  const metaEs = { title: document.title, description: descMeta ? descMeta.content : '' };
+  const metaEn = window.V2_I18N && window.V2_I18N.meta ? window.V2_I18N.meta : null;
 
   const applyLanguage = (lang) => {
     const target = lang === 'en' ? 'en' : 'es';
@@ -17,14 +22,9 @@
     });
     document.querySelectorAll('[data-lang]').forEach(btn =>
       btn.setAttribute('aria-pressed', String(btn.dataset.lang === target)));
-    if (window.V2_I18N && window.V2_I18N.meta) {
-      const m = window.V2_I18N.meta;
-      if (target === 'en') {
-        if (m.title) document.title = m.title;
-        const desc = document.querySelector('meta[name="description"]');
-        if (desc && m.description) desc.content = m.description;
-      }
-    }
+    const m = target === 'en' ? metaEn : metaEs;
+    if (m && m.title) document.title = m.title;
+    if (descMeta && m && m.description) descMeta.setAttribute('content', m.description);
     try { localStorage.setItem('site-language', target); } catch (e) { /* private mode */ }
   };
 

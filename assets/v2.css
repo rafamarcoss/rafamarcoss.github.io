@@ -35,9 +35,14 @@
   --font-mono: 'JetBrains Mono', ui-monospace, monospace;
 
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --nav-h: 64px;
 }
 
 html { scroll-behavior: smooth; background: var(--paper); }
+/* clip (when supported) keeps 100vw separators from creating document width */
+@supports (overflow-x: clip) {
+  html, body { overflow-x: clip; }
+}
 body {
   min-height: 100vh; overflow-x: hidden;
   color: var(--ink); font-family: var(--font-body);
@@ -65,12 +70,12 @@ ul { list-style: none; }
 
 .v2-shell { width: min(1120px, calc(100% - 2.5rem)); margin-inline: auto; }
 
-.v2-section { position: relative; padding: clamp(3.6rem, 7.5vw, 6.4rem) 0 0; scroll-margin-top: 92px; }
+.v2-section { position: relative; padding: clamp(3.6rem, 7.5vw, 6.4rem) 0 0; scroll-margin-top: calc(var(--nav-h) + 28px); }
 .v2-section::before {
   content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
   width: 100vw; height: 1px; background: var(--line-soft);
 }
-.anchor-alias { position: absolute; }
+.anchor-alias { position: absolute; scroll-margin-top: calc(var(--nav-h) + 1rem); }
 
 .eyebrow {
   display: inline-flex; align-items: center; gap: 0.55rem;
@@ -361,6 +366,7 @@ ul { list-style: none; }
 }
 
 @media (max-width: 620px) {
+  :root { --nav-h: 58px; }
   .v2-shell { width: min(100% - 1.4rem, 1120px); }
   .v2-nav-in { height: 58px; }
   .hero { padding-top: 3rem; }
