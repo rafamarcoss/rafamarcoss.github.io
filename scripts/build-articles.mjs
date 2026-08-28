@@ -330,7 +330,7 @@ function sitemapXml(articles) {
   const news = existsSync(NEWS_FEED) ? JSON.parse(readFileSync(NEWS_FEED, 'utf8')).articles || [] : [];
   const urls = [
     ['', '1.0', '2026-08-25'],
-    ['copywriting/', '0.9', '2026-08-25'],
+    ['copywriting/', '0.9', '2026-08-28'],
     ['articles/', '0.9', '2026-08-25'],
     ['news/', '0.6', '2026-08-25'],
     ['news/archive/', '0.6', '2026-08-25'],

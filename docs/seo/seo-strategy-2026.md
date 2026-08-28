@@ -249,13 +249,13 @@ RafaOps should link to future `AI Agent Observability` and `AI Agents in Product
 
 Engineering is the link-building mechanism: build a useful asset, publish its reasoning and examples, then make it easy to cite. The asset must stand alone; a generic blog post does not create the same reason to link.
 
-## Copywriting page strategy — future implementation only
+## Copywriting page strategy — implemented 2026-08-28
 
 - **Primary keyword:** `technical SEO content writer`.
 - **Secondary keywords:** `SaaS content writer`, `B2B SaaS content writer`, `technical writer for AI companies`, `developer tools content writer`, `AI content writer` (supporting only).
 - **Intent:** commercial investigation; readers compare specialist writers, agencies, proof and process.
 - **H1 direction:** `Technical SEO Content Writing for SaaS, AI & Automation` is aligned and should remain close to the current direction.
-- **Missing sections to consider:** operating process from technical discovery to source review; who the work is for/not for; concrete deliverable examples; byline/published-work proof; technical stack/topics; testimonial or client proof when available; a small FAQ only for genuine objections.
+- **Implemented:** technical discovery-to-delivery process, focused fit, concrete deliverables, published samples, system evidence and a five-question FAQ. No testimonials or client outcomes are claimed without verification.
 - **Proof needed:** published samples, project evidence, technical source methodology, measurable client outcomes when they can be substantiated. Do not invent case studies.
 - **Internal links:** selected writing cards now work well; add one link from relevant future articles only when the reader could plausibly hire a writer for that product category.
 - **CTA:** keep one primary `Start a project` action. The next step should ask for product, audience, goal and current documentation; avoid multiple competing CTAs.

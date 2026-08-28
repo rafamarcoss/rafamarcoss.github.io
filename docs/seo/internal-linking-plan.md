@@ -32,6 +32,12 @@ Status: P0-01 implemented on 2026-08-28. Remaining `PLANNED` URLs do not exist a
 
 ## Existing article execution map
 
+### `/copywriting/` — IMPLEMENTED V2 LANDING PAGE
+
+→ `/articles/ai-agent-observability/` — featured technical sample with event-schema asset.
+→ `/articles/eu-ai-act-ai-agents-2026/`, `/articles/ai-agents-for-customer-support/`, `/articles/crm-automation-7-workflows/` — selected writing proof.
+→ `/rafaops/`, `/projects/portfolio-automation/` — engineering evidence for the service positioning.
+
 ### `/articles/ai-agents-for-customer-support/`
 
 → `/articles/crm-automation-7-workflows/`
