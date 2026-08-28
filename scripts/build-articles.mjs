@@ -187,9 +187,10 @@ ${V2_FONTS}
 <link rel="stylesheet" href="/assets/v2.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
 ${v2Nav('writing')}
 
-<main id="main">
+<main id="main-content" class="skip-target" tabindex="-1">
   <article class="v2-shell" lang="en">
     <nav class="art-crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/articles/">Articles</a><span>/</span><span>${escapeHtml(data.category)}</span></nav>
     <header class="art-head">
