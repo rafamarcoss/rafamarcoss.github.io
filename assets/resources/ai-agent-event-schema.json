@@ -1,0 +1,240 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rafaelmarcos.tech/assets/resources/ai-agent-event-schema.json",
+  "title": "AI Agent Event Schema",
+  "description": "A practical, framework-neutral reference for redacted AI agent observability events. This is not an industry standard.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "event_id",
+    "timestamp",
+    "run_id",
+    "trace_id",
+    "event_type",
+    "state",
+    "agent",
+    "status",
+    "privacy"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0.0",
+      "description": "Schema version, not an agent or model version."
+    },
+    "event_id": {
+      "type": "string",
+      "description": "Unique ID for this immutable event. Do not embed personal data."
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "run_id": {
+      "type": "string",
+      "description": "Stable identifier for one business workflow run."
+    },
+    "trace_id": {
+      "type": "string",
+      "description": "Identifier used to correlate operations across the run."
+    },
+    "parent_event_id": {
+      "type": ["string", "null"],
+      "description": "Parent local event when the event is part of a sequence."
+    },
+    "event_type": {
+      "type": "string",
+      "enum": [
+        "run.started",
+        "agent.turn.completed",
+        "tool.call.started",
+        "tool.call.completed",
+        "policy.decision",
+        "approval.requested",
+        "approval.resolved",
+        "handoff.requested",
+        "handoff.acknowledged",
+        "run.completed",
+        "run.failed"
+      ]
+    },
+    "state": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "running",
+        "waiting_approval",
+        "retrying",
+        "completed",
+        "failed",
+        "escalated"
+      ]
+    },
+    "agent": {
+      "type": "object",
+      "required": ["name", "version", "instruction_version"],
+      "properties": {
+        "name": { "type": "string" },
+        "version": { "type": "string" },
+        "instruction_version": {
+          "type": "string",
+          "description": "A controlled revision ID; do not store a full prompt by default."
+        }
+      },
+      "additionalProperties": false
+    },
+    "model": {
+      "type": ["object", "null"],
+      "properties": {
+        "provider": { "type": "string" },
+        "name": { "type": "string" },
+        "response_id": { "type": ["string", "null"] }
+      },
+      "additionalProperties": false
+    },
+    "tool": {
+      "type": ["object", "null"],
+      "properties": {
+        "name": { "type": "string" },
+        "tool_call_id": { "type": "string" },
+        "permission_scope": { "type": "string" },
+        "action_state": {
+          "type": "string",
+          "enum": ["read_only", "proposed", "approved", "committed", "denied"]
+        },
+        "external_request_ref": {
+          "type": ["string", "null"],
+          "description": "A safe request reference or idempotency key, never a raw credential."
+        },
+        "input_summary": { "type": ["string", "null"] },
+        "output_summary": { "type": ["string", "null"] }
+      },
+      "additionalProperties": false
+    },
+    "duration_ms": {
+      "type": ["integer", "null"],
+      "minimum": 0
+    },
+    "usage": {
+      "type": ["object", "null"],
+      "properties": {
+        "input_tokens": { "type": ["integer", "null"], "minimum": 0 },
+        "output_tokens": { "type": ["integer", "null"], "minimum": 0 },
+        "total_tokens": { "type": ["integer", "null"], "minimum": 0 },
+        "rate_limit_state": { "type": ["string", "null"] }
+      },
+      "additionalProperties": false
+    },
+    "cost": {
+      "type": ["object", "null"],
+      "properties": {
+        "amount": { "type": ["number", "null"], "minimum": 0 },
+        "currency": { "type": ["string", "null"] },
+        "source": {
+          "type": ["string", "null"],
+          "description": "For example, provider usage export or internal allocation."
+        }
+      },
+      "additionalProperties": false
+    },
+    "status": {
+      "type": "string",
+      "enum": ["ok", "error", "denied", "timeout", "fallback", "cancelled"]
+    },
+    "error": {
+      "type": ["object", "null"],
+      "properties": {
+        "category": { "type": "string" },
+        "safe_message": { "type": ["string", "null"] },
+        "retry_of_event_id": { "type": ["string", "null"] },
+        "retry_count": { "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": false
+    },
+    "human_handoff": {
+      "type": ["object", "null"],
+      "properties": {
+        "reason_code": { "type": "string" },
+        "destination_role": { "type": "string" },
+        "context_reference": {
+          "type": ["string", "null"],
+          "description": "Reference to an access-controlled handoff package, not the package itself."
+        },
+        "acknowledged": { "type": "boolean" },
+        "final_owner": { "type": ["string", "null"] }
+      },
+      "additionalProperties": false
+    },
+    "privacy": {
+      "type": "object",
+      "required": ["payload_redacted", "pii_detected", "retention_class"],
+      "properties": {
+        "payload_redacted": { "type": "boolean" },
+        "pii_detected": { "type": "boolean" },
+        "retention_class": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Allowlisted, low-sensitivity implementation metadata only.",
+      "additionalProperties": { "type": ["string", "number", "boolean", "null"] }
+    }
+  },
+  "additionalProperties": false,
+  "examples": [
+    {
+      "schema_version": "1.0.0",
+      "event_id": "evt_01JOBS9T3",
+      "timestamp": "2026-08-28T09:30:12.450Z",
+      "run_id": "run_support_01JOBS9",
+      "trace_id": "trace_01JOBS9",
+      "parent_event_id": "evt_01JOBS8Z",
+      "event_type": "tool.call.completed",
+      "state": "running",
+      "agent": {
+        "name": "support-triage",
+        "version": "2026-08-28",
+        "instruction_version": "support-triage@b47f1a2"
+      },
+      "model": {
+        "provider": "example-provider",
+        "name": "example-model",
+        "response_id": "resp_ref_8a7d"
+      },
+      "tool": {
+        "name": "lookup_account",
+        "tool_call_id": "tool_01JOBS9T",
+        "permission_scope": "customer:read",
+        "action_state": "read_only",
+        "external_request_ref": "req_hash_7bc3",
+        "input_summary": "Account lookup requested for an internal reference.",
+        "output_summary": "Matching account found; no sensitive fields retained."
+      },
+      "duration_ms": 342,
+      "usage": {
+        "input_tokens": 412,
+        "output_tokens": 83,
+        "total_tokens": 495,
+        "rate_limit_state": "within_budget"
+      },
+      "cost": {
+        "amount": 0.0021,
+        "currency": "USD",
+        "source": "provider_usage_export"
+      },
+      "status": "ok",
+      "error": null,
+      "human_handoff": null,
+      "privacy": {
+        "payload_redacted": true,
+        "pii_detected": false,
+        "retention_class": "operational_30d"
+      },
+      "metadata": {
+        "environment": "production",
+        "service_version": "2026.08.28"
+      }
+    }
+  ]
+}

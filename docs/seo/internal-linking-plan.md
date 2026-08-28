@@ -1,6 +1,6 @@
 # Internal linking execution plan
 
-Status: implementation plan only. `PLANNED` URLs do not exist and must not be linked from public pages until published.
+Status: P0-01 implemented on 2026-08-28. Remaining `PLANNED` URLs do not exist and must not be linked from public pages until published.
 
 ## Operating rules
 
@@ -25,7 +25,7 @@ Status: implementation plan only. `PLANNED` URLs do not exist and must not be li
 | `/articles/what-is-saas-automation/` | Automation/integration hub candidate | CURRENT |
 | `/rafaops/` | Operational evidence | CURRENT |
 | `/projects/portfolio-automation/` | Automation infrastructure evidence | CURRENT |
-| `/articles/ai-agent-observability/` | Production telemetry | PLANNED — P0-01 |
+| `/articles/ai-agent-observability/` | Production telemetry | IMPLEMENTED — P0-01 |
 | `/articles/ai-agent-guardrails/` | Tool permissions and controls | PLANNED — P0-02 |
 | `/articles/n8n-in-production/` | Workflow reliability | PLANNED — P0-03 |
 | `/articles/ai-agents-in-production/` | Cluster hub | FUTURE PILLAR — do not create yet |
@@ -193,13 +193,18 @@ Priority: KEEP.
 
 ## Future P0 link map
 
-### `/articles/ai-agent-observability/` — PLANNED
+### `/articles/ai-agent-observability/` — IMPLEMENTED
 
 → `/rafaops/` — `a public example of run evidence`; placement: after event-schema or evidence discussion; reason: real project context.
 → `/articles/eu-ai-act-ai-agents-2026/` — `logging versus regulatory record-keeping`; placement: privacy/retention section; reason: preserves legal/engineering distinction.
 → `/articles/ai-agents-for-customer-support/` — `human handoff in a support-agent workflow`; placement: outcome-state section; reason: a tangible use case.
 → `/articles/ai-agents-in-production/` — `monitoring and operating agents`; status: FUTURE PILLAR.
 → `/copywriting/` — `technical content for AI infrastructure products`; commercial link: OPTIONAL, conclusion only.
+
+### Implemented P0-01 inbound links
+
+→ `/rafaops/` → `/articles/ai-agent-observability/` — `observability for production agents`; execution-evidence context.
+→ `/articles/eu-ai-act-ai-agents-2026/` → `/articles/ai-agent-observability/` — `operational traces and agent observability`; logging/legal distinction.
 
 ### `/articles/ai-agent-guardrails/` — PLANNED
 

@@ -224,6 +224,7 @@ function articleDiagram(slug) {
   const diagrams = {
     'ai-agents-for-customer-support': ['Ticket', 'Retrieve context', 'Guardrails', 'Human handoff'],
     'ai-agents-vs-traditional-automation': ['Event', 'Rules first', 'Agent only if judgement is needed', 'Logged outcome'],
+    'ai-agent-observability': ['Trigger', 'Run and trace', 'Tools and validation', 'Outcome or handoff'],
     'crm-automation-7-workflows': ['Lead or event', 'CRM rule', 'Action', 'Audit trail'],
     'what-is-saas-automation': ['Source app', 'Webhook or API', 'Workflow', 'System of record'],
   };

@@ -303,7 +303,7 @@ Google recommends examining trends in impressions and clicks, not position alone
 
 ## Top 10 highest-leverage actions
 
-1. Publish `AI Agent Observability: What to Log in Production` with a real RafaOps-derived evidence model.
+1. Published 2026-08-28: `AI Agent Observability: What to Log in Production` with a public RafaOps-derived evidence model and a framework-neutral event-schema asset.
 2. Publish `AI Agent Architecture: A Practical Reference for Production Systems` with a diagram and clear limits.
 3. Add GSC Search Analytics export/reporting; index inspection alone cannot guide content priorities.
 4. Publish `Webhook Reliability: Retries, Idempotency and Duplicate Events` with concrete implementation patterns.
