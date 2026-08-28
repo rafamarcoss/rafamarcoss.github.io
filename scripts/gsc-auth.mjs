@@ -1,6 +1,7 @@
 import { google } from 'googleapis';
 
 export const GSC_SCOPE = 'https://www.googleapis.com/auth/webmasters';
+export const GSC_SITE_URL = 'sc-domain:rafaelmarcos.tech';
 
 function readCredentials() {
   const raw = process.env.GSC_SERVICE_ACCOUNT_JSON;

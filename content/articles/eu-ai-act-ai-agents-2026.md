@@ -7,7 +7,9 @@ tags: ["eu ai act", "ai agents", "ai compliance", "automation", "chatbots", "ai 
 slug: "eu-ai-act-ai-agents-2026"
 author: "Rafael Marcos"
 related: ["ai-agents-vs-traditional-automation", "ai-agents-for-customer-support", "what-is-saas-automation"]
-image: "/assets/articles/eu-ai-act-ai-agents-2026.png"
+image: "/assets/articles/eu-ai-act-ai-agents-2026.webp"
+featured: true
+humanInsight: "Disclosure beats arguing about whether it was obvious."
 ---
 
 AI agents are still software. That sentence is the frame for everything in this article. The EU AI Act does not turn your agent into a strange legal object; it applies to it because it is an AI system or uses a general-purpose AI model, and it asks you to be transparent about it, document it, and think about the risk it creates.
@@ -126,7 +128,7 @@ This distinction matters, so let me be precise. The AI Act's hard logging requir
 - **Article 12** requires high-risk AI systems to technically allow automatic recording of events (logs) over the lifetime of the system, with logging capabilities sufficient for traceability.
 - **Article 72** requires providers of high-risk AI systems to establish a post-market monitoring system and plan, as part of their technical documentation.
 
-A normal chatbot does not automatically carry those obligations. It would be wrong to tell every team building an agent that they must implement high-risk logging. What is true is that observability — the ability to reconstruct what the system did — remains a very good engineering practice for any production system, AI or not. Keep the two ideas separate: one is a legal requirement tied to classification; the other is something you should do anyway because production without observability is guesswork.
+A normal chatbot does not automatically carry those obligations. It would be wrong to tell every team building an agent that they must implement high-risk logging. What is true is that [operational traces and agent observability](/articles/ai-agent-observability/) — the ability to reconstruct what the system did — remain good engineering practice for any production system, AI or not. Keep the two ideas separate: one is a legal requirement tied to classification; the other is something you should do anyway because production without observability is guesswork.
 
 ## Human handoff
 

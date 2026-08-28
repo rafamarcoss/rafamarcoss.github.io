@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Agent Observability: What to Log in Production — Rafael Marcos</title>
+<meta name="description" content="A framework-neutral reference for tracing production AI agents: runs, tool calls, state changes, cost, handoffs and the data you should not retain.">
+<meta name="author" content="Rafael Marcos">
+<meta name="theme-color" content="#F4F5EF">
+<link rel="canonical" href="https://rafaelmarcos.tech/articles/ai-agent-observability/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AI Agent Observability: What to Log in Production">
+<meta property="og:description" content="A framework-neutral reference for tracing production AI agents: runs, tool calls, state changes, cost, handoffs and the data you should not retain.">
+<meta property="og:url" content="https://rafaelmarcos.tech/articles/ai-agent-observability/">
+<meta property="og:site_name" content="Rafael Marcos">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://rafaelmarcos.tech/assets/og/ai-agent-observability.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-08-28">
+<meta property="article:modified_time" content="2026-08-28">
+<meta property="article:author" content="Rafael Marcos">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://rafaelmarcos.tech/assets/og/ai-agent-observability.png">
+<meta name="twitter:title" content="AI Agent Observability: What to Log in Production">
+<meta name="twitter:description" content="A framework-neutral reference for tracing production AI agents: runs, tool calls, state changes, cost, handoffs and the data you should not retain.">
+<link rel="icon" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400..800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","headline":"AI Agent Observability: What to Log in Production","description":"A framework-neutral reference for tracing production AI agents: runs, tool calls, state changes, cost, handoffs and the data you should not retain.","inLanguage":"en","datePublished":"2026-08-28","dateModified":"2026-08-28","mainEntityOfPage":{"@type":"WebPage","@id":"https://rafaelmarcos.tech/articles/ai-agent-observability/"},"author":{"@type":"Person","name":"Rafael Marcos","url":"https://rafaelmarcos.tech/"},"publisher":{"@type":"Person","name":"Rafael Marcos"}}
+</script>
+<link rel="stylesheet" href="/assets/v2.css">
+</head>
+<body>
+<header class="v2-nav">
+    <div class="v2-shell v2-nav-in">
+      <a href="/" class="v2-brand">RafaelMarcos<em>_</em></a>
+      <nav class="v2-links" aria-label="Primary navigation">
+        <a href="/#systems">Systems</a>
+        <a href="/articles/" aria-current="page">Writing</a>
+        <a href="/labs/">Lab</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+      <div class="v2-nav-cta">
+        <a href="mailto:rafaelmarcos2604@gmail.com?subject=Project%20enquiry" class="btn btn-primary">Start a project <span class="arrow">↗</span></a>
+        <button class="v2-menu-toggle" type="button" data-nav-toggle data-label-open="Open menu" data-label-close="Close menu" aria-expanded="false" aria-controls="v2-mobile-nav" aria-label="Open menu">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="v2-mobile-nav" class="v2-mobile" hidden>
+      <a href="/#systems">Systems</a>
+      <a href="/articles/">Writing</a>
+      <a href="/labs/">Lab</a>
+      <a href="/#contact">Contact</a>
+      <div class="sep" role="presentation"></div>
+      <a href="/articles/">Articles</a>
+      <a href="/news/">AI Signal</a>
+      <a href="/copywriting/">Copywriting</a>
+    </div>
+  </header>
+
+<main id="main">
+  <article class="v2-shell" lang="en">
+    <nav class="art-crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/articles/">Articles</a><span>/</span><span>AI Engineering</span></nav>
+    <header class="art-head">
+      <p class="cat-chip">AI Engineering</p>
+      <h1>AI Agent Observability: What to Log in Production</h1>
+      <p class="art-dek">A framework-neutral reference for tracing production AI agents: runs, tool calls, state changes, cost, handoffs and the data you should not retain.</p>
+      <div class="art-meta"><time datetime="2026-08-28">28 August 2026</time><span>·</span><span>13 min read</span><span>·</span><span>Rafael Marcos</span></div>
+      <div class="art-tags"><span>ai agent observability</span><span>agent telemetry</span><span>llm observability</span><span>tracing</span><span>tool calls</span><span>production ai</span></div>
+    </header>
+
+    <aside class="insight" aria-label="Human insight"><span class="k">Human insight</span><p>If you cannot reconstruct why an agent called a tool, what happened next and who stopped it, you have logs, not observability.</p></aside>
+    <div class="art-layout">
+      <div class="prose"><figure class="diagram" aria-label="Trigger to Run and trace to Tools and validation to Outcome or handoff"><div class="diagram-step"><span class="diagram-label">1</span>Trigger</div><div class="diagram-step"><span class="diagram-label">2</span>Run and trace</div><div class="diagram-step"><span class="diagram-label">3</span>Tools and validation</div><div class="diagram-step"><span class="diagram-label">4</span>Outcome or handoff</div></figure><p>An agent that returns a final answer is not necessarily an agent that completed a safe run. It may have chosen the wrong tool, retried an action after a timeout, exhausted a budget, waited for approval or handed a case to a person. A single prompt and response log cannot explain any of that.</p>
+<p>AI agent observability is the ability to reconstruct a business run: what the system attempted, which boundaries applied, what changed outside the model, what failed, what it cost and whether a human became responsible. The useful unit is the run, not the prompt.</p>
+<p>That distinction matters more once an agent can call APIs. A wrong draft can be corrected. A duplicate refund, an overwritten CRM field or an unacknowledged escalation is an operational incident. The record has to follow the work across model calls, tools and state transitions without turning your telemetry store into a copy of every customer interaction.</p>
+<blockquote>Observability does not mean storing everything. It means retaining enough evidence to explain a run safely.</blockquote>
+<h2 id="sec-1">What agent observability needs to answer</h2>
+<p>Before choosing a tracing product or a dashboard, write the questions an operator must answer. They usually fall into three groups.</p>
+<h3>Which business run is this?</h3>
+<p>Every externally meaningful workflow needs a stable <code>run_id</code>: one support case, one report generation, one approval request or one scheduled job. A <code>trace_id</code> then ties together the operations that belong to that run across services. OpenTelemetry defines a trace as a tree of spans, where each span represents one operation; context propagation preserves that relationship across process and network boundaries. <a href="https://opentelemetry.io/docs/specs/otel/trace/api/">Its trace and context documentation</a> is a useful model even when you do not adopt OpenTelemetry directly.</p>
+<p>Record the trigger, timestamps, environment, application version and a privacy-safe correlation key for the business object. A run ID answers “which job?”; a trace ID answers “which connected work happened while that job ran?” Do not use an email address or a raw ticket body as either identifier.</p>
+<h3>What did the agent attempt, and what was it allowed to do?</h3>
+<p>The next question is not “what did the model say?” It is “which action boundary did the system cross?” For each model turn and tool call, an operator should be able to see the agent and instruction version, the selected model, the tool name, the permission scope, the validation result and whether a side effect was requested or committed.</p>
+<p>Tool calls deserve first-class telemetry because they connect probabilistic output to deterministic systems. Keep a tool-call ID and, where possible, the downstream request or idempotency key. Store an argument summary or allowlisted metadata, not an unfiltered request body. A billing lookup might safely retain <code>account_lookup</code> and <code>record_found</code>; it should not copy card data into a trace.</p>
+<h3>Did the workflow finish safely?</h3>
+<p><code>200 OK</code> is not a useful final state for an agent. Use explicit states such as <code>pending</code>, <code>running</code>, <code>waiting_approval</code>, <code>retrying</code>, <code>failed</code>, <code>completed</code> and <code>escalated</code>. Log the transition, its reason and the actor that made it. The operator can then distinguish a model failure from a workflow that correctly stopped at a permission boundary.</p>
+<p>This is especially important for support. A human handoff in a support-agent workflow is not an error path; it is a transfer of ownership. Record the trigger, the context package prepared for the person, acknowledgement and the terminal owner. The implementation pattern is covered in <a href="/articles/ai-agents-for-customer-support/">AI agents for customer support</a>.</p>
+<h2 id="sec-2">The minimum event model for a production agent</h2>
+<p>The lifecycle diagram above is deliberately compact: trigger, run and trace, tools and validation, then outcome or handoff. It provides a shared vocabulary for the events that make a run explainable.</p>
+<h2 id="sec-3">Run and trace identifiers</h2>
+<p>Start an agent run with <code>run_id</code>, <code>trace_id</code>, <code>event_id</code> and <code>parent_event_id</code>. The event ID identifies one immutable record. The parent event ID links an event to the preceding local operation; the trace ID links it to the wider distributed execution. Preserve the trace context across queues and downstream HTTP calls when those calls are part of the same business operation. OpenTelemetry notes that trace and span IDs can correlate logs, traces and metrics across service boundaries, but also warns against accepting untrusted incoming context blindly.</p>
+<p>Add a <code>correlation_key</code> only when it helps the operator locate the related business record. Prefer a hashed or internal reference over a customer identifier. The goal is correlation, not a shadow customer database.</p>
+<h2 id="sec-4">Agent identity, model and versioned instructions</h2>
+<p>Record the agent name, agent version, environment, provider, model identifier and instruction or policy version. These fields make regressions diagnosable: a rise in tool failures after a model or prompt change is actionable; a generic increase in errors is not.</p>
+<p>Do not confuse version metadata with a prompt archive. A version ID is normally enough for routine telemetry when the controlled instruction lives in source control. Capture a reviewed snapshot only for a bounded incident workflow, with a stated retention rule and access control.</p>
+<h2 id="sec-5">Tool calls, permissions and action boundaries</h2>
+<p>For every tool action, capture:</p>
+<ul><li>Tool name and <code>tool_call_id</code>.</li><li>Allowed scope or permission decision.</li><li>Whether the operation is read-only, proposed, approved or committed.</li><li>Start and end timestamps, duration and outcome category.</li><li>An idempotency or external request reference when one exists.</li><li>Redacted input and output summaries that explain the action without storing the payload.</li></ul>
+<p>An agent may call <code>create_refund</code>, but the observability event should still show whether a policy denied it, whether a human approved it and whether the payment provider accepted the request. This separates a decision from an external side effect.</p>
+<h2 id="sec-6">Latency, token usage, cost and rate-limit state</h2>
+<p>Cost is part of observability because retries and fallback loops are execution behaviour. At the run and model-call levels, record duration, input/output token usage where the provider exposes it, the model/provider identifier, rate-limit state and a normalised cost field if your billing data supports it. Avoid hard-coding volatile public price tables into application logs.</p>
+<p>Use budgets as state transitions, not just charts. <code>budget_warning</code>, <code>budget_exhausted</code> and <code>fallback_selected</code> explain why a run slowed down, stopped or changed model. Alert on sustained changes in retry rate, tool failure rate, handoff rate and cost per successful outcome; a dashboard full of token totals alone is mostly decoration.</p>
+<h2 id="sec-7">Errors, retries, fallbacks and terminal state</h2>
+<p>An error event needs an error class, a safe message, retry count, retry policy and final disposition. “Provider timeout” and “tool validation denied” belong in different operational buckets. Pair a retry with the original operation through a parent event, idempotency key or explicit <code>retry_of_event_id</code> so an operator can see whether a retry risks duplicate work.</p>
+<p>The public RafaOps system is a small, bounded example of this principle. Its published run record contains task, role, model, attempt status, duration and usage data, while its monitor keeps separate checks, incidents and recovery decisions. See <a href="/rafaops/">a public example of run evidence</a>. It is evidence of that system's scheduled publishing workflow, not a claim about customer-agent production traffic.</p>
+<h2 id="sec-8">Human handoff and approval events</h2>
+<p>Handoff needs its own events: <code>handoff_requested</code>, <code>handoff_prepared</code>, <code>handoff_acknowledged</code> and <code>handoff_completed</code> are more useful than a single boolean. Include the reason code, destination queue or role, the summary reference delivered to the person and whether the agent is paused. Do not log the full conversation again just to prove the handoff happened.</p>
+<p>For approval gates, distinguish <code>action_proposed</code> from <code>action_approved</code> and <code>action_committed</code>. That gap is where a human can reject an unsafe action without the trace pretending that the action succeeded.</p>
+<h2 id="sec-9">What not to log</h2>
+<p>The easiest observability failure is collecting more data than anyone can protect or use. A production schema needs explicit exclusions as much as it needs fields.</p>
+<h3>Sensitive payloads and data minimisation</h3>
+<p>Do not write credentials, access tokens, passwords, connection strings, encryption keys or raw sensitive personal data to ordinary logs. OWASP's <a href="https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html">Logging Cheat Sheet</a> recommends masking, sanitising, hashing or encrypting sensitive values when they are needed for correlation, and protecting log data from unauthorised access and tampering.</p>
+<p>For personal data, start with purpose. The GDPR's Article 5 requires data to be adequate, relevant and limited to what is necessary, and not retained in identifiable form longer than necessary for that purpose. This is an engineering constraint, not legal advice: define retention by event class, redact before export and restrict access by role. The distinction between operational telemetry and high-risk AI-system record-keeping is covered in <a href="/articles/eu-ai-act-ai-agents-2026/">logging versus regulatory record-keeping</a>.</p>
+<h3>Prompt snapshots without hidden reasoning</h3>
+<p>Do not store hidden chain-of-thought. It is neither required to explain an external action nor a safe default telemetry field. Record observable inputs, tool selection, retrieved document IDs, policy decisions and final outputs or summaries when needed. Those are testable system behaviours.</p>
+<p>Even prompt and tool payload capture should be opt-in. The OpenAI Agents SDK, for example, documents that generation and function spans may contain sensitive inputs and outputs, and provides a setting to exclude that data while retaining tracing structure. Treat this as the default architecture: spans and events can be useful without storing their content.</p>
+<h3>Retention, redaction and access control</h3>
+<p>Implement redaction at the producer, not as a best-effort clean-up after export. Make a small allowlist for fields that can leave the service. Tag events with <code>payload_redacted</code> and <code>pii_detected</code> where your detection pipeline is reliable enough to do so; do not claim that a flag makes raw data safe.</p>
+<p>Set a retention period per data class. Keep short-lived debugging detail separate from durable aggregate metrics. Give operators the least access needed to investigate a run, and audit access to high-sensitivity stores. Unlimited trace retention is an operational liability, not a sign of maturity.</p>
+<h2 id="sec-10">A practical event schema for AI agents</h2>
+<p>The <a href="/assets/resources/ai-agent-event-schema.json">AI Agent Event Schema</a> is a framework-neutral JSON Schema and example event. It is a practical reference, not an industry standard and not a substitute for provider-specific semantic conventions. It is designed so a team can map its own tracing backend or structured logger onto a minimum event record.</p>
+<div class="table-wrap"><table><thead><tr><th>Field group</th><th>Capture</th><th>Privacy rule</th></tr></thead><tbody><tr><td>Identity</td><td><code>schema_version</code>, event and run IDs, timestamps</td><td>IDs must not embed personal data</td></tr><tr><td>Execution</td><td>agent, instruction version, provider, model, state</td><td>Version IDs, not prompt dumps</td></tr><tr><td>Tool boundary</td><td>tool name, call ID, permission, action state</td><td>Summaries or allowlisted metadata only</td></tr><tr><td>Outcome</td><td>status, error category, duration, retry relation</td><td>Safe error messages; no secrets</td></tr><tr><td>Usage</td><td>token counts, normalised cost, rate-limit state</td><td>Aggregate where individual detail is unnecessary</td></tr><tr><td>Handoff</td><td>reason, destination role, acknowledgement</td><td>Reference a secured context package</td></tr><tr><td>Privacy</td><td><code>payload_redacted</code>, <code>pii_detected</code>, retention class</td><td>Never use flags as permission to retain payloads</td></tr></tbody></table></div>
+<p>Here is the useful shape of a single event, in plain language: an <code>agent.turn.completed</code> event belongs to a run and trace, names the agent/model/instruction revision, reports duration and usage, references its parent event and records a redacted output summary. A <code>tool.call.completed</code> child event then names the tool, permission outcome, external request reference and status. The trace tree answers the sequence; the event fields answer the operational detail.</p>
+<p>If a tool calls an external API, attach a safe downstream reference such as a hashed request ID or idempotency key. Do not copy the entire API request and response into the event merely because they are available. The schema includes <code>input_summary</code>, <code>output_summary</code> and <code>payload_redacted</code> for exactly this reason.</p>
+<h2 id="sec-11">Failure modes observability should expose</h2>
+<div class="table-wrap"><table><thead><tr><th>Failure mode</th><th>Evidence to inspect</th><th>Operator action</th></tr></thead><tbody><tr><td>Wrong tool selected</td><td>agent version, tool name, permission decision, validation result</td><td>Review routing or tool descriptions; keep the boundary closed</td></tr><tr><td>Retry creates duplicate work</td><td>retry relation, idempotency key, external request reference</td><td>Stop retries until the downstream outcome is known</td></tr><tr><td>Provider timeout or fallback</td><td>error class, duration, retry count, fallback state</td><td>Check provider health and budget; compare success after fallback</td></tr><tr><td>Approval gate blocks action</td><td>proposed action, approver role, decision reason</td><td>Resolve the business decision without marking the run failed</td></tr><tr><td>Human takes over</td><td>handoff reason, destination, acknowledgement, final owner</td><td>Confirm the person received enough context and the agent is paused</td></tr></tbody></table></div>
+<p>The table is intentionally about decisions rather than vendors. An observability system is useful when it shortens the route from “something looks wrong” to a safe next action.</p>
+<h2 id="sec-12">From traces to operational decisions</h2>
+<p>A small project can start with structured JSON events, a persistent run store and one view that groups events by <code>run_id</code>. Add alerts only for conditions that somebody can act on: a run stuck in <code>waiting_approval</code>, a failed side-effecting tool call, a duplicate-risk retry, a rising fallback rate or a budget threshold.</p>
+<p>A growing SaaS system usually needs trace storage with propagated context, separate aggregate metrics, access-controlled detailed events and a clear incident path. It does not need every model message indexed forever. OpenTelemetry's common vocabulary can make cross-service correlation easier; provider tracing can add useful agent-specific spans. Choose the storage and exporter that fit your data boundary rather than choosing a vendor because its dashboard looks complete.</p>
+<p>Useful operational questions include:</p>
+<ul><li>Which tool is failing by action type and version?</li><li>Which retries are safe, and which can create duplicate side effects?</li><li>Are handoffs increasing after a policy, model or instruction change?</li><li>Which model path has the highest cost per completed business outcome?</li><li>Which runs stopped intentionally at a permission or approval boundary?</li></ul>
+<p>These questions produce engineering work. “How many tokens did we use this month?” may be worth tracking, but it is not enough to operate a tool-using agent.</p>
+<h2 id="sec-13">Checklist before shipping</h2>
+<ul><li>Every business workflow has a <code>run_id</code> and terminal state.</li><li>Trace context reaches model calls, tools and downstream requests where it is safe to propagate.</li><li>Tool events include permission and side-effect state, not only a result string.</li><li>Retries link back to the original action and respect idempotency.</li><li>Error categories, fallback decisions and budgets are observable.</li><li>Human handoff records trigger, acknowledgement and final ownership.</li><li>Raw secrets, credentials, hidden reasoning and unnecessary payloads are excluded.</li><li>Redaction, retention and access rules are defined before telemetry leaves the service.</li><li>Alerts map to an operator action, not a vanity metric.</li><li>A test run can be reconstructed without reading a complete customer conversation.</li></ul>
+<h2 id="sec-14">Final perspective</h2>
+<p>AI agents are still software, but probabilistic choices and external actions increase the context needed to understand a failure. A good telemetry model makes a run explainable without retaining every piece of data the run touched.</p>
+<p>For AI and infrastructure teams, that operational detail also needs to be explained accurately to technical buyers. I write <a href="/copywriting/">technical content for AI infrastructure products</a> from the same source-first, system-aware perspective.</p>
+<h2 id="sec-15">Sources</h2>
+<ul><li><a href="https://opentelemetry.io/docs/specs/otel/trace/api/">OpenTelemetry: Tracing API</a> and <a href="https://opentelemetry.io/docs/concepts/context-propagation/">context propagation</a> for trace, span and correlation concepts.</li><li><a href="https://openai.github.io/openai-agents-js/guides/tracing/">OpenAI Agents SDK: tracing</a> for current agent, tool, guardrail and handoff tracing examples, including sensitive-data controls.</li><li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html">OWASP Logging Cheat Sheet</a> for secure log-data handling.</li><li><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A02016R0679-20160504">GDPR, Article 5</a> for data-minimisation and storage-limitation principles.</li></ul></div>
+      <aside class="art-rail"><div class="rail-card"><h3>On this page</h3><nav class="toc" aria-label="Table of contents"><a href="#sec-1">What agent observability needs to answer</a><a href="#sec-2">The minimum event model for a production agent</a><a href="#sec-3">Run and trace identifiers</a><a href="#sec-4">Agent identity, model and versioned instructions</a><a href="#sec-5">Tool calls, permissions and action boundaries</a><a href="#sec-6">Latency, token usage, cost and rate-limit state</a><a href="#sec-7">Errors, retries, fallbacks and terminal state</a><a href="#sec-8">Human handoff and approval events</a><a href="#sec-9">What not to log</a><a href="#sec-10">A practical event schema for AI agents</a><a href="#sec-11">Failure modes observability should expose</a><a href="#sec-12">From traces to operational decisions</a><a href="#sec-13">Checklist before shipping</a><a href="#sec-14">Final perspective</a><a href="#sec-15">Sources</a></nav></div><div class="rail-card"><h3>Continue reading</h3><div class="rel-list"><a href="/articles/ai-agents-vs-traditional-automation/">AI Agents vs Traditional Automation: What's the Difference?</a><a href="/articles/ai-agents-for-customer-support/">AI Agents for Customer Support: How They Work and When to Use Them</a><a href="/articles/eu-ai-act-ai-agents-2026/">EU AI Act for AI Agents: What Developers and Businesses Need to Change in 2026</a></div></div></aside>
+    </div>
+    <section class="cta-band">
+      <div>
+        <h2>Need technical content that actually understands the product?</h2>
+        <p>I write SEO content for SaaS, AI and automation companies — grounded in how the tech actually works.</p>
+      </div>
+      <a class="btn" href="/copywriting/">Technical SEO content <span class="arrow">↗</span></a>
+    </section>
+  </article>
+</main>
+
+<footer class="v2-shell v2-footer">
+    <span>© 2026 Rafael Marcos Serrano</span>
+    <nav aria-label="Footer links">
+      <a href="https://linkedin.com/in/rafael-marcos-serrano" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/rafamarcoss" target="_blank" rel="noopener">GitHub</a>
+      <a href="/articles/">Articles</a>
+      <a href="/news/">News</a>
+      <a href="/copywriting/">Copywriting</a>
+      <a href="/rafaops/">RafaOps</a>
+      <a href="/labs/">Lab</a>
+      <a href="/upwork-match/">Opportunity Match</a>
+    </nav>
+  </footer>
+<script src="/assets/v2.js"></script>
+</body>
+</html>

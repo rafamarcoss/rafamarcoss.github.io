@@ -1,281 +1,53 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="RafaOps: control plane agentic para monitorizar, diagnosticar y recuperar las automatizaciones de Rafael Marcos.">
-  <meta name="theme-color" content="#071315">
-  <link rel="canonical" href="https://rafaelmarcos.tech/rafaops/">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="RafaOps — Agentic control plane">
-  <meta property="og:description" content="Operational monitoring, incident evidence and bounded recovery for Rafael Marcos' automations.">
-  <meta property="og:url" content="https://rafaelmarcos.tech/rafaops/">
-  <meta property="og:image" content="https://rafaelmarcos.tech/assets/og/portfolio-automation.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://rafaelmarcos.tech/assets/og/portfolio-automation.png">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"RafaOps — Agentic control plane","url":"https://rafaelmarcos.tech/rafaops/","description":"Operational monitoring and bounded recovery for Rafael Marcos' automations."}</script>
-  <title>RafaOps — Agentic control plane</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@500..800&display=swap" rel="stylesheet">
-  <style>
-    *,*::before,*::after{box-sizing:border-box}*{margin:0;padding:0}
-    :root{--night:#071315;--night-2:#0c2022;--panel:rgba(13,35,37,.78);--panel-solid:#0d2325;--paper:#eef5ed;--muted:#90a7a5;--line:rgba(207,237,225,.12);--mint:#9ae6b4;--teal:#43c4bc;--blue:#6e9cff;--orange:#ff9c65;--red:#ff6b6b;--display:'Plus Jakarta Sans',sans-serif;--body:'Inter',sans-serif;--mono:'JetBrains Mono',monospace;--site-nav-bg:rgba(7,19,21,.88);--site-nav-ink:#eef5ed;--site-nav-muted:#90a7a5;--site-nav-line:rgba(207,237,225,.16);--site-nav-accent:#43c4bc}
-    html{scroll-behavior:smooth;background:var(--night)}
-    body{min-height:100vh;color:var(--paper);font-family:var(--body);background:radial-gradient(circle at 12% 4%,rgba(67,196,188,.15),transparent 28rem),radial-gradient(circle at 92% 18%,rgba(110,156,255,.12),transparent 31rem),var(--night);overflow-x:hidden}
-    body::before{content:'';position:fixed;inset:0;pointer-events:none;opacity:.38;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(#000,transparent 85%)}
-    a{color:inherit;text-decoration:none}button{font:inherit}.shell{width:min(1240px,calc(100% - 2rem));margin-inline:auto}.mono{font-family:var(--mono)}
-    nav{position:relative;z-index:3;display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:82px;border-bottom:1px solid var(--line)}
-    .brand{display:flex;align-items:center;gap:.75rem;font:800 1rem var(--display);letter-spacing:-.03em}.brand-mark{width:43px;height:43px;display:grid;place-items:center;border:1px solid rgba(154,230,180,.35);border-radius:14px;background:rgba(154,230,180,.09);color:var(--mint);font:700 .7rem var(--mono);box-shadow:inset 0 0 24px rgba(154,230,180,.07)}
-    .nav-actions{display:flex;align-items:center;gap:.6rem}.nav-link,.lang{border:1px solid var(--line);border-radius:999px;background:rgba(13,35,37,.62);color:var(--muted);font:700 .7rem var(--mono)}.nav-link{padding:.7rem 1rem}.lang{display:flex;padding:3px}.lang button{min-width:38px;padding:.45rem;border:0;border-radius:999px;background:transparent;color:var(--muted);cursor:pointer}.lang button[aria-pressed="true"]{background:var(--paper);color:var(--night)}
-    header{position:relative;z-index:1;padding:clamp(4rem,9vw,8rem) 0 3rem}.eyebrow{display:flex;align-items:center;gap:.7rem;color:var(--teal);font:700 .72rem var(--mono);letter-spacing:.14em;text-transform:uppercase}.eyebrow::before{content:'';width:34px;height:1px;background:var(--teal)}
-    h1{max-width:1000px;margin-top:1rem;font:800 clamp(3.3rem,8.7vw,8rem)/.9 var(--display);letter-spacing:-.075em}.gradient{color:transparent;background:linear-gradient(100deg,var(--mint),var(--teal),var(--blue));background-clip:text}.hero-bottom{display:flex;align-items:end;justify-content:space-between;gap:2rem;margin-top:2rem}.lead{max-width:680px;color:var(--muted);font-size:clamp(1rem,1.8vw,1.22rem);line-height:1.7}.live{display:flex;align-items:center;gap:.7rem;padding:.8rem 1rem;border:1px solid var(--line);border-radius:999px;background:rgba(13,35,37,.75);white-space:nowrap;font:700 .7rem var(--mono)}.live-dot{width:9px;height:9px;border-radius:50%;background:var(--muted)}.live.operational .live-dot{background:var(--mint);box-shadow:0 0 0 6px rgba(154,230,180,.1);animation:pulse 1.8s infinite}.live.incident .live-dot{background:var(--red);box-shadow:0 0 0 6px rgba(255,107,107,.1)}@keyframes pulse{50%{box-shadow:0 0 0 10px rgba(154,230,180,0)}}
-    main{position:relative;z-index:1;padding-bottom:6rem}.metrics{display:grid;grid-template-columns:repeat(5,1fr);gap:.75rem}.metric{min-height:150px;padding:1.2rem;border:1px solid var(--line);border-radius:24px;background:var(--panel);backdrop-filter:blur(18px)}.metric-label{color:var(--muted);font:700 .66rem var(--mono);letter-spacing:.08em;text-transform:uppercase}.metric-value{display:block;margin-top:1rem;font:750 clamp(2rem,4vw,3.2rem)/1 var(--display);letter-spacing:-.07em}.metric-foot{display:block;margin-top:.7rem;color:var(--muted);font-size:.72rem}
-    .grid{display:grid;grid-template-columns:1.5fr .85fr;gap:1rem;margin-top:1rem}.panel{border:1px solid var(--line);border-radius:28px;background:var(--panel);backdrop-filter:blur(18px);overflow:hidden}.panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;padding:1.35rem 1.45rem;border-bottom:1px solid var(--line)}.panel-kicker{color:var(--teal);font:700 .64rem var(--mono);letter-spacing:.1em;text-transform:uppercase}.panel h2{margin-top:.32rem;font:750 1.25rem var(--display);letter-spacing:-.035em}.panel-note{max-width:310px;color:var(--muted);font-size:.73rem;line-height:1.5;text-align:right}
-    .pipeline{display:flex;align-items:stretch;gap:.45rem;padding:1.5rem;overflow-x:auto}.step{position:relative;min-width:132px;flex:1;padding:1rem;border:1px solid var(--line);border-radius:18px;background:rgba(5,18,19,.55)}.step:not(:last-child)::after{content:'→';position:absolute;right:-.48rem;top:50%;z-index:2;width:.52rem;color:var(--teal);background:var(--night);font:700 .7rem var(--mono);text-align:center}.step-index{display:flex;align-items:center;justify-content:space-between;color:var(--muted);font:700 .6rem var(--mono);text-transform:uppercase}.step-light{width:7px;height:7px;border-radius:50%;background:var(--muted)}.step.healthy .step-light{background:var(--mint);box-shadow:0 0 10px rgba(154,230,180,.7)}.step.failed{border-color:rgba(255,107,107,.45)}.step.failed .step-light{background:var(--red)}.step-name{margin-top:1.5rem;font:700 .84rem/1.25 var(--display)}.step-model{display:block;min-height:2em;margin-top:.55rem;color:var(--muted);font:500 .58rem/1.4 var(--mono);overflow-wrap:anywhere}
-    .checks{display:grid;padding:.45rem 1rem 1rem}.check{display:grid;grid-template-columns:auto 1fr auto;gap:.8rem;align-items:center;padding:.95rem .35rem;border-bottom:1px solid var(--line)}.check:last-child{border-bottom:0}.check-icon{width:34px;height:34px;display:grid;place-items:center;border-radius:11px;background:rgba(144,167,165,.09);color:var(--muted);font:700 .65rem var(--mono)}.check.healthy .check-icon{color:var(--mint);background:rgba(154,230,180,.09)}.check.failed .check-icon{color:var(--red);background:rgba(255,107,107,.09)}.check-title{font-size:.8rem;font-weight:750}.check-detail{margin-top:.25rem;color:var(--muted);font-size:.67rem}.check-latency{color:var(--muted);font:500 .62rem var(--mono)}
-    .routing{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem;padding:1.4rem}.route{position:relative;padding:1.1rem;border:1px solid var(--line);border-radius:19px;background:rgba(5,18,19,.48)}.route:not(:last-child)::after{content:'→';position:absolute;right:-.55rem;top:50%;z-index:2;color:var(--orange);font:700 .72rem var(--mono)}.route-role{color:var(--orange);font:700 .6rem var(--mono);letter-spacing:.08em;text-transform:uppercase}.route-model{display:block;margin-top:.7rem;font:700 .84rem/1.35 var(--display);overflow-wrap:anywhere}.policy{padding:0 1.4rem 1.4rem;color:var(--muted);font:.66rem/1.5 var(--mono)}
-    .incidents,.runs{padding:.5rem 1.2rem 1.2rem}.incident,.run{display:grid;grid-template-columns:auto 1fr auto;gap:.8rem;align-items:start;padding:1rem .25rem;border-bottom:1px solid var(--line)}.incident:last-child,.run:last-child{border-bottom:0}.incident-mark{width:9px;height:9px;margin-top:.35rem;border-radius:50%;background:var(--orange)}.incident.resolved .incident-mark{background:var(--mint)}.item-title{font-size:.8rem;font-weight:750}.item-detail{margin-top:.3rem;color:var(--muted);font-size:.67rem;line-height:1.45}.item-time{color:var(--muted);font:500 .6rem var(--mono);white-space:nowrap}.empty{padding:2rem .25rem;color:var(--muted);font-size:.78rem}.empty strong{display:block;margin-bottom:.45rem;color:var(--paper);font-family:var(--display)}
-    .architecture{grid-column:1/-1;display:grid;grid-template-columns:1fr 1.3fr}.architecture-copy{padding:clamp(1.5rem,4vw,3rem);border-right:1px solid var(--line)}.architecture-copy h2{font-size:clamp(1.8rem,4vw,3.5rem);line-height:1;letter-spacing:-.06em}.architecture-copy p{max-width:54ch;margin-top:1rem;color:var(--muted);line-height:1.7}.guardrails{display:grid;grid-template-columns:repeat(2,1fr);gap:.75rem;padding:1.4rem}.guardrail{padding:1.2rem;border:1px solid var(--line);border-radius:19px;background:rgba(5,18,19,.45)}.guardrail code{color:var(--teal);font:700 .62rem var(--mono)}.guardrail h3{margin-top:.7rem;font:700 .92rem var(--display)}.guardrail p{margin-top:.45rem;color:var(--muted);font-size:.72rem;line-height:1.5}
-    footer{position:relative;z-index:1;display:flex;justify-content:space-between;gap:1rem;padding:1.5rem 0 2rem;border-top:1px solid var(--line);color:var(--muted);font-size:.7rem}.loading{animation:blink 1.3s infinite}@keyframes blink{50%{opacity:.35}}
-    @media(max-width:980px){.metrics{grid-template-columns:repeat(3,1fr)}.grid{grid-template-columns:1fr}.architecture{grid-template-columns:1fr}.architecture-copy{border-right:0;border-bottom:1px solid var(--line)}}
-    @media(max-width:640px){.shell{width:min(100% - 1rem,1240px)}.nav-link{display:none}.hero-bottom{align-items:flex-start;flex-direction:column}.metrics{grid-template-columns:repeat(2,1fr)}.metric:last-child{grid-column:1/-1}.pipeline{padding:1rem}.routing{grid-template-columns:1fr}.route:not(:last-child)::after{content:'↓';right:50%;top:auto;bottom:-.65rem}.guardrails{grid-template-columns:1fr}.panel-head{flex-direction:column}.panel-note{text-align:left}.architecture-copy{padding:1.4rem}footer{flex-direction:column}}
-    .pipeline{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));overflow:visible}.step{min-width:0;flex:initial}
-    @media(max-width:640px){.pipeline{grid-template-columns:repeat(2,minmax(0,1fr))}}
-    .vm-board{padding:1.2rem}.vm-summary{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.25rem .2rem 1rem}.vm-identity{display:flex;align-items:center;gap:.7rem}.vm-icon{width:42px;height:42px;display:grid;place-items:center;border:1px solid rgba(110,156,255,.24);border-radius:13px;color:var(--blue);background:rgba(110,156,255,.08);font:700 .62rem var(--mono)}.vm-name{font:700 .9rem var(--display)}.vm-heartbeat{display:block;margin-top:.25rem;color:var(--muted);font:500 .62rem var(--mono)}.vm-state{padding:.42rem .62rem;border:1px solid rgba(154,230,180,.22);border-radius:999px;color:var(--mint);font:700 .58rem var(--mono);text-transform:uppercase}.vm-state.stale,.vm-state.incident{border-color:rgba(255,107,107,.28);color:var(--red)}.vm-resources{display:grid;grid-template-columns:repeat(3,1fr);gap:.55rem;margin-bottom:.8rem}.resource{padding:.85rem;border:1px solid var(--line);border-radius:15px;background:rgba(5,18,19,.42)}.resource-label{color:var(--muted);font:700 .57rem var(--mono);text-transform:uppercase}.resource-value{display:block;margin-top:.5rem;font:700 1rem var(--display)}.resource-track{height:4px;margin-top:.65rem;border-radius:99px;background:rgba(144,167,165,.12);overflow:hidden}.resource-fill{height:100%;border-radius:inherit;background:linear-gradient(90deg,var(--teal),var(--blue))}.vm-services{display:grid}.vm-services .check{padding:.72rem .2rem}.vm-services .check-icon{width:30px;height:30px}.vm-unavailable{padding:2rem .2rem;color:var(--muted);font-size:.76rem}@media(max-width:520px){.vm-resources{grid-template-columns:1fr}.vm-summary{align-items:flex-start}.vm-state{white-space:nowrap}}
-    .agent-board{padding:1.25rem}.agent-summary{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:1rem}.agent-mark{width:46px;height:46px;display:grid;place-items:center;border:1px solid rgba(255,156,101,.25);border-radius:14px;color:var(--orange);background:rgba(255,156,101,.08);font:700 .62rem var(--mono)}.agent-title{font:750 .95rem var(--display)}.agent-meta{display:block;margin-top:.3rem;color:var(--muted);font:500 .62rem var(--mono)}.agent-score{font:750 1.7rem var(--display);letter-spacing:-.06em}.agent-score small{color:var(--muted);font:500 .62rem var(--mono)}.agent-progress{height:7px;margin-top:1.1rem;border-radius:99px;background:rgba(144,167,165,.12);overflow:hidden}.agent-progress span{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,var(--orange),var(--mint))}.agent-copy{margin-top:1rem;color:var(--muted);font-size:.73rem;line-height:1.55}.agent-footer{display:flex;justify-content:space-between;gap:1rem;margin-top:1rem;padding-top:1rem;border-top:1px solid var(--line);color:var(--muted);font:500 .6rem var(--mono)}@media(max-width:520px){.agent-summary{grid-template-columns:auto 1fr}.agent-score{grid-column:1/-1}.agent-footer{flex-direction:column}}
-  </style>
-  <link rel="stylesheet" href="/assets/site-nav.css">
-</head>
-<body>
-  <nav class="site-nav" data-site-nav aria-label="Primary navigation"><a class="site-brand" href="/"><span class="site-brand-mark">RM</span><span>Rafael Marcos</span></a><div class="site-nav-links"><a href="/#services" data-site-nav-i18n="services">Servicios</a><a href="/#projects" data-site-nav-i18n="work">Proyectos</a><a href="/articles/" data-site-nav-i18n="articles">Artículos</a><a href="/news/" data-site-nav-i18n="news">Noticias</a><a href="/copywriting/" data-site-nav-i18n="copywriting">Copywriting</a><a href="/#about" data-site-nav-i18n="about">Sobre mí</a><a href="/#contact" data-site-nav-i18n="contact">Contacto</a></div><div class="site-nav-controls"><div class="site-lang" role="group" aria-label="Language selector"><button type="button" data-site-nav-lang="es" aria-pressed="true">ES</button><button type="button" data-site-nav-lang="en" aria-pressed="false">EN</button></div><a class="site-nav-cta" href="/#contact" data-site-nav-i18n="cta">Hablemos ↗</a><button class="site-mobile-toggle" type="button" data-site-nav-toggle aria-expanded="false" aria-controls="site-mobile-menu" aria-label="Abrir menú">☰</button></div><div class="site-mobile-menu" id="site-mobile-menu" data-site-mobile-menu data-open="false"><div class="site-mobile-links"><a href="/#services" data-site-nav-i18n="services">Servicios</a><a href="/#projects" data-site-nav-i18n="work">Proyectos</a><a href="/articles/" data-site-nav-i18n="articles">Artículos</a><a href="/news/" data-site-nav-i18n="news">Noticias</a><a href="/copywriting/" data-site-nav-i18n="copywriting">Copywriting</a><a href="/#about" data-site-nav-i18n="about">Sobre mí</a><a href="/#contact" data-site-nav-i18n="contact">Contacto</a></div><a class="site-nav-cta" href="/#contact" data-site-nav-i18n="cta">Hablemos ↗</a></div></nav>
-
-  <header class="shell">
-    <p class="eyebrow" data-i18n="eyebrow">Agentic operations control plane</p>
-    <h1><span data-i18n="heroA">Sistemas que fallan.</span><br><span class="gradient" data-i18n="heroB">Agentes que responden.</span></h1>
-    <div class="hero-bottom">
-      <p class="lead" data-i18n="lead">RafaOps vigila mis automatizaciones reales, reúne evidencias, supervisa reintentos y cambia de modelo cuando una ejecución no supera la validación.</p>
-      <div id="live" class="live"><span class="live-dot"></span><span id="live-copy" class="loading">Conectando…</span></div>
+<!doctype html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="RafaOps is an agentic control plane for monitoring, diagnosing and recovering Rafael Marcos’ automations."><meta name="theme-color" content="#F4F5EF">
+<link rel="canonical" href="https://rafaelmarcos.tech/rafaops/"><meta property="og:type" content="website"><meta property="og:title" content="RafaOps — Agentic control plane"><meta property="og:description" content="RafaOps is an agentic control plane for monitoring, diagnosing and recovering Rafael Marcos’ automations."><meta property="og:url" content="https://rafaelmarcos.tech/rafaops/"><meta property="og:locale" content="en_US"><meta property="og:image" content="https://rafaelmarcos.tech/assets/og/portfolio-automation.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="RafaOps — Agentic control plane"><meta name="twitter:description" content="RafaOps is an agentic control plane for monitoring, diagnosing and recovering Rafael Marcos’ automations."><meta name="twitter:image" content="https://rafaelmarcos.tech/assets/og/portfolio-automation.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"RafaOps — Agentic control plane","inLanguage":"en","url":"https://rafaelmarcos.tech/rafaops/","description":"Operational monitoring and bounded recovery for Rafael Marcos’ automations."}</script>
+<title>RafaOps — Agentic control plane</title><link rel="icon" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400..800&display=swap" rel="stylesheet"><link rel="stylesheet" href="/assets/v2.css">
+</head><body><a class="skip-link" href="#main">Skip to content</a><header class="v2-nav">
+    <div class="v2-shell v2-nav-in">
+      <a href="/" class="v2-brand">RafaelMarcos<em>_</em></a>
+      <nav class="v2-links" aria-label="Primary navigation">
+        <a href="/#systems" aria-current="page">Systems</a>
+        <a href="/articles/">Writing</a>
+        <a href="/labs/">Lab</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+      <div class="v2-nav-cta">
+        <a href="mailto:rafaelmarcos2604@gmail.com?subject=Project%20enquiry" class="btn btn-primary">Start a project <span class="arrow">↗</span></a>
+        <button class="v2-menu-toggle" type="button" data-nav-toggle data-label-open="Open menu" data-label-close="Close menu" aria-expanded="false" aria-controls="v2-mobile-nav" aria-label="Open menu">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
     </div>
-  </header>
-
-  <main class="shell">
-    <section class="metrics" aria-label="Operational metrics">
-      <article class="metric"><span class="metric-label" data-i18n="availability">Disponibilidad</span><strong id="availability" class="metric-value">—</strong><span class="metric-foot" data-i18n="realChecks">comprobaciones reales</span></article>
-      <article class="metric"><span class="metric-label" data-i18n="healthy">Checks correctos</span><strong id="healthy" class="metric-value">—</strong><span id="healthy-foot" class="metric-foot">—</span></article>
-      <article class="metric"><span class="metric-label" data-i18n="incidents">Incidentes abiertos</span><strong id="open-incidents" class="metric-value">—</strong><span class="metric-foot" data-i18n="humanGate">con aprobación humana</span></article>
-      <article class="metric"><span class="metric-label" data-i18n="recoveries">Recuperaciones</span><strong id="recoveries" class="metric-value">—</strong><span class="metric-foot" data-i18n="supervised">supervisadas por otro agente</span></article>
-      <article class="metric"><span class="metric-label" data-i18n="lastRun">Última ejecución</span><strong id="duration" class="metric-value">—</strong><span id="updated" class="metric-foot">—</span></article>
-    </section>
-
-    <section class="grid">
-      <article class="panel">
-        <div class="panel-head"><div><span class="panel-kicker">AI Signal / production</span><h2 data-i18n="pipeline">Pipeline agentic</h2></div><p class="panel-note" data-i18n="pipelineNote">Cada bloque tiene estado, modelo, validación y estrategia de recuperación.</p></div>
-        <div id="pipeline" class="pipeline"><span class="loading">Cargando pipeline…</span></div>
-      </article>
-
-      <article class="panel">
-        <div class="panel-head"><div><span class="panel-kicker">Health probes</span><h2 data-i18n="systems">Sistemas vigilados</h2></div><p class="panel-note" data-i18n="refresh">Actualización automática.</p></div>
-        <div id="checks" class="checks"><span class="empty loading">Comprobando servicios…</span></div>
-      </article>
-
-      <article class="panel">
-        <div class="panel-head"><div><span class="panel-kicker">VM / outbound heartbeat</span><h2 data-i18n="vmTitle">Máquina automatizacion</h2></div><p class="panel-note" data-i18n="vmNote">Telemetría enviada desde Ubuntu sin exponer puertos.</p></div>
-        <div id="vm-board" class="vm-board"><div class="vm-unavailable loading">Esperando heartbeat de la VM…</div></div>
-      </article>
-
-      <article class="panel">
-        <div class="panel-head"><div><span class="panel-kicker">DeepSeek → Orca → Codex</span><h2 data-i18n="nightTitle">Agente nocturno</h2></div><p class="panel-note" data-i18n="nightNote">Itera con tests y deja el resultado listo para revisión humana.</p></div>
-        <div id="agent-board" class="agent-board"><div class="vm-unavailable loading">Esperando una ejecución…</div></div>
-      </article>
-
-      <article class="panel">
-        <div class="panel-head"><div><span class="panel-kicker">Recovery policy</span><h2 data-i18n="routing">Enrutamiento de modelos</h2></div><p class="panel-note" data-i18n="routingNote">El modelo caro entra donde aporta razonamiento.</p></div>
-        <div id="routing" class="routing"></div>
-        <p id="policy" class="policy">—</p>
-      </article>
-
-      <article class="panel">
-        <div class="panel-head"><div><span class="panel-kicker">Incident ledger</span><h2 data-i18n="incidentHistory">Historial de incidentes</h2></div><p class="panel-note" data-i18n="incidentNote">Detección, recuperación y cierre trazables.</p></div>
-        <div id="incident-list" class="incidents"></div>
-      </article>
-
-      <article class="panel">
-        <div class="panel-head"><div><span class="panel-kicker">Run ledger</span><h2 data-i18n="runs">Últimas rondas</h2></div><p class="panel-note" data-i18n="runsNote">GitHub Actions y ejecuciones manuales.</p></div>
-        <div id="run-list" class="runs"></div>
-      </article>
-
-      <article class="panel architecture">
-        <div class="architecture-copy">
-          <span class="panel-kicker">Built in public</span>
-          <h2 data-i18n="controlTitle">Control antes que autonomía.</h2>
-          <p data-i18n="controlCopy">Los agentes pueden investigar, reintentar y proponer una recuperación. Publicar código o aceptar una corrección sigue necesitando una puerta humana.</p>
-        </div>
-        <div class="guardrails">
-          <article class="guardrail"><code>01 / RETRY</code><h3 data-i18n="guardRetry">Reintentos acotados</h3><p data-i18n="guardRetryCopy">Dos intentos de transporte. Después cambia la estrategia.</p></article>
-          <article class="guardrail"><code>02 / SUPERVISOR</code><h3 data-i18n="guardSupervisor">Agente independiente</h3><p data-i18n="guardSupervisorCopy">Recibe el error de validación y reconstruye la salida.</p></article>
-          <article class="guardrail"><code>03 / FALLBACK</code><h3 data-i18n="guardFallback">Cambio de modelo</h3><p data-i18n="guardFallbackCopy">Evita que un proveedor bloquee toda la publicación.</p></article>
-          <article class="guardrail"><code>04 / AUDIT</code><h3 data-i18n="guardAudit">Traza comprobable</h3><p data-i18n="guardAuditCopy">Duración, tokens, errores y recuperaciones quedan registrados.</p></article>
-        </div>
-      </article>
-    </section>
-  </main>
-
-  <footer class="shell"><span>RafaOps · Rafael Marcos</span><span id="footer-status">Esperando telemetría de producción.</span></footer>
-
-  <script>
-    const translations = {
-      en: {
-        news:'View AI Signal ↗',portfolio:'Portfolio',eyebrow:'Agentic operations control plane',heroA:'Systems fail.',heroB:'Agents respond.',lead:'RafaOps watches my real automations, gathers evidence, supervises retries and changes model when an execution fails validation.',availability:'Availability',realChecks:'real checks',healthy:'Healthy checks',incidents:'Open incidents',humanGate:'with a human approval gate',recoveries:'Recoveries',supervised:'supervised by another agent',lastRun:'Latest run',pipeline:'Agentic pipeline',pipelineNote:'Every block has state, model, validation and a recovery strategy.',systems:'Watched systems',refresh:'Refreshes automatically.',vmTitle:'automatizacion machine',vmNote:'Telemetry sent from Ubuntu without exposing ports.',nightTitle:'Night agent',nightNote:'Iterates with tests and leaves the result ready for human review.',routing:'Model routing',routingNote:'The expensive model is used where reasoning matters.',incidentHistory:'Incident history',incidentNote:'Traceable detection, recovery and closure.',runs:'Latest rounds',runsNote:'GitHub Actions and manual executions.',controlTitle:'Control before autonomy.',controlCopy:'Agents may investigate, retry and propose a recovery. Publishing code or accepting a fix still requires a human gate.',guardRetry:'Bounded retries',guardRetryCopy:'Two transport attempts. Then the strategy changes.',guardSupervisor:'Independent agent',guardSupervisorCopy:'It receives the validation error and rebuilds the output.',guardFallback:'Model fallback',guardFallbackCopy:'One provider cannot block the whole publication.',guardAudit:'Verifiable trace',guardAuditCopy:'Duration, tokens, errors and recoveries are recorded.'
-      }
-    };
-    const escapeHTML = value => String(value ?? '').replace(/[&<>'"]/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
-    const formatDuration = ms => ms == null ? '—' : ms < 1000 ? `${ms} ms` : `${(ms / 1000).toFixed(ms < 10000 ? 1 : 0)} s`;
-    const formatDate = (value, lang = currentLang) => value ? new Intl.DateTimeFormat(lang === 'en' ? 'en-GB' : 'es-ES',{day:'2-digit',month:'short',hour:'2-digit',minute:'2-digit'}).format(new Date(value)) : '—';
-    const VM_STATUS_URL = 'https://api.github.com/repos/rafamarcoss/rafamarcoss.github.io/contents/rafaops/vm-status.json?ref=rafaops-telemetry';
-    const VM_STATUS_FALLBACK_URL = 'https://raw.githubusercontent.com/rafamarcoss/rafamarcoss.github.io/rafaops-telemetry/rafaops/vm-status.json';
-    let currentLang = localStorage.getItem('site-language') === 'en' ? 'en' : 'es';
-    let latestData = null;
-    let latestVm = null;
-    let lastVmFetch = 0;
-
-    function applyLanguage(lang) {
-      currentLang = lang === 'en' ? 'en' : 'es';
-      document.documentElement.lang = currentLang;
-      document.querySelectorAll('[data-i18n]').forEach(element => {
-        if (!element.dataset.es) element.dataset.es = element.textContent;
-        element.textContent = currentLang === 'en' ? (translations.en[element.dataset.i18n] || element.dataset.es) : element.dataset.es;
-      });
-      if (latestData) render(latestData, latestVm);
-    }
-
-    function render(data, vm) {
-      latestData = data;
-      latestVm = vm;
-      const vmAgeMinutes = vm?.generatedAt ? Math.floor((Date.now() - new Date(vm.generatedAt).getTime()) / 60000) : Infinity;
-      const vmOperational = vm?.health === 'operational' && vmAgeMinutes <= 30;
-      const operational = data.health === 'operational' && vmOperational;
-      const live = document.getElementById('live');
-      live.className = `live ${operational ? 'operational' : 'incident'}`;
-      document.getElementById('live-copy').classList.remove('loading');
-      document.getElementById('live-copy').textContent = operational
-        ? (currentLang === 'en' ? 'All critical systems operational' : 'Sistemas críticos operativos')
-        : (currentLang === 'en' ? 'Incident detected' : 'Incidente detectado');
-      const mainMeasured = (data.checks || []).filter(item => ['healthy','failed'].includes(item.status));
-      const mainHealthy = mainMeasured.filter(item => item.status === 'healthy').length;
-      const vmMeasured = (vm?.services || []).filter(item => ['healthy','failed'].includes(item.status));
-      const vmHealthy = vmMeasured.filter(item => item.status === 'healthy').length;
-      const vmTotal = vmMeasured.length;
-      const healthyTotal = mainHealthy + vmHealthy;
-      const observedTotal = mainMeasured.length + vmTotal;
-      document.getElementById('availability').textContent = `${observedTotal ? Math.round(healthyTotal / observedTotal * 1000) / 10 : 0}%`;
-      document.getElementById('healthy').textContent = healthyTotal;
-      document.getElementById('healthy-foot').textContent = `${observedTotal} ${currentLang === 'en' ? 'systems observed' : 'sistemas observados'}`;
-      document.getElementById('open-incidents').textContent = data.metrics?.openIncidents ?? 0;
-      document.getElementById('recoveries').textContent = data.metrics?.supervisedRecoveries ?? 0;
-      document.getElementById('duration').textContent = formatDuration(data.metrics?.lastRunDurationMs);
-      document.getElementById('updated').textContent = `${currentLang === 'en' ? 'updated' : 'actualizado'} ${formatDate(data.generatedAt)}`;
-      document.getElementById('footer-status').textContent = data.summary || '';
-
-      document.getElementById('pipeline').innerHTML = (data.pipeline || []).map((step,index) => `<article class="step ${escapeHTML(step.status)}">
-        <div class="step-index"><span>${String(index + 1).padStart(2,'0')} · ${escapeHTML(step.type)}</span><i class="step-light"></i></div>
-        <h3 class="step-name">${escapeHTML(step.name)}</h3><span class="step-model">${escapeHTML(step.model || 'deterministic')}</span>
-      </article>`).join('');
-
-      document.getElementById('checks').innerHTML = (data.checks || []).map(check => `<a class="check ${escapeHTML(check.status)}" href="${escapeHTML(check.url || '#')}" ${check.url ? 'target="_blank" rel="noopener"' : 'aria-disabled="true"'}>
-        <span class="check-icon">${check.status === 'healthy' ? 'OK' : check.status === 'failed' ? '!!' : check.status === 'private' ? 'PV' : '—'}</span>
-        <span><strong class="check-title">${escapeHTML(check.name)}</strong><span class="check-detail">${escapeHTML(check.detail)}</span></span>
-        <span class="check-latency">${check.latencyMs == null ? check.status : `${check.latencyMs}ms`}</span>
-      </a>`).join('');
-
-      renderVm(vm, vmAgeMinutes);
-      renderAgent(vm?.agentLoop);
-
-      const routes = [
-        ['worker', currentLang === 'en' ? 'Worker' : 'Worker'],
-        ['supervisor', currentLang === 'en' ? 'Supervisor' : 'Supervisor'],
-        ['fallback', 'Fallback']
-      ];
-      document.getElementById('routing').innerHTML = routes.map(([key,label]) => `<article class="route"><span class="route-role">${label}</span><strong class="route-model">${escapeHTML(data.routing?.[key] || '—')}</strong></article>`).join('');
-      document.getElementById('policy').textContent = data.routing?.policy || '';
-
-      const incidents = data.incidents || [];
-      document.getElementById('incident-list').innerHTML = incidents.length ? incidents.slice(0,5).map(item => `<article class="incident ${escapeHTML(item.status)}"><i class="incident-mark"></i><div><h3 class="item-title">${escapeHTML(item.title)}</h3><p class="item-detail">${escapeHTML(item.detail)}${item.recovery ? ` · ${escapeHTML(item.recovery)}` : ''}</p></div><time class="item-time">${formatDate(item.detectedAt)}</time></article>`).join('') : `<div class="empty"><strong>${currentLang === 'en' ? 'No open incidents' : 'Sin incidentes abiertos'}</strong>${currentLang === 'en' ? 'The ledger will keep the next detection and recovery.' : 'El ledger guardará la siguiente detección y recuperación.'}</div>`;
-
-      document.getElementById('run-list').innerHTML = (data.runs || []).slice(0,5).map(run => `<a class="run" href="${escapeHTML(run.url || '#')}" ${run.url ? 'target="_blank" rel="noopener"' : 'aria-disabled="true"'}><i class="incident-mark"></i><div><h3 class="item-title">${escapeHTML(run.source)} · ${escapeHTML(run.status)}</h3><p class="item-detail">${escapeHTML(run.checks?.length || 0)} checks · ${formatDuration(run.durationMs)}</p></div><time class="item-time">${formatDate(run.finishedAt)}</time></a>`).join('');
-    }
-
-    function renderVm(vm, ageMinutes) {
-      const board = document.getElementById('vm-board');
-      if (!vm) {
-        board.innerHTML = `<div class="vm-unavailable">${currentLang === 'en' ? 'VM heartbeat unavailable.' : 'Heartbeat de la VM no disponible.'}</div>`;
-        return;
-      }
-      const stale = ageMinutes > 30;
-      const metrics = vm.metrics || {};
-      const memory = metrics.memoryTotalBytes ? Math.round(metrics.memoryUsedBytes / metrics.memoryTotalBytes * 100) : 0;
-      const disk = metrics.diskTotalBytes ? Math.round(metrics.diskUsedBytes / metrics.diskTotalBytes * 100) : 0;
-      const uptimeHours = Math.floor((metrics.uptimeSeconds || 0) / 3600);
-      const status = stale ? 'stale' : vm.health;
-      board.innerHTML = `<div class="vm-summary"><div class="vm-identity"><span class="vm-icon">VM</span><span><strong class="vm-name">${escapeHTML(vm.host)}</strong><small class="vm-heartbeat">${ageMinutes} min · n8n ${escapeHTML(metrics.n8nVersion || '—')}</small></span></div><span class="vm-state ${escapeHTML(status)}">${stale ? 'stale' : escapeHTML(vm.health)}</span></div>
-        <div class="vm-resources">
-          <article class="resource"><span class="resource-label">Uptime</span><strong class="resource-value">${uptimeHours} h</strong><div class="resource-track"><div class="resource-fill" style="width:${Math.min(100, uptimeHours / 168 * 100)}%"></div></div></article>
-          <article class="resource"><span class="resource-label">RAM</span><strong class="resource-value">${memory}%</strong><div class="resource-track"><div class="resource-fill" style="width:${memory}%"></div></div></article>
-          <article class="resource"><span class="resource-label">Disk</span><strong class="resource-value">${disk}%</strong><div class="resource-track"><div class="resource-fill" style="width:${disk}%"></div></div></article>
-        </div>
-        <div class="vm-services">${(vm.services || []).map(item => `<div class="check ${escapeHTML(item.status)}"><span class="check-icon">${item.status === 'healthy' ? 'OK' : item.status === 'failed' ? '!!' : '—'}</span><span><strong class="check-title">${escapeHTML(item.name)}</strong><span class="check-detail">${escapeHTML(item.detail)}</span></span><span class="check-latency">${escapeHTML(item.status)}</span></div>`).join('')}</div>`;
-    }
-
-    function renderAgent(agent) {
-      const board = document.getElementById('agent-board');
-      if (!agent) {
-        board.innerHTML = `<div class="vm-unavailable">${currentLang === 'en' ? 'No agent runs recorded yet.' : 'Todavía no hay ejecuciones registradas.'}</div>`;
-        return;
-      }
-      const active = ['planning','dispatching','working'].includes(agent.status);
-      const statusLabels = currentLang === 'en'
-        ? {ready_for_review:'ready for review',needs_human_review:'human review',working:'working',planning:'planning',dispatching:'dispatching',failed:'failed',stopped:'stopped'}
-        : {ready_for_review:'listo para revisar',needs_human_review:'revisión humana',working:'trabajando',planning:'planificando',dispatching:'asignando',failed:'fallido',stopped:'detenido'};
-      const label = statusLabels[agent.status] || agent.status;
-      const progress = agent.maxIterations ? Math.min(100, Math.round(agent.iteration / agent.maxIterations * 100)) : 0;
-      board.innerHTML = `<div class="agent-summary"><span class="agent-mark">AI</span><span><strong class="agent-title">${escapeHTML(agent.goalLabel || 'Night agent')}</strong><small class="agent-meta">${escapeHTML(label)} · ${escapeHTML(agent.worktreeName || 'worktree pending')}</small></span><span class="agent-score">${agent.score ?? '—'}<small>/100</small></span></div>
-        <div class="agent-progress"><span style="width:${progress}%"></span></div>
-        <p class="agent-copy">${escapeHTML(agent.summary || '')}</p>
-        <div class="agent-footer"><span>${escapeHTML(agent.runId || '—')}</span><span>${currentLang === 'en' ? 'iteration' : 'iteración'} ${agent.iteration || 0}/${agent.maxIterations || 0}${active ? (currentLang === 'en' ? ' · live' : ' · en curso') : (currentLang === 'en' ? ' · human gate' : ' · revisión humana')}</span></div>`;
-    }
-
-    async function loadVmStatus() {
-      if (latestVm && Date.now() - lastVmFetch < 300_000) return latestVm;
-      let response = await fetch(VM_STATUS_URL, {
-        cache:'no-store',
-        headers:{ Accept:'application/vnd.github.raw+json' }
-      });
-      if (!response.ok) response = await fetch(VM_STATUS_FALLBACK_URL, { cache:'no-store' });
-      if (!response.ok) throw new Error(`VM HTTP ${response.status}`);
-      lastVmFetch = Date.now();
-      return response.json();
-    }
-
-    async function loadStatus() {
-      try {
-        const [statusResponse, vmResponse] = await Promise.all([
-          fetch(`status.json?v=${Date.now()}`, { cache:'no-store' }),
-          loadVmStatus().catch(() => null)
-        ]);
-        if (!statusResponse.ok) throw new Error(`HTTP ${statusResponse.status}`);
-        render(await statusResponse.json(), vmResponse);
-      } catch (error) {
-        document.getElementById('live-copy').classList.remove('loading');
-        document.getElementById('live-copy').textContent = currentLang === 'en' ? 'Telemetry unavailable' : 'Telemetría no disponible';
-        document.getElementById('footer-status').textContent = error.message;
-      }
-    }
-
-    applyLanguage(currentLang);
-    window.addEventListener('site-language-change', event => applyLanguage(event.detail.lang));
-    loadStatus();
-    setInterval(loadStatus, 60_000);
-  </script>
-  <script src="/assets/site-nav.js"></script>
-</body>
-</html>
+    <div id="v2-mobile-nav" class="v2-mobile" hidden>
+      <a href="/#systems">Systems</a>
+      <a href="/articles/">Writing</a>
+      <a href="/labs/">Lab</a>
+      <a href="/#contact">Contact</a>
+      <div class="sep" role="presentation"></div>
+      <a href="/articles/">Articles</a>
+      <a href="/news/">AI Signal</a>
+      <a href="/copywriting/">Copywriting</a>
+    </div>
+  </header><main id="main"><header class="v2-shell v2-detail-hero"><p class="eyebrow">System</p><h1>RafaOps</h1><p class="detail-lead">An agentic control plane for observing automations, collecting evidence and supervising bounded recovery.</p><div class="detail-meta"><span class="detail-status"><i class="dot"></i><strong data-rafaops-status>Current state loading…</strong></span><span>GitHub Actions · Node.js · DeepSeek</span><span>Operation: monitored, supervised recovery</span></div></header>
+  <div class="v2-shell"><section class="detail-intro"><div><p class="eyebrow">Overview</p><h2>Automation does not end when it publishes.</h2></div><p>RafaOps exists so workflows do not fail silently. It reads health checks and execution evidence, separates incidents from expected states, and prepares recovery for human review.</p></section>
+  <section class="detail-section"><div class="detail-triad"><article><h3>Problem</h3><p>A publish or workflow can partially complete, become blocked or produce an invalid output without anyone seeing it.</p></article><article><h3>Architecture</h3><p>Workflows leave state in GitHub Actions; the monitor collects checks, incidents and runs in a static ledger.</p></article><article><h3>Result</h3><p>Every round creates operational evidence: service state, executions and recovery decisions.</p></article></div></section>
+  <section class="detail-section"><p class="eyebrow">Architecture</p><h2>From workflow to an observable decision.</h2><div class="tech-flow" aria-label="RafaOps architecture"><div class="flow-node"><span class="flow-k">Trigger</span><strong>GitHub Actions</strong><span>schedule and workflow_run</span></div><div class="flow-node"><span class="flow-k">Execution</span><strong>AI Signal</strong><span>collection, editing and publishing</span></div><div class="flow-node"><span class="flow-k">Observer</span><strong>RafaOps monitor</strong><span>checks, incidents and runs</span></div><div class="flow-node"><span class="flow-k">Evidence</span><strong>status.json</strong><span>verifiable public state</span></div></div></section>
+  <section class="detail-section"><p class="eyebrow">Execution examples</p><h2>Representative events, not live telemetry.</h2><p>These lines describe the path the system records. Current state is published separately in <a href="/rafaops/status.json">status.json</a>.</p><div class="detail-dark"><p class="mono-meta">AI Signal execution / representative events</p><div class="event-examples"><div class="event-example"><time>01</time><strong>agent.run</strong><span>news selector · deepseek-v4-flash</span></div><div class="event-example"><time>02</time><strong>tool.call</strong><span>RSS collection and deduplication</span></div><div class="event-example"><time>03</time><strong>supervisor</strong><span>schema validation and bounded fallback</span></div><div class="event-example"><time>04</time><strong>telemetry</strong><span>checks, incidents and run evidence</span></div><div class="event-example"><time>05</time><strong>deploy</strong><span>GitHub Pages publication</span></div></div></div></section>
+  <section class="detail-section"><p class="eyebrow">Stack</p><h2>Components with explicit responsibilities.</h2><div class="detail-stack"><span>Node.js</span><span>GitHub Actions</span><span>DeepSeek</span><span>RSS</span><span>JSON ledger</span><span>Google Search Console API</span></div></section>
+  <section class="detail-section"><p class="eyebrow">What I learned</p><h2>Limits are part of the architecture.</h2><p>An unindexed URL is not the same as a broken workflow. Recovery must be bounded, credentials kept out of Git, and evidence available before deciding to intervene. The system also illustrates <a href="/articles/ai-agent-observability/">observability for production agents</a>.</p><div class="detail-related"><a href="/projects/portfolio-automation/">Portfolio Automation →</a><a href="/news/">AI Signal →</a><a href="/articles/">Technical writing →</a></div></section></div></main><footer class="v2-shell v2-footer">
+    <span>© 2026 Rafael Marcos Serrano</span>
+    <nav aria-label="Footer links">
+      <a href="https://linkedin.com/in/rafael-marcos-serrano" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/rafamarcoss" target="_blank" rel="noopener">GitHub</a>
+      <a href="/articles/">Articles</a>
+      <a href="/news/">News</a>
+      <a href="/copywriting/">Copywriting</a>
+      <a href="/rafaops/">RafaOps</a>
+      <a href="/labs/">Lab</a>
+      <a href="/upwork-match/">Opportunity Match</a>
+    </nav>
+  </footer><script src="/assets/v2.js"></script></body></html>

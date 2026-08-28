@@ -6,13 +6,14 @@
 <title>CRM Automation: 7 Workflows That Save Sales Teams Hours Every Week — Rafael Marcos</title>
 <meta name="description" content="Seven concrete CRM automation workflows — from lead assignment to reporting — with the triggers, conditions and integrations each one needs.">
 <meta name="author" content="Rafael Marcos">
-<meta name="theme-color" content="#F2F4EE">
+<meta name="theme-color" content="#F4F5EF">
 <link rel="canonical" href="https://rafaelmarcos.tech/articles/crm-automation-7-workflows/">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CRM Automation: 7 Workflows That Save Sales Teams Hours Every Week">
 <meta property="og:description" content="Seven concrete CRM automation workflows — from lead assignment to reporting — with the triggers, conditions and integrations each one needs.">
 <meta property="og:url" content="https://rafaelmarcos.tech/articles/crm-automation-7-workflows/">
 <meta property="og:site_name" content="Rafael Marcos">
+<meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://rafaelmarcos.tech/assets/og/crm-automation-7-workflows.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -26,109 +27,130 @@
 <link rel="icon" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..900&family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400..800&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","headline":"CRM Automation: 7 Workflows That Save Sales Teams Hours Every Week","description":"Seven concrete CRM automation workflows — from lead assignment to reporting — with the triggers, conditions and integrations each one needs.","datePublished":"2026-08-24","dateModified":"2026-08-25","mainEntityOfPage":{"@type":"WebPage","@id":"https://rafaelmarcos.tech/articles/crm-automation-7-workflows/"},"author":{"@type":"Person","name":"Rafael Marcos","url":"https://rafaelmarcos.tech/"},"publisher":{"@type":"Person","name":"Rafael Marcos"}}
+{"@context":"https://schema.org","@type":"BlogPosting","headline":"CRM Automation: 7 Workflows That Save Sales Teams Hours Every Week","description":"Seven concrete CRM automation workflows — from lead assignment to reporting — with the triggers, conditions and integrations each one needs.","inLanguage":"en","datePublished":"2026-08-24","dateModified":"2026-08-25","mainEntityOfPage":{"@type":"WebPage","@id":"https://rafaelmarcos.tech/articles/crm-automation-7-workflows/"},"author":{"@type":"Person","name":"Rafael Marcos","url":"https://rafaelmarcos.tech/"},"publisher":{"@type":"Person","name":"Rafael Marcos"}}
 </script>
-<style>
-*,*::before,*::after{box-sizing:border-box}*{margin:0;padding:0}
-:root{--paper:#F2F4EE;--card:rgba(255,255,249,.76);--ink:#0B0E0F;--muted:rgba(11,14,15,.64);--line:rgba(11,14,15,.13);--mint:#B0DFAA;--teal:#24969B;--blue:#0860A7;--royal:#0234C0;--coral:#C64240;--display:'Plus Jakarta Sans',sans-serif;--body:'Inter',sans-serif}
-html{scroll-behavior:smooth;background:var(--paper);overflow-x:hidden}
-body{min-height:100vh;overflow-x:hidden;color:var(--ink);font-family:var(--body);line-height:1.75;background:radial-gradient(circle at 12% 2%,rgba(176,223,170,.7),transparent 28rem),radial-gradient(circle at 90% 22%,rgba(36,150,155,.2),transparent 32rem),var(--paper)}
-a{color:inherit;text-decoration:none}.shell{width:min(1120px,calc(100% - 2rem));margin-inline:auto}
-nav{position:sticky;top:.7rem;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-top:.7rem;padding:.55rem .7rem;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,249,.82);backdrop-filter:blur(18px);box-shadow:0 16px 54px rgba(8,96,167,.09)}
-.brand{display:flex;align-items:center;gap:.65rem;font-family:var(--display);font-weight:800;letter-spacing:-.04em}.mark{width:42px;height:42px;display:grid;place-items:center;border-radius:50%;color:#fff;background:linear-gradient(135deg,var(--ink),var(--blue),var(--teal))}
-.nav-links{display:flex;align-items:center;gap:.4rem;list-style:none}.nav-links a{display:inline-flex;align-items:center;min-height:38px;padding:0 .8rem;border-radius:999px;color:rgba(11,14,15,.62);font:700 .72rem 'JetBrains Mono',monospace;letter-spacing:.09em;text-transform:uppercase}.nav-links a:hover,.nav-links a.on{color:var(--ink);background:rgba(255,255,249,.72)}
-.back{display:inline-flex;align-items:center;padding:0 1rem;min-height:38px;border:1px solid var(--line);border-radius:999px;font:700 .72rem 'JetBrains Mono',monospace}
-main{padding:2.5rem 0 6rem}.crumbs{display:flex;flex-wrap:wrap;gap:.4rem;align-items:center;color:var(--muted);font:700 .72rem 'JetBrains Mono',monospace}.crumbs a{color:var(--teal)}.crumbs span{opacity:.5}
-.article-head{max-width:820px;padding:3rem 0 2rem}.chip{display:inline-flex;padding:.35rem .7rem;border:1px solid var(--line);border-radius:999px;font:700 .68rem 'JetBrains Mono',monospace;text-transform:uppercase}.chip.cat{background:var(--cat,rgba(176,223,170,.48));border-color:transparent}.article-head h1{margin-top:1.1rem;font:800 clamp(2.4rem,6vw,4.2rem)/1.02 var(--display);letter-spacing:-.05em}.dek{margin-top:1.2rem;color:var(--muted);font-size:clamp(1.1rem,2vw,1.3rem);line-height:1.6}.meta{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.5rem;color:var(--muted);font:700 .72rem 'JetBrains Mono',monospace}
-.article-hero{margin:2rem 0 1rem;border-radius:24px;overflow:hidden;border:1px solid var(--line)}
-.article-hero img{display:block;width:100%;height:auto}
-.article-layout{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:3rem;align-items:start}.body{max-width:760px;font-size:1.06rem}.body h2{margin:3rem 0 1rem;font:700 clamp(1.7rem,3.5vw,2.5rem)/1.05 var(--display);letter-spacing:-.04em}.body h3{margin:2.2rem 0 .7rem;font:700 1.25rem var(--display);letter-spacing:-.02em}.body p{margin:1rem 0;color:rgba(11,14,15,.86)}.body ul,.body ol{margin:1rem 0 1rem 1.4rem;display:grid;gap:.5rem}.body li{color:rgba(11,14,15,.86)}.body li::marker{color:var(--teal);font-weight:700}.body code{font:600 .9em 'JetBrains Mono',monospace;background:rgba(11,14,15,.06);padding:.1rem .4rem;border-radius:6px}.body a{color:var(--blue);text-decoration:underline;text-underline-offset:2px}.body a:hover{color:var(--teal)}.body strong{font-weight:700}
-.table-wrap{margin:1.5rem 0;overflow-x:auto;border:1px solid var(--line);border-radius:16px}.table-wrap table{width:100%;border-collapse:collapse;font-size:.92rem}.table-wrap th{text-align:left;padding:.8rem 1rem;font:700 .72rem 'JetBrains Mono',monospace;text-transform:uppercase;background:rgba(11,14,15,.04)}.table-wrap td{padding:.8rem 1rem;border-top:1px solid var(--line);vertical-align:top;color:rgba(11,14,15,.86)}
-.diagram{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;margin:1.6rem 0;padding:1rem;border:1px solid var(--line);border-radius:20px;background:rgba(255,255,249,.62)}.diagram-step{position:relative;min-height:92px;padding:1rem;border-radius:14px;background:rgba(11,14,15,.045);font:700 .8rem/1.35 'JetBrains Mono',monospace}.diagram-step:not(:last-child)::after{content:'→';position:absolute;right:-.55rem;top:50%;z-index:1;color:var(--teal);font:800 1.1rem var(--display)}.diagram-label{display:block;margin-bottom:.4rem;color:var(--teal);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase}@media(max-width:640px){.diagram{grid-template-columns:1fr}.diagram-step:not(:last-child)::after{content:'↓';right:50%;top:auto;bottom:-.85rem}}
-aside{position:sticky;top:6rem;display:grid;gap:1rem}.aside-card{padding:1.3rem;border:1px solid var(--line);border-radius:22px;background:var(--card)}.aside-card h3{font:700 .9rem 'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.08em;color:var(--teal)}.aside-card ul{list-style:none;display:grid;gap:.7rem;margin-top:1rem}.aside-card a{font-weight:650;line-height:1.35}.aside-card a:hover{color:var(--blue)}
-.cta{margin-top:3rem;padding:2rem;border-radius:28px;color:#fff;background:linear-gradient(145deg,var(--ink),#0D3140,var(--blue))}.cta h2{font:700 1.6rem var(--display);letter-spacing:-.02em}.cta p{margin-top:.6rem;color:rgba(255,255,255,.72)}.cta a{display:inline-block;margin-top:1rem;padding:.7rem 1.2rem;border-radius:999px;background:var(--paper);color:var(--ink);font:700 .8rem 'JetBrains Mono',monospace}
-footer{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding:2rem 0;color:var(--muted);border-top:1px solid var(--line)}
-@media(max-width:900px){.article-layout{grid-template-columns:1fr}aside{position:static}}
-@media(max-width:640px){.nav-links{display:none}.shell{width:min(100% - 1rem,1120px)}.body{font-size:1rem}.article-head h1{font-size:2.3rem}}
-</style>
-<link rel="stylesheet" href="/assets/site-nav.css">
+<link rel="stylesheet" href="/assets/v2.css">
 </head>
 <body>
-<nav class="site-nav" data-site-nav aria-label="Primary navigation"><a class="site-brand" href="/"><span class="site-brand-mark">RM</span><span>Rafael Marcos</span></a><div class="site-nav-links"><a href="/#services" data-site-nav-i18n="services">Servicios</a><a href="/#projects" data-site-nav-i18n="work">Proyectos</a><a href="/articles/" data-site-nav-i18n="articles" aria-current="page">Artículos</a><a href="/news/" data-site-nav-i18n="news">Noticias</a><a href="/copywriting/" data-site-nav-i18n="copywriting">Copywriting</a><a href="/#about" data-site-nav-i18n="about">Sobre mí</a><a href="/#contact" data-site-nav-i18n="contact">Contacto</a></div><div class="site-nav-controls"><div class="site-lang" role="group" aria-label="Language selector"><button type="button" data-site-nav-lang="es" aria-pressed="true">ES</button><button type="button" data-site-nav-lang="en" aria-pressed="false">EN</button></div><a class="site-nav-cta" href="/#contact" data-site-nav-i18n="cta">Hablemos ↗</a><button class="site-mobile-toggle" type="button" data-site-nav-toggle aria-expanded="false" aria-controls="site-mobile-menu" aria-label="Abrir menú">☰</button></div><div class="site-mobile-menu" id="site-mobile-menu" data-site-mobile-menu data-open="false"><div class="site-mobile-links"><a href="/#services" data-site-nav-i18n="services">Servicios</a><a href="/#projects" data-site-nav-i18n="work">Proyectos</a><a href="/articles/" data-site-nav-i18n="articles" aria-current="page">Artículos</a><a href="/news/" data-site-nav-i18n="news">Noticias</a><a href="/copywriting/" data-site-nav-i18n="copywriting">Copywriting</a><a href="/#about" data-site-nav-i18n="about">Sobre mí</a><a href="/#contact" data-site-nav-i18n="contact">Contacto</a></div><a class="site-nav-cta" href="/#contact" data-site-nav-i18n="cta">Hablemos ↗</a></div></nav>
+<header class="v2-nav">
+    <div class="v2-shell v2-nav-in">
+      <a href="/" class="v2-brand">RafaelMarcos<em>_</em></a>
+      <nav class="v2-links" aria-label="Primary navigation">
+        <a href="/#systems">Systems</a>
+        <a href="/articles/" aria-current="page">Writing</a>
+        <a href="/labs/">Lab</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+      <div class="v2-nav-cta">
+        <a href="mailto:rafaelmarcos2604@gmail.com?subject=Project%20enquiry" class="btn btn-primary">Start a project <span class="arrow">↗</span></a>
+        <button class="v2-menu-toggle" type="button" data-nav-toggle data-label-open="Open menu" data-label-close="Close menu" aria-expanded="false" aria-controls="v2-mobile-nav" aria-label="Open menu">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="v2-mobile-nav" class="v2-mobile" hidden>
+      <a href="/#systems">Systems</a>
+      <a href="/articles/">Writing</a>
+      <a href="/labs/">Lab</a>
+      <a href="/#contact">Contact</a>
+      <div class="sep" role="presentation"></div>
+      <a href="/articles/">Articles</a>
+      <a href="/news/">AI Signal</a>
+      <a href="/copywriting/">Copywriting</a>
+    </div>
+  </header>
 
-<main class="shell">
-  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/articles/">Articles</a><span>/</span><span>CRM</span></nav>
-  <article>
-    <header class="article-head">
-      <span class="chip cat" style="--cat:rgba(198,66,64,.20)">CRM</span>
+<main id="main">
+  <article class="v2-shell" lang="en">
+    <nav class="art-crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/articles/">Articles</a><span>/</span><span>CRM</span></nav>
+    <header class="art-head">
+      <p class="cat-chip">CRM</p>
       <h1>CRM Automation: 7 Workflows That Save Sales Teams Hours Every Week</h1>
-      <p class="dek">Seven concrete CRM automation workflows — from lead assignment to reporting — with the triggers, conditions and integrations each one needs.</p>
-      <div class="meta"><time datetime="2026-08-24">24 August 2026</time><span>·</span><span>6 min read</span><span>·</span><span>Rafael Marcos</span></div>
-      <div class="meta"><span class="chip">crm</span><span class="chip">automation</span><span class="chip">lead assignment</span><span class="chip">follow-up</span><span class="chip">api</span><span class="chip">webhooks</span><span class="chip">reporting</span></div>
+      <p class="art-dek">Seven concrete CRM automation workflows — from lead assignment to reporting — with the triggers, conditions and integrations each one needs.</p>
+      <div class="art-meta"><time datetime="2026-08-24">24 August 2026</time><span>·</span><span>6 min read</span><span>·</span><span>Rafael Marcos</span></div>
+      <div class="art-tags"><span>crm</span><span>automation</span><span>lead assignment</span><span>follow-up</span><span>api</span><span>webhooks</span><span>reporting</span></div>
     </header>
 
-    <div class="article-layout">
-      <div class="body"><figure class="diagram" aria-label="Lead or event to CRM rule to Action to Audit trail"><div class="diagram-step"><span class="diagram-label">1</span>Lead or event</div><div class="diagram-step"><span class="diagram-label">2</span>CRM rule</div><div class="diagram-step"><span class="diagram-label">3</span>Action</div><div class="diagram-step"><span class="diagram-label">4</span>Audit trail</div></figure><p>Most CRM automation fails because it starts with the tool instead of the task. Teams buy a CRM, see that it "supports automation", and wire up a few triggers without deciding what the sales process should look like first.</p>
+    <div class="art-layout">
+      <div class="prose"><figure class="diagram" aria-label="Lead or event to CRM rule to Action to Audit trail"><div class="diagram-step"><span class="diagram-label">1</span>Lead or event</div><div class="diagram-step"><span class="diagram-label">2</span>CRM rule</div><div class="diagram-step"><span class="diagram-label">3</span>Action</div><div class="diagram-step"><span class="diagram-label">4</span>Audit trail</div></figure><p>Most CRM automation fails because it starts with the tool instead of the task. Teams buy a CRM, see that it "supports automation", and wire up a few triggers without deciding what the sales process should look like first.</p>
 <p>The better approach is the opposite: write down the repetitive work a rep does every day, then automate the parts that are mechanical. This guide covers seven workflows that almost every sales team benefits from, with the trigger, the conditions, and the integrations each one needs.</p>
 <p>These are platform-agnostic patterns. They work in HubSpot, Salesforce, Pipedrive, or a custom setup, and they can usually be built with native rules or with an automation layer like n8n or Make.</p>
-<h2>1. Lead assignment</h2>
+<h2 id="sec-1">1. Lead assignment</h2>
 <p>The problem is obvious: a lead comes in and sits unassigned, or it goes to the wrong person. Assignment is the first thing to automate because every other workflow depends on the lead having an owner.</p>
 <p>The workflow:</p>
 <ul><li><strong>Trigger:</strong> a new lead is created (form submission, list import, inbound email).</li><li><strong>Conditions:</strong> round-robin by owner, or route by territory, product, or source.</li><li><strong>Action:</strong> assign the owner and set the lead status.</li></ul>
 <p>A common refinement is weighted round-robin: reps on a lighter pipeline receive more leads. Keep the assignment rule simple at first; you can add sophistication once the basics are reliable.</p>
-<h2>2. Lead qualification</h2>
+<h2 id="sec-2">2. Lead qualification</h2>
 <p>Not every lead deserves a call. Qualification automation scores or tags leads so reps focus on the ones most likely to close.</p>
 <ul><li><strong>Trigger:</strong> lead created or updated.</li><li><strong>Conditions:</strong> firmographic and behavioural rules — company size, role, source, pages visited, form fields filled.</li><li><strong>Action:</strong> apply a score, tag, or stage. High-scoring leads can trigger an immediate notification.</li></ul>
 <p>A qualification workflow should complement human judgement, not replace it. The score is a signal, not a verdict.</p>
-<h2>3. Follow-up sequences</h2>
+<h2 id="sec-3">3. Follow-up sequences</h2>
 <p>Reps forget to follow up, or they follow up too slowly. Automating the follow-up sequence turns a discipline problem into a system.</p>
 <ul><li><strong>Trigger:</strong> lead enters a stage, or a proposal is sent.</li><li><strong>Conditions:</strong> no reply or no activity within a set window.</li><li><strong>Action:</strong> send a templated email, then schedule the next step if there is still no reply.</li></ul>
 <p>The sequence should always stop when the lead replies or books a meeting. The most common failure mode is an automated email firing after the deal has already moved.</p>
-<h2>4. Pipeline stage updates</h2>
+<h2 id="sec-4">4. Pipeline stage updates</h2>
 <p>Manual stage updates are inaccurate because they depend on people remembering to do them. Automating them keeps the pipeline honest.</p>
 <ul><li><strong>Trigger:</strong> a deal field changes (e.g. proposal status, meeting booked, contract signed).</li><li><strong>Conditions:</strong> the field matches a defined value.</li><li><strong>Action:</strong> move the deal to the matching stage and log the event.</li></ul>
 <p>Tying stage changes to concrete events — a meeting, a sent proposal, a signed document — means the pipeline reflects reality instead of optimism.</p>
-<h2>5. Task and meeting reminders</h2>
+<h2 id="sec-5">5. Task and meeting reminders</h2>
 <p>Reminders are the simplest workflow and the one with the most consistent payoff.</p>
 <ul><li><strong>Trigger:</strong> a task or meeting is created.</li><li><strong>Conditions:</strong> time-based — the due date or meeting time approaches.</li><li><strong>Action:</strong> notify the owner, usually by email or a channel message.</li></ul>
 <p>The key detail is deduplication: if a task is rescheduled or completed, the reminder must cancel, not fire again. This is where a workflow needs a proper "task done" guard.</p>
-<h2>6. Data enrichment</h2>
+<h2 id="sec-6">6. Data enrichment</h2>
 <p>Reps waste time copying company information from a website into the CRM. Enrichment automates the lookup.</p>
 <ul><li><strong>Trigger:</strong> a lead or account is created with only an email or domain.</li><li><strong>Conditions:</strong> required fields are missing.</li><li><strong>Action:</strong> call an enrichment API, then write the company data — size, industry, location — back into the record.</li></ul>
 <p>Enrichment is an API-heavy workflow. It works well when the CRM has a clean, consistent schema, and it is a good first candidate for <a href="/articles/what-is-saas-automation/">a broader SaaS automation strategy</a>.</p>
-<h2>7. Reporting and handoff summaries</h2>
+<h2 id="sec-7">7. Reporting and handoff summaries</h2>
 <p>Reporting automation does not generate strategy, but it removes the manual work of assembling the numbers.</p>
 <ul><li><strong>Trigger:</strong> scheduled (daily, weekly, or on a stage change).</li><li><strong>Conditions:</strong> none, or filter by team and period.</li><li><strong>Action:</strong> build a summary — won deals, pipeline value, stale opportunities — and send it to the team or a Slack channel.</li></ul>
 <p>A related pattern is the handoff summary: when a deal moves from sales to onboarding or support, the CRM compiles the key facts into a single message so nothing gets lost between teams.</p>
-<h2>What makes these workflows reliable</h2>
+<h2 id="sec-8">What makes these workflows reliable</h2>
 <p>Three habits separate workflows that run quietly in the background from the ones that break after a week:</p>
 <ol><li><strong>Single source of truth.</strong> Every workflow should read from and write to one system — usually the CRM — so there is no drift between tools.</li><li><strong>Guards against duplication.</strong> Reminders and follow-ups must check whether they already fired. A duplicate email to a prospect is worse than no automation at all.</li><li><strong>Visibility.</strong> Each automation should log what it did, so a rep can trace why an email was sent or a lead was reassigned.</li></ol>
-<h2>Where to start</h2>
+<h2 id="sec-9">Where to start</h2>
 <p>Do not build all seven at once. Start with lead assignment and reminders, because they are low-risk and their value is immediate. Then add qualification and follow-ups, and leave enrichment and reporting until the data model is stable.</p>
 <p>The order matters: automation built on top of a messy CRM just makes the mess faster.</p>
-<h2>Frequently asked questions</h2>
+<h2 id="sec-10">Frequently asked questions</h2>
 <p><strong>Do I need a developer to set up CRM automation?</strong></p>
 <p>For simple workflows, no — most CRMs have a visual builder. But the moment you need webhooks, custom fields, or an external API, having someone who understands APIs and data modelling saves a lot of trial and error.</p>
 <p><strong>How is this different from an AI agent doing sales?</strong></p>
 <p>These workflows are deterministic: fixed triggers, fixed rules. An AI agent can handle the parts that need judgement, like writing a tailored follow-up or scoring a lead from unstructured notes. The two work together — automation handles the plumbing, and the agent handles the reasoning. See <a href="/articles/ai-agents-vs-traditional-automation/">AI agents vs traditional automation</a> for the full picture.</p>
 <p><strong>What is the most common mistake?</strong></p>
 <p>Automating a process that is not understood yet. If a human could not write down the exact steps, the automation will be wrong, just faster.</p>
-<h2>Automation is the plumbing, not the strategy</h2>
+<h2 id="sec-11">Automation is the plumbing, not the strategy</h2>
 <p>These seven workflows save hours because they remove mechanical work from a rep's day. They do not replace selling. Build them one at a time, keep them visible, and treat the CRM as the single source of truth.</p>
 <p>Need technically accurate content about CRM or sales automation? I write <a href="/copywriting/">SEO content for products I actually understand</a>.</p>
-<h2>A real example from my work</h2>
+<h2 id="sec-12">A real example from my work</h2>
 <p>For Kit Consulting I built a scheduled alert system around projects, requirements, hours, VAT and justifications. It uses explicit state flags and weekend guards so an alert is traceable and does not fire just because a date exists. CRM workflows need the same discipline: a clear source of truth, idempotent checks and a record of each action.</p>
-<h2>Primary sources</h2>
+<h2 id="sec-13">Primary sources</h2>
 <ul><li><a href="https://knowledge.hubspot.com/workflows/choose-your-workflow-actions">HubSpot: workflow actions</a></li><li><a href="https://help.salesforce.com/s/articleView?id=platform.flow.htm&amp;type=5">Salesforce: Flow Builder</a></li><li><a href="https://docs.n8n.io/">n8n: workflow automation</a></li></ul></div>
-      <aside><div class="aside-card"><h3>Related</h3><ul><li><a href="/articles/what-is-saas-automation/">What Is SaaS Automation? A Practical Guide for Growing Teams</a></li><li><a href="/articles/ai-agents-for-customer-support/">AI Agents for Customer Support: How They Work and When to Use Them</a></li></ul></div></aside>
+      <aside class="art-rail"><div class="rail-card"><h3>On this page</h3><nav class="toc" aria-label="Table of contents"><a href="#sec-1">1. Lead assignment</a><a href="#sec-2">2. Lead qualification</a><a href="#sec-3">3. Follow-up sequences</a><a href="#sec-4">4. Pipeline stage updates</a><a href="#sec-5">5. Task and meeting reminders</a><a href="#sec-6">6. Data enrichment</a><a href="#sec-7">7. Reporting and handoff summaries</a><a href="#sec-8">What makes these workflows reliable</a><a href="#sec-9">Where to start</a><a href="#sec-10">Frequently asked questions</a><a href="#sec-11">Automation is the plumbing, not the strategy</a><a href="#sec-12">A real example from my work</a><a href="#sec-13">Primary sources</a></nav></div><div class="rail-card"><h3>Continue reading</h3><div class="rel-list"><a href="/articles/what-is-saas-automation/">What Is SaaS Automation? A Practical Guide for Growing Teams</a><a href="/articles/ai-agents-for-customer-support/">AI Agents for Customer Support: How They Work and When to Use Them</a></div></div></aside>
     </div>
-    <section class="cta"><h2>Need this kind of content for your product?</h2><p>I write SEO articles for SaaS, AI and automation companies — grounded in how the tech actually works.</p><a href="/copywriting/">See my copywriting service →</a></section>
+    <section class="cta-band">
+      <div>
+        <h2>Need technical content that actually understands the product?</h2>
+        <p>I write SEO content for SaaS, AI and automation companies — grounded in how the tech actually works.</p>
+      </div>
+      <a class="btn" href="/copywriting/">Technical SEO content <span class="arrow">↗</span></a>
+    </section>
   </article>
 </main>
 
-<footer class="shell"><span>© 2026 Rafael Marcos Serrano</span><a href="mailto:rafaelmarcos2604@gmail.com">rafaelmarcos2604@gmail.com</a></footer>
-<script src="/assets/site-nav.js"></script>
+<footer class="v2-shell v2-footer">
+    <span>© 2026 Rafael Marcos Serrano</span>
+    <nav aria-label="Footer links">
+      <a href="https://linkedin.com/in/rafael-marcos-serrano" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/rafamarcoss" target="_blank" rel="noopener">GitHub</a>
+      <a href="/articles/">Articles</a>
+      <a href="/news/">News</a>
+      <a href="/copywriting/">Copywriting</a>
+      <a href="/rafaops/">RafaOps</a>
+      <a href="/labs/">Lab</a>
+      <a href="/upwork-match/">Opportunity Match</a>
+    </nav>
+  </footer>
+<script src="/assets/v2.js"></script>
 </body>
 </html>

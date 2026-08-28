@@ -17,9 +17,10 @@ for (const f of files) {
   const jsonld = html.includes('application/ld+json');
   const og = html.includes('og:title');
   const desc = html.includes('name="description"');
-  const globalNav = f === 'index.html'
-    ? html.includes('navServices') && html.includes('navCta') && html.includes('data-lang="en"') && html.includes('mobile-menu-toggle') && html.includes('aria-expanded="false"')
-    : html.includes('data-site-nav') && html.includes('data-site-nav-i18n="services"') && html.includes('data-site-nav-i18n="cta"') && html.includes('data-site-nav-lang="en"') && html.includes('data-site-nav-toggle') && html.includes('aria-expanded="false"');
+  const v2Nav = html.includes('class="v2-nav"') && html.includes('Start a project') && html.includes('data-nav-toggle') && html.includes('aria-expanded="false"');
+  const legacyNav = html.includes('data-site-nav') && html.includes('data-site-nav-i18n="services"') && html.includes('data-site-nav-i18n="cta"') && html.includes('data-site-nav-lang="en"') && html.includes('data-site-nav-toggle') && html.includes('aria-expanded="false"');
+  // V2 nav: home, articles, AI Signal and systems. The remaining areas keep the legacy nav.
+  const globalNav = (f === 'index.html' || f.startsWith('articles/') || f.startsWith('news/') || f === 'copywriting/index.html' || f === 'rafaops/index.html' || f.startsWith('projects/')) ? v2Nav : legacyNav;
   const good = h1 === 1 && canonical && jsonld && og && desc && globalNav;
   if (!good) ok = false;
   console.log(`${good ? 'OK  ' : 'FAIL'} h1=${h1} canonical=${canonical} jsonld=${jsonld} og=${og} desc=${desc} nav=${globalNav} | ${f}`);

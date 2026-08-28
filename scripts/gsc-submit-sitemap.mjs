@@ -1,6 +1,6 @@
-import { createGscClients } from './gsc-auth.mjs';
+import { createGscClients, GSC_SITE_URL } from './gsc-auth.mjs';
 
-const SITE_URL = 'sc-domain:rafaelmarcos.tech';
+const SITE_URL = GSC_SITE_URL;
 const SITEMAP_URL = 'https://rafaelmarcos.tech/sitemap.xml';
 
 function errorMessage(error) {
