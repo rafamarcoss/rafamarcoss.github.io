@@ -9,7 +9,7 @@ export function v2Nav(active) {
       <nav class="v2-links" aria-label="Primary navigation">
         <a href="/#systems"${on('systems')}>Systems</a>
         <a href="/articles/"${on('writing')}>Writing</a>
-        <a href="/labs/">Lab</a>
+        <a href="/labs/"${on('lab')}>Lab</a>
         <a href="/#contact">Contact</a>
       </nav>
       <div class="v2-nav-cta">
@@ -22,7 +22,7 @@ export function v2Nav(active) {
     <div id="v2-mobile-nav" class="v2-mobile" hidden>
       <a href="/#systems">Systems</a>
       <a href="/articles/">Writing</a>
-      <a href="/labs/">Lab</a>
+      <a href="/labs/"${on('lab')}>Lab</a>
       <a href="/#contact">Contact</a>
       <div class="sep" role="presentation"></div>
       <a href="/articles/">Articles</a>
