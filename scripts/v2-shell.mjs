@@ -26,7 +26,7 @@ export function v2Nav(active) {
       <a href="/#contact">Contact</a>
       <div class="sep" role="presentation"></div>
       <a href="/articles/">Articles</a>
-      <a href="/news/">AI Signal</a>
+      <a href="/news/"${on('news')}>AI Signal</a>
       <a href="/copywriting/">Copywriting</a>
     </div>
   </header>`;
