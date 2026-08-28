@@ -98,4 +98,15 @@
       card.classList.toggle('open', !open);
     });
   });
+
+  /* ---- RafaOps current status (only used when the page requests it) ---- */
+  const rafaopsStatus = document.querySelector('[data-rafaops-status]');
+  if (rafaopsStatus) {
+    fetch('/rafaops/status.json')
+      .then(response => response.ok ? response.json() : Promise.reject())
+      .then(data => {
+        rafaopsStatus.textContent = data.health === 'healthy' ? 'Estado actual: healthy' : 'Estado actual: requiere atención';
+      })
+      .catch(() => { rafaopsStatus.textContent = 'Estado actual no disponible'; });
+  }
 })();
