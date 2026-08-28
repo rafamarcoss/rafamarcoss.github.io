@@ -5,7 +5,8 @@
     "build:systems": "node scripts/build-v2-systems.mjs",
     "validate": "node scripts/validate-site.mjs",
     "gsc:submit": "node scripts/gsc-submit-sitemap.mjs",
-    "gsc:inspect": "node scripts/gsc-inspect.mjs"
+    "gsc:inspect": "node scripts/gsc-inspect.mjs",
+    "gsc:performance": "node scripts/gsc-performance.mjs"
   },
   "devDependencies": {
     "@resvg/resvg-js": "^2.6.2"
