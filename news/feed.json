@@ -1,7 +1,115 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-27T18:15:45.386Z",
+  "generatedAt": "2026-08-28T19:23:42.440Z",
   "articles": [
+    {
+      "slug": "ai-signal-2026-08-28",
+      "date": "2026-08-28",
+      "generatedAt": "2026-08-28T19:23:42.440Z",
+      "categories": [
+        "AI",
+        "Finance & investment",
+        "Work & business",
+        "AI & law",
+        "AI & education"
+      ],
+      "readingMinutes": 4,
+      "content": {
+        "en": {
+          "title": "AI's ROI Reality Check: Adoption Soars but Trust and Measurement Lag",
+          "dek": "As AI drives 30% of business tasks, only 35% of finance leaders confidently measure returns. Meanwhile, legal and educational systems scramble to set guardrails.",
+          "intro": "The AI landscape is marked by rapid adoption and widening productivity gaps, yet organizations struggle to quantify returns and manage risks. From boardrooms to classrooms, stakeholders are navigating a complex matrix of opportunity and accountability.",
+          "sections": [
+            {
+              "heading": "ROI and Productivity: The Business Tension",
+              "body": "AI now drives three in ten business tasks, according to a report from Escudo Digital, intensifying the productivity gap between adopters and laggards. Yet only 35% of finance leaders confidently gauge AI ROI, per a Protiviti survey—a stark contrast to McKinsey's analysis, which highlights companies achieving tangible financial returns. This divergence suggests that while some have cracked the code, many lack robust metrics to justify spending."
+            },
+            {
+              "heading": "Legal Accountability and AI Risks",
+              "body": "The legal sector confronts both opportunity and peril. A Minnesota lawyer was suspended for submitting fake AI-generated case citations, underscoring the need for verification. Meanwhile, Google is entering the legal AI race against Anthropic and OpenAI, signaling growing corporate investment in tailored tools. Separately, a financial watchdog warns that AI chatbot users seeking investing help have no safety net, exposing regulatory gaps that leave consumers vulnerable."
+            },
+            {
+              "heading": "Education Policy and Practice",
+              "body": "Educational institutions are preparing for AI's impact. UC Irvine's School of Education will lead a $10 million national center on AI and postsecondary writing, aiming to develop evidence-based practices. UNESCO announced a forthcoming ministerial statement on education in the age of AI, intended to guide global policy. These initiatives reflect a push to harness AI's potential while addressing pedagogical and ethical challenges."
+            },
+            {
+              "heading": "Influence and the Road Ahead",
+              "body": "TIME's 2026 TIME100 AI list spotlights leaders shaping AI across sectors, offering a barometer of influence. The American Hospital Association's fact sheet on AI and coding intensity highlights AI's penetration into specialized administrative functions. As these forces converge, the challenge remains balancing innovation with responsibility."
+            }
+          ],
+          "takeaways": [
+            "Develop rigorous AI ROI metrics to avoid blind investment.",
+            "Verify all AI-generated content, especially in legal and financial contexts.",
+            "Consult licensed advisors before acting on AI chatbot investment advice.",
+            "Monitor UNESCO and UC Irvine initiatives for best practices in AI education.",
+            "Track TIME100 AI leaders to spot emerging trends and partnerships."
+          ],
+          "closing": "The AI signal is clear: adoption is accelerating, but trust and measurement lag behind. By addressing accountability gaps and investing in robust evaluation, organizations can turn potential into sustainable value."
+        }
+      },
+      "sources": [
+        {
+          "title": "Fact Sheet: Artificial Intelligence and Coding Intensity - American Hospital Association",
+          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPMzFMM0luX1VvMWRRUlhFRmh0TnVHbWl4QkplUFgzQ1Vsc3FBQWIwdzlyTHFWN09BMHN4VXBWNDhqLTY2M3hpb0JLdldKcXZhUkpNSU5tMGx3QWVLRzRmb29QS1lMV0ZzYk9JdjVBQWVtOXI2eE9jTVBBS2M3bi1jcVA4b0lvWjhCOFpibjJDTHoxVHV5QV9DVEhhbXJVLUU?oc=5",
+          "category": "AI",
+          "publishedAt": "2026-08-26T20:09:53.000Z"
+        },
+        {
+          "title": "TIME Reveals the 2026 TIME100 AI List of the World’s Most Influential People in Artificial Intelligence - Time Magazine",
+          "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOeUg5OE1hZExocUtuYVlkbmN0a2NrWmNQaW5GY0NQN0tRamFjWmx2UTBGeTRydGp5c3FHeVdRTlNaYi00clplLTZrZDlHamE3bXpBOWE4MldraHZrbVBMMjN1X1ZTLVR0YV9LVllMcldob1I5UDRzZzRPdWhpMTRGaDJrV3Z4eWFVWEJoZ3pQbTFneUFHa3ZEX1RTOUUyRG1hTHFubEVQVl85TEhRWGI2c0FFakl1VVNaV1o2c0JHaHQ1MDc4ZEZwazBMWUpqWms3MGZIdTJQZw?oc=5",
+          "category": "AI",
+          "publishedAt": "2026-08-27T12:30:00.000Z"
+        },
+        {
+          "title": "Only 35% of finance leaders confidently gauge ROI from AI: Protiviti - CFO Dive",
+          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQc1Y3TFAzUy1PWWtTVE5FQl9kWEJSYU9LbnhxdWFPc19sN1prLXhFekQ0NVdia2NFbXotX3c0MHNhWEg5Q1JjWHZMSmdFRHMycV90bXVtVlY0TG45djFxcDlYVjhSeWY3MGRVVjRoRnVYdkxmVDFJZUtyVmFHdXZXNjhGWEdmbjB4el9vMkVqWTJld01JaVRiZTEwWU1LSFkyTEdEU0NMRmQwMThRSFNXY29IMldaME1rQ240NQ?oc=5",
+          "category": "Finance & investment",
+          "publishedAt": "2026-08-27T21:00:13.000Z"
+        },
+        {
+          "title": "No safety net for people using AI chatbots for help investing, watchdog warns - Yahoo Finance UK",
+          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxONl9aZGxCdEhVUVVuc3FMcjFDdjdranBPU0NDQ0VZYmJoZFN4RXFwRFYyN3NmbGRJNzFmUW5vYjlCdFhWUXZ1b3JyX1JoTm1aaGNtOWZENWFDa2hWZzVlUDRfTGZaS0VuVDRFWVJOUU1MRm1fZnBEaXZHN3VaMXFETg?oc=5",
+          "category": "Finance & investment",
+          "publishedAt": "2026-08-27T09:04:30.000Z"
+        },
+        {
+          "title": "AI drives 3 in 10 business tasks, widening the productivity gap - Escudo Digital",
+          "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNMkgybldfZ3FLWGJpNnhGanpLcmV3N3dhYVRYaXJMR3A5Rlkzd3J4STFJZWhzamlNVUFiRTRFWGpSNUhfbGtQQTc2SXlHeHdia3VEM1R6a0pXQnJVX3BXNV9LOUdTQ1lZOUo2MndmWTgxVnlrdzNmckNfZ3p4aERjcDBRNVJCM2lTWTFIYmFQRVI2ZmhrY2dBcTgyb2tWQWVHamFMYXJtOUNudGZwbDhjZndfTm1ESDlNWnkyNnFXdlBXaDlya2t2SXFucFJkZ0VT?oc=5",
+          "category": "Work & business",
+          "publishedAt": "2026-08-27T05:20:01.000Z"
+        },
+        {
+          "title": "The state of AI in 2026: On the road to ROI - McKinsey & Company",
+          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPVkNzT2lMcURPYXQxQmh0azdzbjVrNFktNzZFLTZacnFlR2xZYXczRnI4MHh2amsya2xOOEh1QURSbFUxU0ZUWGQ5WE5kVHJtbEFJb0NOdTNVUVhPeC1iVVJOZk1VbXpwLVBuYzVod0tMVmlYbVdzNjgwcF83MTVJTWNvVFRaZw?oc=5",
+          "category": "Work & business",
+          "publishedAt": "2026-08-25T00:00:00.000Z"
+        },
+        {
+          "title": "Minnesota lawyer suspended over fake AI case citations - MPR News",
+          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPbDU2dVoya2VUT2pDdnA3bVZ3UlQyOE0xeEpueDJONGl0MUpEWFBpeXVGRHZtblU2OWVuYnhncmJ2WmlUeE5uUEtnRUtOMWpKalhtakpQLUE0N3ZSdFYwWU1GSmZrR3pMVTkxSWtaanlvUmk2UElqMnpHdDd1Q0FWbmJxalplMzQzNGRJcWZoRGswWjNUc1B1TE1pQmpNR28?oc=5",
+          "category": "AI & law",
+          "publishedAt": "2026-08-21T21:56:00.000Z"
+        },
+        {
+          "title": "Google is taking on Anthropic and OpenAI in the legal AI race - Business Insider",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxObDJZVDVhblFNcllGUWhwQ3pFeE5EaDRwUVhBWVRQZ0Vxd1hEbGlJYWlzazZpVU5WNkNlUTkxX0tfc1loQzF6a2I2M21tODVrMUpyZEVZOTFMbnNjNU5XMElfMzNadTl3T0ItRV9zdmJXZ0pKUk9wblJUczlKN3kwOFVKZTlURzVfUUZnb3JfOEtiR2xCU25UZzJZYw?oc=5",
+          "category": "AI & law",
+          "publishedAt": "2026-08-25T15:06:00.000Z"
+        },
+        {
+          "title": "UC Irvine School of Education to lead $10 million national center on AI and postsecondary writing - UC Irvine News",
+          "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOdVpDci1ZbVRNUEpwaUtjS0xNbllNXzlVaDdxTVNsRGZoNmREaTI4TTF6V0h6eWxhM1FXSTMtLVM1UTVaUWR1WjRwZ2pXcGQ1R0N1bl9mV01BOTdpUnNDUFIzc3NldFFsOVJBaVpNLUtHYUg0UmpyeTNfMm82Z0phcFlabldkMUxxOEFHRDd1SWpuSkR2Z2VJRi01WlpNaVdqc3pWUGhRbngxdkVITTFpNEZ1UzkxOTI1amhpN3M5bHZNSTRobldlVw?oc=5",
+          "category": "AI & education",
+          "publishedAt": "2026-08-27T18:03:58.000Z"
+        },
+        {
+          "title": "Education in the age of AI: Ministerial statement to be adopted at - UNESCO",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQMkVTNWxIb25QWDB3VGNtUFVvRjRicmxfemdKMXZKZU9QLUMxTUVuajhmU19wWGxLM3AwcW5UaWp4ZDhsZDlFNHRLdXhMQW0yeVhtMVM3a2FVQnJWT1JJN1h4M0FqT2VZelJ1d3U5Z1dUbTFQbS1LbnZmQW81N3NUTk1BandKSVZHMk9kSmR2VUpJYXBTVl9OT1BLeEh0MU1tS3F0YXo5aTNOejNpMGptZDlSaE0?oc=5",
+          "category": "AI & education",
+          "publishedAt": "2026-08-25T15:13:27.000Z"
+        }
+      ]
+    },
     {
       "slug": "ai-signal-2026-08-27",
       "date": "2026-08-27",
