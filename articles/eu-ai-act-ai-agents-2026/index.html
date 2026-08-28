@@ -13,6 +13,7 @@
 <meta property="og:description" content="A developer's practical view of the EU AI Act for AI agents: transparency, providers, logging, human oversight, production architecture and when not to use AI.">
 <meta property="og:url" content="https://rafaelmarcos.tech/articles/eu-ai-act-ai-agents-2026/">
 <meta property="og:site_name" content="Rafael Marcos">
+<meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://rafaelmarcos.tech/assets/og/eu-ai-act-ai-agents-2026.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -28,7 +29,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400..800&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","headline":"EU AI Act for AI Agents: What Developers and Businesses Need to Change in 2026","description":"A developer's practical view of the EU AI Act for AI agents: transparency, providers, logging, human oversight, production architecture and when not to use AI.","datePublished":"2026-08-26","dateModified":"2026-08-26","mainEntityOfPage":{"@type":"WebPage","@id":"https://rafaelmarcos.tech/articles/eu-ai-act-ai-agents-2026/"},"author":{"@type":"Person","name":"Rafael Marcos","url":"https://rafaelmarcos.tech/"},"publisher":{"@type":"Person","name":"Rafael Marcos"}}
+{"@context":"https://schema.org","@type":"BlogPosting","headline":"EU AI Act for AI Agents: What Developers and Businesses Need to Change in 2026","description":"A developer's practical view of the EU AI Act for AI agents: transparency, providers, logging, human oversight, production architecture and when not to use AI.","inLanguage":"en","datePublished":"2026-08-26","dateModified":"2026-08-26","mainEntityOfPage":{"@type":"WebPage","@id":"https://rafaelmarcos.tech/articles/eu-ai-act-ai-agents-2026/"},"author":{"@type":"Person","name":"Rafael Marcos","url":"https://rafaelmarcos.tech/"},"publisher":{"@type":"Person","name":"Rafael Marcos"}}
 </script>
 <link rel="stylesheet" href="/assets/v2.css">
 </head>
@@ -36,32 +37,28 @@
 <header class="v2-nav">
     <div class="v2-shell v2-nav-in">
       <a href="/" class="v2-brand">RafaelMarcos<em>_</em></a>
-      <nav class="v2-links" aria-label="Navegación principal">
-        <a href="/#systems" data-i18n="navSystems">Systems</a>
-        <a href="/articles/" aria-current="page" data-i18n="navWriting">Writing</a>
-        <a href="/labs/" data-i18n="navLab">Lab</a>
-        <a href="/#contact" data-i18n="navContact">Contact</a>
+      <nav class="v2-links" aria-label="Primary navigation">
+        <a href="/#systems">Systems</a>
+        <a href="/articles/" aria-current="page">Writing</a>
+        <a href="/labs/">Lab</a>
+        <a href="/#contact">Contact</a>
       </nav>
       <div class="v2-nav-cta">
-        <div class="lang-switch" role="group" aria-label="Selector de idioma">
-          <button type="button" data-lang="es" aria-pressed="true">ES</button>
-          <button type="button" data-lang="en" aria-pressed="false">EN</button>
-        </div>
-        <a href="mailto:rafaelmarcos2604@gmail.com?subject=Consulta%20de%20proyecto" class="btn btn-primary" data-i18n="navCta">Start a project <span class="arrow">↗</span></a>
-        <button class="v2-menu-toggle" type="button" data-nav-toggle data-label-open="Abrir menú" data-label-close="Cerrar menú" aria-expanded="false" aria-controls="v2-mobile-nav" aria-label="Abrir menú">
+        <a href="mailto:rafaelmarcos2604@gmail.com?subject=Project%20enquiry" class="btn btn-primary">Start a project <span class="arrow">↗</span></a>
+        <button class="v2-menu-toggle" type="button" data-nav-toggle data-label-open="Open menu" data-label-close="Close menu" aria-expanded="false" aria-controls="v2-mobile-nav" aria-label="Open menu">
           <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
         </button>
       </div>
     </div>
     <div id="v2-mobile-nav" class="v2-mobile" hidden>
-      <a href="/#systems" data-i18n="navSystems">Systems</a>
-      <a href="/articles/" data-i18n="navWriting">Writing</a>
-      <a href="/labs/" data-i18n="navLab">Lab</a>
-      <a href="/#contact" data-i18n="navContact">Contact</a>
+      <a href="/#systems">Systems</a>
+      <a href="/articles/">Writing</a>
+      <a href="/labs/">Lab</a>
+      <a href="/#contact">Contact</a>
       <div class="sep" role="presentation"></div>
-      <a href="/articles/" data-i18n="navArticles">Artículos</a>
-      <a href="/news/" data-i18n="navNews">AI Signal · Noticias</a>
-      <a href="/copywriting/" data-i18n="navCopywriting">Copywriting</a>
+      <a href="/articles/">Articles</a>
+      <a href="/news/">AI Signal</a>
+      <a href="/copywriting/">Copywriting</a>
     </div>
   </header>
 
@@ -189,27 +186,17 @@
 
 <footer class="v2-shell v2-footer">
     <span>© 2026 Rafael Marcos Serrano</span>
-    <nav aria-label="Enlaces de pie">
+    <nav aria-label="Footer links">
       <a href="https://linkedin.com/in/rafael-marcos-serrano" target="_blank" rel="noopener">LinkedIn</a>
       <a href="https://github.com/rafamarcoss" target="_blank" rel="noopener">GitHub</a>
-      <a href="/articles/" data-i18n="fArticles">Artículos</a>
-      <a href="/news/" data-i18n="fNews">News</a>
+      <a href="/articles/">Articles</a>
+      <a href="/news/">News</a>
       <a href="/copywriting/">Copywriting</a>
       <a href="/rafaops/">RafaOps</a>
-      <a href="/labs/" data-i18n="fLab">Lab</a>
-      <a href="/upwork-match/" data-i18n="fMatch">Opportunity Match</a>
+      <a href="/labs/">Lab</a>
+      <a href="/upwork-match/">Opportunity Match</a>
     </nav>
   </footer>
-<script>
-window.V2_I18N = {
-  en: {
-    navSystems: 'Systems', navWriting: 'Writing', navLab: 'Lab', navContact: 'Contact',
-    navCta: 'Start a project <span class="arrow">↗</span>',
-    navArticles: 'Articles', navNews: 'AI Signal · News', navCopywriting: 'Copywriting',
-    fArticles: 'Articles', fNews: 'News', fLab: 'Lab', fMatch: 'Opportunity Match'
-  }
-};
-</script>
 <script src="/assets/v2.js"></script>
 </body>
 </html>

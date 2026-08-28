@@ -6,7 +6,7 @@ import { readFileSync, writeFileSync, mkdirSync, readdirSync, existsSync } from 
 import { join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { Resvg } from '@resvg/resvg-js';
-import { v2Nav, v2Footer, V2_NAV_I18N, V2_FONTS } from './v2-shell.mjs';
+import { v2Nav, v2Footer, V2_FONTS } from './v2-shell.mjs';
 
 const ROOT = resolve(fileURLToPath(import.meta.url), '..', '..');
 const CONTENT_DIR = join(ROOT, 'content', 'articles');
@@ -168,6 +168,7 @@ function articleHtml(article, all) {
 <meta property="og:description" content="${escapeHtml(data.description)}">
 <meta property="og:url" content="${url}">
 <meta property="og:site_name" content="Rafael Marcos">
+<meta property="og:locale" content="en_US">
 <meta property="og:image" content="${ogImage}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -181,7 +182,7 @@ function articleHtml(article, all) {
 <link rel="icon" href="/favicon.svg">
 ${V2_FONTS}
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","headline":${JSON.stringify(data.title)},"description":${JSON.stringify(data.description)},"datePublished":${JSON.stringify(date)},"dateModified":${JSON.stringify(updated)},"mainEntityOfPage":{"@type":"WebPage","@id":${JSON.stringify(url)}},"author":{"@type":"Person","name":${JSON.stringify(data.author || AUTHOR)},"url":"https://rafaelmarcos.tech/"},"publisher":{"@type":"Person","name":${JSON.stringify(data.author || AUTHOR)}}}
+{"@context":"https://schema.org","@type":"BlogPosting","headline":${JSON.stringify(data.title)},"description":${JSON.stringify(data.description)},"inLanguage":"en","datePublished":${JSON.stringify(date)},"dateModified":${JSON.stringify(updated)},"mainEntityOfPage":{"@type":"WebPage","@id":${JSON.stringify(url)}},"author":{"@type":"Person","name":${JSON.stringify(data.author || AUTHOR)},"url":"https://rafaelmarcos.tech/"},"publisher":{"@type":"Person","name":${JSON.stringify(data.author || AUTHOR)}}}
 </script>
 <link rel="stylesheet" href="/assets/v2.css">
 </head>
@@ -214,7 +215,6 @@ ${hero}${insight}
 </main>
 
 ${v2Footer()}
-${V2_NAV_I18N}
 <script src="/assets/v2.js"></script>
 </body>
 </html>`;
@@ -277,22 +277,23 @@ function indexHtml(articles) {
         </div>`).join('\n');
 
   const itemList = articles.map((a, i) => `{"@type":"ListItem","position":${i + 1},"url":"${SITE}/articles/${a.data.slug}/"}`).join(',');
-  const collectionJson = `{"@context":"https://schema.org","@type":"CollectionPage","name":"Articles — Rafael Marcos","description":"Evergreen SEO articles on AI, automation, SaaS and CRM.","url":"${SITE}/articles/","mainEntity":{"@type":"ItemList","itemListElement":[${itemList}]}}`;
+  const collectionJson = `{"@context":"https://schema.org","@type":"CollectionPage","name":"Technical SEO Content on SaaS, AI and Automation — Rafael Marcos","description":"Technical SEO articles on SaaS, AI, automation, CRM and software engineering.","inLanguage":"en","url":"${SITE}/articles/","mainEntity":{"@type":"ItemList","itemListElement":[${itemList}]}}`;
 
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Articles — Rafael Marcos</title>
-<meta name="description" content="Evergreen SEO articles on AI, automation, SaaS, CRM and software development — written by a developer who works with these systems.">
+<title>Technical SEO Content on SaaS, AI & Automation — Rafael Marcos</title>
+<meta name="description" content="Technical SEO articles on SaaS, AI, automation, CRM and software engineering, written by a builder of production systems.">
 <meta name="author" content="${AUTHOR}">
 <meta name="theme-color" content="#F4F5EF">
 <link rel="canonical" href="https://rafaelmarcos.tech/articles/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Articles — Rafael Marcos">
-<meta property="og:description" content="Evergreen SEO articles on AI, automation, SaaS and CRM.">
+<meta property="og:title" content="Technical SEO Content on SaaS, AI & Automation — Rafael Marcos">
+<meta property="og:description" content="Technical SEO articles on SaaS, AI, automation, CRM and software engineering.">
 <meta property="og:url" content="https://rafaelmarcos.tech/articles/">
+<meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="/favicon.svg">
 ${V2_FONTS}
@@ -319,7 +320,6 @@ ${rows}
 </main>
 
 ${v2Footer()}
-${V2_NAV_I18N}
 <script src="/assets/v2.js"></script>
 </body>
 </html>`;

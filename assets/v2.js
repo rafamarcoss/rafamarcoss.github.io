@@ -3,37 +3,6 @@
   'use strict';
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-  /* ---- i18n (page provides window.V2_I18N = { meta: {title, description}, en: {key: html} }) ---- */
-  const dict = window.V2_I18N && window.V2_I18N.en ? window.V2_I18N.en : null;
-  const nodes = Array.from(document.querySelectorAll('[data-i18n]'));
-  nodes.forEach(el => { el.dataset.es = el.innerHTML; });
-
-  /* ES metadata captured once from the document — no duplicated strings */
-  const descMeta = document.querySelector('meta[name="description"]');
-  const metaEs = { title: document.title, description: descMeta ? descMeta.content : '' };
-  const metaEn = window.V2_I18N && window.V2_I18N.meta ? window.V2_I18N.meta : null;
-
-  const applyLanguage = (lang) => {
-    const target = lang === 'en' ? 'en' : 'es';
-    document.documentElement.lang = target;
-    nodes.forEach(el => {
-      const key = el.dataset.i18n;
-      el.innerHTML = (target === 'en' && dict && dict[key]) ? dict[key] : el.dataset.es;
-    });
-    document.querySelectorAll('[data-lang]').forEach(btn =>
-      btn.setAttribute('aria-pressed', String(btn.dataset.lang === target)));
-    const m = target === 'en' ? metaEn : metaEs;
-    if (m && m.title) document.title = m.title;
-    if (descMeta && m && m.description) descMeta.setAttribute('content', m.description);
-    try { localStorage.setItem('site-language', target); } catch (e) { /* private mode */ }
-  };
-
-  document.querySelectorAll('[data-lang]').forEach(btn =>
-    btn.addEventListener('click', () => applyLanguage(btn.dataset.lang)));
-  let initialLang = 'es';
-  try { initialLang = localStorage.getItem('site-language') || 'es'; } catch (e) { /* private mode */ }
-  applyLanguage(initialLang);
-
   /* ---- reveal on scroll ---- */
   const revealEls = Array.from(document.querySelectorAll('.reveal'));
   if (reduceMotion.matches || !('IntersectionObserver' in window)) {
@@ -58,7 +27,7 @@
     if (!toggle || !panel) return;
     if (panel.hidden && !panel.classList.contains('open')) return;
     toggle.setAttribute('aria-expanded', 'false');
-    toggle.setAttribute('aria-label', toggle.dataset.labelOpen || 'Abrir menú');
+    toggle.setAttribute('aria-label', toggle.dataset.labelOpen || 'Open menu');
     panel.classList.remove('open');
     window.setTimeout(() => { if (!panel.classList.contains('open')) panel.hidden = true; }, 160);
     if (restoreFocus && lastTrigger instanceof HTMLElement) lastTrigger.focus({ preventScroll: true });
@@ -69,7 +38,7 @@
     panel.hidden = false;
     requestAnimationFrame(() => panel.classList.add('open'));
     toggle.setAttribute('aria-expanded', 'true');
-    toggle.setAttribute('aria-label', toggle.dataset.labelClose || 'Cerrar menú');
+    toggle.setAttribute('aria-label', toggle.dataset.labelClose || 'Close menu');
   };
 
   if (toggle && panel) {
@@ -105,8 +74,8 @@
     fetch('/rafaops/status.json')
       .then(response => response.ok ? response.json() : Promise.reject())
       .then(data => {
-        rafaopsStatus.textContent = data.health === 'healthy' ? 'Estado actual: healthy' : 'Estado actual: requiere atención';
+        rafaopsStatus.textContent = data.health === 'healthy' ? 'Current state: healthy' : 'Current state: needs attention';
       })
-      .catch(() => { rafaopsStatus.textContent = 'Estado actual no disponible'; });
+      .catch(() => { rafaopsStatus.textContent = 'Current state unavailable'; });
   }
 })();
