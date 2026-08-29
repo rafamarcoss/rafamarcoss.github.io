@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-29T13:09:20.196Z",
+  "generatedAt": "2026-08-29T13:09:32.376Z",
   "health": "incident",
   "summary": "RafaOps ha detectado un incidente que requiere revisión.",
   "metrics": {
-    "availability": 66.7,
-    "healthyChecks": 2,
+    "availability": 75,
+    "healthyChecks": 3,
     "totalChecks": 5,
     "openIncidents": 1,
     "supervisedRecoveries": 0,
@@ -21,8 +21,8 @@
       "critical": true,
       "status": "healthy",
       "detail": "HTML y marca verificados",
-      "latencyMs": 181,
-      "checkedAt": "2026-08-29T13:09:20.377Z"
+      "latencyMs": 197,
+      "checkedAt": "2026-08-29T13:09:32.573Z"
     },
     {
       "id": "news-page",
@@ -31,8 +31,8 @@
       "critical": true,
       "status": "healthy",
       "detail": "Archivo de noticias disponible",
-      "latencyMs": 136,
-      "checkedAt": "2026-08-29T13:09:20.375Z"
+      "latencyMs": 145,
+      "checkedAt": "2026-08-29T13:09:32.570Z"
     },
     {
       "id": "feed-integrity",
@@ -42,16 +42,16 @@
       "status": "failed",
       "detail": "Edición es incompleta",
       "latencyMs": 0,
-      "checkedAt": "2026-08-29T13:09:20.241Z"
+      "checkedAt": "2026-08-29T13:09:32.426Z"
     },
     {
       "id": "github-actions",
       "name": "GitHub Actions",
       "critical": false,
-      "status": "running",
-      "detail": "Ejecución in_progress",
-      "latencyMs": 177,
-      "checkedAt": "2026-08-29T13:09:20.418Z",
+      "status": "healthy",
+      "detail": "Última ejecución: success",
+      "latencyMs": 216,
+      "checkedAt": "2026-08-29T13:09:32.642Z",
       "url": "https://github.com/rafamarcoss/rafamarcoss.github.io/actions/runs/33254224127"
     },
     {
@@ -61,7 +61,7 @@
       "status": "private",
       "detail": "Runtime aislado; conector local pendiente",
       "latencyMs": null,
-      "checkedAt": "2026-08-29T13:09:20.196Z",
+      "checkedAt": "2026-08-29T13:09:32.376Z",
       "url": null
     }
   ],
@@ -212,6 +212,42 @@
     }
   ],
   "runs": [
+    {
+      "id": "33254295481",
+      "source": "workflow_run",
+      "startedAt": "2026-08-29T13:09:32.375Z",
+      "finishedAt": "2026-08-29T13:09:32.376Z",
+      "durationMs": 267,
+      "status": "incident",
+      "checks": [
+        {
+          "id": "website",
+          "status": "healthy",
+          "latencyMs": 197
+        },
+        {
+          "id": "news-page",
+          "status": "healthy",
+          "latencyMs": 145
+        },
+        {
+          "id": "feed-integrity",
+          "status": "failed",
+          "latencyMs": 0
+        },
+        {
+          "id": "github-actions",
+          "status": "healthy",
+          "latencyMs": 216
+        },
+        {
+          "id": "n8n-private",
+          "status": "private",
+          "latencyMs": null
+        }
+      ],
+      "url": "https://github.com/rafamarcoss/rafamarcoss.github.io/actions/runs/33254295481"
+    },
     {
       "id": "33254224127",
       "source": "schedule",
@@ -895,42 +931,6 @@
         }
       ],
       "url": "https://github.com/rafamarcoss/rafamarcoss.github.io/actions/runs/32838941394"
-    },
-    {
-      "id": "32823946386",
-      "source": "workflow_run",
-      "startedAt": "2026-08-25T07:55:13.072Z",
-      "finishedAt": "2026-08-25T07:55:13.073Z",
-      "durationMs": 517,
-      "status": "operational",
-      "checks": [
-        {
-          "id": "website",
-          "status": "healthy",
-          "latencyMs": 400
-        },
-        {
-          "id": "news-page",
-          "status": "healthy",
-          "latencyMs": 253
-        },
-        {
-          "id": "feed-integrity",
-          "status": "healthy",
-          "latencyMs": 0
-        },
-        {
-          "id": "github-actions",
-          "status": "healthy",
-          "latencyMs": 372
-        },
-        {
-          "id": "n8n-private",
-          "status": "private",
-          "latencyMs": null
-        }
-      ],
-      "url": "https://github.com/rafamarcoss/rafamarcoss.github.io/actions/runs/32823946386"
     }
   ]
 }
