@@ -48,17 +48,15 @@ function validateFeed(feed) {
   if (!Array.isArray(latest.sources) || latest.sources.length !== 10) {
     throw new Error('La última edición no contiene 10 fuentes');
   }
-  for (const language of ['es', 'en']) {
-    const article = latest.content?.[language];
-    if (!article?.title || !article?.intro || !Array.isArray(article.sections) || article.sections.length < 3) {
-      throw new Error(`Edición ${language} incompleta`);
-    }
+  const article = latest.content?.en;
+  if (!article?.title || !article?.intro || !Array.isArray(article.sections) || article.sections.length < 3) {
+    throw new Error('English edition incomplete');
   }
   const ageHours = Math.round((Date.now() - new Date(latest.generatedAt).getTime()) / 3_600_000);
   if (!Number.isFinite(ageHours) || ageHours > 48) {
     throw new Error(`Última edición con ${ageHours} h de antigüedad`);
   }
-  return `${latest.sources.length} fuentes · ES/EN · ${Math.max(0, ageHours)} h`;
+  return `${latest.sources.length} fuentes · EN · ${Math.max(0, ageHours)} h`;
 }
 
 async function checkLocalFeed() {
