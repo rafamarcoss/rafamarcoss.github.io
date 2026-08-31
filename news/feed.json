@@ -1,7 +1,115 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-30T12:48:49.699Z",
+  "generatedAt": "2026-08-31T15:03:06.771Z",
   "articles": [
+    {
+      "slug": "ai-signal-2026-08-31",
+      "date": "2026-08-31",
+      "generatedAt": "2026-08-31T15:03:06.771Z",
+      "categories": [
+        "AI",
+        "Finance & investment",
+        "AI & education",
+        "Work & business",
+        "AI & law"
+      ],
+      "readingMinutes": 4,
+      "content": {
+        "en": {
+          "title": "AI Signal: ROI Gaps, Education Shifts, and Workplace Caution",
+          "dek": "Finance leaders struggle to measure AI returns while Microsoft withholds segment data. Education explores new assessment models and legal sectors brace for frontier AI risks.",
+          "intro": "As AI adoption accelerates across markets, education, work, and regulation, today's stories reveal a landscape of high stakes and uneven readiness. Financial institutions face opacity in AI business metrics, schools reconsider traditional assessment, workplaces learn from integration successes and replacement failures, and regulators and insurers sound caution on emerging risks.",
+          "sections": [
+            {
+              "heading": "AI ROI: Promise vs. Measurement",
+              "body": "McKinsey's 2026 state of AI report frames the current phase as 'on the road to ROI,' implying that returns are achievable with the right strategy. However, a Protiviti survey finds only 35% of finance leaders confidently gauge ROI from AI, indicating a significant gap between ambition and measurement capability. This material disagreement highlights a core tension: while consultancies project a path to value, many practitioners lack the tools to quantify it. Compounding investor concerns, the Wall Street Journal reports that Microsoft is 'leaving investors flying blind' on its AI businesses, as the tech giant does not break out revenue or profit for AI segments. Without transparent reporting, markets struggle to evaluate the true financial impact of AI investments, potentially distorting capital allocation and inflating expectations."
+            },
+            {
+              "heading": "Education Rethinks Assessment and Writing",
+              "body": "An MIT AI report calls for alternative grading methods and more social learning to adapt to AI's presence in classrooms. The report suggests that traditional exams and solo assignments may no longer effectively measure student learning when AI tools are widely available, urging educators to design collaborative and authentic assessments. Supporting this shift, UC Irvine's School of Education will lead a $10 million national center on AI and postsecondary writing. The center will study how AI affects writing instruction and develop evidence-based practices, signaling a significant investment in understanding AI's role in higher education. However, the report and center face limits: institutional inertia and faculty resistance to changing grading systems could slow adoption."
+            },
+            {
+              "heading": "Workplace Integration: Lessons from China and Meta's Failure",
+              "body": "The World Economic Forum shares lessons from Chinese business leaders on integrating AI in the workplace, emphasizing a careful, incremental approach that augments rather than replaces workers. These leaders focus on retraining employees and redesigning workflows to leverage AI's strengths while preserving human judgment. In contrast, Reuters reports that Mark Zuckerberg's bold plan to replace Meta staff with AI imploded, as the company encountered unexpected technical and organizational challenges. The failure underscores the limits of full automation and the importance of human oversight, particularly in creative and strategic roles. Together, these stories highlight a clear tension: thoughtful integration may yield benefits, while aggressive replacement can backfire."
+            },
+            {
+              "heading": "Regulation and Legal Risk Management",
+              "body": "The Financial Stability Board chair warned about risks arising from frontier AI models, highlighting potential financial stability concerns such as herding behavior and concentration risk in AI providers. This warning signals that regulators are increasingly focused on systemic implications of advanced AI, which could lead to new oversight frameworks. In the legal sector, malpractice insurers are advising law firms on five ways to reduce AI risk, including verifying AI outputs, maintaining human review, and documenting AI use. Meanwhile, a Bain partner's legal AI strategy suggests 'buy everything but Big Law,' implying that AI tools are best applied to commoditized legal work rather than high-end advisory services. These developments show a pragmatic approach to risk management while acknowledging that AI will transform legal workflows."
+            }
+          ],
+          "takeaways": [
+            "Finance leaders must develop rigorous AI ROI measurement frameworks; currently only 35% feel confident, creating a competitive advantage for early adopters.",
+            "Investors should demand transparency from tech companies like Microsoft on AI segment performance to make informed decisions.",
+            "Educators should explore alternative grading and social learning to fairly assess student work in an AI-augmented environment.",
+            "Workplace leaders should prioritize integrating AI to augment employees, learning from Chinese business leaders, rather than wholesale replacement as Meta attempted.",
+            "Law firms should implement risk-reduction measures advised by malpractice insurers, such as human review of AI outputs, to mitigate liability."
+          ],
+          "closing": "The AI landscape is maturing, but maturity brings complexity. While the promise of ROI and transformation remains strong, the stories today highlight the need for transparency, thoughtful implementation, and adaptive regulation. Whether in finance, education, work, or law, the successful path forward lies in balancing innovation with accountability and human-centric design."
+        }
+      },
+      "sources": [
+        {
+          "title": "FSB Chair warns of risks arising from frontier Artificial Intelligence (AI) models - Financial Stability Board",
+          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQbmJIcDlHZ0Y3aGJ0VHA1ZUNOaTIzSkR3YThzNVdKdkVMQUhRU252NWpTV3ZQMHoyYnNjZWEtcWowTW9jNjhPaWxuT1JZQjUxb0tlS3ROaTJkVmNfRDh0dGxZVWs4OG5mTXFib3lsMVd5TVczZEEwTWlPMnd6R0hlZHQ0WXVtaTdUTWt1WWFqU0h1ZWhwLWd2bWV4WmlKVU4ybWVfT1lZNkVob0J0R2c?oc=5",
+          "category": "AI",
+          "publishedAt": "2026-08-31T06:04:42.000Z"
+        },
+        {
+          "title": "The state of AI in 2026: On the road to ROI - McKinsey & Company",
+          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPVkNzT2lMcURPYXQxQmh0azdzbjVrNFktNzZFLTZacnFlR2xZYXczRnI4MHh2amsya2xOOEh1QURSbFUxU0ZUWGQ5WE5kVHJtbEFJb0NOdTNVUVhPeC1iVVJOZk1VbXpwLVBuYzVod0tMVmlYbVdzNjgwcF83MTVJTWNvVFRaZw?oc=5",
+          "category": "AI",
+          "publishedAt": "2026-08-25T00:00:00.000Z"
+        },
+        {
+          "title": "Only 35% of finance leaders confidently gauge ROI from AI: Protiviti - CFO Dive",
+          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQc1Y3TFAzUy1PWWtTVE5FQl9kWEJSYU9LbnhxdWFPc19sN1prLXhFekQ0NVdia2NFbXotX3c0MHNhWEg5Q1JjWHZMSmdFRHMycV90bXVtVlY0TG45djFxcDlYVjhSeWY3MGRVVjRoRnVYdkxmVDFJZUtyVmFHdXZXNjhGWEdmbjB4el9vMkVqWTJld01JaVRiZTEwWU1LSFkyTEdEU0NMRmQwMThRSFNXY29IMldaME1rQ240NQ?oc=5",
+          "category": "Finance & investment",
+          "publishedAt": "2026-08-27T21:00:13.000Z"
+        },
+        {
+          "title": "Microsoft Is Leaving Investors Flying Blind on Its AI Businesses - WSJ",
+          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQdFY0NEpTbU51QTA4YXloUkVMVWFuYjcwZy1uaEtUX0dqbkU0UVAtUkRkUEZYTGhSV3M1bDBrd3NDZG9TNjI1MFZPX2szTTNQLWJQWkdTT0txZ1RjUU9RaW5OMTVoTUItbFpZMGkxREF0SlFhNXlCc2VWOXhBQUhSWXVTMDBMeWt1dk5tUktzcUpZTE5tYTVQcmp3YTBxMzIzZ204?oc=5",
+          "category": "Finance & investment",
+          "publishedAt": "2026-08-26T09:30:00.000Z"
+        },
+        {
+          "title": "MIT AI Report Calls for Alternative Grading, More Social Learning - Inside Higher Ed",
+          "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNbnYwb1pRVHhoZ2xsbDVscmxCSElDYlM1SkpkWUw2TmpEMVpXbzdDd0xUeWhFLWU2YVJsX0tXV1ZhSVQ0ZWNKdkZobktuU2tHa1ByRFJZS0VXU2lIbUpLQVdjbG0wTTdtdjVqNE03Sl9oeC1fUHJZYVFDOHZVazJnQk85RUlBMW9HRzdyd0hJaWdVV1NFTFo2T1I1NzBIQ3ljUE5ubldOYzFxbjB4bHZRT050WXRVWE9IR2Z0ZnBZeVNHWEZ4?oc=5",
+          "category": "AI & education",
+          "publishedAt": "2026-08-28T07:01:14.000Z"
+        },
+        {
+          "title": "UC Irvine School of Education to lead $10 million national center on AI and postsecondary writing - UC Irvine News",
+          "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOdVpDci1ZbVRNUEpwaUtjS0xNbllNXzlVaDdxTVNsRGZoNmREaTI4TTF6V0h6eWxhM1FXSTMtLVM1UTVaUWR1WjRwZ2pXcGQ1R0N1bl9mV01BOTdpUnNDUFIzc3NldFFsOVJBaVpNLUtHYUg0UmpyeTNfMm82Z0phcFlabldkMUxxOEFHRDd1SWpuSkR2Z2VJRi01WlpNaVdqc3pWUGhRbngxdkVITTFpNEZ1UzkxOTI1amhpN3M5bHZNSTRobldlVw?oc=5",
+          "category": "AI & education",
+          "publishedAt": "2026-08-27T18:03:58.000Z"
+        },
+        {
+          "title": "Lessons from Chinese business leaders about integrating AI in the workplace - The World Economic Forum",
+          "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQTGt5Ulg0c05NV0FRUVdrdG1lNjU3REQ3NllROV9DQWROeWR5RkluU3NhRWlZbFJDVDRMSl8yUkVpWENaWXpVWnVZVlY5Q0ZrRWpLNUlMektKbnA0ejRMcV9iN0YyUUVleDZmX0p3Y2VXX3pBVFJtUG42MTJlRFJrZk5uYmxnVzRJY21N?oc=5",
+          "category": "Work & business",
+          "publishedAt": "2026-08-27T11:56:38.000Z"
+        },
+        {
+          "title": "Mark Zuckerberg had a bold plan to replace Meta staff with AI. Here’s how it imploded. - Reuters",
+          "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOMVhpalVEX2c1eUE5LVNJX0QyX0oyRmlxOThJTm9TZXpKbnpUbWU1Z1ZuQjlvVWpMQzBaamtsZlRpS2daendQY1pDQ2ZRWG45VlJ0eVlXNFVzUC1DcUQ0eTlMZEhRUnBjSmo3MHB6X1JCT2RZY0YyOGFPdjF2c216MnBZR3RSaFplYTg0bmVuNk42amZERzB3NGM1NGJaMUQtSjZXdlJtZmlUTktDcVBKaXVWekdtOGdoRlQ2d09CRFM1LVN1MktkTg?oc=5",
+          "category": "Work & business",
+          "publishedAt": "2026-08-26T10:07:00.000Z"
+        },
+        {
+          "title": "5 ways malpractice insurers say law firms can reduce AI risk - Maryland Daily Record",
+          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE4zcmRTTW1QSURTVml5UHNKNEkxVlVnMXdoN0k1MVp3cERWSTRDaWJHYTItdEVNMDJiOWRvUE1RRERLZlVieWprSzRHRmFkb1dxc1hyRW1jTlktdG1ETk5HT1U4QjlkYXIxVXM2RFByU2R4RnVm?oc=5",
+          "category": "AI & law",
+          "publishedAt": "2026-08-26T09:03:32.000Z"
+        },
+        {
+          "title": "Bain Partner’s Legal AI Strategy: Buy Everything But Big Law - Bloomberg Law News",
+          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQLWtJSFFLbFV5b0V4Mlhad0Y0ME54bjhuOW1ZRlRQbllDclpfTUlyMGZwZW5TcXFhN2g5ZFExY3BkakxfcFJibDFabEdJZW1xYW9mWTVGUUZCcjNIRDhVY2J6dEhNOG1xeHBsb0Z5dG1hUHlMcUkyYlJwX1FncXEwVm95SDRxQlc5X0xYMWJZTnFuNFdKbHJaMWQ5c1hRSkZCY3BQaTU0U1gwYTFJVFlV?oc=5",
+          "category": "AI & law",
+          "publishedAt": "2026-08-27T09:00:00.000Z"
+        }
+      ]
+    },
     {
       "slug": "ai-signal-2026-08-30",
       "date": "2026-08-30",
