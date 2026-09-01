@@ -76,7 +76,7 @@ For the sales side specifically, [the seven CRM workflows](/articles/crm-automat
 
 AI is an extension of SaaS automation, not a replacement for it. Once the deterministic plumbing is in place — data moving between systems — an AI layer can handle the parts that need judgement:
 
-- An agent that reads a support ticket and drafts a reply.
+- An [AI agent for customer support](/articles/ai-agents-for-customer-support/) that reads a ticket and drafts a reply.
 - A model that extracts structured fields from an unstructured email.
 - A classifier that routes a request to the right team.
 
@@ -89,7 +89,7 @@ Growing teams usually do best with this sequence:
 1. **Pick one painful manual process.** Choose the one that recurs daily and has a clear source of truth.
 2. **Write down the exact steps.** If a human cannot describe them, the automation will be wrong.
 3. **Build it small.** One trigger, a few conditions, a few actions.
-4. **Log everything.** Every run should be traceable.
+4. **Log everything.** Every run should be traceable; [AI agent observability in production](/articles/ai-agent-observability/) explains the events worth retaining.
 5. **Expand only after it is stable.** Add the next workflow once the first one is trusted.
 
 Resist the urge to automate everything at once. A small number of reliable workflows is worth more than a large number of fragile ones.

@@ -1,8 +1,9 @@
 ---
 title: "AI Agents for Customer Support: How They Work and When to Use Them"
+seoTitle: "AI Agents for Customer Support: A Practical Guide"
 description: "A practical breakdown of how AI support agents work — the model, tools, context and guardrails — and where they actually fit in a support team."
 date: 2026-08-24
-updated: 2026-08-25
+updated: 2026-09-01
 category: "AI"
 tags: ["ai agents", "customer support", "llm", "tools", "crm", "human handoff"]
 slug: "ai-agents-for-customer-support"

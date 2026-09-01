@@ -1,8 +1,9 @@
 ---
 title: "AI Agent Observability: What to Log in Production"
+seoTitle: "AI Agent Observability: Production Logging Guide"
 description: "A framework-neutral reference for tracing production AI agents: runs, tool calls, state changes, cost, handoffs and the data you should not retain."
 date: 2026-08-28
-updated: 2026-08-28
+updated: 2026-09-01
 category: "AI Engineering"
 tags: ["ai agent observability", "agent telemetry", "llm observability", "tracing", "tool calls", "production ai"]
 slug: "ai-agent-observability"

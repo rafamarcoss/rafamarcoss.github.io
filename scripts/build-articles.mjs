@@ -135,6 +135,7 @@ function articleHtml(article, all) {
   const reading = readingMinutes(body);
   const date = data.date || '2026-08-24';
   const updated = data.updated || date;
+  const seoTitle = data.seoTitle || data.title;
   const dateHuman = new Intl.DateTimeFormat('en-GB', { day: '2-digit', month: 'long', year: 'numeric' }).format(new Date(`${date}T12:00:00`));
   const related = (data.related || []).map((r) => all.find((a) => a.data.slug === r)).filter(Boolean);
   const tags = (data.tags || []).length
@@ -158,13 +159,13 @@ function articleHtml(article, all) {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>${escapeHtml(data.title)} — Rafael Marcos</title>
+<title>${escapeHtml(seoTitle)}</title>
 <meta name="description" content="${escapeHtml(data.description)}">
 <meta name="author" content="${escapeHtml(data.author || AUTHOR)}">
 <meta name="theme-color" content="#F4F5EF">
 <link rel="canonical" href="${url}">
 <meta property="og:type" content="article">
-<meta property="og:title" content="${escapeHtml(data.title)}">
+<meta property="og:title" content="${escapeHtml(seoTitle)}">
 <meta property="og:description" content="${escapeHtml(data.description)}">
 <meta property="og:url" content="${url}">
 <meta property="og:site_name" content="Rafael Marcos">
@@ -177,7 +178,7 @@ function articleHtml(article, all) {
 <meta property="article:author" content="${escapeHtml(data.author || AUTHOR)}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="${ogImage}">
-<meta name="twitter:title" content="${escapeHtml(data.title)}">
+<meta name="twitter:title" content="${escapeHtml(seoTitle)}">
 <meta name="twitter:description" content="${escapeHtml(data.description)}">
 <link rel="icon" href="/favicon.svg">
 ${V2_FONTS}

@@ -55,7 +55,7 @@ An agent is the right choice for work that requires reading, interpretation, or 
 | Failure mode | Wrong rule | Hallucination, wrong action |
 | Best for | Repetitive, high-volume, precise work | Judgement, language, adaptation |
 
-The failure modes are the most important row. A broken automation does the wrong thing loudly and repeatedly. A misconfigured agent does the wrong thing subtly and in fluent prose. Both need testing, but the agent needs a different kind.
+The failure modes are the most important row. A broken automation does the wrong thing loudly and repeatedly. A misconfigured agent does the wrong thing subtly and in fluent prose. Both need testing, but the agent needs [production observability](/articles/ai-agent-observability/) that can reconstruct what it did.
 
 ## When to use traditional automation
 
@@ -70,7 +70,7 @@ If a human could describe the process as "if X, then Y, otherwise Z", you do not
 
 ## When to use an AI agent
 
-Use it when the input is unstructured or the decision needs interpretation:
+Use it when the input is unstructured or the decision needs interpretation. For teams deploying in Europe, the [EU AI Act requirements for AI agents](/articles/eu-ai-act-ai-agents-2026/) should shape the boundaries before the system reaches users:
 
 - Reading a support email and deciding what it is about.
 - Extracting fields from an inconsistent document.

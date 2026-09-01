@@ -86,7 +86,7 @@ Reporting automation does not generate strategy, but it removes the manual work 
 - **Conditions:** none, or filter by team and period.
 - **Action:** build a summary — won deals, pipeline value, stale opportunities — and send it to the team or a Slack channel.
 
-A related pattern is the handoff summary: when a deal moves from sales to onboarding or support, the CRM compiles the key facts into a single message so nothing gets lost between teams.
+A related pattern is the handoff summary: when a deal moves from sales to onboarding or support, the CRM compiles the key facts into a single message so nothing gets lost between teams. The same handoff boundary matters when using [AI agents for customer support](/articles/ai-agents-for-customer-support/).
 
 ## What makes these workflows reliable
 
@@ -94,7 +94,7 @@ Three habits separate workflows that run quietly in the background from the ones
 
 1. **Single source of truth.** Every workflow should read from and write to one system — usually the CRM — so there is no drift between tools.
 2. **Guards against duplication.** Reminders and follow-ups must check whether they already fired. A duplicate email to a prospect is worse than no automation at all.
-3. **Visibility.** Each automation should log what it did, so a rep can trace why an email was sent or a lead was reassigned.
+3. **Visibility.** Each automation should log what it did, so a rep can trace why an email was sent or a lead was reassigned. For systems that let an agent act, use [AI agent observability in production](/articles/ai-agent-observability/) to retain the run, tool and handoff evidence.
 
 ## Where to start
 

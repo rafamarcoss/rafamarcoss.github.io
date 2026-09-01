@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CRM Automation: 7 Workflows That Save Sales Teams Hours Every Week — Rafael Marcos</title>
+<title>CRM Automation: 7 Workflows That Save Sales Teams Hours Every Week</title>
 <meta name="description" content="Seven concrete CRM automation workflows — from lead assignment to reporting — with the triggers, conditions and integrations each one needs.">
 <meta name="author" content="Rafael Marcos">
 <meta name="theme-color" content="#F4F5EF">
@@ -106,10 +106,10 @@
 <h2 id="sec-7">7. Reporting and handoff summaries</h2>
 <p>Reporting automation does not generate strategy, but it removes the manual work of assembling the numbers.</p>
 <ul><li><strong>Trigger:</strong> scheduled (daily, weekly, or on a stage change).</li><li><strong>Conditions:</strong> none, or filter by team and period.</li><li><strong>Action:</strong> build a summary — won deals, pipeline value, stale opportunities — and send it to the team or a Slack channel.</li></ul>
-<p>A related pattern is the handoff summary: when a deal moves from sales to onboarding or support, the CRM compiles the key facts into a single message so nothing gets lost between teams.</p>
+<p>A related pattern is the handoff summary: when a deal moves from sales to onboarding or support, the CRM compiles the key facts into a single message so nothing gets lost between teams. The same handoff boundary matters when using <a href="/articles/ai-agents-for-customer-support/">AI agents for customer support</a>.</p>
 <h2 id="sec-8">What makes these workflows reliable</h2>
 <p>Three habits separate workflows that run quietly in the background from the ones that break after a week:</p>
-<ol><li><strong>Single source of truth.</strong> Every workflow should read from and write to one system — usually the CRM — so there is no drift between tools.</li><li><strong>Guards against duplication.</strong> Reminders and follow-ups must check whether they already fired. A duplicate email to a prospect is worse than no automation at all.</li><li><strong>Visibility.</strong> Each automation should log what it did, so a rep can trace why an email was sent or a lead was reassigned.</li></ol>
+<ol><li><strong>Single source of truth.</strong> Every workflow should read from and write to one system — usually the CRM — so there is no drift between tools.</li><li><strong>Guards against duplication.</strong> Reminders and follow-ups must check whether they already fired. A duplicate email to a prospect is worse than no automation at all.</li><li><strong>Visibility.</strong> Each automation should log what it did, so a rep can trace why an email was sent or a lead was reassigned. For systems that let an agent act, use <a href="/articles/ai-agent-observability/">AI agent observability in production</a> to retain the run, tool and handoff evidence.</li></ol>
 <h2 id="sec-9">Where to start</h2>
 <p>Do not build all seven at once. Start with lead assignment and reminders, because they are low-risk and their value is immediate. Then add qualification and follow-ups, and leave enrichment and reporting until the data model is stable.</p>
 <p>The order matters: automation built on top of a messy CRM just makes the mess faster.</p>

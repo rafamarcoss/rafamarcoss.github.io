@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Agents vs Traditional Automation: What's the Difference? — Rafael Marcos</title>
+<title>AI Agents vs Traditional Automation: What's the Difference?</title>
 <meta name="description" content="Traditional automation follows rules; AI agents make decisions. A clear comparison of how each works, what each is good at, and how to choose.">
 <meta name="author" content="Rafael Marcos">
 <meta name="theme-color" content="#F4F5EF">
@@ -91,13 +91,13 @@
 <p>An agent is the right choice for work that requires reading, interpretation, or adaptation — the parts that used to require a human.</p>
 <h2 id="sec-3">Side by side</h2>
 <div class="table-wrap"><table><thead><tr><th></th><th>Traditional automation</th><th>AI agents</th></tr></thead><tbody><tr><td>Behaviour</td><td>Deterministic</td><td>Non-deterministic</td></tr><tr><td>Built from</td><td>Triggers, conditions, actions</td><td>Model, prompt, tools</td></tr><tr><td>Handles</td><td>Known, structured inputs</td><td>Unstructured, varied inputs</td></tr><tr><td>Cost</td><td>Low, predictable</td><td>Higher, per-token</td></tr><tr><td>Failure mode</td><td>Wrong rule</td><td>Hallucination, wrong action</td></tr><tr><td>Best for</td><td>Repetitive, high-volume, precise work</td><td>Judgement, language, adaptation</td></tr></tbody></table></div>
-<p>The failure modes are the most important row. A broken automation does the wrong thing loudly and repeatedly. A misconfigured agent does the wrong thing subtly and in fluent prose. Both need testing, but the agent needs a different kind.</p>
+<p>The failure modes are the most important row. A broken automation does the wrong thing loudly and repeatedly. A misconfigured agent does the wrong thing subtly and in fluent prose. Both need testing, but the agent needs <a href="/articles/ai-agent-observability/">production observability</a> that can reconstruct what it did.</p>
 <h2 id="sec-4">When to use traditional automation</h2>
 <p>Use it when you can write the rules down completely. Good examples:</p>
 <ul><li>Moving a deal to "proposal sent" when a document is emailed.</li><li>Sending an invoice reminder on a schedule.</li><li>Syncing new form submissions into a CRM.</li><li>Routing a webhook to the right Slack channel.</li></ul>
 <p>If a human could describe the process as "if X, then Y, otherwise Z", you do not need an agent. You need a workflow. Agents here would add cost, latency, and risk for no benefit.</p>
 <h2 id="sec-5">When to use an AI agent</h2>
-<p>Use it when the input is unstructured or the decision needs interpretation:</p>
+<p>Use it when the input is unstructured or the decision needs interpretation. For teams deploying in Europe, the <a href="/articles/eu-ai-act-ai-agents-2026/">EU AI Act requirements for AI agents</a> should shape the boundaries before the system reaches users:</p>
 <ul><li>Reading a support email and deciding what it is about.</li><li>Extracting fields from an inconsistent document.</li><li>Drafting a tailored reply based on a customer's history.</li><li>Summarizing a long thread for a human to review.</li></ul>
 <p>The pattern is the same in each case: language in, judgement out. That is exactly what a model is good at and a rule is not.</p>
 <h2 id="sec-6">The practical answer: they are complementary</h2>
