@@ -1,7 +1,115 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-31T15:03:06.771Z",
+  "generatedAt": "2026-09-01T12:32:49.216Z",
   "articles": [
+    {
+      "slug": "ai-signal-2026-09-01",
+      "date": "2026-09-01",
+      "generatedAt": "2026-09-01T12:32:49.216Z",
+      "categories": [
+        "AI",
+        "Finance & investment",
+        "Work & business",
+        "AI & law",
+        "AI & education"
+      ],
+      "readingMinutes": 4,
+      "content": {
+        "en": {
+          "title": "AI Signal: Risk Warnings Meet Investment Surge in Work, Law, and Education",
+          "dek": "Regulators sound alarms on frontier AI while capital chases supply chains. Gaps in ROI measurement, job displacement, and educational adaptation define the day.",
+          "intro": "Today's AI Signal surfaces a field in tension: financial stability watchdogs and intelligence lawmakers warn of extreme risks, even as venture capital pours into AI infrastructure. Across finance, work, law, and education, leaders face a common challenge—how to capture value while managing uncertainty. Below, we trace the day's developments, flag divergences, and extract actionable takeaways.",
+          "sections": [
+            {
+              "heading": "Regulatory Alarm and Risk Mitigation",
+              "body": "The Financial Stability Board Chair warned about risks arising from frontier AI models, urging financial institutions to review their AI risk management. The House Intelligence Committee warned of 'Black Swan' AI risks, which may push policymakers toward AI security legislation. Meanwhile, malpractice insurers outlined five ways law firms can reduce AI risk, offering concrete guidance to lower liability. These moves reflect a regulatory and risk-management consensus: AI's unknowns demand proactive safeguards."
+            },
+            {
+              "heading": "Capital Flows and ROI Uncertainty",
+              "body": "Andreessen Horowitz launched a 'Machine Age' fund to address AI supply bottlenecks, targeting AI infrastructure and supply chain companies. This signals strong investor confidence in AI growth. However, a Protiviti survey found only 35% of finance leaders are confident in gauging ROI from AI, revealing a significant measurement gap. This divergence creates a market paradox: capital is flowing into enabling technologies while many adopters cannot yet prove returns. The contrast between regulatory caution and investor enthusiasm is not a direct conflict of data, but it exposes a material divergence in how different actors assess AI's net impact."
+            },
+            {
+              "heading": "Workplace Shifts and Global Lessons",
+              "body": "Meta is continuing to replace jobs with AI, according to a report, with one commentator saying robots are 'coming for us all.' This underscores displacement concerns. At the same time, the World Economic Forum published lessons from Chinese business leaders on integrating AI in the workplace, suggesting strategies for adoption that could mitigate negative impacts. The tension between efficiency gains and labor disruption remains unresolved, and companies may need to plan for workforce transitions."
+            },
+            {
+              "heading": "Education and Legal Adaptation",
+              "body": "In education, an MIT AI report calls for alternative grading and more social learning to address AI's impact, and UC Irvine will lead a $10 million national center on AI and postsecondary writing, signaling institutional investment in pedagogical adaptation. In law, a Bain partner outlined a strategy to 'buy everything but Big Law,' implying that AI tools are reshaping legal service delivery, while malpractice insurers have already begun advising firms on risk reduction. These moves suggest that professional and educational institutions are preparing for AI's integration, but the specifics of effective adaptation are still emerging."
+            }
+          ],
+          "takeaways": [
+            "Financial institutions should review AI risk management in light of the FSB warning.",
+            "Law firms can adopt the five risk-reduction practices identified by malpractice insurers to lower liability.",
+            "Investors may explore AI supply chain and infrastructure opportunities via funds like a16z's Machine Age.",
+            "Finance leaders should benchmark their AI ROI measurement against Protiviti's 35% confidence finding.",
+            "Business leaders can apply WEF's lessons from Chinese firms on workplace AI integration."
+          ],
+          "closing": "As today's signals show, AI is simultaneously a source of systemic risk and a catalyst for capital deployment and institutional change. The gap between warning and investment, measurement and confidence, and disruption and adaptation will define the next phase. Leaders who act on the concrete guidance emerging from regulators, insurers, and educators—while acknowledging the limits of current knowledge—may navigate the transition more effectively."
+        }
+      },
+      "sources": [
+        {
+          "title": "FSB Chair warns of risks arising from frontier Artificial Intelligence (AI) models - fsb.org",
+          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQbmJIcDlHZ0Y3aGJ0VHA1ZUNOaTIzSkR3YThzNVdKdkVMQUhRU252NWpTV3ZQMHoyYnNjZWEtcWowTW9jNjhPaWxuT1JZQjUxb0tlS3ROaTJkVmNfRDh0dGxZVWs4OG5mTXFib3lsMVd5TVczZEEwTWlPMnd6R0hlZHQ0WXVtaTdUTWt1WWFqU0h1ZWhwLWd2bWV4WmlKVU4ybWVfT1lZNkVob0J0R2c?oc=5",
+          "category": "AI",
+          "publishedAt": "2026-08-31T06:04:42.000Z"
+        },
+        {
+          "title": "House Intelligence Committee warns of 'Black Swan' AI risks - CNBC",
+          "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPSldFa0VOb0pOQTkxckR0ZHBOSWJFalQ1NVIyaFdPVDM5SEQ3RXFxOEJjY0Y3cEU3QWcwMC1kTWRyak00THMxNXhuTGZ5THdvLVZuTFdTTXBDbjhFVWxibVhYdGNYQmF2S3p6bzA3TnBuR3ZEbVNlLXNwWEZpMFhQdWJR0gGHAUFVX3lxTE9BbzhvdWdiTFcxcXB0SDcxSVlDekRsZlcwUldyTEtoU09rc21aTk9iU3I3WXV2cW1wcXJmQ0s3LTR1VnEyWm9nU21GaFlvZEg1ZFgtZ1V3YUY3UjBDd0c4c3ZnaUVZNFYxeUdLZV9hZ1hBaEs0bUtPbjNHQnRMSnA3T3dzd29hRQ?oc=5",
+          "category": "AI",
+          "publishedAt": "2026-08-31T21:18:37.000Z"
+        },
+        {
+          "title": "Exclusive | Andreessen Horowitz Launches ‘Machine Age’ Fund to Tackle AI Supply Bottlenecks - WSJ",
+          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPUFZvdlZDMk82a1lZeF9DV0otdjVBcmJDNWRXWXlqU3hxV0xlVGlKVk1fY05CZFAweXRVZlYzb3JPRnEzNGJmYUxGelNvelhuX0E5Y2ZHX2N3VXJTTlZKMllSUVY4ZWRYSzNkYmtGaW9QQ1AwZ2ZTRFAxWnFSeC04eHVScGFpdDRzY2dCYzFqVmM0aHdnM3hsbFVuMTc?oc=5",
+          "category": "Finance & investment",
+          "publishedAt": "2026-08-28T13:00:00.000Z"
+        },
+        {
+          "title": "Only 35% of finance leaders confidently gauge ROI from AI: Protiviti - CFO Dive",
+          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQc1Y3TFAzUy1PWWtTVE5FQl9kWEJSYU9LbnhxdWFPc19sN1prLXhFekQ0NVdia2NFbXotX3c0MHNhWEg5Q1JjWHZMSmdFRHMycV90bXVtVlY0TG45djFxcDlYVjhSeWY3MGRVVjRoRnVYdkxmVDFJZUtyVmFHdXZXNjhGWEdmbjB4el9vMkVqWTJld01JaVRiZTEwWU1LSFkyTEdEU0NMRmQwMThRSFNXY29IMldaME1rQ240NQ?oc=5",
+          "category": "Finance & investment",
+          "publishedAt": "2026-08-27T21:00:13.000Z"
+        },
+        {
+          "title": "Lessons from Chinese business leaders about integrating AI in the workplace - The World Economic Forum",
+          "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQTGt5Ulg0c05NV0FRUVdrdG1lNjU3REQ3NllROV9DQWROeWR5RkluU3NhRWlZbFJDVDRMSl8yUkVpWENaWXpVWnVZVlY5Q0ZrRWpLNUlMektKbnA0ejRMcV9iN0YyUUVleDZmX0p3Y2VXX3pBVFJtUG42MTJlRFJrZk5uYmxnVzRJY21N?oc=5",
+          "category": "Work & business",
+          "publishedAt": "2026-08-27T11:56:38.000Z"
+        },
+        {
+          "title": "Meta Continues to Trade Jobs for AI: Robots Are \"Coming For Us All\" - 24/7 Wall St.",
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOcWVXR3FwNklSMTFiVFdoekRHZ3Q5cXY1ZndJdkxCMUtZMXRUa1hYOElNbDd0SjJqNGRIbnpSc0lFeEVnM2d3bjZoTHRwZ1A5T1QwQWVYWi1Hb1NiVXhXelAteTFJbkhiRjV0bzZ6aVh3dWZYVWFwWkdEajJmV2FvRkhLYUkwQWlJLVZzR0wyNTMzTXE1RW5VWmsxaWdEYVBuRmhXZFJjcUJPVEp6?oc=5",
+          "category": "Work & business",
+          "publishedAt": "2026-08-29T15:31:00.000Z"
+        },
+        {
+          "title": "5 ways malpractice insurers say law firms can reduce AI risk - thedailyrecord.com",
+          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE4zcmRTTW1QSURTVml5UHNKNEkxVlVnMXdoN0k1MVp3cERWSTRDaWJHYTItdEVNMDJiOWRvUE1RRERLZlVieWprSzRHRmFkb1dxc1hyRW1jTlktdG1ETk5HT1U4QjlkYXIxVXM2RFByU2R4RnVm?oc=5",
+          "category": "AI & law",
+          "publishedAt": "2026-08-26T09:03:32.000Z"
+        },
+        {
+          "title": "Bain Partner’s Legal AI Strategy: Buy Everything But Big Law - Bloomberg Law News",
+          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQLWtJSFFLbFV5b0V4Mlhad0Y0ME54bjhuOW1ZRlRQbllDclpfTUlyMGZwZW5TcXFhN2g5ZFExY3BkakxfcFJibDFabEdJZW1xYW9mWTVGUUZCcjNIRDhVY2J6dEhNOG1xeHBsb0Z5dG1hUHlMcUkyYlJwX1FncXEwVm95SDRxQlc5X0xYMWJZTnFuNFdKbHJaMWQ5c1hRSkZCY3BQaTU0U1gwYTFJVFlV?oc=5",
+          "category": "AI & law",
+          "publishedAt": "2026-08-27T09:00:00.000Z"
+        },
+        {
+          "title": "MIT AI Report Calls for Alternative Grading, More Social Learning - Inside Higher Ed",
+          "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNbnYwb1pRVHhoZ2xsbDVscmxCSElDYlM1SkpkWUw2TmpEMVpXbzdDd0xUeWhFLWU2YVJsX0tXV1ZhSVQ0ZWNKdkZobktuU2tHa1ByRFJZS0VXU2lIbUpLQVdjbG0wTTdtdjVqNE03Sl9oeC1fUHJZYVFDOHZVazJnQk85RUlBMW9HRzdyd0hJaWdVV1NFTFo2T1I1NzBIQ3ljUE5ubldOYzFxbjB4bHZRT050WXRVWE9IR2Z0ZnBZeVNHWEZ4?oc=5",
+          "category": "AI & education",
+          "publishedAt": "2026-08-28T07:01:14.000Z"
+        },
+        {
+          "title": "UC Irvine School of Education to lead $10 million national center on AI and postsecondary writing - UC Irvine News",
+          "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOdVpDci1ZbVRNUEpwaUtjS0xNbllNXzlVaDdxTVNsRGZoNmREaTI4TTF6V0h6eWxhM1FXSTMtLVM1UTVaUWR1WjRwZ2pXcGQ1R0N1bl9mV01BOTdpUnNDUFIzc3NldFFsOVJBaVpNLUtHYUg0UmpyeTNfMm82Z0phcFlabldkMUxxOEFHRDd1SWpuSkR2Z2VJRi01WlpNaVdqc3pWUGhRbngxdkVITTFpNEZ1UzkxOTI1amhpN3M5bHZNSTRobldlVw?oc=5",
+          "category": "AI & education",
+          "publishedAt": "2026-08-27T18:03:58.000Z"
+        }
+      ]
+    },
     {
       "slug": "ai-signal-2026-08-31",
       "date": "2026-08-31",
