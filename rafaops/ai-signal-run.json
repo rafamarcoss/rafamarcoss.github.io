@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "system": "ai-signal",
-  "startedAt": "2026-09-02T12:04:18.628Z",
+  "startedAt": "2026-09-03T12:03:27.216Z",
   "status": "healthy",
   "models": {
     "selection": "deepseek-v4-flash",
@@ -16,11 +16,11 @@
       "model": "deepseek-v4-flash",
       "attempt": 1,
       "status": "success",
-      "durationMs": 10993,
+      "durationMs": 28271,
       "usage": {
-        "prompt_tokens": 2374,
-        "completion_tokens": 2163,
-        "total_tokens": 4537,
+        "prompt_tokens": 2378,
+        "completion_tokens": 3689,
+        "total_tokens": 6067,
         "prompt_tokens_details": {}
       }
     },
@@ -29,38 +29,47 @@
       "role": "worker",
       "model": "deepseek-v4-pro",
       "attempt": 1,
+      "status": "failed",
+      "durationMs": 51483,
+      "error": "OpenCode returned no JSON (finish: stop)"
+    },
+    {
+      "task": "write-english-edition",
+      "role": "worker",
+      "model": "deepseek-v4-pro",
+      "attempt": 2,
       "status": "success",
-      "durationMs": 53906,
+      "durationMs": 42431,
       "usage": {
-        "prompt_tokens": 1173,
-        "completion_tokens": 3608,
-        "total_tokens": 4781,
-        "prompt_cache_hit_tokens": 0,
-        "prompt_cache_miss_tokens": 1173,
+        "prompt_tokens": 1261,
+        "completion_tokens": 1998,
+        "total_tokens": 3259,
+        "prompt_cache_hit_tokens": 1152,
+        "prompt_cache_miss_tokens": 109,
         "prompt_tokens_details": {
-          "cached_tokens": 0
+          "cached_tokens": 1152
         },
         "completion_tokens_details": {
-          "reasoning_tokens": 2432
+          "reasoning_tokens": 852
         }
       }
     }
   ],
   "recoveries": [],
   "output": {
-    "slug": "ai-signal-2026-09-02",
+    "slug": "ai-signal-2026-09-03",
     "sources": 10,
     "languages": [
       "en"
     ]
   },
-  "finishedAt": "2026-09-02T12:05:25.363Z",
-  "durationMs": 66735,
+  "finishedAt": "2026-09-03T12:05:32.368Z",
+  "durationMs": 125152,
   "error": null,
   "metrics": {
-    "modelCalls": 2,
-    "failedAttempts": 0,
+    "modelCalls": 3,
+    "failedAttempts": 1,
     "supervisedRecoveries": 0,
-    "totalTokens": 9318
+    "totalTokens": 9326
   }
 }
