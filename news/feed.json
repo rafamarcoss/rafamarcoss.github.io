@@ -1,7 +1,119 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-03T12:05:32.349Z",
+  "generatedAt": "2026-09-04T12:06:13.078Z",
   "articles": [
+    {
+      "slug": "ai-signal-2026-09-04",
+      "date": "2026-09-04",
+      "generatedAt": "2026-09-04T12:06:13.078Z",
+      "categories": [
+        "AI",
+        "Work & business",
+        "Finance & investment",
+        "AI & law",
+        "AI & education"
+      ],
+      "readingMinutes": 4,
+      "content": {
+        "en": {
+          "title": "AI's Market Boom Meets Regulatory and Educational Reckoning",
+          "dek": "Investors pour capital into AI supply chains while regulators warn of financial stability risks. New rules for lawyers and workplace AI policies emerge alongside concerns about student learning outcomes.",
+          "intro": "The week's AI signal reveals a landscape of stark contrasts. While venture capital flows into addressing AI's physical constraints and corporate financial value from AI holds steady, watchdogs caution about systemic risks from frontier models. Meanwhile, policymakers and educators are moving to govern AI's integration into law, work, and classrooms, even as research infrastructure expands.",
+          "sections": [
+            {
+              "heading": "Markets Bet on AI Infrastructure as Stability Concerns Loom",
+              "body": "The Financial Stability Board chair warned on August 31 about risks arising from frontier AI models, signaling that financial watchdogs are increasingly focused on potential systemic impacts. In parallel, Andreessen Horowitz launched a 'Machine Age' fund on August 28 to tackle AI supply bottlenecks, indicating confidence in the sector's growth. Meanwhile, a report on September 1 found that companies' financial value from AI holds firm in 2026, according to Financial Management magazine."
+            },
+            {
+              "heading": "Workplace AI: Levers for Productivity and Shifts in Real Estate",
+              "body": "MIT Sloan outlined 10 levers for shaping generative AI to improve worker performance in an article published September 3, offering managers concrete strategies for effective adoption. At the same time, a JLL report from September 1 highlights how AI-driven job changes are reshaping real estate demand, suggesting investors must consider these shifts when assessing property markets."
+            },
+            {
+              "heading": "Regulation Advances: Lawyers and Employers Face New AI Rules",
+              "body": "California lawmakers passed a bill on September 1 governing lawyers' use of AI, as reported by Reuters, setting boundaries for legal professionals. Additionally, Epstein Becker Green published a guide on September 2 to help employers navigate the changing legal landscape of workplace AI in 2026, underscoring the need for updated policies."
+            },
+            {
+              "heading": "Education's AI Paradox: Faster Homework, Weaker Learning",
+              "body": "Al Jazeera reported on September 2 that AI use leads to faster homework completion but poorer exam results for students, raising alarms about the quality of learning. In response, UNESCO announced a ministerial statement to be adopted on education in the age of AI, aiming to guide national strategies and address the trade-offs."
+            },
+            {
+              "heading": "Expanding Public AI Research Infrastructure",
+              "body": "The U.S. National Science Foundation established an operations center for the National Artificial Intelligence Research Resource on September 1, providing researchers with enhanced access to computational resources and data. This move supports the broader push to democratize AI research and counterbalance private sector dominance."
+            }
+          ],
+          "takeaways": [
+            "Financial regulators are signaling caution on frontier AI, but private investment continues at pace, creating a potential gap in oversight.",
+            "Employers can leverage MIT Sloan's levers to boost worker performance, but must also stay compliant with emerging workplace AI regulations.",
+            "The real estate market may see shifts as AI changes job functions, affecting demand for office and industrial space.",
+            "Educational institutions face the challenge of restricting AI's downsides while embracing its potential, a balance UNESCO's statement seeks to address.",
+            "Researchers gain a new public resource with the NSF operations center, potentially democratizing AI development."
+          ],
+          "closing": "The signals this week point to an AI ecosystem that is moving on multiple fronts simultaneously: capital flows into infrastructure, regulators erect guardrails, and educators debate effectiveness. The tension between innovation and caution is palpable, but the shared goal remains to harness AI's benefits while mitigating its harms. As the landscape evolves, stakeholders must navigate these developments with an eye on both opportunity and responsibility."
+        }
+      },
+      "sources": [
+        {
+          "title": "FSB Chair warns of risks arising from frontier Artificial Intelligence (AI) models - Financial Stability Board",
+          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQbmJIcDlHZ0Y3aGJ0VHA1ZUNOaTIzSkR3YThzNVdKdkVMQUhRU252NWpTV3ZQMHoyYnNjZWEtcWowTW9jNjhPaWxuT1JZQjUxb0tlS3ROaTJkVmNfRDh0dGxZVWs4OG5mTXFib3lsMVd5TVczZEEwTWlPMnd6R0hlZHQ0WXVtaTdUTWt1WWFqU0h1ZWhwLWd2bWV4WmlKVU4ybWVfT1lZNkVob0J0R2c?oc=5",
+          "category": "AI",
+          "publishedAt": "2026-08-31T06:04:42.000Z"
+        },
+        {
+          "title": "NSF establishes operations center for the National Artificial Intelligence Research Resource - U.S. National Science Foundation (.gov)",
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNWVZBSjRSTk1jemxJVWRDUzBfWUNuY09FUUsyU25tekdlaGh3bzlDcF9wZlFOZi1reEtNRWk0X1g0VVZRZHVfV2hRbWVMakRfaWtPYmc0QUtMaWlEQW5vaThDdjBEeTQwVnJiMkVXa1BGZWtaUTZpT0Z4MEZ6Y09uVVJoTnVPNmRfaHB3cDZmUQ?oc=5",
+          "category": "AI",
+          "publishedAt": "2026-09-01T15:31:51.000Z"
+        },
+        {
+          "title": "10 levers for shaping generative AI that truly improves worker performance - MIT Sloan",
+          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNUkNHRTc4Y2Rzcld4Z3pJVWIxeE1vZ0xQS3dxaUFlZXpVZGViVkxDODlfWi1Qd241RDd2MTZ0MjNHb2p5YnZFX2xVel9BUS00ZG5WMm9EalNicE50VDZlUjBxZjVjYUh4MWhLWS0zOFVSd2ttRUxLSHJQNzJKODVVcFlnYVNHeFpiYUhnRF8ya0czU2dLM1NwajJvSGF4OHdqdU14NlJBajFQOEZ2S1dHdg?oc=5",
+          "category": "Work & business",
+          "publishedAt": "2026-09-03T14:29:55.000Z"
+        },
+        {
+          "title": "Where AI is changing jobs and what it means for real estate - JLL",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOZExnYkY3LXBBa1I4ejNCcGVGQlJDZE5aNjA2Y1BqQ05wa2cwUXJKSXBJOTRiaDA4XzVyT1lMdmg1NnE4UHpkNW5DbC1NbEV3REJuTmlpeWN2YVVKcFhOd2lVSDdpRUVuNElqbTNsYUFrQ2w2SGlkRHRLZ3hOVGtCYUR4WWNNTE4xVkU3UEVXZ2FNWjZwdGtIQjJoYw?oc=5",
+          "category": "Work & business",
+          "publishedAt": "2026-09-01T07:00:00.000Z"
+        },
+        {
+          "title": "Exclusive | Andreessen Horowitz Launches ‘Machine Age’ Fund to Tackle AI Supply Bottlenecks - WSJ",
+          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPUFZvdlZDMk82a1lZeF9DV0otdjVBcmJDNWRXWXlqU3hxV0xlVGlKVk1fY05CZFAweXRVZlYzb3JPRnEzNGJmYUxGelNvelhuX0E5Y2ZHX2N3VXJTTlZKMllSUVY4ZWRYSzNkYmtGaW9QQ1AwZ2ZTRFAxWnFSeC04eHVScGFpdDRzY2dCYzFqVmM0aHdnM3hsbFVuMTc?oc=5",
+          "category": "Finance & investment",
+          "publishedAt": "2026-08-28T13:00:00.000Z"
+        },
+        {
+          "title": "Companies’ financial value from AI holds firm in 2026 - Financial Management magazine",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxObXlycGttaGxxSWtWb2YxTTZYSVBpM0tTa1JVcVJIN1JEMl8wcUNKdUdaM0diSm43ZEg3QmxycENqRDQxa3ZYMm42QWQwNEtNZ0FmdlBmRGp4bENNakJ2eE9iSW5CbElaOFJkQTBLMkRadWFxSU5ZdUFkWFJZNmJPUXBSNThSTXZhRmdkcWREU0d2ZUF6bGMzVW5sdw?oc=5",
+          "category": "Finance & investment",
+          "publishedAt": "2026-09-01T20:31:39.000Z"
+        },
+        {
+          "title": "California lawmakers pass bill governing lawyers' use of AI - Reuters",
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQbFh0bjF0aXc5OFBldkJvWXMzcW00WnF4TTVybHBsWDR0T2dXaWxJNWp5ci1kaFpCNXloY1FxM2JjRHlEY1F6cEFhSmU4LTMtYlBUTXI0TUd0OFVBLVZSNzJUY2dDT1pXR21wZTRteThtYUtQMnlmRHZ3TmFnR3FrQndEZ3BOaHRZRGlvdklaMGJjeGg1TTdjUDU4UW93amlmTjRUNV9kZTdXalNJ?oc=5",
+          "category": "AI & law",
+          "publishedAt": "2026-09-01T23:17:16.000Z"
+        },
+        {
+          "title": "Workplace AI Regulation in 2026: How Employers Can Navigate the Changing Legal Landscape - Epstein Becker Green",
+          "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPRjZuaU9aTk5pbDgxYkNIaFI5ZHdDbnlSZDEyX3hpVklrVDFwV0hLcEE4cjh2ZjFVUUY4RXZtVDN3eHd6YUN1aEQ3SXJhMWtlTzIwdUdsUnpWWksxOTlBNU4wY0dvbTJlQjlTeUtCS3JkX3VFMjJPYzZlR18tV3NUWHRkQl8xUDN3NnJVMzlPeExpdVppRWIyUHJOR2hGa0YteFA2OVJFMGl5dnYzaGhrZm84ZUJ3U3JPZWhqOHNrTWsyMC1GeS02RWlrYnU?oc=5",
+          "category": "AI & law",
+          "publishedAt": "2026-09-02T00:37:33.000Z"
+        },
+        {
+          "title": "Faster homework, poor exam results: What AI is doing to students’ learning - Al Jazeera",
+          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOX05MbzQyVzZqLUtTdXFRVk1nNnNNci1QQlBnX0ZyNkFuRWtsM194Qm5yTEVoNVRJaUlzVHlPWkZhdnNtNFc2MWNBWGUwbUZxQjRmVVY3WnBoWGJxTi1DLWtsemFRX1puWWdhcGlCeDBtOTRnVEo0RnhNT0ZPNkdjWllCSy0tRWZCZ04tczl3UHVLX251aXdXVi1aOGpKeTVNczkzS0VYaXVweHBHMGU2YdIBtgFBVV95cUxOZVZtQ1paY09PR2c0ZVdvdFdERFNWOUJiQzVqWVFLVFdvc2FOZ05sTTlrMEJRVDR0SlctMkNiRjdEdGNxd0FONjlGbzVvLUdYZ25HcG90MDl6bDZyb0NIWU9nY3RoNWFyMm1GakpVWWN0TkRsaU5LVUY0STlOcDUxaXk2dC1aRDFOZW56ZWRCalhldENwTm5NSzZzeW5oNkJ6b25OR3d1cE9YYkJyUXBWczRXS093dw?oc=5",
+          "category": "AI & education",
+          "publishedAt": "2026-09-02T06:03:22.000Z"
+        },
+        {
+          "title": "Education in the age of AI: Ministerial statement to be adopted at - UNESCO",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQMkVTNWxIb25QWDB3VGNtUFVvRjRicmxfemdKMXZKZU9QLUMxTUVuajhmU19wWGxLM3AwcW5UaWp4ZDhsZDlFNHRLdXhMQW0yeVhtMVM3a2FVQnJWT1JJN1h4M0FqT2VZelJ1d3U5Z1dUbTFQbS1LbnZmQW81N3NUTk1BandKSVZHMk9kSmR2VUpJYXBTVl9OT1BLeEh0MU1tS3F0YXo5aTNOejNpMGptZDlSaE0?oc=5",
+          "category": "AI & education",
+          "publishedAt": "2026-09-02T07:00:00.000Z"
+        }
+      ]
+    },
     {
       "slug": "ai-signal-2026-09-03",
       "date": "2026-09-03",
