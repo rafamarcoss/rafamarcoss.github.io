@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "system": "ai-signal",
-  "startedAt": "2026-09-06T11:37:10.316Z",
-  "status": "healthy",
+  "startedAt": "2026-09-07T13:27:33.620Z",
+  "status": "failed",
   "models": {
     "selection": "deepseek-v4-flash",
     "article": "deepseek-v4-pro",
@@ -15,52 +15,30 @@
       "role": "worker",
       "model": "deepseek-v4-flash",
       "attempt": 1,
-      "status": "success",
-      "durationMs": 40345,
-      "usage": {
-        "prompt_tokens": 2272,
-        "completion_tokens": 2898,
-        "total_tokens": 5170,
-        "prompt_tokens_details": {}
-      }
+      "status": "failed",
+      "durationMs": 162,
+      "error": "OpenCode: Error from provider (Console Go): Request is missing x-opencode-session and cannot be routed efficiently. Please see https://opencode.ai/docs/go/#where-can-i-use-it"
     },
     {
-      "task": "write-english-edition",
-      "role": "worker",
-      "model": "deepseek-v4-pro",
+      "task": "select-top-10",
+      "role": "supervisor",
+      "model": "glm-5.2",
       "attempt": 1,
-      "status": "success",
-      "durationMs": 26847,
-      "usage": {
-        "prompt_tokens": 1228,
-        "completion_tokens": 1560,
-        "total_tokens": 2788,
-        "prompt_cache_hit_tokens": 0,
-        "prompt_cache_miss_tokens": 1228,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "completion_tokens_details": {
-          "reasoning_tokens": 538
-        }
-      }
+      "status": "failed",
+      "durationMs": 179,
+      "error": "OpenCode: Error from provider (Console Go): Request is missing x-opencode-session and cannot be routed efficiently. Please see https://opencode.ai/docs/go/#where-can-i-use-it"
     }
   ],
   "recoveries": [],
-  "output": {
-    "slug": "ai-signal-2026-09-06",
-    "sources": 10,
-    "languages": [
-      "en"
-    ]
+  "finishedAt": "2026-09-07T13:27:34.608Z",
+  "durationMs": 988,
+  "error": {
+    "message": "[select-top-10] worker, supervisor and fallback failed: OpenCode: Error from provider (Console Go): Request is missing x-opencode-session and cannot be routed efficiently. Please see https://opencode.ai/docs/go/#where-can-i-use-it"
   },
-  "finishedAt": "2026-09-06T11:38:18.274Z",
-  "durationMs": 67958,
-  "error": null,
   "metrics": {
     "modelCalls": 2,
-    "failedAttempts": 0,
+    "failedAttempts": 2,
     "supervisedRecoveries": 0,
-    "totalTokens": 7958
+    "totalTokens": 0
   }
 }
