@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "system": "ai-signal",
-  "startedAt": "2026-09-07T13:27:33.620Z",
+  "startedAt": "2026-09-08T12:05:47.640Z",
   "status": "failed",
   "models": {
     "selection": "deepseek-v4-flash",
@@ -16,7 +16,7 @@
       "model": "deepseek-v4-flash",
       "attempt": 1,
       "status": "failed",
-      "durationMs": 162,
+      "durationMs": 158,
       "error": "OpenCode: Error from provider (Console Go): Request is missing x-opencode-session and cannot be routed efficiently. Please see https://opencode.ai/docs/go/#where-can-i-use-it"
     },
     {
@@ -25,13 +25,13 @@
       "model": "glm-5.2",
       "attempt": 1,
       "status": "failed",
-      "durationMs": 179,
+      "durationMs": 142,
       "error": "OpenCode: Error from provider (Console Go): Request is missing x-opencode-session and cannot be routed efficiently. Please see https://opencode.ai/docs/go/#where-can-i-use-it"
     }
   ],
   "recoveries": [],
-  "finishedAt": "2026-09-07T13:27:34.608Z",
-  "durationMs": 988,
+  "finishedAt": "2026-09-08T12:05:48.533Z",
+  "durationMs": 893,
   "error": {
     "message": "[select-top-10] worker, supervisor and fallback failed: OpenCode: Error from provider (Console Go): Request is missing x-opencode-session and cannot be routed efficiently. Please see https://opencode.ai/docs/go/#where-can-i-use-it"
   },
