@@ -1,8 +1,9 @@
 ---
 title: "CRM Automation: 7 Workflows That Save Sales Teams Hours Every Week"
-description: "Seven concrete CRM automation workflows — from lead assignment to reporting — with the triggers, conditions and integrations each one needs."
+seoTitle: "CRM Workflow Automation: 7 Sales Workflows"
+description: "Seven CRM workflow automation patterns for sales teams: lead assignment, qualification, follow-up, pipeline stages, reminders, enrichment and reporting."
 date: 2026-08-24
-updated: 2026-08-25
+updated: 2026-09-10
 category: "CRM"
 tags: ["crm", "automation", "lead assignment", "follow-up", "api", "webhooks", "reporting"]
 slug: "crm-automation-7-workflows"
@@ -10,7 +11,7 @@ author: "Rafael Marcos"
 related: ["what-is-saas-automation", "ai-agents-for-customer-support"]
 ---
 
-Most CRM automation fails because it starts with the tool instead of the task. Teams buy a CRM, see that it "supports automation", and wire up a few triggers without deciding what the sales process should look like first.
+CRM workflow automation fails when it starts with the tool instead of the task. Teams buy a CRM, see that it "supports automation", and wire up a few triggers without deciding what the sales process should look like first.
 
 The better approach is the opposite: write down the repetitive work a rep does every day, then automate the parts that are mechanical. This guide covers seven workflows that almost every sales team benefits from, with the trigger, the conditions, and the integrations each one needs.
 

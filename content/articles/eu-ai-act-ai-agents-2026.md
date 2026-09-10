@@ -3,7 +3,7 @@ title: "EU AI Act for AI Agents: What Developers and Businesses Need to Change i
 seoTitle: "EU AI Act for AI Agents: Developer Guide 2026"
 description: "A developer's practical view of the EU AI Act for AI agents: transparency, providers, logging, human oversight, production architecture and when not to use AI."
 date: 2026-08-26
-updated: 2026-09-01
+updated: 2026-09-10
 category: "AI Regulation"
 tags: ["eu ai act", "ai agents", "ai compliance", "automation", "chatbots", "ai regulation", "software engineering"]
 slug: "eu-ai-act-ai-agents-2026"

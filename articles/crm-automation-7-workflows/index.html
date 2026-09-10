@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CRM Automation: 7 Workflows That Save Sales Teams Hours Every Week</title>
-<meta name="description" content="Seven concrete CRM automation workflows — from lead assignment to reporting — with the triggers, conditions and integrations each one needs.">
+<title>CRM Workflow Automation: 7 Sales Workflows</title>
+<meta name="description" content="Seven CRM workflow automation patterns for sales teams: lead assignment, qualification, follow-up, pipeline stages, reminders, enrichment and reporting.">
 <meta name="author" content="Rafael Marcos">
 <meta name="theme-color" content="#F4F5EF">
 <link rel="canonical" href="https://rafaelmarcos.tech/articles/crm-automation-7-workflows/">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CRM Automation: 7 Workflows That Save Sales Teams Hours Every Week">
-<meta property="og:description" content="Seven concrete CRM automation workflows — from lead assignment to reporting — with the triggers, conditions and integrations each one needs.">
+<meta property="og:title" content="CRM Workflow Automation: 7 Sales Workflows">
+<meta property="og:description" content="Seven CRM workflow automation patterns for sales teams: lead assignment, qualification, follow-up, pipeline stages, reminders, enrichment and reporting.">
 <meta property="og:url" content="https://rafaelmarcos.tech/articles/crm-automation-7-workflows/">
 <meta property="og:site_name" content="Rafael Marcos">
 <meta property="og:locale" content="en_US">
@@ -18,18 +18,18 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="article:published_time" content="2026-08-24">
-<meta property="article:modified_time" content="2026-08-25">
+<meta property="article:modified_time" content="2026-09-10">
 <meta property="article:author" content="Rafael Marcos">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://rafaelmarcos.tech/assets/og/crm-automation-7-workflows.png">
-<meta name="twitter:title" content="CRM Automation: 7 Workflows That Save Sales Teams Hours Every Week">
-<meta name="twitter:description" content="Seven concrete CRM automation workflows — from lead assignment to reporting — with the triggers, conditions and integrations each one needs.">
+<meta name="twitter:title" content="CRM Workflow Automation: 7 Sales Workflows">
+<meta name="twitter:description" content="Seven CRM workflow automation patterns for sales teams: lead assignment, qualification, follow-up, pipeline stages, reminders, enrichment and reporting.">
 <link rel="icon" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400..800&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","headline":"CRM Automation: 7 Workflows That Save Sales Teams Hours Every Week","description":"Seven concrete CRM automation workflows — from lead assignment to reporting — with the triggers, conditions and integrations each one needs.","inLanguage":"en","datePublished":"2026-08-24","dateModified":"2026-08-25","mainEntityOfPage":{"@type":"WebPage","@id":"https://rafaelmarcos.tech/articles/crm-automation-7-workflows/"},"author":{"@type":"Person","name":"Rafael Marcos","url":"https://rafaelmarcos.tech/"},"publisher":{"@type":"Person","name":"Rafael Marcos"}}
+{"@context":"https://schema.org","@type":"BlogPosting","headline":"CRM Automation: 7 Workflows That Save Sales Teams Hours Every Week","description":"Seven CRM workflow automation patterns for sales teams: lead assignment, qualification, follow-up, pipeline stages, reminders, enrichment and reporting.","inLanguage":"en","datePublished":"2026-08-24","dateModified":"2026-09-10","mainEntityOfPage":{"@type":"WebPage","@id":"https://rafaelmarcos.tech/articles/crm-automation-7-workflows/"},"author":{"@type":"Person","name":"Rafael Marcos","url":"https://rafaelmarcos.tech/"},"publisher":{"@type":"Person","name":"Rafael Marcos"}}
 </script>
 <link rel="stylesheet" href="/assets/v2.css">
 </head>
@@ -69,13 +69,13 @@
     <header class="art-head">
       <p class="cat-chip">CRM</p>
       <h1>CRM Automation: 7 Workflows That Save Sales Teams Hours Every Week</h1>
-      <p class="art-dek">Seven concrete CRM automation workflows — from lead assignment to reporting — with the triggers, conditions and integrations each one needs.</p>
+      <p class="art-dek">Seven CRM workflow automation patterns for sales teams: lead assignment, qualification, follow-up, pipeline stages, reminders, enrichment and reporting.</p>
       <div class="art-meta"><time datetime="2026-08-24">24 August 2026</time><span>·</span><span>6 min read</span><span>·</span><span>Rafael Marcos</span></div>
       <div class="art-tags"><span>crm</span><span>automation</span><span>lead assignment</span><span>follow-up</span><span>api</span><span>webhooks</span><span>reporting</span></div>
     </header>
 
     <div class="art-layout">
-      <div class="prose"><figure class="diagram" aria-label="Lead or event to CRM rule to Action to Audit trail"><div class="diagram-step"><span class="diagram-label">1</span>Lead or event</div><div class="diagram-step"><span class="diagram-label">2</span>CRM rule</div><div class="diagram-step"><span class="diagram-label">3</span>Action</div><div class="diagram-step"><span class="diagram-label">4</span>Audit trail</div></figure><p>Most CRM automation fails because it starts with the tool instead of the task. Teams buy a CRM, see that it "supports automation", and wire up a few triggers without deciding what the sales process should look like first.</p>
+      <div class="prose"><figure class="diagram" aria-label="Lead or event to CRM rule to Action to Audit trail"><div class="diagram-step"><span class="diagram-label">1</span>Lead or event</div><div class="diagram-step"><span class="diagram-label">2</span>CRM rule</div><div class="diagram-step"><span class="diagram-label">3</span>Action</div><div class="diagram-step"><span class="diagram-label">4</span>Audit trail</div></figure><p>CRM workflow automation fails when it starts with the tool instead of the task. Teams buy a CRM, see that it "supports automation", and wire up a few triggers without deciding what the sales process should look like first.</p>
 <p>The better approach is the opposite: write down the repetitive work a rep does every day, then automate the parts that are mechanical. This guide covers seven workflows that almost every sales team benefits from, with the trigger, the conditions, and the integrations each one needs.</p>
 <p>These are platform-agnostic patterns. They work in HubSpot, Salesforce, Pipedrive, or a custom setup, and they can usually be built with native rules or with an automation layer like n8n or Make.</p>
 <h2 id="sec-1">1. Lead assignment</h2>

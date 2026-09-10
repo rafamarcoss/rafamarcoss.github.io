@@ -1,8 +1,9 @@
 ---
 title: "AI Agents vs Traditional Automation: What's the Difference?"
-description: "Traditional automation follows rules; AI agents make decisions. A clear comparison of how each works, what each is good at, and how to choose."
+seoTitle: "AI Agents vs Automation: How to Choose"
+description: "AI agents vs automation: compare fixed workflows with model-based decisions, costs, failure modes and the practical way to choose between them."
 date: 2026-08-24
-updated: 2026-08-25
+updated: 2026-09-10
 category: "Automation"
 tags: ["ai agents", "automation", "workflow", "rules", "triggers", "tools"]
 slug: "ai-agents-vs-traditional-automation"
@@ -10,7 +11,7 @@ author: "Rafael Marcos"
 related: ["ai-agents-for-customer-support", "what-is-saas-automation"]
 ---
 
-The word "automation" now covers two very different things, and mixing them up causes real problems: teams over-engineer simple workflows with AI, or they force a rigid rules-based flow onto work that genuinely needs judgement.
+The AI agents vs automation decision is often framed as a replacement question. It is not. Automation and agents solve different parts of a process, and mixing them up causes real problems: teams over-engineer simple workflows with AI, or they force a rigid rules-based flow onto work that genuinely needs judgement.
 
 The distinction is simple enough to state and deep enough to matter:
 

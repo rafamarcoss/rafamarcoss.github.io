@@ -1,8 +1,9 @@
 ---
 title: "What Is SaaS Automation? A Practical Guide for Growing Teams"
-description: "SaaS automation connects the tools your team uses so data moves without manual work. A practical guide to APIs, webhooks, CRM, workflows and where AI fits."
+seoTitle: "SaaS Workflow Automation: A Practical Guide"
+description: "SaaS workflow automation connects cloud tools so data moves without manual work. A practical guide to APIs, webhooks, CRM workflows and where AI fits."
 date: 2026-08-24
-updated: 2026-08-25
+updated: 2026-09-10
 category: "SaaS"
 tags: ["saas", "automation", "api", "webhooks", "crm", "workflow", "ai"]
 slug: "what-is-saas-automation"
@@ -10,7 +11,7 @@ author: "Rafael Marcos"
 related: ["crm-automation-7-workflows", "ai-agents-vs-traditional-automation"]
 ---
 
-SaaS automation is the practice of connecting the cloud tools a team already uses so that data and work move between them without manual steps. It is what happens when a new signup automatically becomes a CRM contact, a payment triggers an invoice email, and a support ticket updates a customer record — all without a person copying information between tabs.
+SaaS workflow automation is the practice of connecting the cloud tools a team already uses so that data and work move between them without manual steps. It is what happens when a new signup automatically becomes a CRM contact, a payment triggers an invoice email, and a support ticket updates a customer record — all without a person copying information between tabs.
 
 This guide explains what SaaS automation is, the building blocks it relies on, and how to approach it as your team grows. It is written as a reference you can come back to, and it links to the deeper pieces where relevant.
 
