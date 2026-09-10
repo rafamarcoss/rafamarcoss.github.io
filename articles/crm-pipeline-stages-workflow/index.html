@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CRM Pipeline Stages Workflow: Rules and Examples</title>
+<meta name="description" content="Design a CRM pipeline stages workflow with clear entry criteria, evidence-based transitions, ownership, automation rules and safeguards against stale deals.">
+<meta name="author" content="Rafael Marcos">
+<meta name="theme-color" content="#F4F5EF">
+<link rel="canonical" href="https://rafaelmarcos.tech/articles/crm-pipeline-stages-workflow/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CRM Pipeline Stages Workflow: Rules and Examples">
+<meta property="og:description" content="Design a CRM pipeline stages workflow with clear entry criteria, evidence-based transitions, ownership, automation rules and safeguards against stale deals.">
+<meta property="og:url" content="https://rafaelmarcos.tech/articles/crm-pipeline-stages-workflow/">
+<meta property="og:site_name" content="Rafael Marcos">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://rafaelmarcos.tech/assets/og/crm-pipeline-stages-workflow.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-09-10">
+<meta property="article:modified_time" content="2026-09-10">
+<meta property="article:author" content="Rafael Marcos">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://rafaelmarcos.tech/assets/og/crm-pipeline-stages-workflow.png">
+<meta name="twitter:title" content="CRM Pipeline Stages Workflow: Rules and Examples">
+<meta name="twitter:description" content="Design a CRM pipeline stages workflow with clear entry criteria, evidence-based transitions, ownership, automation rules and safeguards against stale deals.">
+<link rel="icon" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400..800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","headline":"CRM Pipeline Stages Workflow: Rules That Keep Deals Honest","description":"Design a CRM pipeline stages workflow with clear entry criteria, evidence-based transitions, ownership, automation rules and safeguards against stale deals.","inLanguage":"en","datePublished":"2026-09-10","dateModified":"2026-09-10","mainEntityOfPage":{"@type":"WebPage","@id":"https://rafaelmarcos.tech/articles/crm-pipeline-stages-workflow/"},"author":{"@type":"Person","name":"Rafael Marcos","url":"https://rafaelmarcos.tech/"},"publisher":{"@type":"Person","name":"Rafael Marcos"}}
+</script>
+<link rel="stylesheet" href="/assets/v2.css">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="v2-nav">
+    <div class="v2-shell v2-nav-in">
+      <a href="/" class="v2-brand">RafaelMarcos<em>_</em></a>
+      <nav class="v2-links" aria-label="Primary navigation">
+        <a href="/#systems">Systems</a>
+        <a href="/articles/" aria-current="page">Writing</a>
+        <a href="/labs/">Lab</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+      <div class="v2-nav-cta">
+        <a href="mailto:rafaelmarcos2604@gmail.com?subject=Project%20enquiry" class="btn btn-primary">Start a project <span class="arrow">↗</span></a>
+        <button class="v2-menu-toggle" type="button" data-nav-toggle data-label-open="Open menu" data-label-close="Close menu" aria-expanded="false" aria-controls="v2-mobile-nav" aria-label="Open menu">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="v2-mobile-nav" class="v2-mobile" hidden>
+      <a href="/#systems">Systems</a>
+      <a href="/articles/">Writing</a>
+      <a href="/labs/">Lab</a>
+      <a href="/#contact">Contact</a>
+      <div class="sep" role="presentation"></div>
+      <a href="/articles/">Articles</a>
+      <a href="/news/">AI Signal</a>
+      <a href="/copywriting/">Copywriting</a>
+    </div>
+  </header>
+
+<main id="main-content" class="skip-target" tabindex="-1">
+  <article class="v2-shell" lang="en">
+    <nav class="art-crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/articles/">Articles</a><span>/</span><span>CRM</span></nav>
+    <header class="art-head">
+      <p class="cat-chip">CRM</p>
+      <h1>CRM Pipeline Stages Workflow: Rules That Keep Deals Honest</h1>
+      <p class="art-dek">Design a CRM pipeline stages workflow with clear entry criteria, evidence-based transitions, ownership, automation rules and safeguards against stale deals.</p>
+      <div class="art-meta"><time datetime="2026-09-10">10 September 2026</time><span>·</span><span>5 min read</span><span>·</span><span>Rafael Marcos</span></div>
+      <div class="art-tags"><span>crm pipeline stages workflow</span><span>crm stages workflow</span><span>deal stages</span><span>sales pipeline</span><span>revops</span><span>crm automation</span></div>
+    </header>
+
+    <aside class="insight" aria-label="Human insight"><span class="k">Human insight</span><p>A stage is useful only if two people can look at the same deal and agree why it belongs there.</p></aside>
+    <div class="art-layout">
+      <div class="prose"><p>A CRM pipeline stages workflow defines how a deal earns the right to move forward. It replaces subjective updates such as “looks promising” with observable business events: a discovery call happened, a proposal was sent, a legal review started or a contract was signed.</p>
+<p>The goal is not to force every deal through a perfect funnel. It is to make stage, owner and next action reliable enough for forecasting and handoff. This guide focuses on stage design; pair it with the <a href="/articles/crm-workflow-automation-guide/">CRM workflow automation guide</a> for the surrounding triggers, logs and retry rules.</p>
+<h2 id="sec-1">Design stages around evidence</h2>
+<p>Each stage needs one sentence that states what has objectively happened. “Qualified” is weak unless qualification has a shared definition. “Discovery complete” is stronger when it means a meeting occurred and the agreed qualification fields are present.</p>
+<p>An example B2B pipeline:</p>
+<div class="table-wrap"><table><thead><tr><th>Stage</th><th>Entry evidence</th><th>Required next action</th></tr></thead><tbody><tr><td>New</td><td>valid inbound or outbound lead converted to a deal</td><td>assign owner</td></tr><tr><td>Discovery</td><td>meeting booked or completed</td><td>capture needs and timeline</td></tr><tr><td>Qualified</td><td>agreed need, authority, budget and timing fields</td><td>prepare proposal</td></tr><tr><td>Proposal sent</td><td>versioned proposal sent to buyer</td><td>follow-up date</td></tr><tr><td>Negotiation</td><td>commercial or legal terms actively discussed</td><td>record blocker and owner</td></tr><tr><td>Closed won/lost</td><td>signed agreement or explicit loss reason</td><td>handoff or loss review</td></tr></tbody></table></div>
+<p>Your labels can differ. The evidence cannot be optional if the stage is used for reporting.</p>
+<h2 id="sec-2">Keep lifecycle stage and deal stage separate</h2>
+<p>Lifecycle stage describes the relationship of a contact or company to the business: subscriber, lead, marketing-qualified lead, customer. Deal stage describes the progress of one commercial opportunity.</p>
+<p>Do not make a workflow mirror them blindly. One company may be a customer while opening a new expansion deal. One contact may be a lead attached to more than one opportunity. Decide which object owns the fact, then update only that object unless an explicit rule connects them.</p>
+<h2 id="sec-3">Define allowed transitions</h2>
+<p>Not every stage should move freely to every other stage. A proposal-sent deal can return to discovery if new requirements emerge, but a closed-won deal should not move back to qualification because a webhook replayed an old event.</p>
+<p>For each transition, document:</p>
+<ul><li>the event that permits it;</li><li>required fields or evidence;</li><li>whether a human must approve it;</li><li>the owner after the move;</li><li>automation that starts or stops;</li><li>how the transition is logged.</li></ul>
+<p>This makes a stage workflow understandable to sales, operations and the person maintaining the CRM.</p>
+<h2 id="sec-4">Automate only verifiable transitions</h2>
+<p>Automation is appropriate when the trigger represents evidence. A calendar event marked as completed can create a “capture discovery notes” task. A signed document can move a deal to closed won. A proposal email tracked by the CRM can set a proposal-sent timestamp.</p>
+<p>Avoid moving the stage only because an email was opened, a scoring model changed or a sequence reached day seven. Those are signals for a rep to review, not proof that the buyer has progressed.</p>
+<p>The <a href="/articles/crm-automation-7-workflows/">seven CRM automation workflows</a> show where reminders, handoffs and reporting fit around the stage process.</p>
+<h2 id="sec-5">Guard against stale-deal automation</h2>
+<p>Stale-deal workflows often do more damage than good when they mutate stages automatically. A useful workflow creates a task when a deal has no activity for a defined period. It does not declare the deal lost without checking whether there is an upcoming meeting, a current proposal or a manual hold reason.</p>
+<p>Use a sequence like this:</p>
+<ol><li>Detect inactivity against a stage-specific threshold.</li><li>Check for open tasks, meetings and an override flag.</li><li>Create a review task for the owner.</li><li>Escalate only after the owner misses the review window.</li><li>Keep stage movement manual unless there is hard evidence.</li></ol>
+<p>That preserves forecast integrity and makes exceptions visible.</p>
+<h2 id="sec-6">Make ownership survive the handoff</h2>
+<p>Stage changes often transfer responsibility. Sales may own the opportunity through signature; onboarding owns implementation after closed won; support may own an escalation after go-live. The workflow should state both the new owner and the information that moves with the handoff.</p>
+<p>At minimum, package scope, contacts, commitments, risks, dates and the original deal link. A handoff summary is useful only if it is generated from current CRM fields and points people back to the source record.</p>
+<h2 id="sec-7">Report on stage quality</h2>
+<p>Pipeline reports should reveal whether stages are being used correctly, not merely how many deals occupy them. Track:</p>
+<ul><li>time spent in each stage;</li><li>deals missing entry criteria;</li><li>backward transitions;</li><li>deals without a next action;</li><li>loss reasons by stage;</li><li>manual overrides of automated recommendations.</li></ul>
+<p>If many deals enter a stage without the required evidence, fix the definition or the workflow. Do not solve it by making the dashboard look cleaner.</p>
+<h2 id="sec-8">Frequently asked questions</h2>
+<p><strong>How many deal stages should a CRM have?</strong></p>
+<p>Use the fewest stages that create a meaningful change in buyer commitment, owner or next action. Most teams can start with five to seven.</p>
+<p><strong>Should an AI agent update a deal stage?</strong></p>
+<p>Only if a deterministic rule verifies the evidence and a human can review the change. An agent can extract a suggestion from a call note; it should not become the sole authority for a forecast field.</p>
+<p><strong>What should happen to inactive deals?</strong></p>
+<p>Create an owner review task first. Move to closed lost only with an explicit reason, an agreed expiry policy or a human decision.</p>
+<h2 id="sec-9">Primary sources</h2>
+<ul><li><a href="https://knowledge.hubspot.com/object-settings/customize-deal-pipelines-and-stages">HubSpot: customize deal pipelines</a></li><li><a href="https://help.salesforce.com/s/articleView?id=sales.customize_salesprocess.htm&amp;type=5">Salesforce: sales process and opportunity stages</a></li><li><a href="https://docs.n8n.io/">n8n: workflow automation</a></li></ul></div>
+      <aside class="art-rail"><div class="rail-card"><h3>On this page</h3><nav class="toc" aria-label="Table of contents"><a href="#sec-1">Design stages around evidence</a><a href="#sec-2">Keep lifecycle stage and deal stage separate</a><a href="#sec-3">Define allowed transitions</a><a href="#sec-4">Automate only verifiable transitions</a><a href="#sec-5">Guard against stale-deal automation</a><a href="#sec-6">Make ownership survive the handoff</a><a href="#sec-7">Report on stage quality</a><a href="#sec-8">Frequently asked questions</a><a href="#sec-9">Primary sources</a></nav></div><div class="rail-card"><h3>Continue reading</h3><div class="rel-list"><a href="/articles/crm-automation-7-workflows/">CRM Automation: 7 Workflows That Save Sales Teams Hours Every Week</a><a href="/articles/crm-workflow-automation-guide/">CRM Workflow Automation: A Production Guide</a><a href="/articles/what-is-saas-automation/">What Is SaaS Automation? A Practical Guide for Growing Teams</a></div></div></aside>
+    </div>
+    <section class="cta-band">
+      <div>
+        <h2>Need technical content that actually understands the product?</h2>
+        <p>I write SEO content for SaaS, AI and automation companies — grounded in how the tech actually works.</p>
+      </div>
+      <a class="btn" href="/copywriting/">Technical SEO content <span class="arrow">↗</span></a>
+    </section>
+  </article>
+</main>
+
+<footer class="v2-shell v2-footer">
+    <span>© 2026 Rafael Marcos Serrano</span>
+    <nav aria-label="Footer links">
+      <a href="https://linkedin.com/in/rafael-marcos-serrano" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/rafamarcoss" target="_blank" rel="noopener">GitHub</a>
+      <a href="/articles/">Articles</a>
+      <a href="/news/">News</a>
+      <a href="/copywriting/">Copywriting</a>
+      <a href="/rafaops/">RafaOps</a>
+      <a href="/labs/">Lab</a>
+      <a href="/upwork-match/">Opportunity Match</a>
+    </nav>
+  </footer>
+<script src="/assets/v2.js"></script>
+</body>
+</html>

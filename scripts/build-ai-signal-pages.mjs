@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Builds the AI Signal archive from news/feed.json. Generated pages stay static and indexable.
+// Builds the AI Signal archive from news/feed.json. Older daily editions stay accessible but do not compete in search.
 
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { v2Footer, v2Nav, V2_FONTS } from './v2-shell.mjs';
@@ -44,14 +44,15 @@ function prose(value) {
   return String(value || '').split(/\n{2,}/).filter(Boolean).map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join('');
 }
 
-function layout({ title, description, canonical, schema, type = 'website', body }) {
+function layout({ title, description, canonical, schema, type = 'website', robots, body }) {
   return `<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${escapeHtml(title)} | Rafael Marcos</title>
-  <meta name="description" content="${escapeHtml(description)}">
+  <meta name="description" content="${escapeHtml(description)}">${robots ? `
+  <meta name="robots" content="${robots}">` : ''}
   <link rel="canonical" href="${canonical}">
   <meta property="og:type" content="${type}">
   <meta property="og:title" content="${escapeHtml(title)}">
@@ -72,7 +73,7 @@ function layout({ title, description, canonical, schema, type = 'website', body 
 </html>`;
 }
 
-function articlePage(article) {
+function articlePage(article, indexable) {
   const content = contentFor(article);
   if (!content) throw new Error(`Missing readable content for ${article.slug}`);
   const url = `${SITE}/news/${article.slug}/`;
@@ -101,6 +102,7 @@ function articlePage(article) {
     description: content.dek,
     canonical: url,
     type: 'article',
+    robots: indexable ? null : 'noindex,follow',
     schema,
     body: `<article class="v2-shell signal-edition">
       <nav class="art-crumbs" aria-label="Breadcrumb"><a href="/news/">AI Signal</a><span aria-hidden="true">/</span><span>${escapeHtml(article.date)}</span></nav>
@@ -182,10 +184,14 @@ function archivePage(articles) {
 export async function buildAiSignalPages() {
   const feed = JSON.parse(await readFile(FEED, 'utf8'));
   const articles = (feed.articles || []).filter(contentFor);
+  const indexableSlugs = new Set([...articles]
+    .sort((a, b) => String(b.date).localeCompare(String(a.date)))
+    .slice(0, 7)
+    .map((article) => article.slug));
   for (const article of articles) {
     const dir = new URL(`../news/${article.slug}/`, import.meta.url);
     await mkdir(dir, { recursive: true });
-    await writeFile(new URL('index.html', dir), articlePage(article), 'utf8');
+    await writeFile(new URL('index.html', dir), articlePage(article, indexableSlugs.has(article.slug)), 'utf8');
   }
   const archive = new URL('../news/archive/', import.meta.url);
   await mkdir(archive, { recursive: true });

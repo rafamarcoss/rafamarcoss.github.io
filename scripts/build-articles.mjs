@@ -330,6 +330,9 @@ ${v2Footer()}
 
 function sitemapXml(articles) {
   const news = existsSync(NEWS_FEED) ? JSON.parse(readFileSync(NEWS_FEED, 'utf8')).articles || [] : [];
+  const indexableNews = [...news]
+    .sort((a, b) => String(b.date).localeCompare(String(a.date)))
+    .slice(0, 7);
   const urls = [
     ['', '1.0', '2026-08-25'],
     ['copywriting/', '0.9', '2026-08-28'],
@@ -340,7 +343,7 @@ function sitemapXml(articles) {
     ['rafaops/', '0.7', '2026-08-25'],
     ['projects/portfolio-automation/', '0.8', '2026-08-25'],
     ...articles.map((a) => [`articles/${a.data.slug}/`, '0.8', a.data.updated || a.data.date]),
-    ...news.map((item) => [`news/${item.slug}/`, '0.6', item.date || item.generatedAt?.slice(0, 10)]),
+    ...indexableNews.map((item) => [`news/${item.slug}/`, '0.6', item.date || item.generatedAt?.slice(0, 10)]),
   ];
   const entries = urls.map(([path, prio, lastmod]) => `  <url><loc>${SITE}/${path}</loc><lastmod>${lastmod}</lastmod><changefreq>monthly</changefreq><priority>${prio}</priority></url>`).join('\n');
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${entries}\n</urlset>\n`;

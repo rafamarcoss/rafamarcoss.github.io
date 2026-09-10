@@ -8,12 +8,12 @@ category: "CRM"
 tags: ["crm", "automation", "lead assignment", "follow-up", "api", "webhooks", "reporting"]
 slug: "crm-automation-7-workflows"
 author: "Rafael Marcos"
-related: ["what-is-saas-automation", "ai-agents-for-customer-support"]
+related: ["crm-workflow-automation-guide", "crm-pipeline-stages-workflow", "what-is-saas-automation"]
 ---
 
 CRM workflow automation fails when it starts with the tool instead of the task. Teams buy a CRM, see that it "supports automation", and wire up a few triggers without deciding what the sales process should look like first.
 
-The better approach is the opposite: write down the repetitive work a rep does every day, then automate the parts that are mechanical. This guide covers seven workflows that almost every sales team benefits from, with the trigger, the conditions, and the integrations each one needs.
+The better approach is the opposite: write down the repetitive work a rep does every day, then automate the parts that are mechanical. This guide covers seven workflows that almost every sales team benefits from, with the trigger, the conditions, and the integrations each one needs. For the system design behind those workflows, use the [CRM workflow automation guide](/articles/crm-workflow-automation-guide/); for stage definitions and transitions, use the [CRM pipeline stages workflow guide](/articles/crm-pipeline-stages-workflow/).
 
 These are platform-agnostic patterns. They work in HubSpot, Salesforce, Pipedrive, or a custom setup, and they can usually be built with native rules or with an automation layer like n8n or Make.
 

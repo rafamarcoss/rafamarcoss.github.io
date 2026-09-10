@@ -223,9 +223,9 @@ The principle is simple:
 
 > Move fast by reducing scope, not by removing safeguards.
 
-## A practical pre-production checklist
+## EU AI Act checklist for AI agents in 2026
 
-Before you put an agent in production, work through a list like this:
+Before you put an AI agent in production in the EU, work through this engineering checklist. It turns transparency, ownership, logging and human oversight into release checks rather than a legal note discovered after launch.
 
 1. The use case is defined in writing.
 2. You can justify why AI is needed, and why deterministic would not do.
