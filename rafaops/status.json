@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-10T13:12:48.270Z",
+  "generatedAt": "2026-09-10T13:13:05.496Z",
   "health": "incident",
   "summary": "RafaOps ha detectado un incidente que requiere revisión.",
   "metrics": {
-    "availability": 66.7,
-    "healthyChecks": 2,
+    "availability": 75,
+    "healthyChecks": 3,
     "totalChecks": 5,
     "openIncidents": 1,
     "supervisedRecoveries": 1,
@@ -21,8 +21,8 @@
       "critical": true,
       "status": "healthy",
       "detail": "HTML y marca verificados",
-      "latencyMs": 236,
-      "checkedAt": "2026-09-10T13:12:48.506Z"
+      "latencyMs": 448,
+      "checkedAt": "2026-09-10T13:13:05.944Z"
     },
     {
       "id": "news-page",
@@ -31,8 +31,8 @@
       "critical": true,
       "status": "healthy",
       "detail": "Archivo de noticias disponible",
-      "latencyMs": 200,
-      "checkedAt": "2026-09-10T13:12:48.500Z"
+      "latencyMs": 315,
+      "checkedAt": "2026-09-10T13:13:05.943Z"
     },
     {
       "id": "feed-integrity",
@@ -42,16 +42,16 @@
       "status": "failed",
       "detail": "Última edición con 98 h de antigüedad",
       "latencyMs": 0,
-      "checkedAt": "2026-09-10T13:12:48.300Z"
+      "checkedAt": "2026-09-10T13:13:05.629Z"
     },
     {
       "id": "github-actions",
       "name": "GitHub Actions",
       "critical": false,
-      "status": "running",
-      "detail": "Ejecución in_progress",
-      "latencyMs": 339,
-      "checkedAt": "2026-09-10T13:12:48.640Z",
+      "status": "healthy",
+      "detail": "Última ejecución: success",
+      "latencyMs": 376,
+      "checkedAt": "2026-09-10T13:13:06.006Z",
       "url": "https://github.com/rafamarcoss/rafamarcoss.github.io/actions/runs/34481143113"
     },
     {
@@ -61,7 +61,7 @@
       "status": "private",
       "detail": "Runtime aislado; conector local pendiente",
       "latencyMs": null,
-      "checkedAt": "2026-09-10T13:12:48.270Z",
+      "checkedAt": "2026-09-10T13:13:05.496Z",
       "url": null
     }
   ],
@@ -289,6 +289,42 @@
     }
   ],
   "runs": [
+    {
+      "id": "34481244694",
+      "source": "workflow_run",
+      "startedAt": "2026-09-10T13:13:05.494Z",
+      "finishedAt": "2026-09-10T13:13:05.496Z",
+      "durationMs": 513,
+      "status": "incident",
+      "checks": [
+        {
+          "id": "website",
+          "status": "healthy",
+          "latencyMs": 448
+        },
+        {
+          "id": "news-page",
+          "status": "healthy",
+          "latencyMs": 315
+        },
+        {
+          "id": "feed-integrity",
+          "status": "failed",
+          "latencyMs": 0
+        },
+        {
+          "id": "github-actions",
+          "status": "healthy",
+          "latencyMs": 376
+        },
+        {
+          "id": "n8n-private",
+          "status": "private",
+          "latencyMs": null
+        }
+      ],
+      "url": "https://github.com/rafamarcoss/rafamarcoss.github.io/actions/runs/34481244694"
+    },
     {
       "id": "34481143113",
       "source": "workflow_dispatch",
@@ -972,42 +1008,6 @@
         }
       ],
       "url": "https://github.com/rafamarcoss/rafamarcoss.github.io/actions/runs/34140179784"
-    },
-    {
-      "id": "34127510114",
-      "source": "workflow_run",
-      "startedAt": "2026-09-07T13:27:47.422Z",
-      "finishedAt": "2026-09-07T13:27:47.423Z",
-      "durationMs": 391,
-      "status": "degraded",
-      "checks": [
-        {
-          "id": "website",
-          "status": "healthy",
-          "latencyMs": 242
-        },
-        {
-          "id": "news-page",
-          "status": "healthy",
-          "latencyMs": 217
-        },
-        {
-          "id": "feed-integrity",
-          "status": "healthy",
-          "latencyMs": 0
-        },
-        {
-          "id": "github-actions",
-          "status": "failed",
-          "latencyMs": 350
-        },
-        {
-          "id": "n8n-private",
-          "status": "private",
-          "latencyMs": null
-        }
-      ],
-      "url": "https://github.com/rafamarcoss/rafamarcoss.github.io/actions/runs/34127510114"
     }
   ]
 }
