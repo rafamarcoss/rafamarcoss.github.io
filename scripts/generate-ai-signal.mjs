@@ -10,6 +10,7 @@ const FEED_PATH = new URL('../news/feed.json', import.meta.url);
 const TELEMETRY_PATH = new URL('../rafaops/ai-signal-run.json', import.meta.url);
 const DRY_RUN = process.argv.includes('--dry-run');
 const startedAt = Date.now();
+const OPENCODE_SESSION = process.env.OPENCODE_SESSION?.trim() || `ai-signal-${process.env.GITHUB_RUN_ID || startedAt}`;
 const trace = {
   schemaVersion: 1,
   system: 'ai-signal',
@@ -93,7 +94,12 @@ async function callModel(apiKey, messages, { model, temperature, maxTokens, task
     try {
       const response = await fetch(API_URL, {
         method: 'POST',
-        headers: { Authorization: `Bearer ${apiKey}`, 'Content-Type': 'application/json' },
+        headers: {
+          Authorization: `Bearer ${apiKey}`,
+          'Content-Type': 'application/json',
+          'User-Agent': 'rafaelmarcos-tech-ai-signal/1.0',
+          'x-opencode-session': OPENCODE_SESSION,
+        },
         body: JSON.stringify({ model, messages, temperature, max_tokens: maxTokens, reasoning_effort: 'low', response_format: { type: 'json_object' } }),
         signal: AbortSignal.timeout(180_000),
       });
