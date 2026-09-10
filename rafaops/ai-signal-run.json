@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "system": "ai-signal",
-  "startedAt": "2026-09-10T13:12:06.418Z",
+  "startedAt": "2026-09-10T13:13:31.277Z",
   "status": "healthy",
   "models": {
     "selection": "deepseek-v4-flash",
@@ -16,7 +16,7 @@
       "model": "deepseek-v4-flash",
       "attempt": 1,
       "status": "failed",
-      "durationMs": 638,
+      "durationMs": 556,
       "error": "OpenCode: Error from provider (Console Go): Upstream request failed: [invalid_request_error] Prompt must contain the word 'json' in some form to use 'response_format' of type 'json_object'."
     },
     {
@@ -25,13 +25,13 @@
       "model": "glm-5.2",
       "attempt": 1,
       "status": "success",
-      "durationMs": 8477,
+      "durationMs": 7845,
       "usage": {
-        "prompt_tokens": 2479,
-        "completion_tokens": 590,
-        "total_tokens": 3069,
+        "prompt_tokens": 2467,
+        "completion_tokens": 642,
+        "total_tokens": 3109,
         "prompt_tokens_details": {
-          "cached_tokens": 10
+          "cached_tokens": 8
         },
         "completion_tokens_details": {
           "reasoning_tokens": 4
@@ -44,18 +44,18 @@
       "model": "deepseek-v4-pro",
       "attempt": 1,
       "status": "success",
-      "durationMs": 31935,
+      "durationMs": 43953,
       "usage": {
-        "prompt_tokens": 1236,
-        "completion_tokens": 2589,
-        "total_tokens": 3825,
+        "prompt_tokens": 1278,
+        "completion_tokens": 3500,
+        "total_tokens": 4778,
         "prompt_cache_hit_tokens": 0,
-        "prompt_cache_miss_tokens": 1236,
+        "prompt_cache_miss_tokens": 1278,
         "prompt_tokens_details": {
           "cached_tokens": 0
         },
         "completion_tokens_details": {
-          "reasoning_tokens": 1573
+          "reasoning_tokens": 2414
         }
       }
     }
@@ -66,7 +66,7 @@
       "strategy": "supervisor",
       "model": "glm-5.2",
       "trigger": "OpenCode: Error from provider (Console Go): Upstream request failed: [invalid_request_error] Prompt must contain the word 'json' in some form to use 'response_format' of type 'json_object'.",
-      "recoveredAt": "2026-09-10T13:12:16.193Z"
+      "recoveredAt": "2026-09-10T13:13:40.292Z"
     }
   ],
   "output": {
@@ -76,13 +76,13 @@
       "en"
     ]
   },
-  "finishedAt": "2026-09-10T13:12:48.226Z",
-  "durationMs": 41808,
+  "finishedAt": "2026-09-10T13:14:24.307Z",
+  "durationMs": 53030,
   "error": null,
   "metrics": {
     "modelCalls": 3,
     "failedAttempts": 1,
     "supervisedRecoveries": 1,
-    "totalTokens": 6894
+    "totalTokens": 7887
   }
 }

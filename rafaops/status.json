@@ -1,17 +1,17 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-10T13:13:05.496Z",
-  "health": "incident",
-  "summary": "RafaOps ha detectado un incidente que requiere revisión.",
+  "generatedAt": "2026-09-10T13:14:24.355Z",
+  "health": "operational",
+  "summary": "Operativo después de 1 recuperación supervisada.",
   "metrics": {
-    "availability": 75,
+    "availability": 100,
     "healthyChecks": 3,
     "totalChecks": 5,
-    "openIncidents": 1,
+    "openIncidents": 0,
     "supervisedRecoveries": 1,
     "modelCalls": 3,
-    "totalTokens": 6894,
-    "lastRunDurationMs": 41808
+    "totalTokens": 7887,
+    "lastRunDurationMs": 53030
   },
   "checks": [
     {
@@ -21,8 +21,8 @@
       "critical": true,
       "status": "healthy",
       "detail": "HTML y marca verificados",
-      "latencyMs": 448,
-      "checkedAt": "2026-09-10T13:13:05.944Z"
+      "latencyMs": 184,
+      "checkedAt": "2026-09-10T13:14:24.540Z"
     },
     {
       "id": "news-page",
@@ -31,28 +31,28 @@
       "critical": true,
       "status": "healthy",
       "detail": "Archivo de noticias disponible",
-      "latencyMs": 315,
-      "checkedAt": "2026-09-10T13:13:05.943Z"
+      "latencyMs": 142,
+      "checkedAt": "2026-09-10T13:14:24.538Z"
     },
     {
       "id": "feed-integrity",
       "name": "Integridad editorial",
       "url": "https://rafaelmarcos.tech/news/feed.json",
       "critical": true,
-      "status": "failed",
-      "detail": "Última edición con 98 h de antigüedad",
+      "status": "healthy",
+      "detail": "10 fuentes · EN · 0 h",
       "latencyMs": 0,
-      "checkedAt": "2026-09-10T13:13:05.629Z"
+      "checkedAt": "2026-09-10T13:14:24.397Z"
     },
     {
       "id": "github-actions",
       "name": "GitHub Actions",
       "critical": false,
-      "status": "healthy",
-      "detail": "Última ejecución: success",
-      "latencyMs": 376,
-      "checkedAt": "2026-09-10T13:13:06.006Z",
-      "url": "https://github.com/rafamarcoss/rafamarcoss.github.io/actions/runs/34481143113"
+      "status": "running",
+      "detail": "Ejecución in_progress",
+      "latencyMs": 201,
+      "checkedAt": "2026-09-10T13:14:24.598Z",
+      "url": "https://github.com/rafamarcoss/rafamarcoss.github.io/actions/runs/34481294235"
     },
     {
       "id": "n8n-private",
@@ -61,7 +61,7 @@
       "status": "private",
       "detail": "Runtime aislado; conector local pendiente",
       "latencyMs": null,
-      "checkedAt": "2026-09-10T13:13:05.496Z",
+      "checkedAt": "2026-09-10T13:14:24.355Z",
       "url": null
     }
   ],
@@ -125,7 +125,7 @@
   "latestAgentRun": {
     "schemaVersion": 1,
     "system": "ai-signal",
-    "startedAt": "2026-09-10T13:12:06.418Z",
+    "startedAt": "2026-09-10T13:13:31.277Z",
     "status": "healthy",
     "models": {
       "selection": "deepseek-v4-flash",
@@ -140,7 +140,7 @@
         "model": "deepseek-v4-flash",
         "attempt": 1,
         "status": "failed",
-        "durationMs": 638,
+        "durationMs": 556,
         "error": "OpenCode: Error from provider (Console Go): Upstream request failed: [invalid_request_error] Prompt must contain the word 'json' in some form to use 'response_format' of type 'json_object'."
       },
       {
@@ -149,13 +149,13 @@
         "model": "glm-5.2",
         "attempt": 1,
         "status": "success",
-        "durationMs": 8477,
+        "durationMs": 7845,
         "usage": {
-          "prompt_tokens": 2479,
-          "completion_tokens": 590,
-          "total_tokens": 3069,
+          "prompt_tokens": 2467,
+          "completion_tokens": 642,
+          "total_tokens": 3109,
           "prompt_tokens_details": {
-            "cached_tokens": 10
+            "cached_tokens": 8
           },
           "completion_tokens_details": {
             "reasoning_tokens": 4
@@ -168,18 +168,18 @@
         "model": "deepseek-v4-pro",
         "attempt": 1,
         "status": "success",
-        "durationMs": 31935,
+        "durationMs": 43953,
         "usage": {
-          "prompt_tokens": 1236,
-          "completion_tokens": 2589,
-          "total_tokens": 3825,
+          "prompt_tokens": 1278,
+          "completion_tokens": 3500,
+          "total_tokens": 4778,
           "prompt_cache_hit_tokens": 0,
-          "prompt_cache_miss_tokens": 1236,
+          "prompt_cache_miss_tokens": 1278,
           "prompt_tokens_details": {
             "cached_tokens": 0
           },
           "completion_tokens_details": {
-            "reasoning_tokens": 1573
+            "reasoning_tokens": 2414
           }
         }
       }
@@ -190,7 +190,7 @@
         "strategy": "supervisor",
         "model": "glm-5.2",
         "trigger": "OpenCode: Error from provider (Console Go): Upstream request failed: [invalid_request_error] Prompt must contain the word 'json' in some form to use 'response_format' of type 'json_object'.",
-        "recoveredAt": "2026-09-10T13:12:16.193Z"
+        "recoveredAt": "2026-09-10T13:13:40.292Z"
       }
     ],
     "output": {
@@ -200,14 +200,14 @@
         "en"
       ]
     },
-    "finishedAt": "2026-09-10T13:12:48.226Z",
-    "durationMs": 41808,
+    "finishedAt": "2026-09-10T13:14:24.307Z",
+    "durationMs": 53030,
     "error": null,
     "metrics": {
       "modelCalls": 3,
       "failedAttempts": 1,
       "supervisedRecoveries": 1,
-      "totalTokens": 6894
+      "totalTokens": 7887
     }
   },
   "incidents": [
@@ -239,9 +239,10 @@
       "title": "Integridad editorial necesita atención",
       "detail": "Última edición con 51 h de antigüedad",
       "severity": "critical",
-      "status": "open",
+      "status": "resolved",
       "detectedAt": "2026-09-08T14:30:31.474Z",
-      "recovery": "El supervisor reintentará con otro modelo en la siguiente generación."
+      "recovery": "El supervisor reintentará con otro modelo en la siguiente generación.",
+      "resolvedAt": "2026-09-10T13:14:24.355Z"
     },
     {
       "id": "github-actions-1788869161843",
@@ -289,6 +290,42 @@
     }
   ],
   "runs": [
+    {
+      "id": "34481294235",
+      "source": "workflow_dispatch",
+      "startedAt": "2026-09-10T13:14:24.354Z",
+      "finishedAt": "2026-09-10T13:14:24.355Z",
+      "durationMs": 244,
+      "status": "operational",
+      "checks": [
+        {
+          "id": "website",
+          "status": "healthy",
+          "latencyMs": 184
+        },
+        {
+          "id": "news-page",
+          "status": "healthy",
+          "latencyMs": 142
+        },
+        {
+          "id": "feed-integrity",
+          "status": "healthy",
+          "latencyMs": 0
+        },
+        {
+          "id": "github-actions",
+          "status": "running",
+          "latencyMs": 201
+        },
+        {
+          "id": "n8n-private",
+          "status": "private",
+          "latencyMs": null
+        }
+      ],
+      "url": "https://github.com/rafamarcoss/rafamarcoss.github.io/actions/runs/34481294235"
+    },
     {
       "id": "34481244694",
       "source": "workflow_run",
@@ -972,42 +1009,6 @@
         }
       ],
       "url": "https://github.com/rafamarcoss/rafamarcoss.github.io/actions/runs/34157393476"
-    },
-    {
-      "id": "34140179784",
-      "source": "schedule",
-      "startedAt": "2026-09-07T15:48:41.116Z",
-      "finishedAt": "2026-09-07T15:48:41.118Z",
-      "durationMs": 300,
-      "status": "degraded",
-      "checks": [
-        {
-          "id": "website",
-          "status": "healthy",
-          "latencyMs": 199
-        },
-        {
-          "id": "news-page",
-          "status": "healthy",
-          "latencyMs": 145
-        },
-        {
-          "id": "feed-integrity",
-          "status": "healthy",
-          "latencyMs": 0
-        },
-        {
-          "id": "github-actions",
-          "status": "failed",
-          "latencyMs": 246
-        },
-        {
-          "id": "n8n-private",
-          "status": "private",
-          "latencyMs": null
-        }
-      ],
-      "url": "https://github.com/rafamarcoss/rafamarcoss.github.io/actions/runs/34140179784"
     }
   ]
 }
