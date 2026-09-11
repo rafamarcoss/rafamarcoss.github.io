@@ -1,7 +1,118 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-10T13:14:24.284Z",
+  "generatedAt": "2026-09-11T12:11:18.994Z",
   "articles": [
+    {
+      "slug": "ai-signal-2026-09-11",
+      "date": "2026-09-11",
+      "generatedAt": "2026-09-11T12:11:18.994Z",
+      "categories": [
+        "AI",
+        "Work & business",
+        "Finance & investment",
+        "AI & law"
+      ],
+      "readingMinutes": 4,
+      "content": {
+        "en": {
+          "title": "AI Signal Daily: Security Warnings, Economic Caution, and Legal Fragmentation",
+          "dek": "From AI model theft to courtroom battles, today's stories show a technology racing ahead of guardrails. Businesses are deploying agents while economists warn of an investment bust, and regulators scramble to keep pace.",
+          "intro": "On September 11, 2026, the AI landscape presents a paradox: adoption is surging, but so are risks across security, finance, and law. Anthropic details misuse patterns, the NSA warns of model distillation, and a Rutgers survey reveals public distrust of autonomous AI. Meanwhile, distributors embed AI agents, IBM tackles token costs, and warnings from the BIS and Goldman Sachs cast doubt on the investment boom. Legal developments from California, Wisconsin, and China show a fragmented regulatory response. This edition weaves these threads together, highlighting tensions, opportunities, and practical limits.",
+          "sections": [
+            {
+              "heading": "State-Sponsored Theft and Platform Misuse",
+              "body": "Anthropic's September 2026 report documents emerging misuse patterns on its platform, offering a typology that security teams can apply to their own monitoring. Simultaneously, the NSA and partner agencies warn that China-based AI companies are distilling U.S. frontier models, threatening intellectual property and national security. The tension is stark: platforms are fighting misuse, but sophisticated actors are extracting model capabilities. These sources do not disagree but describe complementary threats. Enterprises hosting or exporting frontier models should review the NSA advisory's guidance on protecting model weights and outputs."
+            },
+            {
+              "heading": "AI Agents Enter Core Operations, but Costs Demand Discipline",
+              "body": "Distribution Strategy Group reports that distributors are building AI workforces, integrating agents into core operations rather than isolated pilots. This shift offers efficiency gains but introduces new financial challenges. IBM's guidance on AI agent token spend management provides a needed counterweight, outlining methods to track and control variable costs. The opportunity is clear: AI agents can augment human staff. The limit is equally clear: without disciplined spend management, token costs can spiral. Finance and IT leaders should apply IBM's controls to keep agentic workloads predictable."
+            },
+            {
+              "heading": "Economists Sound Alarm on AI Investment Boom",
+              "body": "The head of the Bank for International Settlements warns that the AI boom poses financial stability risks, pointing to concentration and market vulnerabilities. Goldman Sachs chief economist Jan Hatzius adds that the investment boom won't last forever, cautioning that current capital spending levels are unsustainable. These warnings are complementary, not contradictory: one focuses on systemic risk, the other on cyclicality. Investors and corporate planners should stress-test assumptions that assume uninterrupted AI capex growth, factoring AI-sector concentration into risk assessments."
+            },
+            {
+              "heading": "A Patchwork of AI Laws: California Leads, Wisconsin Stumbles, China Sets Benchmarks",
+              "body": "California Governor Newsom signed first-in-the-nation AI safeguards, calling for federal action. Meanwhile, a federal court ruling conflicts with part of Wisconsin's law banning AI-generated child pornography, creating enforcement uncertainty. In China, a judicial benchmark for AI disputes establishes court-level guidance. The tension is evident: a fragmented legal landscape where state, federal, and international approaches diverge. Companies operating across jurisdictions must navigate multiple compliance regimes, and the Wisconsin ruling highlights the risk that well-intentioned laws may be struck down."
+            },
+            {
+              "heading": "Americans Use AI but Don't Want It in Charge",
+              "body": "A Rutgers University survey finds that Americans use AI but do not want it making decisions autonomously. This public ambivalence creates a limit for product and policy teams: granting AI too much autonomy may erode trust. The opportunity lies in calibrating AI features to measured comfort levels, ensuring that automation supports rather than replaces human judgment. Designers should consider incremental autonomy, where AI recommends and humans decide, until public trust matures."
+            }
+          ],
+          "takeaways": [
+            "Review Anthropic's misuse typologies to strengthen internal AI abuse monitoring.",
+            "Implement token spend tracking and controls for AI agent deployments to avoid cost overruns.",
+            "Stress-test financial assumptions given warnings about the AI investment boom's sustainability.",
+            "Assess compliance with California's new AI safeguards and monitor similar state laws.",
+            "Gauge end-user comfort before granting AI systems autonomous decision-making authority."
+          ],
+          "closing": "The AI signal for September 11, 2026 is clear: the technology's benefits are tangible, but the risks are accelerating in tandem. From security threats to economic volatility and legal fragmentation, stakeholders must navigate a complex landscape. The path forward demands vigilance, adaptability, and collaboration across sectors, ensuring that AI's promise is realized without undermining trust, stability, or rights."
+        }
+      },
+      "sources": [
+        {
+          "title": "Detecting and countering misuse of AI: September 2026 - Anthropic",
+          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBBeTNVQy1tcnZPVW9SM3drbmxGN1UxRktiY3JfLW9rMDdIMm9SOUd3b3RJNHpSRXVzS1JKckctcFUyZHpNTVE3aEtWVFhka3o3UmlLUzk1ZEs3dUhyVmRJYVctb0IyN1JuNDB6N0hZdTR2TWJTVXc?oc=5",
+          "category": "AI",
+          "publishedAt": "2026-09-10T17:10:27.000Z"
+        },
+        {
+          "title": "NSA and Others Warn China-Based AI Companies are Distilling U.S. Frontier AI Models - National Security Agency (.gov)",
+          "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxQbE80SEUzdlJMcDM2NEI3dFFreTJzNVdQeFlBenYybG5RekJvUFRldEtWd3NCZ0FJSG0wbjQ4SDgwM1BWWW55YTVvX0VEQV9yUzRNMk4wLXdPZDRVMEI3THAxSU9BRmNwMFJSNEltZk5Za28zS2ZjNFR3X2pfbzJrQnhjLUlVWVlCTXQ0X042cmhoR2loWjRUdnp0Yk1xYmVjMkR6RUxjZ295djlfOHlZemlMdEtXU01McndEdU9CVVhqOUNPMFR1TWRibmhJYXlJampGNzZzdlZDWF9TQm13eEswdFktM3VxY0tmcUJoQ012XzFMcVpNNm5kY09UQld1MlE?oc=5",
+          "category": "AI",
+          "publishedAt": "2026-09-08T20:57:18.000Z"
+        },
+        {
+          "title": "Americans Use Artificial Intelligence, but They Don’t Want It in Charge - Rutgers University",
+          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxORldrSnlEcTV5RFhxdks4VnZNM3J0VGZSeU45Rk9hTmc0QVV5eXZ4Qm9HQ3JleFQ0dDlVcy14aW9BcWw2ZXRxYTNObndsQ2RBalA2Zm9SY1d5YmlOSkxkNHZCQW52N2s2N3M3Mjk5TzlJTE4yT3U5amxOYms0V2VVcEhOcGVHTXF3N3I4b3drVnhlREhjSVE?oc=5",
+          "category": "AI",
+          "publishedAt": "2026-09-09T12:55:26.000Z"
+        },
+        {
+          "title": "Distributors Build an AI Workforce as Hiring Moves into Core Operations - distributionstrategy.com",
+          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOXy1JNHIzRVNTQVBwREswZmtXVE11RUo3b012a3ZIdmdULTg5X0QtTms4V3JNRTdQRk1GbW5vMGwxN0YtUmNDaVE2Y2h5WjN5UGNWSUR1dUlISjYyb0JVZ3kxNDNsSEFtUDJoTmpUdFRfSU9BeG1tWU5mYTJucV93aFNYVWR0ck9iMHN1YVljVkxCZ1JURTc3OUtmemZNSWxqbHBXaV9tUmxrY29mbThOdEJmUQ?oc=5",
+          "category": "Work & business",
+          "publishedAt": "2026-09-08T15:47:37.000Z"
+        },
+        {
+          "title": "AI Agent Token Spend Management - IBM",
+          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5mRWFuUnc3Y01IcEgycm5sLTdYMDE3WVBNTzF6X1FpcGxIeFpndTJSZ1RYWG1MMGNDRU5Vamc2aThzODd0ZzlwZE5OaHhEbG9WVUhWazcwcy15aEg1M1dpUm1ET1VBMHhyci1GTHFOdzNRMmJ3?oc=5",
+          "category": "Work & business",
+          "publishedAt": "2026-09-10T14:15:41.000Z"
+        },
+        {
+          "title": "AI boom poses new financial stability risks, BIS head says - Reuters",
+          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNcDUzRnJ3dHpQaFN0aF9CVHRZbTExQ1h4UHg2OEFaQmxHeHZsdUwtN2piZzdPdk5oYUticEdmSEIyS0RYUlpKYUpRX3ptWFp6WGFNbGp2QXlVNjRIVFdvanlTWXdubklpcXZzUHNWQWxURlBrU3hpcTU0dVJ2M1NEUEpRU3FhUzhHa25XRklRbUo2LUVoVWlsV3dVcVY5SENFc29hd3JXRUZQZG1FbHEw?oc=5",
+          "category": "Finance & investment",
+          "publishedAt": "2026-09-10T05:53:00.000Z"
+        },
+        {
+          "title": "The AI investment boom won't last forever, Goldman Sachs chief economist Jan Hatzius warns - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNM1hQQ1U3cmliMVJYMkpWNFpteHdEdXU0Sk5DQWhDdmRJY2M5cnpkMExIQldCQkp6bkRJMTk3MWpWY2lZTDBISFZBeGhSbUdLMGYwWU9WSEZLTFAxWWFRYzNBa3laNmkwODdYTFBJYlY1ZXVpWW55NkU0WXZKT1F1Yi1vX2RucUpHeXZTbkxXM2RNVFhEQUJwSS1UaTNqUzVBMFhlczJVNm9WY0s0eS1ZX3lGQ2N5N3Nsd1Q0WThRVXVNQ2RWa3dmdTlIaF9MX1FRVDFMQThEZTJnWVpLaFE?oc=5",
+          "category": "Finance & investment",
+          "publishedAt": "2026-09-10T12:25:46.000Z"
+        },
+        {
+          "title": "Federal court ruling conflicts with part of Wisconsin law banning AI child pornography - WPR",
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQc3d0dGhHbWlJNEtHMmlIRmc5bjJfbXZjdFEtUzByQWt3TkkzVGVtaldFN0pOMGZHWUszSms1dEZSMTFKdHh0bDYyejlFNTk3YnVTcFRIWmExdVV4ejYwT09kQ0hheURnQWo0REVoMmR2UTdqdE4zMW1lZ0dRVDR2OGVHc2tybnRNOWF3WGdpQWo4OWpIVzNJTUVtYU0tc2dFWUh6UQ?oc=5",
+          "category": "AI & law",
+          "publishedAt": "2026-09-08T20:43:25.000Z"
+        },
+        {
+          "title": "Governor Newsom signs first-in-the-nation AI safeguards to protect Californians, calls on the federal government to do its part - California State Portal | CA.gov",
+          "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxPbUZRVHhudU1zcDhNQmhkRHpFNk9SOUJlN2EzZHlwZEZPdVFIcVJpU0pieUhsVGFNRUFNTWxidHRFeEJhR3ViMThRNWRHeFZncmp0dTZTazBYcXJLaXJTY0k4VmFCRW5KU0loMlJuWWhSdnhSdzFyTVNndlk2NFNRam9Pdk40U19KUnZaamZzcHYwamFLb2JkQ1hTNHJOc0Uxb1ZMbzJ1Xy1yM0p3NER2bFJuVlZESXZMNVBDRzhzVkRpREtfX1JzWGFMRkVIY2doVDY0dG50WERMdWZmcmtNbWFSYXE5ZmdZbU1sQ2RkWWNQSGc?oc=5",
+          "category": "AI & law",
+          "publishedAt": "2026-09-09T23:20:57.000Z"
+        },
+        {
+          "title": "China sets a judicial benchmark for AI disputes - IAPP",
+          "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5Gb09TcGNBTm5MMWxTQTdLNUlsUzlEeHJ3Mk01RXNEeDVKdGduUnhSdkVvWlotTHdNRDlPUjR2bmV3blNLa3l1d0hCdzAyTjVNZnRmRUp2a01fVVZzZlo2QUdzeTNnYXNiMFlKSzdQUWxjVzJKc0ZDdWR2QQ?oc=5",
+          "category": "AI & law",
+          "publishedAt": "2026-09-10T16:22:03.000Z"
+        }
+      ]
+    },
     {
       "slug": "ai-signal-2026-09-10",
       "date": "2026-09-10",
