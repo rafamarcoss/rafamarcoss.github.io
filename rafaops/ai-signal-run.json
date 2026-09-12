@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "system": "ai-signal",
-  "startedAt": "2026-09-11T12:10:02.315Z",
+  "startedAt": "2026-09-12T11:34:38.822Z",
   "status": "healthy",
   "models": {
     "selection": "deepseek-v4-flash",
@@ -16,7 +16,7 @@
       "model": "deepseek-v4-flash",
       "attempt": 1,
       "status": "failed",
-      "durationMs": 726,
+      "durationMs": 557,
       "error": "OpenCode: Error from provider (Console Go): Upstream request failed: [invalid_request_error] Prompt must contain the word 'json' in some form to use 'response_format' of type 'json_object'."
     },
     {
@@ -25,16 +25,16 @@
       "model": "glm-5.2",
       "attempt": 1,
       "status": "success",
-      "durationMs": 8500,
+      "durationMs": 6921,
       "usage": {
-        "prompt_tokens": 2499,
-        "completion_tokens": 655,
+        "prompt_tokens": 2481,
+        "completion_tokens": 673,
         "total_tokens": 3154,
         "prompt_tokens_details": {
-          "cached_tokens": 11
+          "cached_tokens": 10
         },
         "completion_tokens_details": {
-          "reasoning_tokens": 4
+          "reasoning_tokens": 15
         }
       }
     },
@@ -44,18 +44,18 @@
       "model": "deepseek-v4-pro",
       "attempt": 1,
       "status": "success",
-      "durationMs": 66858,
+      "durationMs": 66772,
       "usage": {
-        "prompt_tokens": 1276,
-        "completion_tokens": 2657,
-        "total_tokens": 3933,
+        "prompt_tokens": 1306,
+        "completion_tokens": 4671,
+        "total_tokens": 5977,
         "prompt_cache_hit_tokens": 0,
-        "prompt_cache_miss_tokens": 1276,
+        "prompt_cache_miss_tokens": 1306,
         "prompt_tokens_details": {
           "cached_tokens": 0
         },
         "completion_tokens_details": {
-          "reasoning_tokens": 1650
+          "reasoning_tokens": 3430
         }
       }
     }
@@ -66,23 +66,23 @@
       "strategy": "supervisor",
       "model": "glm-5.2",
       "trigger": "OpenCode: Error from provider (Console Go): Upstream request failed: [invalid_request_error] Prompt must contain the word 'json' in some form to use 'response_format' of type 'json_object'.",
-      "recoveredAt": "2026-09-11T12:10:12.114Z"
+      "recoveredAt": "2026-09-12T11:34:46.991Z"
     }
   ],
   "output": {
-    "slug": "ai-signal-2026-09-11",
+    "slug": "ai-signal-2026-09-12",
     "sources": 10,
     "languages": [
       "en"
     ]
   },
-  "finishedAt": "2026-09-11T12:11:19.018Z",
-  "durationMs": 76703,
+  "finishedAt": "2026-09-12T11:35:53.836Z",
+  "durationMs": 75014,
   "error": null,
   "metrics": {
     "modelCalls": 3,
     "failedAttempts": 1,
     "supervisedRecoveries": 1,
-    "totalTokens": 7087
+    "totalTokens": 9131
   }
 }
