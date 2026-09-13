@@ -1,88 +1,25 @@
 {
   "schemaVersion": 1,
   "system": "ai-signal",
-  "startedAt": "2026-09-12T11:34:38.822Z",
-  "status": "healthy",
+  "startedAt": "2026-09-13T12:41:15.566Z",
+  "status": "failed",
   "models": {
     "selection": "deepseek-v4-flash",
     "article": "deepseek-v4-pro",
     "supervisor": "glm-5.2",
     "fallback": "deepseek-v4-flash"
   },
-  "attempts": [
-    {
-      "task": "select-top-10",
-      "role": "worker",
-      "model": "deepseek-v4-flash",
-      "attempt": 1,
-      "status": "failed",
-      "durationMs": 557,
-      "error": "OpenCode: Error from provider (Console Go): Upstream request failed: [invalid_request_error] Prompt must contain the word 'json' in some form to use 'response_format' of type 'json_object'."
-    },
-    {
-      "task": "select-top-10",
-      "role": "supervisor",
-      "model": "glm-5.2",
-      "attempt": 1,
-      "status": "success",
-      "durationMs": 6921,
-      "usage": {
-        "prompt_tokens": 2481,
-        "completion_tokens": 673,
-        "total_tokens": 3154,
-        "prompt_tokens_details": {
-          "cached_tokens": 10
-        },
-        "completion_tokens_details": {
-          "reasoning_tokens": 15
-        }
-      }
-    },
-    {
-      "task": "write-english-edition",
-      "role": "worker",
-      "model": "deepseek-v4-pro",
-      "attempt": 1,
-      "status": "success",
-      "durationMs": 66772,
-      "usage": {
-        "prompt_tokens": 1306,
-        "completion_tokens": 4671,
-        "total_tokens": 5977,
-        "prompt_cache_hit_tokens": 0,
-        "prompt_cache_miss_tokens": 1306,
-        "prompt_tokens_details": {
-          "cached_tokens": 0
-        },
-        "completion_tokens_details": {
-          "reasoning_tokens": 3430
-        }
-      }
-    }
-  ],
-  "recoveries": [
-    {
-      "task": "select-top-10",
-      "strategy": "supervisor",
-      "model": "glm-5.2",
-      "trigger": "OpenCode: Error from provider (Console Go): Upstream request failed: [invalid_request_error] Prompt must contain the word 'json' in some form to use 'response_format' of type 'json_object'.",
-      "recoveredAt": "2026-09-12T11:34:46.991Z"
-    }
-  ],
-  "output": {
-    "slug": "ai-signal-2026-09-12",
-    "sources": 10,
-    "languages": [
-      "en"
-    ]
+  "attempts": [],
+  "recoveries": [],
+  "finishedAt": "2026-09-13T12:41:21.278Z",
+  "durationMs": 5712,
+  "error": {
+    "message": "RSS AI & education: HTTP 503"
   },
-  "finishedAt": "2026-09-12T11:35:53.836Z",
-  "durationMs": 75014,
-  "error": null,
   "metrics": {
-    "modelCalls": 3,
-    "failedAttempts": 1,
-    "supervisedRecoveries": 1,
-    "totalTokens": 9131
+    "modelCalls": 0,
+    "failedAttempts": 0,
+    "supervisedRecoveries": 0,
+    "totalTokens": 0
   }
 }
