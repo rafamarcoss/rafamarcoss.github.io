@@ -60,16 +60,32 @@ function parseRss(xml, category) {
 }
 
 async function collectCandidates() {
-  const groups = await Promise.all(feeds.map(async ({ category, url }) => {
-    const response = await fetch(url, {
-      headers: { 'User-Agent': 'AI-Signal/1.0 (+https://rafaelmarcos.tech)' },
-      signal: AbortSignal.timeout(30_000),
-    });
-    if (!response.ok) throw new Error(`RSS ${category}: HTTP ${response.status}`);
-    return parseRss(await response.text(), category);
+  const groups = await Promise.allSettled(feeds.map(async ({ category, url }) => {
+    for (let attempt = 1; attempt <= 3; attempt += 1) {
+      try {
+        const response = await fetch(url, {
+          headers: { 'User-Agent': 'AI-Signal/1.0 (+https://rafaelmarcos.tech)' },
+          signal: AbortSignal.timeout(30_000),
+        });
+        if (!response.ok) {
+          const error = new Error(`RSS ${category}: HTTP ${response.status}`);
+          error.retryable = response.status === 429 || response.status >= 500;
+          throw error;
+        }
+        return parseRss(await response.text(), category);
+      } catch (error) {
+        if (attempt === 3 || error.retryable === false) throw error;
+        console.warn(`${error.message}; retrying RSS ${category} (${attempt}/3)`);
+        await new Promise((resolve) => setTimeout(resolve, 1_000 * 2 ** (attempt - 1)));
+      }
+    }
   }));
+  const successfulGroups = groups.flatMap((result) => result.status === 'fulfilled' ? [result.value] : []);
+  for (const result of groups) {
+    if (result.status === 'rejected') console.warn(`${result.reason.message}; continuing with the remaining feeds`);
+  }
   const seen = new Set();
-  return groups.flat().filter((item) => {
+  return successfulGroups.flat().filter((item) => {
     const key = item.title.toLocaleLowerCase('en').replace(/\s+/g, ' ').trim();
     if (seen.has(key)) return false;
     seen.add(key);
