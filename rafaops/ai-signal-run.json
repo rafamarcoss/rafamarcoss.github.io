@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "system": "ai-signal",
-  "startedAt": "2026-09-16T12:33:21.089Z",
-  "status": "failed",
+  "startedAt": "2026-09-17T12:33:04.968Z",
+  "status": "healthy",
   "models": {
     "selection": "deepseek-v4-flash",
     "article": "deepseek-v4-pro",
@@ -16,7 +16,7 @@
       "model": "deepseek-v4-flash",
       "attempt": 1,
       "status": "failed",
-      "durationMs": 612,
+      "durationMs": 607,
       "error": "OpenCode: Error from provider (Console Go): Upstream request failed: [invalid_request_error] Prompt must contain the word 'json' in some form to use 'response_format' of type 'json_object'."
     },
     {
@@ -25,30 +25,64 @@
       "model": "glm-5.2",
       "attempt": 1,
       "status": "success",
-      "durationMs": 11138,
+      "durationMs": 8652,
       "usage": {
-        "prompt_tokens": 2346,
-        "completion_tokens": 911,
-        "total_tokens": 3257,
+        "prompt_tokens": 2348,
+        "completion_tokens": 646,
+        "total_tokens": 2994,
         "prompt_tokens_details": {
-          "cached_tokens": 8
+          "cached_tokens": 11
         },
         "completion_tokens_details": {
-          "reasoning_tokens": 7
+          "reasoning_tokens": 4
+        }
+      }
+    },
+    {
+      "task": "write-english-edition",
+      "role": "worker",
+      "model": "deepseek-v4-pro",
+      "attempt": 1,
+      "status": "success",
+      "durationMs": 46690,
+      "usage": {
+        "prompt_tokens": 1271,
+        "completion_tokens": 2438,
+        "total_tokens": 3709,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 1271,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1653
         }
       }
     }
   ],
-  "recoveries": [],
-  "finishedAt": "2026-09-16T12:33:33.559Z",
-  "durationMs": 12470,
-  "error": {
-    "message": "[select-top-10] worker, supervisor and fallback failed: Selection contains 14 valid IDs; expected 10"
+  "recoveries": [
+    {
+      "task": "select-top-10",
+      "strategy": "supervisor",
+      "model": "glm-5.2",
+      "trigger": "OpenCode: Error from provider (Console Go): Upstream request failed: [invalid_request_error] Prompt must contain the word 'json' in some form to use 'response_format' of type 'json_object'.",
+      "recoveredAt": "2026-09-17T12:33:14.836Z"
+    }
+  ],
+  "output": {
+    "slug": "ai-signal-2026-09-17",
+    "sources": 10,
+    "languages": [
+      "en"
+    ]
   },
+  "finishedAt": "2026-09-17T12:34:01.623Z",
+  "durationMs": 56655,
+  "error": null,
   "metrics": {
-    "modelCalls": 2,
+    "modelCalls": 3,
     "failedAttempts": 1,
-    "supervisedRecoveries": 0,
-    "totalTokens": 3257
+    "supervisedRecoveries": 1,
+    "totalTokens": 6703
   }
 }
