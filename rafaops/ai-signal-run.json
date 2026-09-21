@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "system": "ai-signal",
-  "startedAt": "2026-09-20T12:14:02.758Z",
+  "startedAt": "2026-09-21T13:55:36.901Z",
   "status": "healthy",
   "models": {
     "selection": "deepseek-v4-flash",
@@ -16,11 +16,11 @@
       "model": "deepseek-v4-flash",
       "attempt": 1,
       "status": "success",
-      "durationMs": 36353,
+      "durationMs": 40297,
       "usage": {
-        "prompt_tokens": 2264,
-        "completion_tokens": 4440,
-        "total_tokens": 6704,
+        "prompt_tokens": 2326,
+        "completion_tokens": 2831,
+        "total_tokens": 5157,
         "prompt_tokens_details": {}
       }
     },
@@ -30,37 +30,37 @@
       "model": "deepseek-v4-pro",
       "attempt": 1,
       "status": "success",
-      "durationMs": 27899,
+      "durationMs": 51683,
       "usage": {
-        "prompt_tokens": 1286,
-        "completion_tokens": 1804,
-        "total_tokens": 3090,
+        "prompt_tokens": 1216,
+        "completion_tokens": 3368,
+        "total_tokens": 4584,
         "prompt_cache_hit_tokens": 0,
-        "prompt_cache_miss_tokens": 1286,
+        "prompt_cache_miss_tokens": 1216,
         "prompt_tokens_details": {
           "cached_tokens": 0
         },
         "completion_tokens_details": {
-          "reasoning_tokens": 782
+          "reasoning_tokens": 2432
         }
       }
     }
   ],
   "recoveries": [],
   "output": {
-    "slug": "ai-signal-2026-09-20",
+    "slug": "ai-signal-2026-09-21",
     "sources": 10,
     "languages": [
       "en"
     ]
   },
-  "finishedAt": "2026-09-20T12:15:08.234Z",
-  "durationMs": 65476,
+  "finishedAt": "2026-09-21T13:57:09.707Z",
+  "durationMs": 92806,
   "error": null,
   "metrics": {
     "modelCalls": 2,
     "failedAttempts": 0,
     "supervisedRecoveries": 0,
-    "totalTokens": 9794
+    "totalTokens": 9741
   }
 }
