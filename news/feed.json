@@ -1,7 +1,115 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-21T13:57:09.672Z",
+  "generatedAt": "2026-09-22T12:34:07.848Z",
   "articles": [
+    {
+      "slug": "ai-signal-2026-09-22",
+      "date": "2026-09-22",
+      "generatedAt": "2026-09-22T12:34:07.848Z",
+      "categories": [
+        "AI",
+        "Finance & investment",
+        "AI & education",
+        "Work & business",
+        "AI & law"
+      ],
+      "readingMinutes": 4,
+      "content": {
+        "en": {
+          "title": "AI Signal: Balancing Efficiency, Risk, and Accountability",
+          "dek": "From emergency rooms to courtrooms, AI is reshaping practices with mixed results. Today's stories highlight both clear benefits and unresolved challenges.",
+          "intro": "On September 22, 2026, reports across healthcare, finance, education, work, and law reveal a dual narrative: AI tools are delivering measurable improvements in some areas while introducing new risks and accountability questions in others. Emergency departments see better triage with AI support, and supply chains benefit from human-AI collaboration, but federal agencies warn of AI-enabled terrorism, AI-generated court filings keep proliferating with errors, and lawyers remain split on whether to disclose AI use to clients. This edition examines the tensions, opportunities, and limits emerging as AI becomes embedded in critical systems.",
+          "sections": [
+            {
+              "heading": "Healthcare and Security: Efficiency Meets Emerging Threats",
+              "body": "A study reported by 2 Minute Medicine found that AI-supported triaging in emergency departments led to improved triaging accuracy and patient flow, signaling a concrete benefit for hospital workflows. However, the same week, federal cybersecurity agencies warned that US adversaries could use AI to plan terrorist attacks, as reported by ABC7 Chicago. While the healthcare application shows AI augmenting human decision-making in high-stakes environments, the security alert underscores the dual-use nature of the technology: capabilities that streamline operations can also be repurposed for malicious ends."
+            },
+            {
+              "heading": "Financing the AI Race: China's Push and the Risk of Slowdown",
+              "body": "Rhodium Group released an examination of China's AI financing, providing investors and policymakers with a detailed look at how the country is funding its AI ambitions. Simultaneously, The Washington Post explored the potential economic and investment consequences if the AI race were to slow down. Together, these stories highlight the fragile optimism underpinning AI markets: heavy investment may be driving current progress, but a deceleration could ripple through portfolios and the broader economy, prompting a need for scenario planning."
+            },
+            {
+              "heading": "Education and Work: Adoption Patterns and Quiet Disruptions",
+              "body": "In education, Cornell Chronicle reported on initiatives that emphasize experimentation and balanced AI use, while a study covered by Phys.org mapped why university students continue to use ChatGPT for learning—offering insights for institutions aiming to support effective adoption. In the workforce, The New York Times described the quiet ways AI is hitting jobs, suggesting that changes may be more subtle than mass layoffs, and Supply Chain Management Review discussed building smarter supply chains through human-AI augmentation, where the technology complements rather than replaces human judgment. The common thread is adaptation: from classrooms to shipping docks, the focus is on integrating AI in ways that enhance rather than disrupt."
+            },
+            {
+              "heading": "Legal Accountability: Sanctions Fail to Stem AI Errors",
+              "body": "Reuters reported that AI error-ridden court filings are surging despite three years of sanctions, indicating that existing penalties have not deterred lawyers from submitting unchecked AI-generated documents. A separate piece from Law.com revealed that Texas lawyers are splitting their AI use into two worlds—a 'walled garden' of secure, vetted tools and an 'open door' of more experimental applications—and most are not telling clients about either approach. This lack of transparency, combined with the continuing error problem, points to a gap between the legal profession's adoption of AI and its responsibility to ensure accuracy and client trust."
+            }
+          ],
+          "takeaways": [
+            "Emergency departments may consider AI-supported triage to improve patient flow and accuracy based on reported findings.",
+            "Investors should stress-test portfolios against scenarios where AI investment slows, given the economic uncertainty highlighted by The Washington Post.",
+            "Educational institutions can use student retention studies on ChatGPT to design support that aligns with actual use motivations.",
+            "Supply chain leaders can adopt human-AI augmentation strategies to combine machine insights with human judgment.",
+            "Lawyers must implement stricter verification of AI-generated documents, as sanctions have not reduced error-ridden court filings."
+          ],
+          "closing": "Today's stories illustrate that AI's integration into society is neither uniformly positive nor negative. While clear wins emerge in healthcare triage and supply chain efficiency, unresolved challenges persist in security, legal accountability, and economic stability. The path forward requires vigilant balancing: embracing AI where it demonstrably helps, while building robust safeguards and disclosure norms where the risks are highest. Without such diligence, the very tools designed to improve systems could undermine the trust they depend on."
+        }
+      },
+      "sources": [
+        {
+          "title": "Emergency department triaging decisions supported by artificial intelligence (AI) led to improved triaging accuracy and patient flow - 2 Minute Medicine",
+          "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxOTUl0Vk9neUJINmxBdjFicGNic1VPTGpvdWhEbDFtZW95dUppUmpjcGFoX3dobFFFTnRnWk9mZlZPUXY0OUZQcFItdnQ4c3h5Z05aSTlObDByOFBUOTFWU1Q1X0hJZnVLNC1Hd0ZSZWF6dFZLc0haQ21ZRmFsdTBuMjY3Ql9xQ3hJVElFLTZ6eFdIU3VaZ1VxWGg5RFRNbWc3SG1uNHFiVk9vZEtPSkhsUVprMzFOdTN1azBnbmE5LVFBRkpmZHdTRWRpQ1QyTDRDTjZ0aXZGTkV0NXBpRUFidnJZSVphTUljWHJoOW1UYksxaEFoVnc?oc=5",
+          "category": "AI",
+          "publishedAt": "2026-09-21T15:36:34.000Z"
+        },
+        {
+          "title": "AI warning: Federal cybersecurity agencies warn US adversaries could use artificial intelligence to plan terrorist attacks - ABC7 Chicago",
+          "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPWmVLNy1kaU5hRFJRVml1cDc2TmdrVUZjUGg5RUhMMks2TjI4aUVnNlo5N0NMN0dPM0pySlMwaTlYZVdSNmVMcnpVdzJPQ2xMZGk3a21SU2dURW13SjgxS1E4cUJHWHFtOGFzMHBRN0ZDZGpzeER4Y25zS1ZTYzhIY1B5bWd6b2Zta21Lbi1oYzUwSTR0dVZpUGVCYWpWRmQxVnR4b0E3eHRQeENtOWFzNlhKMzFVTDIzTTVBWldCVURjRmZHc3ZDSlBsSWtKVUFMXzhSWdIB2gFBVV95cUxPR1I5WGVBSDVTQ19iWDQxQU41M0lCd1pHYzdVdm1ianBuZm1BZ0RzRWthUVp3ZHA0Vll2a1QzM2xCZVM4TmFZOGwwTkFPb0hQcGgtdVlzM1BxMG9vU1JFUENib01GOHdZa1lJMW1fbXF4TkJqa1BwUFQ0bllaQk5fMkRSYmxONExlUWJUVWtSSWpFSnFGRmRVOXJqWFRXVmdLaWFnRjRtd2VDd0RpSjRYVWtKNXUzYzQ5Yk1GdXViSEFtU1A3UUl3UVo4SXp3U01iVFVPTDVUSEt5dw?oc=5",
+          "category": "AI",
+          "publishedAt": "2026-09-18T01:54:04.000Z"
+        },
+        {
+          "title": "Examining China’s AI Financing - Rhodium Group",
+          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE8xMUl2SlRnd3RpWjZ4Rlh6VHh1b1lNTUp0YmcxZ1hwblNUZ1dvOVdjbTZNWjlZZHVwN0pUSndJdlBYNXdLd1VlTkZiRWdIMjZ2eUhUYkJ0RjdPY0ZDbjNQUk9rLVBOZw?oc=5",
+          "category": "Finance & investment",
+          "publishedAt": "2026-09-17T11:49:09.000Z"
+        },
+        {
+          "title": "What happens to the economy and your investments if the AI race slows down? - The Washington Post",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNSnBsd3Y1ZlAwZ0ZkOThXNDJ1ajBjdzVyVnFQajh2UVpFRGZQcGFzRkVqdl9IUXV1X1JQRTgydHNDSW9QT0REeWVUUWZGODdKd1lpcWlid1RrWTkydGNycFFEeVRJeUs1NHZmeHNjVVRCWWt4aFhTX3cwRk44blZkQXNfdVQ3Q254MnUyajNhelhMaWw1eE1ubGk4U0paY3lBQnV3U0YyMHVYaTl6UkFlTlNEdUo?oc=5",
+          "category": "Finance & investment",
+          "publishedAt": "2026-09-15T16:33:50.000Z"
+        },
+        {
+          "title": "AI in education initiatives emphasize experimentation, balanced use - Cornell Chronicle",
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPT19hUFpsRXVBZkxxOEhKQmV1WGpoV3AtcG51WGVTOUtzaUwxckVqN3V5bkF0c3Y3d1NuTTN1TERvb1M2NkpMWERDNkFsUGxCeHVEcWRzQTU0anVHYlE5aEhtYnBrR2R1TDI3N2IwUGUwclgwX18zaHFQWXFzVjB3azlBV2NaVk8tZV9xYnZpX3prVXNCU2NoZ1YxWUkxYVg0ZkkyY09QVQ?oc=5",
+          "category": "AI & education",
+          "publishedAt": "2026-09-17T14:40:55.000Z"
+        },
+        {
+          "title": "ChatGPT at university: Study maps why students stick with AI for learning - Phys.org",
+          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5ZXzBqbkZBVDlpUjFfY2FqdVdGeW5OM1pBZGtsd2o3Zkk4U3FyeDZJQWZnQUZuU2pGUU92Z3I2RGVVcHUxM0NZSjZ3T1pTbG5xb0ladGVzVi1YRjRZZnF0OGtwRHdGdmFRYXZfbXpaRzdrWkk?oc=5",
+          "category": "AI & education",
+          "publishedAt": "2026-09-16T23:20:04.000Z"
+        },
+        {
+          "title": "The Quiet Way A.I. Is Hitting the Work Force - The New York Times",
+          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9fN1J4VEllRVd5dTBaMlpDazlYUUxodnA1d2dYbnF1ZHl4UlJKVUpsY0pkYU91bXJuM09VM1RaT3Q0YW1makJRVWpXVnZYMWFxMTJkM0cxUjF5bWhGQlQ2UFFvMFI0cjJyalNFN29pWGdNeVk?oc=5",
+          "category": "Work & business",
+          "publishedAt": "2026-09-16T14:34:35.000Z"
+        },
+        {
+          "title": "Human + AI: Building smarter supply chains through augmentation - Supply Chain Management Review",
+          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9CV3FKSXpob3EtMjFhU1pNMFI1eTJnMTZTT0RHNjZsM0Z2STR3Xzh4RUFoQlRVOUFhbGlRSzh2b1NrYTVwd2hIa0lRa3V2VVQtU1dWb2Zic3ZEQmEwR0g4dzNVenNFNW05ejlSaW5vMlU?oc=5",
+          "category": "Work & business",
+          "publishedAt": "2026-09-18T12:04:00.000Z"
+        },
+        {
+          "title": "AI error-ridden court filings surge despite three years of sanctions - Reuters",
+          "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQQnJWZ0JVOU00NlJhLU42Q2REa1hJdkdGV3BaaTJ0SGZJc1M0ci1ITXdyR3NnbWdKWFdVdjRqQnM4Z2hjOHFNMGd6RG8yNGdYb1N0am1HZXdGYlBGZG5wM0QybGhKd1NSVGdRUW5najRFMWp4NGVtS3RsWFlUZ2NCNVRuRFR6VHFxeHdjSjNkRDVnRE5Wa2Znazk0TXNJZzhqZk5zdkxqMkpiZ1lwRUx4ZGJrOVhHV1l1NHR3a1dTX3J1dw?oc=5",
+          "category": "AI & law",
+          "publishedAt": "2026-09-17T20:30:03.000Z"
+        },
+        {
+          "title": "The Walled Garden and the Open Door: Texas Lawyers Split AI Into 2 Worlds and Most Aren't Telling Clients About Either - Law.com",
+          "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPSGwydi0yV1k3TEluX2pYdGJyTUFJNkFuSUhWSjFrQ2lKSmRGMWkySS1NZWlfdThDXzFIV0FaNXU3RmRvNFN2eWN6NFlrcTk3VGxOblpvU0VYd0xNSnlYYVJIUkZUdkVESmlfcHFNSkJUOEhhNDh1NGt3RVpteG5zVGVfMUo2ZF9hVi1rbmwzdXVVY2FNMjYzUmFIZzdXYW9ncl9CX2dFYnFQMWVNZ1BIakhfUlFmMU1hSWRLM1JNWExLS29lWFN1VVhaYUpFWTh0dkhFM2ZOWlpabXM1VElZTFE0NmwzWVF5TUhwbDNLcHp2dw?oc=5",
+          "category": "AI & law",
+          "publishedAt": "2026-09-21T21:59:36.000Z"
+        }
+      ]
+    },
     {
       "slug": "ai-signal-2026-09-21",
       "date": "2026-09-21",
