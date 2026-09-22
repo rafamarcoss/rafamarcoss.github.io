@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-22T12:34:07.935Z",
+  "generatedAt": "2026-09-22T12:34:20.951Z",
   "health": "operational",
   "summary": "Todos los sistemas críticos responden correctamente.",
   "metrics": {
     "availability": 100,
-    "healthyChecks": 3,
+    "healthyChecks": 4,
     "totalChecks": 5,
     "openIncidents": 0,
     "supervisedRecoveries": 0,
@@ -21,8 +21,8 @@
       "critical": true,
       "status": "healthy",
       "detail": "HTML y marca verificados",
-      "latencyMs": 235,
-      "checkedAt": "2026-09-22T12:34:08.171Z"
+      "latencyMs": 164,
+      "checkedAt": "2026-09-22T12:34:21.115Z"
     },
     {
       "id": "news-page",
@@ -31,8 +31,8 @@
       "critical": true,
       "status": "healthy",
       "detail": "Archivo de noticias disponible",
-      "latencyMs": 194,
-      "checkedAt": "2026-09-22T12:34:08.170Z"
+      "latencyMs": 112,
+      "checkedAt": "2026-09-22T12:34:21.113Z"
     },
     {
       "id": "feed-integrity",
@@ -42,16 +42,16 @@
       "status": "healthy",
       "detail": "10 fuentes · EN · 0 h",
       "latencyMs": 0,
-      "checkedAt": "2026-09-22T12:34:07.977Z"
+      "checkedAt": "2026-09-22T12:34:21.002Z"
     },
     {
       "id": "github-actions",
       "name": "GitHub Actions",
       "critical": false,
-      "status": "running",
-      "detail": "Ejecución in_progress",
-      "latencyMs": 350,
-      "checkedAt": "2026-09-22T12:34:08.327Z",
+      "status": "healthy",
+      "detail": "Última ejecución: success",
+      "latencyMs": 210,
+      "checkedAt": "2026-09-22T12:34:21.212Z",
       "url": "https://github.com/rafamarcoss/rafamarcoss.github.io/actions/runs/35727751857"
     },
     {
@@ -61,7 +61,7 @@
       "status": "private",
       "detail": "Runtime aislado; conector local pendiente",
       "latencyMs": null,
-      "checkedAt": "2026-09-22T12:34:07.935Z",
+      "checkedAt": "2026-09-22T12:34:20.951Z",
       "url": null
     }
   ],
@@ -290,6 +290,42 @@
     }
   ],
   "runs": [
+    {
+      "id": "35727978142",
+      "source": "workflow_run",
+      "startedAt": "2026-09-22T12:34:20.949Z",
+      "finishedAt": "2026-09-22T12:34:20.951Z",
+      "durationMs": 263,
+      "status": "operational",
+      "checks": [
+        {
+          "id": "website",
+          "status": "healthy",
+          "latencyMs": 164
+        },
+        {
+          "id": "news-page",
+          "status": "healthy",
+          "latencyMs": 112
+        },
+        {
+          "id": "feed-integrity",
+          "status": "healthy",
+          "latencyMs": 0
+        },
+        {
+          "id": "github-actions",
+          "status": "healthy",
+          "latencyMs": 210
+        },
+        {
+          "id": "n8n-private",
+          "status": "private",
+          "latencyMs": null
+        }
+      ],
+      "url": "https://github.com/rafamarcoss/rafamarcoss.github.io/actions/runs/35727978142"
+    },
     {
       "id": "35727751857",
       "source": "schedule",
@@ -973,42 +1009,6 @@
         }
       ],
       "url": "https://github.com/rafamarcoss/rafamarcoss.github.io/actions/runs/35432882665"
-    },
-    {
-      "id": "35408789731",
-      "source": "schedule",
-      "startedAt": "2026-09-19T00:16:42.623Z",
-      "finishedAt": "2026-09-19T00:16:42.624Z",
-      "durationMs": 352,
-      "status": "operational",
-      "checks": [
-        {
-          "id": "website",
-          "status": "healthy",
-          "latencyMs": 288
-        },
-        {
-          "id": "news-page",
-          "status": "healthy",
-          "latencyMs": 317
-        },
-        {
-          "id": "feed-integrity",
-          "status": "healthy",
-          "latencyMs": 0
-        },
-        {
-          "id": "github-actions",
-          "status": "healthy",
-          "latencyMs": 278
-        },
-        {
-          "id": "n8n-private",
-          "status": "private",
-          "latencyMs": null
-        }
-      ],
-      "url": "https://github.com/rafamarcoss/rafamarcoss.github.io/actions/runs/35408789731"
     }
   ]
 }
