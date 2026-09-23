@@ -73,7 +73,10 @@ function layout({ title, description, canonical, schema, type = 'website', robot
 </html>`;
 }
 
-function articlePage(article, indexable) {
+// Daily editions are noindex on purpose: thin, no search demand, and they
+// compete for crawl budget with the pages that need indexing. The /news/ hub
+// and /news/archive/ stay indexable. See the sitemap note in build-articles.mjs.
+function articlePage(article) {
   const content = contentFor(article);
   if (!content) throw new Error(`Missing readable content for ${article.slug}`);
   const url = `${SITE}/news/${article.slug}/`;
@@ -102,7 +105,7 @@ function articlePage(article, indexable) {
     description: content.dek,
     canonical: url,
     type: 'article',
-    robots: indexable ? null : 'noindex,follow',
+    robots: 'noindex,follow',
     schema,
     body: `<article class="v2-shell signal-edition">
       <nav class="art-crumbs" aria-label="Breadcrumb"><a href="/news/">AI Signal</a><span aria-hidden="true">/</span><span>${escapeHtml(article.date)}</span></nav>
@@ -184,14 +187,10 @@ function archivePage(articles) {
 export async function buildAiSignalPages() {
   const feed = JSON.parse(await readFile(FEED, 'utf8'));
   const articles = (feed.articles || []).filter(contentFor);
-  const indexableSlugs = new Set([...articles]
-    .sort((a, b) => String(b.date).localeCompare(String(a.date)))
-    .slice(0, 7)
-    .map((article) => article.slug));
   for (const article of articles) {
     const dir = new URL(`../news/${article.slug}/`, import.meta.url);
     await mkdir(dir, { recursive: true });
-    await writeFile(new URL('index.html', dir), articlePage(article, indexableSlugs.has(article.slug)), 'utf8');
+    await writeFile(new URL('index.html', dir), articlePage(article), 'utf8');
   }
   const archive = new URL('../news/archive/', import.meta.url);
   await mkdir(archive, { recursive: true });
