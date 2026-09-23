@@ -210,7 +210,7 @@ ${hero}${insight}
         <h2>Need technical content that actually understands the product?</h2>
         <p>I write SEO content for SaaS, AI and automation companies — grounded in how the tech actually works.</p>
       </div>
-      <a class="btn" href="/copywriting/">Technical SEO content <span class="arrow">↗</span></a>
+      <a class="btn" href="/copywriting/">Technical content <span class="arrow">↗</span></a>
     </section>
   </article>
 </main>
@@ -279,21 +279,21 @@ function indexHtml(articles) {
         </div>`).join('\n');
 
   const itemList = articles.map((a, i) => `{"@type":"ListItem","position":${i + 1},"url":"${SITE}/articles/${a.data.slug}/"}`).join(',');
-  const collectionJson = `{"@context":"https://schema.org","@type":"CollectionPage","name":"Technical SEO Content on SaaS, AI and Automation — Rafael Marcos","description":"Technical SEO articles on SaaS, AI, automation, CRM and software engineering.","inLanguage":"en","url":"${SITE}/articles/","mainEntity":{"@type":"ItemList","itemListElement":[${itemList}]}}`;
+  const collectionJson = `{"@context":"https://schema.org","@type":"CollectionPage","name":"Articles on AI Agents, Automation and SaaS — Rafael Marcos","description":"Articles on AI agents, automation, CRM and software engineering, written by a builder of production systems.","inLanguage":"en","url":"${SITE}/articles/","mainEntity":{"@type":"ItemList","itemListElement":[${itemList}]}}`;
 
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Technical SEO Content on SaaS, AI & Automation — Rafael Marcos</title>
-<meta name="description" content="Technical SEO articles on SaaS, AI, automation, CRM and software engineering, written by a builder of production systems.">
+<title>Articles on AI Agents, Automation & SaaS — Rafael Marcos</title>
+<meta name="description" content="Articles on AI agents, automation, CRM and software engineering, written by a builder of production systems.">
 <meta name="author" content="${AUTHOR}">
 <meta name="theme-color" content="#F4F5EF">
 <link rel="canonical" href="https://rafaelmarcos.tech/articles/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Technical SEO Content on SaaS, AI & Automation — Rafael Marcos">
-<meta property="og:description" content="Technical SEO articles on SaaS, AI, automation, CRM and software engineering.">
+<meta property="og:title" content="Articles on AI Agents, Automation & SaaS — Rafael Marcos">
+<meta property="og:description" content="Articles on AI agents, automation, CRM and software engineering.">
 <meta property="og:url" content="https://rafaelmarcos.tech/articles/">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary">
@@ -333,7 +333,7 @@ function sitemapXml(articles) {
   // that actually need indexing. Keep them out until the content earns its place.
   const urls = [
     ['', '1.0', '2026-08-25'],
-    ['copywriting/', '0.9', '2026-08-28'],
+    ['copywriting/', '0.6', '2026-08-28'],
     ['articles/', '0.9', '2026-08-25'],
     ['news/', '0.6', '2026-08-25'],
     ['news/archive/', '0.6', '2026-08-25'],
