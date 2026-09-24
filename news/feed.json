@@ -1,7 +1,115 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-23T12:43:50.540Z",
+  "generatedAt": "2026-09-24T12:43:59.910Z",
   "articles": [
+    {
+      "slug": "ai-signal-2026-09-24",
+      "date": "2026-09-24",
+      "generatedAt": "2026-09-24T12:43:59.910Z",
+      "categories": [
+        "AI",
+        "Finance & investment",
+        "Work & business",
+        "AI & law",
+        "AI & education"
+      ],
+      "readingMinutes": 4,
+      "content": {
+        "en": {
+          "title": "AI Daily: Super Intelligence Mandate, Financial AI Rivalry, and Education's Turning Point",
+          "dek": "US diplomats adopt new AI terminology while global security talks continue. Meanwhile, AI reshapes finance, law schools, and classrooms with both promise and anxiety.",
+          "intro": "On September 24, 2026, the AI landscape shows a technology in flux across sectors. From a federal terminology shift to financial market integration, enterprise readiness, and educational adaptation, today's reporting reveals deep tensions between innovation, regulation, and human concerns.",
+          "sections": [
+            {
+              "heading": "Regulation at Home and Abroad: From 'Super Intelligence' to Security Council Discussions",
+              "body": "The AP reported that US diplomats have been instructed to use the term 'super intelligence' instead of 'artificial intelligence' following a call from former President Trump. This domestic rebranding contrasts with the United Nations Security Council, which convened its 10228th meeting on artificial intelligence and international security, using the standard terminology. The divergence highlights a lack of global consensus on language and framing, even as AI's geopolitical implications are debated at the highest levels."
+            },
+            {
+              "heading": "AI Invades Finance: Meta's Muse and a Chinese Model Connect to Wall Street",
+              "body": "Meta's AI system Muse is being applied to financial stock analysis, according to the Wall Street Journal, signaling tech giants' push into investment tools. Meanwhile, CNBC reported that a Chinese AI company has connected its model to Wall Street's leading data providers, enabling real-time financial data access. These developments raise competitive and compliance questions for financial institutions, as cross-border AI integrations become more common."
+            },
+            {
+              "heading": "Enterprise and Small Business: Evidence and Readiness",
+              "body": "The Philadelphia Federal Reserve Bank published evidence on AI's impact on small business performance in the Third District, offering data-driven insights for adoption. Separately, IBM outlined a framework for moving from AI pilots to autonomous application management services for SAP, stressing enterprise readiness. Together, these reports suggest AI's value is proven but scaling requires careful evaluation, and not all firms are equally prepared."
+            },
+            {
+              "heading": "Education and Law: Balancing Use and Anxiety",
+              "body": "US law schools are grappling with AI through laptop bans and new technology courses, as reported by Reuters. At the same time, OpenAI introduced a new AI model specifically designed for law firms, aiming to assist with legal research and document analysis. In broader education, Cornell University's initiatives emphasize experimentation and balanced use, while Bay Area high school students tell EdSource that AI is useful but also a source of anxiety. These mixed signals indicate that institutions are still finding the right balance between leveraging AI and addressing its disruptions."
+            }
+          ],
+          "takeaways": [
+            "Update official communications to use 'super intelligence' instead of 'artificial intelligence' per the new US diplomatic directive.",
+            "Financial professionals should monitor Meta's Muse and the Chinese AI model's integration with Wall Street data for competitive and compliance risks.",
+            "Small business owners can consult the Philadelphia Fed's evidence to guide AI investments, while enterprise IT leaders should use IBM's readiness criteria before scaling autonomous AI.",
+            "Law schools and law firms are adopting different approaches: schools are restricting AI use while firms are adopting OpenAI's legal-specific model; evaluate which fits your context.",
+            "Educators and counselors should address student AI anxiety by promoting balanced experimentation, as modeled by Cornell."
+          ],
+          "closing": "As AI continues to permeate every sector, the day's news shows that no single approach fits all. From terminology wars to financial AI competition, from readiness gaps to educational anxiety, the common thread is a need for adaptable frameworks that balance innovation with caution. Tomorrow's developments will likely deepen these debates, but today's reports offer a snapshot of a world learning to live with super intelligence."
+        }
+      },
+      "sources": [
+        {
+          "title": "US diplomats told to say ‘super intelligence’ — not ‘artificial intelligence’ — after Trump’s call - AP News",
+          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQWDBXSVlKYjVLV1hzNnphbmpRampOMGcxUDBCVDdfanV2QmNUWk5fTW5PMFJ1SzB1VUZUQ25GUG55YXgycE13eU5jSlNiUGk5MUZTSFhHQU9pSlJXX1g3Uk82QXc4YktHdVUycnF4OEplZWRyY2txSVZEQTBHMHU3VHhHSW9NUW9HdnUwelBYdHFFSWlhWnJyUVdTUWI4dE5IODNGY2NDZC0?oc=5",
+          "category": "AI",
+          "publishedAt": "2026-09-23T23:45:00.000Z"
+        },
+        {
+          "title": "Security Council, 10228th Meeting (PM) Artificial Intelligence and International Security - UN Meetings Coverage and Press Releases",
+          "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5LSEJvTWFHN3AwODlsTFpON2syOEVnRVJhT3BueFFGbkZsWl9ZbzJHS3ZELUxOdXZSSmNyZUFuM1ZUbHpZMjJCeFFrVnc?oc=5",
+          "category": "AI",
+          "publishedAt": "2026-09-23T12:00:00.000Z"
+        },
+        {
+          "title": "Meta’s Muse Comes for Financial Stocks - WSJ",
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQVnhad1lIRFVNWk04emdJb3Bxa3NZdmJVakFDS3hlTE5nOXE4VURjRnhucmlzUDFLa2d4b2R1YXhzaEdlVFY4WkdpSDR5MVpzUkFkak1UT0pPNlQwSjB2dzVOLXhoQl9YMEx6dFlJSE1JX0FNU1l5SzY3V1B1U0RJZTVUTnVya0RsdjFUaw?oc=5",
+          "category": "Finance & investment",
+          "publishedAt": "2026-09-22T20:47:00.000Z"
+        },
+        {
+          "title": "A Chinese AI company just connected its model to Wall Street's leading data providers - CNBC",
+          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOOWlmNmR0T1BVWmdrUS1pdHJ0N3htUjFnM2V0WGs5RV81TExhdXRIM3JJMzNvT1VZUG9HTzZyT3luOGJZSHRsR2xWWkpad2JnWEtTU1U1THNZb3lOYUJtLUFGTjluRGE0Rm9Xdy1oZTN0R21BTUlVSVZrNnhCcEMtUtIBhgFBVV95cUxQNWlURkQ4dDgtaGVkczdMZjRSWnc1eFY1WWxJbGpXdHFHLTRtMi1Ra25USHNiZHVoeDVwTEVwVXBxY3JRWFBGdWFPSHBlank1alpwcmRIdlJIdnVfZWR5YlhNYUxEYmdyeWR4bnhEYWVXS2lMT1B5NU1XcUNsbU1kUHRBcHBqUQ?oc=5",
+          "category": "Finance & investment",
+          "publishedAt": "2026-09-17T14:30:25.000Z"
+        },
+        {
+          "title": "How Is AI Impacting Small Business Performance? Evidence from the Third District - Philadelphia Federal Reserve Bank",
+          "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQM0RocDJ1bjZRdnJ2Mzl5cUx6V0VqOGFUVjFuRnllVXdJTEpXajMyS0U0OW5JQzllcldfY1BXaHRZQ3k0YmZja2p4NEJVQTlIaGlwdWJJQ0ROSHdpMFQ5alV0bmxaZGV0RDRER2hkR3lmRFR1VlVvMWxmdHRhX3JNa0dSU1JTTVAza0FGTVJCQWFYYWxNemxfMXVvdTlUNXNqMUx1TFZINUIwS1NsZ1NPbm5vU3cyRXkwaFdYaFZDRmptT01HVzFubVVNdFRDR1lDb3NCWXBsT2s3YmJ4SWNfTkc1N0ZKdTg?oc=5",
+          "category": "Work & business",
+          "publishedAt": "2026-09-22T20:23:02.000Z"
+        },
+        {
+          "title": "From AI pilots to autonomous AMS: The enterprise readiness test for SAP - IBM",
+          "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE04VzVGZlNZR2xmTHFJa3poSXU3U1VISEU1M1I0UzhTcHc0UEUyOExNNEJvb3hMWDZpOTE5bXdkRGFfOVRnZ0dIamg5TVFkemNxaDdNdWpCWjh1LVNtVFNpMWJOd2hRcXd6Vmh4dG5nb2lOQQ?oc=5",
+          "category": "Work & business",
+          "publishedAt": "2026-09-23T20:40:48.000Z"
+        },
+        {
+          "title": "From laptop bans to new tech courses, US law schools grapple with AI - Reuters",
+          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPVUVsY3liZG1hTE9XeGZFaDBDcE80WDlObFFLWVJqeHk0WEJhcjVnS2R4akhJelZMcVZ3M0pSSkFEMFRyYnJBWVVWaDZNR3I5c1h1ODFYOUNCS1p5aVVjRnJiYXhRUjA5eTVseTQ1V1BYYU11ZVlUWnh4VDRJdEJJVjRYbWg0Ni1OaWg1Zld0OFJ5cVNHY3VMaXJka19mMkl4SUhLblNuV2dJTFJ2UnV2OTNR?oc=5",
+          "category": "AI & law",
+          "publishedAt": "2026-09-21T14:56:53.000Z"
+        },
+        {
+          "title": "OpenAI introduces new AI model for law firms - ABA Journal",
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNLUQ1c1ViOGVuck1qZ3o1OVJZM1BMQlFLLTJUeGZ5UmZBeHlnYmE5ak15enltc0J0RzlMckU0LWF6Z1k2emlvc1FfVy1nejgzM3F0a3VuRXAzSEFzWEVKdXFrV2F4Q01MWGpHRVJweldHY1l6SmxucFRUMWJKQ1NVY1BpbmlLbVV5V2pkRw?oc=5",
+          "category": "AI & law",
+          "publishedAt": "2026-09-17T20:00:00.000Z"
+        },
+        {
+          "title": "AI in education initiatives emphasize experimentation, balanced use - Cornell Chronicle",
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPT19hUFpsRXVBZkxxOEhKQmV1WGpoV3AtcG51WGVTOUtzaUwxckVqN3V5bkF0c3Y3d1NuTTN1TERvb1M2NkpMWERDNkFsUGxCeHVEcWRzQTU0anVHYlE5aEhtYnBrR2R1TDI3N2IwUGUwclgwX18zaHFQWXFzVjB3azlBV2NaVk8tZV9xYnZpX3prVXNCU2NoZ1YxWUkxYVg0ZkkyY09QVQ?oc=5",
+          "category": "AI & education",
+          "publishedAt": "2026-09-17T14:40:55.000Z"
+        },
+        {
+          "title": "College-bound Bay Area high school students say AI is useful, and a source of anxiety - EdSource",
+          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE03LTJmMVhaTmVPZGlOaGt5cE9RRWtlZ3dHQ3FURG9WRWpkT3JPbDJEa2JCZm5sTHQwZGhTNHlrTFlCaTcxbHlyU29IM1B2bi1OcUxNMnY0M2RVN2Q2Zmw4WUZIYWhuY2hvaFHSAXJBVV95cUxPWF9XcWUtLU5oZmR4bFE3WEdhWmRlV3dsZ25ILWVqcHRXUEoxTVJzUVdZQnRuRTREYzlBS0NPbnU1YkhCbUxtVkF1WHJ5bjhvb2JYOVhZekVLU01ZT2Y2Rm1ocWlIeWRMcDB6aDlCNkc1S3c?oc=5",
+          "category": "AI & education",
+          "publishedAt": "2026-09-22T09:11:47.000Z"
+        }
+      ]
+    },
     {
       "slug": "ai-signal-2026-09-23",
       "date": "2026-09-23",
