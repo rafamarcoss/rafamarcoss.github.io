@@ -1,7 +1,119 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-25T12:46:03.362Z",
+  "generatedAt": "2026-09-26T12:12:21.526Z",
   "articles": [
+    {
+      "slug": "ai-signal-2026-09-26",
+      "date": "2026-09-26",
+      "generatedAt": "2026-09-26T12:12:21.526Z",
+      "categories": [
+        "AI",
+        "Finance & investment",
+        "AI & education",
+        "Work & business",
+        "AI & law"
+      ],
+      "readingMinutes": 4,
+      "content": {
+        "en": {
+          "title": "AI's Dual Edge: Security Warnings, Market Moves, and Uneven Adoption",
+          "dek": "From UN briefings on runaway AI to health scans and stock analysis, the technology is generating both hope and alarm. This edition examines tensions across security, finance, education, work, and law.",
+          "intro": "AI's reach is expanding rapidly, from assessing heart risk on routine CT scans to triggering warnings of an 'imminent' threat before the UN Security Council. This edition explores how AI is reshaping markets, classrooms, workplaces, and legal practice, revealing a landscape of opportunities tempered by serious concerns about systemic risk, cognitive skills, and ethical transparency.",
+          "sections": [
+            {
+              "heading": "Security and Systemic Risk: The Runaway Threat and Financing Dangers",
+              "body": "OpenAI and Anthropic briefed the UN Security Council on a 'real and imminent' threat posed by runaway AI, an extraordinary admission from the industry's leading developers. Meanwhile, Reuters reported that the financing of the historic AI buildout raises systemic risks in the US, as massive capital flows into infrastructure with uncertain returns. Tension exists between the urgent warnings and the continued aggressive investment, suggesting a disconnect between risk awareness and financial incentives."
+            },
+            {
+              "heading": "Finance: Meta's Muse Targets Stocks",
+              "body": "The Wall Street Journal reported that Meta's Muse AI model is coming for financial stocks, signaling a potential shift in how market analysis is conducted. While the details of Muse's capabilities remain unclear, the move could disrupt traditional financial analysis and trading. The opportunity lies in enhanced efficiency, but the limits include potential over-reliance on AI models and undisclosed biases."
+            },
+            {
+              "heading": "Education: Tool or Crutch? Students and Educators Diverge",
+              "body": "Bay Area high school students told EdSource that AI is useful but a source of anxiety, reflecting a nuanced view of its role in college preparation. In contrast, educators quoted by The Washington Post argue that AI is hurting students' ability to think, calling it 'the illusion of learning.' This material disagreement highlights the challenge of integrating AI without undermining critical thinking. Schools are left to balance the technology's benefits against its potential to shortcut learning."
+            },
+            {
+              "heading": "Work and Business: Evidence vs. Optimism",
+              "body": "The Philadelphia Federal Reserve Bank published evidence on AI's impact on small business performance, offering a grounded look at adoption effects. Simultaneously, Fortune reported that Zoom's CEO agrees with Bill Gates, Jensen Huang, and Jamie Dimon that a three-day workweek is coming soon thanks to AI. The tension between cautious empirical findings and bold predictions underscores the uncertainty in AI's productivity payoff. Business leaders must weigh hype against measurable outcomes."
+            },
+            {
+              "heading": "Legal Profession: Split and Silent",
+              "body": "Reuters reported that US law schools are grappling with AI through measures ranging from laptop bans to new tech courses, aiming to prepare future lawyers. However, Law.com found that Texas lawyers are split into two AI worlds—some embracing it, others avoiding it—and most are not telling clients about either. This disconnect between formal education and practice raises ethical concerns about transparency and competence."
+            }
+          ],
+          "takeaways": [
+            "AI developers are warning of runaway risks to the UN while the financing of the buildout creates systemic financial dangers, demanding coordinated regulatory attention.",
+            "AI offers concrete health benefits, as demonstrated by its ability to evaluate cardiovascular risk from routine CT images.",
+            "Students find AI useful but anxiety-inducing, while educators warn it may erode thinking skills, necessitating balanced classroom policies.",
+            "Evidence on AI's impact on small businesses is emerging, but predictions of a three-day workweek remain speculative and unproven.",
+            "The legal profession faces an ethics gap: many lawyers adopt AI without disclosing it to clients, risking trust and professional standards."
+          ],
+          "closing": "AI's promise is undeniable, from medical diagnostics to financial analysis, but so are its perils, including systemic financial risk and cognitive erosion. The path forward requires transparency, rigorous evaluation, and a willingness to confront uncomfortable tensions between innovation and safety."
+        }
+      },
+      "sources": [
+        {
+          "title": "LIVE: OpenAI and Anthropic brief Security Council amid ‘real and imminent’ threat posed by runaway AI - UN News",
+          "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBqVGZCZ3prNmhaQXp3bkxTeWlRWlpjYUkxV2V0UWJGTy01dTFZQ2NoLXlXQWtVQ3lySFJsZmNuMDRWMWZQbmhfUGpqN3VsbFlPZ1ltNl9HQQ?oc=5",
+          "category": "AI",
+          "publishedAt": "2026-09-23T18:34:18.000Z"
+        },
+        {
+          "title": "AI uses routine CT images to evaluate cardiovascular risk - Cardiovascular Business",
+          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPQXZ0a1VPSkt0WEprT0lHdU9oSGRkMmZ2THJxMzNzRUlIcmtUa2VPc3NTU1V1T2lRclRFbWxKYVZLUVRkVm1iRmhyVEZYbnFMSDdWYnBTdnNaWS1GWGhMZzBHZHlXZVA0SXkxNXUtM1E4bXVoTm5kNmpZLVRwMWxLV3U1MUVERk9qaDlDVENkakhRdDU5aThvOEFiRDBBR2R4blVlVVgyS3N4NWFQeEZCVFFKUklCSWFnemlwOQ?oc=5",
+          "category": "AI",
+          "publishedAt": "2026-09-23T17:02:45.000Z"
+        },
+        {
+          "title": "Meta’s Muse Comes for Financial Stocks - WSJ",
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQVnhad1lIRFVNWk04emdJb3Bxa3NZdmJVakFDS3hlTE5nOXE4VURjRnhucmlzUDFLa2d4b2R1YXhzaEdlVFY4WkdpSDR5MVpzUkFkak1UT0pPNlQwSjB2dzVOLXhoQl9YMEx6dFlJSE1JX0FNU1l5SzY3V1B1U0RJZTVUTnVya0RsdjFUaw?oc=5",
+          "category": "Finance & investment",
+          "publishedAt": "2026-09-22T20:47:00.000Z"
+        },
+        {
+          "title": "Financing of historic AI buildout raises systemic risks in US, researcher says - Reuters",
+          "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxONTI0NGRQVHZXUklOa2xra3RUeVRIUnBhYjdYVENBX1UzTkJoZ1hsX1lvX185ajhhNG5xeWpCMWctSUlnVDFlcE93akVCblpGMy1QY0lCUEJDSVZyZnFWVVA4ZzRhSDM2eVlKelBJRDQ1dlh4UjRsYS0xdVBVX2lWRGQ5ZklQUi03NnZBVm9ncE1KU2JOR3hWRFZ6djBVR1dCak5zREE0VUp3UF9ieWRsQlk0VXUycXBQNTQ1eHdzbkdydw?oc=5",
+          "category": "Finance & investment",
+          "publishedAt": "2026-09-24T10:07:31.000Z"
+        },
+        {
+          "title": "College-bound Bay Area high school students say AI is useful, and a source of anxiety - EdSource",
+          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE03LTJmMVhaTmVPZGlOaGt5cE9RRWtlZ3dHQ3FURG9WRWpkT3JPbDJEa2JCZm5sTHQwZGhTNHlrTFlCaTcxbHlyU29IM1B2bi1OcUxNMnY0M2RVN2Q2Zmw4WUZIYWhuY2hvaFHSAXJBVV95cUxPWF9XcWUtLU5oZmR4bFE3WEdhWmRlV3dsZ25ILWVqcHRXUEoxTVJzUVdZQnRuRTREYzlBS0NPbnU1YkhCbUxtVkF1WHJ5bjhvb2JYOVhZekVLU01ZT2Y2Rm1ocWlIeWRMcDB6aDlCNkc1S3c?oc=5",
+          "category": "AI & education",
+          "publishedAt": "2026-09-22T09:11:47.000Z"
+        },
+        {
+          "title": "AI is hurting students’ ability to think, educators say: ‘It’s the illusion of learning’ - The Washington Post",
+          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPNWhWRHFvWFF6MFVCcGFHYWk5aEpwQk5GVWh4eWpfTmN0VmJoV3BIRV9IckZ2N3Z6M3lrT3J5cnZ4MVB4bWpUSnAwUThRZDM5TWZidkl6eGZtZUtRT3hONXlxc0hkaVZFVk1zdVNJOGh2TGI5MWZMd3h4Q0YwcTZmbDJTSG02OTYwNkJhYWh4NlJzYnRocGJZRFlBbTRnU0dHTHdEdjFXeFhpSzV0cW9tVHl5Wk9WVmlyaTVOaQ?oc=5",
+          "category": "AI & education",
+          "publishedAt": "2026-09-22T17:00:01.000Z"
+        },
+        {
+          "title": "How Is AI Impacting Small Business Performance? Evidence from the Third District - Philadelphia Federal Reserve Bank",
+          "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQM0RocDJ1bjZRdnJ2Mzl5cUx6V0VqOGFUVjFuRnllVXdJTEpXajMyS0U0OW5JQzllcldfY1BXaHRZQ3k0YmZja2p4NEJVQTlIaGlwdWJJQ0ROSHdpMFQ5alV0bmxaZGV0RDRER2hkR3lmRFR1VlVvMWxmdHRhX3JNa0dSU1JTTVAza0FGTVJCQWFYYWxNemxfMXVvdTlUNXNqMUx1TFZINUIwS1NsZ1NPbm5vU3cyRXkwaFdYaFZDRmptT01HVzFubVVNdFRDR1lDb3NCWXBsT2s3YmJ4SWNfTkc1N0ZKdTg?oc=5",
+          "category": "Work & business",
+          "publishedAt": "2026-09-22T20:23:02.000Z"
+        },
+        {
+          "title": "Zoom’s CEO agrees with Bill Gates, Jensen Huang, and Jamie Dimon: A 3-day workweek is coming soon thanks to AI - Fortune",
+          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQdTdCb3B0eFYwWWZ3N09TS1JNVkl0V2RXN2NyUl85NUQzY1Fyd09pV1RFMlZ5MDJ3bHRaMnd6aXk0SGRBT2VKU1dCd0Nta21LOE96M29tQVdYVm1vYWo5bmdfRkQ0cG11dUl3eUpvUGY1alBTcFZGcGg4X293dzRnUXYySXptbmpOVXZHbzMzSEJ5NXdhdlljVXhjOERyX0hXRjFfOWxOZkNTTjZUaGNMMXFIdzFUbi05VzFvWHpZQQ?oc=5",
+          "category": "Work & business",
+          "publishedAt": "2026-09-20T13:24:00.000Z"
+        },
+        {
+          "title": "From laptop bans to new tech courses, US law schools grapple with AI - Reuters",
+          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPVUVsY3liZG1hTE9XeGZFaDBDcE80WDlObFFLWVJqeHk0WEJhcjVnS2R4akhJelZMcVZ3M0pSSkFEMFRyYnJBWVVWaDZNR3I5c1h1ODFYOUNCS1p5aVVjRnJiYXhRUjA5eTVseTQ1V1BYYU11ZVlUWnh4VDRJdEJJVjRYbWg0Ni1OaWg1Zld0OFJ5cVNHY3VMaXJka19mMkl4SUhLblNuV2dJTFJ2UnV2OTNR?oc=5",
+          "category": "AI & law",
+          "publishedAt": "2026-09-21T14:56:53.000Z"
+        },
+        {
+          "title": "The Walled Garden and the Open Door: Texas Lawyers Split AI Into 2 Worlds and Most Aren't Telling Clients About Either - Law.com",
+          "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPSGwydi0yV1k3TEluX2pYdGJyTUFJNkFuSUhWSjFrQ2lKSmRGMWkySS1NZWlfdThDXzFIV0FaNXU3RmRvNFN2eWN6NFlrcTk3VGxOblpvU0VYd0xNSnlYYVJIUkZUdkVESmlfcHFNSkJUOEhhNDh1NGt3RVpteG5zVGVfMUo2ZF9hVi1rbmwzdXVVY2FNMjYzUmFIZzdXYW9ncl9CX2dFYnFQMWVNZ1BIakhfUlFmMU1hSWRLM1JNWExLS29lWFN1VVhaYUpFWTh0dkhFM2ZOWlpabXM1VElZTFE0NmwzWVF5TUhwbDNLcHp2dw?oc=5",
+          "category": "AI & law",
+          "publishedAt": "2026-09-21T21:59:36.000Z"
+        }
+      ]
+    },
     {
       "slug": "ai-signal-2026-09-25",
       "date": "2026-09-25",
