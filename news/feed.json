@@ -1,7 +1,115 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-27T12:56:58.608Z",
+  "generatedAt": "2026-09-28T15:19:14.390Z",
   "articles": [
+    {
+      "slug": "ai-signal-2026-09-28",
+      "date": "2026-09-28",
+      "generatedAt": "2026-09-28T15:19:14.390Z",
+      "categories": [
+        "AI",
+        "Finance & investment",
+        "Work & business",
+        "AI & law",
+        "AI & education"
+      ],
+      "readingMinutes": 4,
+      "content": {
+        "en": {
+          "title": "AI Signal: Super Intelligence, Systemic Risks, and Shifting Norms",
+          "dek": "From UN security briefings to law firm billing, AI is reshaping institutions. Financial and educational risks accompany the efficiency gains.",
+          "intro": "Today's AI landscape is marked by high-level warnings, terminology shifts, financial risk assessments, and institutional adaptations. From the UN Security Council to California's campuses, the signals point to a technology transcending its tool status.",
+          "sections": [
+            {
+              "heading": "Global Governance and Terminology: The Rise of 'Super Intelligence'",
+              "body": "The UN Security Council heard briefings from OpenAI and Anthropic on what was described as a 'real and imminent' threat posed by runaway AI. In parallel, US diplomats have been instructed to use the term 'super intelligence' instead of 'artificial intelligence' following a directive from President Trump. This shift suggests a perceptual change from AI as a tool to a potentially independent entity, aligning with the security concerns raised at the UN. The terminology change may foster more serious discourse but also risks sensationalizing the technology's capabilities. No material disagreement between sources; both indicate a move toward treating AI as a major force in global affairs."
+            },
+            {
+              "heading": "Financial Stability Concerns: Debt-Financed Buildout Under Scrutiny",
+              "body": "Reuters reported that a researcher says the financing of the historic AI buildout raises systemic risks in the US, while the IMF warned that a debt-financed AI investment boom risks an equity market selloff. These warnings highlight a tension between the massive capital flowing into AI infrastructure and the potential for financial instability if returns fail to materialize. The opportunity lies in the productivity gains that AI could deliver, but the limits are clear: the risk assessments are based on models and assumptions that may not fully capture market dynamics. Both sources align on the systemic risk, offering no contradiction but rather reinforcing concern. Investors should assess their exposure to AI infrastructure debt and equities."
+            },
+            {
+              "heading": "Work, Business, and Law: Efficiency Pressures and Assumptions Under Review",
+              "body": "The Philadelphia Fed released evidence on AI's impact on small business performance, though details remain region-specific. Digital Information World scrutinized five common assumptions about AI's effects on jobs, productivity, intelligence, business value, and headcount, suggesting they need critical review. Meanwhile, The New York Times reported that as AI makes law firms more efficient, clients are demanding discounts, creating a tension between efficiency gains and equitable value distribution. This pressure may force law firms to renegotiate fee structures. The Digital Information World piece implicitly challenges assumptions that many business leaders may take for granted, indicating a need for nuance in AI adoption strategies. No direct disagreement between sources, but the NYT story highlights a market tension between providers and clients."
+            },
+            {
+              "heading": "Education: Balancing AI Integration with Cognitive Development",
+              "body": "Educators told The Washington Post that AI is hurting students' ability to think, calling it 'the illusion of learning'. In contrast, the Sacramento Bee reported on how California schools are responding to AI in higher education, detailing various institutional approaches. This presents a tension between caution and adoption: while some warn of cognitive decline, others are actively integrating AI into curricula. The opportunity lies in learning from California's responses to develop models that use AI responsibly without undermining critical thinking. The limit is that the warnings are based on educator observations, not necessarily rigorous studies, and the California examples are state-specific. No direct disagreement, but the two stories reflect different stances on AI in education."
+            }
+          ],
+          "takeaways": [
+            "Policymakers and businesses should monitor UN Security Council discussions and terminology shifts, as they may signal future regulatory frameworks.",
+            "Investors should heed IMF and researcher warnings about debt-financed AI buildout risks and evaluate their exposure to AI infrastructure bonds and equities.",
+            "Law firms need to prepare for client pressure on billing as AI reduces hours; renegotiating fee structures may be necessary.",
+            "Business leaders should critically evaluate assumptions about AI's impact on jobs, productivity, and headcount, as common beliefs may be flawed.",
+            "Educators and administrators should consider strategies that integrate AI without diminishing critical thinking, learning from California's institutional responses."
+          ],
+          "closing": "As AI evolves from artificial to super intelligence, its ripples are felt in global security, finance, law, and education. The signals today are cautionary but not deterministic: with careful management, institutions may harness the benefits while mitigating the risks. The next stage demands coordinated action across sectors."
+        }
+      },
+      "sources": [
+        {
+          "title": "LIVE: OpenAI and Anthropic brief Security Council amid ‘real and imminent’ threat posed by runaway AI - UN News",
+          "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBqVGZCZ3prNmhaQXp3bkxTeWlRWlpjYUkxV2V0UWJGTy01dTFZQ2NoLXlXQWtVQ3lySFJsZmNuMDRWMWZQbmhfUGpqN3VsbFlPZ1ltNl9HQQ?oc=5",
+          "category": "AI",
+          "publishedAt": "2026-09-23T18:34:18.000Z"
+        },
+        {
+          "title": "US diplomats told to say ‘super intelligence’ — not ‘artificial intelligence’ — after Trump’s call - AP News",
+          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQWDBXSVlKYjVLV1hzNnphbmpRampOMGcxUDBCVDdfanV2QmNUWk5fTW5PMFJ1SzB1VUZUQ25GUG55YXgycE13eU5jSlNiUGk5MUZTSFhHQU9pSlJXX1g3Uk82QXc4YktHdVUycnF4OEplZWRyY2txSVZEQTBHMHU3VHhHSW9NUW9HdnUwelBYdHFFSWlhWnJyUVdTUWI4dE5IODNGY2NDZC0?oc=5",
+          "category": "AI",
+          "publishedAt": "2026-09-23T23:45:00.000Z"
+        },
+        {
+          "title": "Financing of historic AI buildout raises systemic risks in US, researcher says - Reuters",
+          "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxONTI0NGRQVHZXUklOa2xra3RUeVRIUnBhYjdYVENBX1UzTkJoZ1hsX1lvX185ajhhNG5xeWpCMWctSUlnVDFlcE93akVCblpGMy1QY0lCUEJDSVZyZnFWVVA4ZzRhSDM2eVlKelBJRDQ1dlh4UjRsYS0xdVBVX2lWRGQ5ZklQUi03NnZBVm9ncE1KU2JOR3hWRFZ6djBVR1dCak5zREE0VUp3UF9ieWRsQlk0VXUycXBQNTQ1eHdzbkdydw?oc=5",
+          "category": "Finance & investment",
+          "publishedAt": "2026-09-24T10:07:31.000Z"
+        },
+        {
+          "title": "Debt-Financed AI Investment Boom Risks Equity Market Selloff, IMF Says - finance.yahoo.com",
+          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVEkzNWE5eDRQaVp2Mld2NzdfV1JnaUlYRnhCaDluZXFEaENJb2xBZVlFbUdUMDNDY3E4dkpQSW4ycm9zTk50QXZYbXFDSVhjQTlqZUtYWkpVWllKSW0zUTdVaG5IYzNiMHhORnB4ejBBWml6dWNPY3dmbEZUeGQwcXZGNVdFZ0ZXVENtd2ZiTTFyeGJQSkVrU05RVjg?oc=5",
+          "category": "Finance & investment",
+          "publishedAt": "2026-09-23T20:37:03.000Z"
+        },
+        {
+          "title": "How Is AI Impacting Small Business Performance? Evidence from the Third District - philadelphiafed.org",
+          "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQM0RocDJ1bjZRdnJ2Mzl5cUx6V0VqOGFUVjFuRnllVXdJTEpXajMyS0U0OW5JQzllcldfY1BXaHRZQ3k0YmZja2p4NEJVQTlIaGlwdWJJQ0ROSHdpMFQ5alV0bmxaZGV0RDRER2hkR3lmRFR1VlVvMWxmdHRhX3JNa0dSU1JTTVAza0FGTVJCQWFYYWxNemxfMXVvdTlUNXNqMUx1TFZINUIwS1NsZ1NPbm5vU3cyRXkwaFdYaFZDRmptT01HVzFubVVNdFRDR1lDb3NCWXBsT2s3YmJ4SWNfTkc1N0ZKdTg?oc=5",
+          "category": "Work & business",
+          "publishedAt": "2026-09-22T20:23:02.000Z"
+        },
+        {
+          "title": "Why Five Common Assumptions About AI Jobs, Productivity, Intelligence, Business Value, and Headcount Need Scrutiny - Digital Information World",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQVjV6V0ZYb2dKSHIwaFJwXzZObTFEQW8wZ1EyMVJhY2tWa0hrMDU1Yy1ILVNka043cXNIVWJQbTVHZERaaWJkUDdtRzl0bGp5bzlYNUFkcVVvOTBwUWRkZUZfTUJ0cW03UHU3UWlLRkNxTWdNaW0tTW55TVJZenBaLTVma3BHWkxhd3VENk1FOUppU3M?oc=5",
+          "category": "Work & business",
+          "publishedAt": "2026-09-25T09:46:00.000Z"
+        },
+        {
+          "title": "As A.I. Makes Law Firms More Efficient, Clients Ask: ‘Where’s My Discount?’ - The New York Times",
+          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPX3Jub1NoeFN0N3RLRlFSdk5lenpQUTYtMEc1dGRTY2xkRjVpSXIwQ3c5SWdtMTV2M2g0NUE1Z2NldFhoYktSSFhQSzd2WEdtVXpSM2gxcFB3N29QNkh3TmZ2b0JSY0pEUDJyU2ptRFlBb3g3ZWs0OGJiTFlqOHVOdGNHN0lrdlEyNFZ2SkdWYkQ?oc=5",
+          "category": "AI & law",
+          "publishedAt": "2026-09-26T12:43:28.000Z"
+        },
+        {
+          "title": "Hacks by autonomous AI agents raise thorny questions of legal accountability - PBS",
+          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOQmJFa201dzhreXJVQkNRZHdVWGw2RVNwZFRmb0pZbXA3dXRHMzdrZ1FEUUJPNHdraHQxWVo0eGpGRm1OYnROTjV2Y2h0ZmNJWG5yVjlIYXVBN21pVTByMHp4Q1dmWVdGWW1vdUFpNXppeG92c2FRb3pvYlB1ZVptT2ZHdDJfeXQ4UnhOVVk1aUVpTG1MU19WVkxHWUY5dHRQU1lLSkRjSjFsYkg0RnZsa0xqa9IBuAFBVV95cUxOMGhiRDBVMEtUUlBhSWlKRExkUlFMalVzM0dHTXpvdW9qWUllaTR5LXl6dzJtQW9WNWRxbHMwRktqcUJBT2RVVzZvaXhMY2tEQUdaVm9pRzhTX2FjQzRiZWFGX1NUcmlYc0pVbjV0RjFTa2p1RGdReGRQV0xlWThuUzFjZUdkYV9NLVlOd0hDX2VzbGFDQUpMTW9sbWJsaXM2a1R5aDdySmZ6TU9sU3BjVzZRbTk4ODFx?oc=5",
+          "category": "AI & law",
+          "publishedAt": "2026-09-25T23:02:57.000Z"
+        },
+        {
+          "title": "AI is hurting students’ ability to think, educators say: ‘It’s the illusion of learning’ - The Washington Post",
+          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPNWhWRHFvWFF6MFVCcGFHYWk5aEpwQk5GVWh4eWpfTmN0VmJoV3BIRV9IckZ2N3Z6M3lrT3J5cnZ4MVB4bWpUSnAwUThRZDM5TWZidkl6eGZtZUtRT3hONXlxc0hkaVZFVk1zdVNJOGh2TGI5MWZMd3h4Q0YwcTZmbDJTSG02OTYwNkJhYWh4NlJzYnRocGJZRFlBbTRnU0dHTHdEdjFXeFhpSzV0cW9tVHl5Wk9WVmlyaTVOaQ?oc=5",
+          "category": "AI & education",
+          "publishedAt": "2026-09-22T17:00:01.000Z"
+        },
+        {
+          "title": "AI is changing higher education. Here’s how California schools are responding - Sacramento Bee",
+          "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNR1JfV1pRVlZucVZTRy1pbWdsT2Q0dDJ4Y0JCVXppa3dtWnZyWmJiZUs3U0p0REREWHRZRnRvekVzSnRRMTM0YWUxSlctZzZ0Uy1wdEstc3RBREd5T3FTY0NRZXczakY3QzY5akVpSm1wd0pZazI2blNWdEZtc3FiTG5rVWhwMF9EVll30gGLAUFVX3lxTFB1WTVPRlpyT3p1djdIMVl1RzN6XzQxNGZ0Q2R3S2xtLVpnR2RRc2lmWUw1NENLX19pZlhJRUlCdi12Y1NiNXdFNk5GRlZpQ1J2S0V1ZTZxT3NIdzZDTE03dFE4YXhtQ3hXWVEwRERWWmdvaHB2bFA1QzVsVy1nSnpMQTQyNi1INVp0RWs?oc=5",
+          "category": "AI & education",
+          "publishedAt": "2026-09-28T00:00:00.000Z"
+        }
+      ]
+    },
     {
       "slug": "ai-signal-2026-09-27",
       "date": "2026-09-27",
