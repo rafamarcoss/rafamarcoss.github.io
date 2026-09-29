@@ -1,7 +1,115 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-28T15:19:14.390Z",
+  "generatedAt": "2026-09-29T13:59:19.055Z",
   "articles": [
+    {
+      "slug": "ai-signal-2026-09-29",
+      "date": "2026-09-29",
+      "generatedAt": "2026-09-29T13:59:19.055Z",
+      "categories": [
+        "AI",
+        "Finance & investment",
+        "Work & business",
+        "AI & law",
+        "AI & education"
+      ],
+      "readingMinutes": 4,
+      "content": {
+        "en": {
+          "title": "Super Intelligence Rhetoric Meets Systemic and Learning Risks: The AI Signal",
+          "dek": "Diplomats rebrand AI as 'super intelligence' while Bill Gates warns of catastrophic potential. Meanwhile, AI reshapes finance, work, and education, raising questions about risk, value, and genuine learning.",
+          "intro": "On September 29, 2026, the AI landscape is marked by a push to rebrand the technology as 'super intelligence' even as voices like Bill Gates call for regulation to prevent catastrophic outcomes. Across sectors, AI's influence is deepening: in finance, new models target stock analysis and systemic risk looms over the buildout; in business, efficiency gains spark client demands for discounts; and in education, educators question whether AI undermines learning. This edition connects these threads to examine the tensions, opportunities, and limits of AI's advance.",
+          "sections": [
+            {
+              "heading": "Rhetoric vs. Reality: From 'Super Intelligence' to Existential Warnings",
+              "body": "The US State Department has instructed diplomats to use the term 'super intelligence' instead of 'artificial intelligence' in official communications, following a call with President Trump. This rebrand signals a promotional tone in government discourse. In stark contrast, Bill Gates has warned that unchecked AI could cause a billion deaths and called for regulation, highlighting the need for oversight to prevent catastrophic scenarios. The juxtaposition of optimistic terminology with dire warnings underscores the delicate balance between promoting innovation and ensuring safety."
+            },
+            {
+              "heading": "Financial Markets and Systemic Risk: AI's Double-Edged Sword",
+              "body": "Meta's AI model, Muse, is being applied to financial stock analysis, potentially changing how investors evaluate stocks. Yet, a researcher reported by Reuters warns that the financing of the historic AI buildout poses systemic risks to the US financial system, citing vulnerabilities from large-scale investments. To address such risks, the Conference of State Bank Supervisors (CSBS) announced an AI supervisory framework for state-chartered banks and nonbank financial institutions, offering concrete guidance for governance. This framework is a step toward mitigating the financial system's exposure to AI-related risks."
+            },
+            {
+              "heading": "Efficiency and Expectations: AI's Impact on Work and Business",
+              "body": "Evidence from the Philadelphia Federal Reserve shows AI's impact on small business performance in the Third District, providing data on adoption and outcomes. Meanwhile, Bain identifies a $100-billion SaaS opportunity in cross-system labor, suggesting that integrating AI across systems can unlock significant value. However, as AI makes law firms more efficient, clients are asking for discounts, according to the New York Times. This tension between efficiency gains and client expectations may force businesses to rethink pricing models and value delivery."
+            },
+            {
+              "heading": "The Learning Illusion: Education's AI Challenge",
+              "body": "Educators report that AI is hurting students' ability to think, calling it 'the illusion of learning,' according to the Washington Post. Similarly, WGBH describes 'cognitive surrender' among college students who use AI, questioning whether genuine learning occurs. Both sources agree that over-reliance on AI can undermine critical thinking and comprehension. This consensus among educators signals an urgent need for policies that balance the benefits of AI with the development of independent cognitive skills."
+            }
+          ],
+          "takeaways": [
+            "The rebranding to 'super intelligence' may shape public perception but should not obscure the need for robust safety measures, as warned by Bill Gates.",
+            "Investors and financial institutions should monitor systemic risks from the AI buildout financing, even as AI tools like Meta's Muse offer new analytical capabilities.",
+            "Businesses adopting AI for efficiency may need to revisit pricing and billing models, as clients increasingly expect cost savings, exemplified by law firms facing discount demands.",
+            "Educators and policymakers should develop guidelines to prevent AI from becoming a crutch that undermines critical thinking, given the reported 'illusion of learning.'",
+            "The CSBS framework provides a starting point for financial regulators to address AI governance, but similar oversight may be needed in other sectors."
+          ],
+          "closing": "AI's transformative power is undeniable, but so are the risks and disruptions it brings. From government rhetoric to classroom practice, the challenge is to harness AI's benefits while mitigating harm through thoughtful regulation, transparent business practices, and educational strategies that preserve human cognition. The day's stories remind us that the path forward requires vigilance and adaptation across all sectors."
+        }
+      },
+      "sources": [
+        {
+          "title": "US diplomats told to say ‘super intelligence’ — not ‘artificial intelligence’ — after Trump’s call - AP News",
+          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQWDBXSVlKYjVLV1hzNnphbmpRampOMGcxUDBCVDdfanV2QmNUWk5fTW5PMFJ1SzB1VUZUQ25GUG55YXgycE13eU5jSlNiUGk5MUZTSFhHQU9pSlJXX1g3Uk82QXc4YktHdVUycnF4OEplZWRyY2txSVZEQTBHMHU3VHhHSW9NUW9HdnUwelBYdHFFSWlhWnJyUVdTUWI4dE5IODNGY2NDZC0?oc=5",
+          "category": "AI",
+          "publishedAt": "2026-09-23T23:45:00.000Z"
+        },
+        {
+          "title": "Bill Gates says unchecked AI could ‘cause a billion deaths’ in call for regulation - The Guardian",
+          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNX3U0dW9FbGNsVVd0bGt4MlRzRTBZMkE2NWZOYUZlUkxOd3puUEwxdkR1YXNIaHdFNUtaYzJ3cGlOTHM2ckdBbHhLZmYtbUlnalJ2QmZYVS00RFROaksyY01xUnRCSXFzcEppNElYd1NOV21KNWJXVEVPVHBVZUppSEZPRVQzVmhtdlA4ZWp4emlaQmwxblpxVjRVWGM0dw?oc=5",
+          "category": "AI",
+          "publishedAt": "2026-09-27T09:00:00.000Z"
+        },
+        {
+          "title": "Meta’s Muse Comes for Financial Stocks - WSJ",
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQVnhad1lIRFVNWk04emdJb3Bxa3NZdmJVakFDS3hlTE5nOXE4VURjRnhucmlzUDFLa2d4b2R1YXhzaEdlVFY4WkdpSDR5MVpzUkFkak1UT0pPNlQwSjB2dzVOLXhoQl9YMEx6dFlJSE1JX0FNU1l5SzY3V1B1U0RJZTVUTnVya0RsdjFUaw?oc=5",
+          "category": "Finance & investment",
+          "publishedAt": "2026-09-22T20:47:00.000Z"
+        },
+        {
+          "title": "Financing of historic AI buildout raises systemic risks in US, researcher says - Reuters",
+          "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxONTI0NGRQVHZXUklOa2xra3RUeVRIUnBhYjdYVENBX1UzTkJoZ1hsX1lvX185ajhhNG5xeWpCMWctSUlnVDFlcE93akVCblpGMy1QY0lCUEJDSVZyZnFWVVA4ZzRhSDM2eVlKelBJRDQ1dlh4UjRsYS0xdVBVX2lWRGQ5ZklQUi03NnZBVm9ncE1KU2JOR3hWRFZ6djBVR1dCak5zREE0VUp3UF9ieWRsQlk0VXUycXBQNTQ1eHdzbkdydw?oc=5",
+          "category": "Finance & investment",
+          "publishedAt": "2026-09-24T10:07:31.000Z"
+        },
+        {
+          "title": "How Is AI Impacting Small Business Performance? Evidence from the Third District - Philadelphia Federal Reserve Bank",
+          "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQM0RocDJ1bjZRdnJ2Mzl5cUx6V0VqOGFUVjFuRnllVXdJTEpXajMyS0U0OW5JQzllcldfY1BXaHRZQ3k0YmZja2p4NEJVQTlIaGlwdWJJQ0ROSHdpMFQ5alV0bmxaZGV0RDRER2hkR3lmRFR1VlVvMWxmdHRhX3JNa0dSU1JTTVAza0FGTVJCQWFYYWxNemxfMXVvdTlUNXNqMUx1TFZINUIwS1NsZ1NPbm5vU3cyRXkwaFdYaFZDRmptT01HVzFubVVNdFRDR1lDb3NCWXBsT2s3YmJ4SWNfTkc1N0ZKdTg?oc=5",
+          "category": "Work & business",
+          "publishedAt": "2026-09-22T20:23:02.000Z"
+        },
+        {
+          "title": "The $100-Billion SaaS Opportunity Hiding in Cross-System Labor - Bain",
+          "url": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxPclhWRTRGU2lyM3ZJSmNHcW9uNHI3VklqcEFpRV9sN05jYmhtYzZvZDJ4bnZnalBORUwxQ21nSnVMNUhvdW0xaVB5WGZVaERxNE1LWFpaa3BzVFpoamhKY2pTYmt3STQzVnI2djhmYmxWWGczWnhqaWVwY1p1SGMxV2hlbUEzVHE5VzNuV084c0c0T0s1eFJsbE1hd2ltS1dVQ3RSeF9rQ0Y0WHlxRHVZeENub1UzQXFkR1BmaWFXaTdWSC1janp4dFp1djAwZGFuTTlGbWJod0JOV2pybjBwSFc1M25jdVhqQ3IyNFJvNFdwUHNnWFdzWlB4ZGE?oc=5",
+          "category": "Work & business",
+          "publishedAt": "2026-09-29T05:48:45.000Z"
+        },
+        {
+          "title": "As A.I. Makes Law Firms More Efficient, Clients Ask: ‘Where’s My Discount?’ - nytimes.com",
+          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPX3Jub1NoeFN0N3RLRlFSdk5lenpQUTYtMEc1dGRTY2xkRjVpSXIwQ3c5SWdtMTV2M2g0NUE1Z2NldFhoYktSSFhQSzd2WEdtVXpSM2gxcFB3N29QNkh3TmZ2b0JSY0pEUDJyU2ptRFlBb3g3ZWs0OGJiTFlqOHVOdGNHN0lrdlEyNFZ2SkdWYkQ?oc=5",
+          "category": "AI & law",
+          "publishedAt": "2026-09-26T12:43:28.000Z"
+        },
+        {
+          "title": "CSBS Announces AI Supervisory Framework for State-Chartered Banks and Nonbank Financial Institutions - consumerfinancialserviceslawmonitor.com",
+          "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxPSFQ0d3F3eDAxbzRCT2ptdzNsUWRtYUZPVTZXMVdnVWRBdUU2UENmUTRjT3JGUDNCYTdVRE5SMlR3QmI1TDhlaDRYaDRSLVJsdTRUbDVIWXRUeFhaRjlYdFpNOTQyYzhzZ29uak4zeG14bV9xQ2FHbVItWFQ0d202dkxzMVp0NEFQTHVpWlo0c25tWV84V1VzVm5xZGVuOXhBa2dZRHpiS1JPdjFHU3dzWlNPNHZld1NQLWxLLVREUGF0WDNhVHRqbEF6a2w2MVNwYV9mTklCeFRUZjhBaWlkR3pmUHREUVBQV0w2cm9nRHFnMGM?oc=5",
+          "category": "AI & law",
+          "publishedAt": "2026-09-28T15:45:34.000Z"
+        },
+        {
+          "title": "AI is hurting students’ ability to think, educators say: ‘It’s the illusion of learning’ - The Washington Post",
+          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPNWhWRHFvWFF6MFVCcGFHYWk5aEpwQk5GVWh4eWpfTmN0VmJoV3BIRV9IckZ2N3Z6M3lrT3J5cnZ4MVB4bWpUSnAwUThRZDM5TWZidkl6eGZtZUtRT3hONXlxc0hkaVZFVk1zdVNJOGh2TGI5MWZMd3h4Q0YwcTZmbDJTSG02OTYwNkJhYWh4NlJzYnRocGJZRFlBbTRnU0dHTHdEdjFXeFhpSzV0cW9tVHl5Wk9WVmlyaTVOaQ?oc=5",
+          "category": "AI & education",
+          "publishedAt": "2026-09-22T17:00:01.000Z"
+        },
+        {
+          "title": "‘Cognitive surrender’: Are college students who use AI really learning? - WGBH",
+          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNeXBaY1VtVndrRzF1aUFFS2psbFVsdDMzV1N3ZldSSjM3eVZHbGpMVXZ2U2l1SXBaRFYtSFVncUx6ejRSRjhfelRfczMwbFJlZGxzaHV5M196eUt3OG85T1RhQ0gtMUJtXzRHd0V0d1FrT0pnbEVKU3BBRDBkLVFaT0NnWDBaWXFBSVdNYmhMT2gxNXZsVW1KYkdvRGYxQkh2clBRNUZaMC0ydFUySU54M1drZnpxTUQwUzVR?oc=5",
+          "category": "AI & education",
+          "publishedAt": "2026-09-24T09:06:46.000Z"
+        }
+      ]
+    },
     {
       "slug": "ai-signal-2026-09-28",
       "date": "2026-09-28",
