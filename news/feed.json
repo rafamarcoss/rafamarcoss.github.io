@@ -1,7 +1,115 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-30T13:35:32.040Z",
+  "generatedAt": "2026-10-01T14:24:49.626Z",
   "articles": [
+    {
+      "slug": "ai-signal-2026-10-01",
+      "date": "2026-10-01",
+      "generatedAt": "2026-10-01T14:24:49.626Z",
+      "categories": [
+        "AI",
+        "Finance & investment",
+        "AI & education",
+        "Work & business",
+        "AI & law"
+      ],
+      "readingMinutes": 4,
+      "content": {
+        "en": {
+          "title": "AI Across Fronts: From Battlefield Risks to Boardroom Bets",
+          "dek": "Military vulnerabilities, medical breakthroughs, credit hurdles, and education gaps mark AI's uneven advance. As Connecticut's new laws take effect, stakeholders must weigh innovation against safety and accountability.",
+          "intro": "On October 1, 2026, AI's march continues across disparate sectors, revealing both promise and peril. Reports today span defense, healthcare, finance, education, work, and law, showing a technology that is rapidly integrating yet still confronting significant hurdles in evidence, funding, and governance.",
+          "sections": [
+            {
+              "heading": "Technology & Security: Promise and Peril",
+              "body": "A RAND analysis warns of adversarial AI and strategic stability attacks on military AI systems, outlining implications for the security of AI-enabled defense technologies. Meanwhile, AI has demonstrated an ability to identify uncommon gastrointestinal pathologies without targeted disease training, suggesting it may generalize to rare conditions beyond its training data. These contrasting developments highlight the dual nature of AI: while it can yield unexpected medical insights, its deployment in critical domains like defense requires rigorous risk assessment."
+            },
+            {
+              "heading": "Finance & Investment: Caution Amid Transformation",
+              "body": "AI-related borrowers are finding it difficult to obtain financing in riskier segments of the US credit market, according to Reuters, signaling lender selectivity. At the same time, Morningstar notes that AI is already changing fund management practices, though it remains uncertain whether AI can consistently pick better stocks. This dynamic underscores a cautious financial environment where AI adoption is progressing, but performance and creditworthiness are under scrutiny."
+            },
+            {
+              "heading": "Education & Work: Experimentation Outpaces Evidence",
+              "body": "NPR reports that schools are experimenting with AI despite a lack of evidence or policy guidance, highlighting a gap between adoption and governance. Meanwhile, South Dakota State University received a Department of Education grant to support AI literacy, offering a model for structured AI education funding. On the workforce front, McKinsey's report analyzes evolving skills and pathways to future jobs, and Bain identifies a $100-billion SaaS opportunity in cross-system labor, suggesting that software addressing labor inefficiencies could capture significant value. The tension is clear: education and work are rushing to integrate AI, but evidence-based frameworks and skill development lag behind."
+            },
+            {
+              "heading": "Regulation & Legal: New Rules and Talent Wars",
+              "body": "Connecticut's new AI and data privacy laws go into effect today, requiring businesses to update their practices for compliance. Simultaneously, law firms are competing to hire technology talent as they race to adopt AI, according to Reuters, reflecting a growing demand for tech skills within the legal profession. As regulation begins to catch up with innovation, the legal sector itself is transforming, creating both compliance burdens and new career pathways."
+            }
+          ],
+          "takeaways": [
+            "Defense planners should assess adversarial risks to military AI systems, as outlined by RAND.",
+            "Clinicians may consider AI diagnostic tools for rare GI conditions, but validation in real-world settings is still needed.",
+            "Investors should exercise caution with high-risk AI credit and be skeptical of AI's ability to consistently improve stock picking.",
+            "Schools need evidence-based policies before adopting AI, and can look to grants like SDSU's for structured AI literacy programs.",
+            "Businesses in Connecticut must immediately review and update their AI and data practices to comply with the new laws."
+          ],
+          "closing": "AI's potential is vast but unevenly distributed across sectors. While medical and workforce applications show promise, military vulnerabilities, financing constraints, education gaps, and regulatory shifts demand careful navigation. The path forward lies in balancing innovation with rigorous evidence, prudent risk management, and proactive governance."
+        }
+      },
+      "sources": [
+        {
+          "title": "Adversarial artificial intelligence: Implications of strategic stability attacks on military AI systems - RAND.org",
+          "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9FUHZKbG1HZjJaZ1A1SE45QTl3WkpPS3Q5Ykd0ZEc3QnVKelF5ZXlzNkk1QVRjQUc2VEdPVnM0bDJCSVBDZFp5NjlyWjZ3NEEtWkplUFhCcWRMNmpKeXZWR09lU2ctSGU1?oc=5",
+          "category": "AI",
+          "publishedAt": "2026-09-29T20:26:09.000Z"
+        },
+        {
+          "title": "Artificial intelligence (AI) capable of identifying uncommon gastrointestinal pathologies despite no targeted disease training - 2 Minute Medicine",
+          "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPRzBodjJhM2lZWE93QjdadU83aU9VZlkxVVQwcnFRajgtMV9GS3JiaGY5aVF2ODFHcVBDZ193U2xROVJXcEFTczlGaDVmbDB6U1gzQUlDUVZ6VE5vNFdBcFNxOUhvRkpaYnRpVXdpQm9WbVBxWXhsNjZZRXp5VzUtWWM0bFRxZVZrVXJVd180SXpoVkVYMG5MUFJJcFgxbHVpQnlXdjNCY0xvUm5WX3lFUWVnVG11bGlfU2hHZExySGZFbEdzNEtPNnoxeWhYRGpDTHVTd0duWWVhZXk3TjN2UHFPRnF1cVcxdFJWeUhB?oc=5",
+          "category": "AI",
+          "publishedAt": "2026-10-01T01:45:45.000Z"
+        },
+        {
+          "title": "AI borrowers face tough sell in risky corners of US credit market - Reuters",
+          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNNDgzMm9MOFBWRnQzVE5TX2FjS0dlek94d3FaTnIwWFNSR2M5LW44X093SllVajZPUUYwenVTa0NlWS01WldkRnFxN25oUFNDYlI4QkdZNFlqQk81VjAtRlhCQjlSSFVkaEY0ZmVfeTZWXy1VQndrNTN4ODVSbDAzeFVTNDlERll6amRqNjQ3dTcxeE9kMWoyckRGZlp3WnBBMzY2UGRhM0ZCZkxyd0lsb0Y4NlQ5UQ?oc=5",
+          "category": "Finance & investment",
+          "publishedAt": "2026-09-30T14:41:53.000Z"
+        },
+        {
+          "title": "AI Is Already Changing Fund Management, But Can it Pick Better Stocks? - Morningstar",
+          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOenVuVnZ3bU9COUFUVHRaU3RHSEZoeXR2T21BdmlYZG1zWWpkYVQyeUJlVVptRmZMTUZDYlA3WkJoWDZvcFRzOHdzSEJsU2JVUFNUeUxNS2h4Z1J4eWhBSW9ud01Ia3FiUlJPZVNYS3RRMjhKTVFpa09RTUVIRXVaX0wzazlWWWp2REtTXzFoXzc3SXRPZzlaTEctcGQySGhzYUppZGw2Nm5HaEE?oc=5",
+          "category": "Finance & investment",
+          "publishedAt": "2026-09-28T06:47:45.000Z"
+        },
+        {
+          "title": "Schools are experimenting with AI with little evidence or policy to guide them - NPR",
+          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOOWNZbE4tY1FmOHFscFk2Yy1aU3JORnJrbDZRckc2amkzajd6UTF5eFJ6ZWs5UmtTMDVvdTVzWTFPZ2k4UDZVdmlLenNxMUpUZlBQV3RnSU5aQkFpaUFPa0Vual85aHJ1bk9YOWl2XzVFQVN6RWdqamx4MXJiLWhHRw?oc=5",
+          "category": "AI & education",
+          "publishedAt": "2026-09-28T09:00:00.000Z"
+        },
+        {
+          "title": "Department of Education grant supports AI literacy at SDSU - sdstate.edu",
+          "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPZ3hyNXd0bEREZmxLWU1CUzZrajZYNzBZV3V5NVFlQUk5YURWajc0WVN4ZzJTOHM0aTFtaEVzdVlnVDFoNFpRMVlRVW82Y1EwenFsMnpJcVU2Zm1tQ0FVVF9WVDlWZUY1ZmpscGtDR1BwQ0daUFlsWEZjOHFoV24tcDljUTg?oc=5",
+          "category": "AI & education",
+          "publishedAt": "2026-09-30T13:47:55.000Z"
+        },
+        {
+          "title": "Workforce in motion: Skills and pathways to future jobs in the United States - McKinsey & Company",
+          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOWnRQelpmc0kxV2JCaHpiZUxSSndBVnlXT2YzNEpudGpFZWUtcmtFUUNJZV9xLUdJMFBKMDE0b2pIaVZ0TWszREI0YzZZRXg4M0w1YTE2UERuV29TaEtMTzl4bllxcGY5UElVajFRRjJtYnpTWUF0eEVIV2JHWHRFVEpMa1BwTGNwaXk4WlFMYk1sLXhSVFdJaVNpTGJjU05neklXamtXVHp4WFZ4b1VwWDFDUlQxcW12?oc=5",
+          "category": "Work & business",
+          "publishedAt": "2026-09-29T00:00:00.000Z"
+        },
+        {
+          "title": "The $100-Billion SaaS Opportunity Hiding in Cross-System Labor - Bain",
+          "url": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxPclhWRTRGU2lyM3ZJSmNHcW9uNHI3VklqcEFpRV9sN05jYmhtYzZvZDJ4bnZnalBORUwxQ21nSnVMNUhvdW0xaVB5WGZVaERxNE1LWFpaa3BzVFpoamhKY2pTYmt3STQzVnI2djhmYmxWWGczWnhqaWVwY1p1SGMxV2hlbUEzVHE5VzNuV084c0c0T0s1eFJsbE1hd2ltS1dVQ3RSeF9rQ0Y0WHlxRHVZeENub1UzQXFkR1BmaWFXaTdWSC1janp4dFp1djAwZGFuTTlGbWJod0JOV2pybjBwSFc1M25jdVhqQ3IyNFJvNFdwUHNnWFdzWlB4ZGE?oc=5",
+          "category": "Work & business",
+          "publishedAt": "2026-09-29T18:03:01.000Z"
+        },
+        {
+          "title": "New CT AI, data privacy laws go into effect Oct. 1. What to know - CT Mirror",
+          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPZmxXdTBTVUFIRmtfeXpUU2xsaE40VFg2bzI3dEU4WXkzRmplWWFyRVE4TFo1VHR4T2FVa2Z2RS16Nko5Q0ItUDEtVzJ4WU9XeDJ5YkFLeWloQ2loemxycXFObFB4WkJ1Q2k4RERjWjVuVVlaV1FwQ0g4ZlJrWlNCaHBuWXVQQlY3Q1VKdEd3?oc=5",
+          "category": "AI & law",
+          "publishedAt": "2026-09-28T11:30:00.000Z"
+        },
+        {
+          "title": "Law firms vie for tech talent in AI race - Reuters",
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQbE9HMk1LNU54UjJ4MmxBbnVHMnpKQ0lnckVheHVQdWxwR0FZTk4yU25BanNZcTROTkhodWVRRGxHREdyX1l1bnNCNk4tdHZwbzlraXY3T1I0a1I2WXlqd1BoczlHV2RDcnhGdk1ORVBaQlJ0ajd2NmtTYUhOOW5KMkI5Qy1SUDVHazBTMVJ4cw?oc=5",
+          "category": "AI & law",
+          "publishedAt": "2026-09-26T03:45:49.000Z"
+        }
+      ]
+    },
     {
       "slug": "ai-signal-2026-09-30",
       "date": "2026-09-30",
