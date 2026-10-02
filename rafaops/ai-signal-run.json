@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "system": "ai-signal",
-  "startedAt": "2026-10-01T14:24:15.423Z",
+  "startedAt": "2026-10-02T13:47:14.854Z",
   "status": "healthy",
   "models": {
     "selection": "deepseek-v4-flash",
@@ -16,11 +16,11 @@
       "model": "deepseek-v4-flash",
       "attempt": 1,
       "status": "success",
-      "durationMs": 9141,
+      "durationMs": 9796,
       "usage": {
-        "prompt_tokens": 2338,
-        "completion_tokens": 2930,
-        "total_tokens": 5268,
+        "prompt_tokens": 2348,
+        "completion_tokens": 2470,
+        "total_tokens": 4818,
         "prompt_tokens_details": {}
       }
     },
@@ -29,38 +29,47 @@
       "role": "worker",
       "model": "deepseek-v4-pro",
       "attempt": 1,
+      "status": "failed",
+      "durationMs": 27744,
+      "error": "Expected ',' or '}' after property value in JSON at position 5124 (line 1 column 5125)"
+    },
+    {
+      "task": "write-english-edition",
+      "role": "worker",
+      "model": "deepseek-v4-pro",
+      "attempt": 2,
       "status": "success",
-      "durationMs": 24041,
+      "durationMs": 31981,
       "usage": {
-        "prompt_tokens": 1194,
-        "completion_tokens": 2050,
-        "total_tokens": 3244,
-        "prompt_cache_hit_tokens": 0,
-        "prompt_cache_miss_tokens": 1194,
+        "prompt_tokens": 1239,
+        "completion_tokens": 3224,
+        "total_tokens": 4463,
+        "prompt_cache_hit_tokens": 1152,
+        "prompt_cache_miss_tokens": 87,
         "prompt_tokens_details": {
-          "cached_tokens": 0
+          "cached_tokens": 1152
         },
         "completion_tokens_details": {
-          "reasoning_tokens": 1258
+          "reasoning_tokens": 2225
         }
       }
     }
   ],
   "recoveries": [],
   "output": {
-    "slug": "ai-signal-2026-10-01",
+    "slug": "ai-signal-2026-10-02",
     "sources": 10,
     "languages": [
       "en"
     ]
   },
-  "finishedAt": "2026-10-01T14:24:49.668Z",
-  "durationMs": 34245,
+  "finishedAt": "2026-10-02T13:48:27.461Z",
+  "durationMs": 72607,
   "error": null,
   "metrics": {
-    "modelCalls": 2,
-    "failedAttempts": 0,
+    "modelCalls": 3,
+    "failedAttempts": 1,
     "supervisedRecoveries": 0,
-    "totalTokens": 8512
+    "totalTokens": 9281
   }
 }
