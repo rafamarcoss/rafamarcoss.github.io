@@ -1,7 +1,115 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-04T13:08:48.242Z",
+  "generatedAt": "2026-10-05T15:53:43.513Z",
   "articles": [
+    {
+      "slug": "ai-signal-2026-10-05",
+      "date": "2026-10-05",
+      "generatedAt": "2026-10-05T15:53:43.513Z",
+      "categories": [
+        "AI",
+        "Finance & investment",
+        "AI & law",
+        "AI & education",
+        "Work & business"
+      ],
+      "readingMinutes": 4,
+      "content": {
+        "en": {
+          "title": "AI's Policy Rebrand, Legal Strains, and Market Tests",
+          "dek": "A federal order recasts AI as 'super intelligence' while state disclosure laws, autonomous trading, and credit markets strain existing frameworks. Clinical and workforce evidence show gains but also flag important limits.",
+          "intro": "On October 5, 2026, AI policy and practice are colliding across Washington, state courts, financial markets, classrooms, and hospitals. The day's reporting shows a technology moving faster than the rules meant to govern it, with new federal leadership and terminology, immediate legal compliance questions, tightening credit, and early evidence of clinical benefit.",
+          "sections": [
+            {
+              "heading": "Washington Recasts AI While States Move Ahead",
+              "body": "The White House's new AI czar has unveiled the goals and members of a federal task force, according to the Wall Street Journal, setting the direction for upcoming US AI policy and funding priorities. At the same time, Wiley's legal analysis reports that an executive order rebrands 'artificial intelligence' as 'super intelligence' and signals potential federal legislative changes. The terminology shift could affect how existing and future federal rules are interpreted, but the reporting offers no detailed guidance on which systems or obligations change.\n\nThe tension is between a coordinated federal direction and a vocabulary change that creates immediate interpretive uncertainty. States are not waiting: California's AI law is already forcing lawyers into tough disclosure decisions, per Bloomberg Law. No source directly contradicts another, but the federal rebranding remains underexplained while state compliance deadlines create action items now."
+            },
+            {
+              "heading": "Legal Practice Faces a Training and Disclosure Crossroads",
+              "body": "A judge warned that AI could stunt lawyers' training and harm their clients, Reuters reports, highlighting the risk that automation reduces junior attorneys' hands-on skill development. That warning sits alongside California's law, which Bloomberg Law reports is hitting lawyers with tough disclosure decisions about when and how to tell clients AI was used.\n\nDelaware adds a corporate dimension: WHYY reports officials are 'not putting brakes on' an AI-run companies initiative despite reports of agents going rogue. The opportunity is clearer rules for AI-directed entities, but the limit is unresolved liability when those agents misbehave. The judge's warning and California's disclosure law both push firms to balance efficiency with oversight, but no reporting yet shows how that balance will be enforced."
+            },
+            {
+              "heading": "Credit and Trading Markets Test Autonomous AI",
+              "body": "Reuters reports that AI-sector borrowers face a tough sell in risky corners of the US credit market, with investors demanding more protection as lending to AI companies grows. That tightening signals caution among creditors even as Robinhood, per the Wall Street Journal, is betting on AI bots that can trade while users sleep, extending automated investing to retail customers.\n\nThe tension is clear: platforms want to push autonomous AI into consumer finance, while lenders pull back on riskier AI borrowers. The opportunity is broader retail access and efficient trading, but the limit is that neither the credit market's protection demands nor regulatory treatment of sleep-trading bots has been settled in the reporting."
+            },
+            {
+              "heading": "Classrooms, Clinics, and the Workforce Show Mixed Evidence",
+              "body": "UCLA is expanding student access to AI tools while prompting responsible use amid learning concerns, the Daily Bruin reports, raising questions about academic integrity and pedagogy. McKinsey's new workforce report examines shifting skill demands and pathways to future jobs in the US, offering HR planners a framework for reskilling.\n\nIn healthcare, 2 Minute Medicine reports that AI-triggered rapid response notifications were associated with lower mortality among hospitalized inpatients, giving administrators evidence to evaluate early warning systems. The opportunity is demonstrable clinical benefit and clearer skill pathways, but the limit is that learning concerns at UCLA and job transition challenges in McKinsey's analysis show gains are not automatic."
+            }
+          ],
+          "takeaways": [
+            "Compliance teams should review whether the 'super intelligence' rebrand affects existing federal AI obligations and monitor the White House task force members for funding priorities.",
+            "California-licensed attorneys should update disclosure protocols now, because the state law creates immediate decisions about client notification.",
+            "Law firms should pair AI tools with structured training to preserve junior lawyers' skill development, as a judge warned of harm to clients.",
+            "AI startups seeking risky credit should expect investors to demand stronger protections, while Robinhood's retail trading bots may face unresolved regulatory scrutiny.",
+            "Hospital administrators can use the inpatient mortality association to evaluate AI early warning systems, but should still require local validation before adoption."
+          ],
+          "closing": "Today's edition shows a sector caught between ambitious automation and incomplete safeguards. Federal rebranding and state disclosure rules create compliance friction; credit markets and courts expose operational and ethical limits; while classrooms and clinics reveal real, but uneven, benefits. The practical path forward is to move deliberately: monitor the task force's next steps, adjust training and disclosure now, and treat every efficiency gain as contingent on oversight."
+        }
+      },
+      "sources": [
+        {
+          "title": "Exclusive | New AI Czar Unveils Goals, Members of White House Task Force - WSJ",
+          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQVzllZ3FlUmNzR3pPMkNlbDRWSU5yT2lZLXA0bnpMZjI5VmxNTG5KZFBfZEp3elVXSG1XOU5jckVlRVA1M05oRHNtMDdhVDQyY0pLdXlScG54OXJpZlZJSTFtZkMxVVBHOWlaM2hKVmpuaFpwR3c3c05ITDU1N19IcnhENHQwdTAxeGtmRnVpNDdSc0IwWFowTmlxREVocURBVFppVFRoaVdLYXpsbXBmSUxqUTZ6MG1GSjE3RHRmVQ?oc=5",
+          "category": "AI",
+          "publishedAt": "2026-10-04T02:14:00.000Z"
+        },
+        {
+          "title": "Executive Order Rebrands AI as “Super Intelligence” and Signals Potential Federal Legislative Changes - wiley.law",
+          "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPOFpXejV2VG9MdW9MRjg2d2h3TElQZVhyVzRUU1U5blpPVVYzYWVab0p3WHBYMDlmQXEwODE1SHMzeXFJSlpsMTVFQWR5aENod2F2Q2F1WmwtMTlMM1ZsNFdPTjdwUlZOalJia0hELXF0MzB3cjBuRFhhN2R0My1iR3Z2dWVJeGNOdUFCTGs2bmxpVzJHaV9qTlVGdjhybTNxZlg1eXdjVnNfaFJER2FwNWNuQmhQdF92MEtoOXhqS3QyejFZSHc?oc=5",
+          "category": "AI",
+          "publishedAt": "2026-10-02T19:38:28.000Z"
+        },
+        {
+          "title": "Artificial intelligence (AI)-triggered rapid response notifications were associated with lower mortality among inpatients - 2minutemedicine.com",
+          "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNMUc0NWhSWE1JMWVBRk5SNk5UWDNrNzRpSVZVaXRlb0hYUFNncnFkdm92OGhOX3JGY3RXUGtJdGQxT0Y4d2N3NUV3U0h2WjdfZGV0RGdZYUxEeXVtSnF5RGlMay1EQmtrM2ZENEJSaUhmTVp0T3NFbndtZVBnallGeTRKZEliVjV3WTItdWRKc3VsR0Mxa3JOR2tWSW1LdlF6dm8yWkxVdnpvZWg0WlN4YS1yWUJJeWlZZnhHM1lIY2hLcW1hY21OUlRBSWl0aWthY1JfNkRpazRTZDBjUEhLaU9GU0FyLWM?oc=5",
+          "category": "AI",
+          "publishedAt": "2026-10-03T01:44:10.000Z"
+        },
+        {
+          "title": "AI borrowers face tough sell in risky corners of US credit market - Reuters",
+          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNNDgzMm9MOFBWRnQzVE5TX2FjS0dlek94d3FaTnIwWFNSR2M5LW44X093SllVajZPUUYwenVTa0NlWS01WldkRnFxN25oUFNDYlI4QkdZNFlqQk81VjAtRlhCQjlSSFVkaEY0ZmVfeTZWXy1VQndrNTN4ODVSbDAzeFVTNDlERll6amRqNjQ3dTcxeE9kMWoyckRGZlp3WnBBMzY2UGRhM0ZCZkxyd0lsb0Y4NlQ5UQ?oc=5",
+          "category": "Finance & investment",
+          "publishedAt": "2026-09-30T14:41:53.000Z"
+        },
+        {
+          "title": "Robinhood’s Next Big Bet: AI Bots That Trade While You Sleep - WSJ",
+          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQUG5Zb3pfVVZKb2x2TFR5OGJ3dzhGZDhBMUVXZ0NmUkI5WnNLWjVPRFdNcTFYU09nWU9lZGZhOEsxRlE5V0dvcTM1UUdwd1FpczdGNm41MHBuY3V1VDBXSVVHQVhTeHFhcl9FdWhIaXRkc2xtS0FjbFJ5Q3lXYVFTa2hDT3JISk5fc0Y2V0djYVZ3UXk1QTl1dnktVm5RU0lTTFo3dTJiTGs?oc=5",
+          "category": "Finance & investment",
+          "publishedAt": "2026-09-29T23:15:00.000Z"
+        },
+        {
+          "title": "Judge warns AI could stunt lawyers' training and harm their clients - Reuters",
+          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPaW9VTzR5bkJYdmJGams3elZMa3hyaXRmOHJVN05BWnZ6VjNRcGlRM243SGwtWGhMeFlIX05haGhqZkFQeXJYcEpYMjdjazJTdmpHVVNsOFItNWxKd1pyenZ1SDVydnRORUZxNkR0TkJhN1YxeG9XSEY4cy1PMUh2Q1Zmd2VuMExUNWZkQ3l4R0hKbXBmVnJOMUpydGRrbnd1d0ZMdFQyWmN3cHlCV1dmYXI3S01iQQ?oc=5",
+          "category": "AI & law",
+          "publishedAt": "2026-10-02T21:30:10.000Z"
+        },
+        {
+          "title": "California’s AI Law Hits Lawyers With Tough Disclosure Decisions - Bloomberg Law News",
+          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQdEswUmpmLVAycHdWY0tncE9RNTBmdnFCcks1MHdCTUlPY2NxMVdDZlZvcXBPZWkyeG1sV2ZYZTNlTlhKcmlvTm9GMHJRM2FpeHVsc25NSnJGdDRnWEx4clVCX3IzVzhXNDVCc3pUV08teGtkNjg1cHdYUl9DNHM4a3FIaUp3eGhmNGxqQlZaRUJfZEtiZ2djOFpIOHZGNUs1QXpCY2NpOUF3MkE5bmFEaE1rOFB2Zw?oc=5",
+          "category": "AI & law",
+          "publishedAt": "2026-10-02T16:24:00.000Z"
+        },
+        {
+          "title": "‘Not putting brakes on’: Delaware pursues AI-run companies initiative amid reports of agents going rogue - WHYY",
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNWVE3NUU4cjJyaVNfcGdwNThPd0ZLVktndS1ta2N2VVNQY1ctUGFWNVhpcUxmdElJX0JtajA0VjBPQ3RFTV9icHpkVnBaSkZqOHNjNFdmSUFYVVNrZWRidzB6ekFvUDlhRzZZaDN2UzdYSHFSQm1zVU50MS0xT1N3VFdKMGUtVEZMcHNZdA?oc=5",
+          "category": "AI & law",
+          "publishedAt": "2026-09-30T09:03:07.000Z"
+        },
+        {
+          "title": "UCLA expands student AI tool access, prompting responsible use, learning concerns - Daily Bruin",
+          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNTUdZZTk3YnBUQWhId3UtakVYanJXZ1hLb2RlbnRGZUoxV0dLa1pmVV9ROTI5Zlhnc3ZyQlNyamxwNS1DamthOWtZLXVrMlhzdkpNWWNTNERtLURzRE9NUVdXSjJyb216SjhrTVRJN3RfSEhTNE5aaXVCNzN6QUZtbjVUQVhReVJwaC1kYXo4MnFxZzl2Z3pGSnVteXFtellHOHZsbmdrQ1IxUzVrVWZVb29mWQ?oc=5",
+          "category": "AI & education",
+          "publishedAt": "2026-10-02T08:28:00.000Z"
+        },
+        {
+          "title": "Workforce in motion: Skills and pathways to future jobs in the United States - McKinsey & Company",
+          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOWnRQelpmc0kxV2JCaHpiZUxSSndBVnlXT2YzNEpudGpFZWUtcmtFUUNJZV9xLUdJMFBKMDE0b2pIaVZ0TWszREI0YzZZRXg4M0w1YTE2UERuV29TaEtMTzl4bllxcGY5UElVajFRRjJtYnpTWUF0eEVIV2JHWHRFVEpMa1BwTGNwaXk4WlFMYk1sLXhSVFdJaVNpTGJjU05neklXamtXVHp4WFZ4b1VwWDFDUlQxcW12?oc=5",
+          "category": "Work & business",
+          "publishedAt": "2026-09-29T00:00:00.000Z"
+        }
+      ]
+    },
     {
       "slug": "ai-signal-2026-10-04",
       "date": "2026-10-04",

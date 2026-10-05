@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "system": "ai-signal",
-  "startedAt": "2026-10-04T13:08:09.781Z",
+  "startedAt": "2026-10-05T15:52:31.532Z",
   "status": "healthy",
   "models": {
     "selection": "deepseek-v4-flash",
@@ -15,13 +15,24 @@
       "role": "worker",
       "model": "deepseek-v4-flash",
       "attempt": 1,
+      "status": "failed",
+      "durationMs": 674,
+      "error": "OpenCode: Upstream request failed: [invalid_request_error] Prompt must contain the word 'json' in some form to use 'response_format' of type 'json_object'. (request_id: 1dbd36b0-4f47-4b16-b46b-9abcc27889d0)"
+    },
+    {
+      "task": "select-top-10",
+      "role": "supervisor",
+      "model": "glm-5.2",
+      "attempt": 1,
       "status": "success",
-      "durationMs": 9307,
+      "durationMs": 12684,
       "usage": {
-        "prompt_tokens": 2316,
-        "completion_tokens": 3938,
-        "total_tokens": 6254,
-        "prompt_tokens_details": {}
+        "prompt_tokens": 2355,
+        "completion_tokens": 622,
+        "total_tokens": 2977,
+        "prompt_tokens_details": {
+          "cached_tokens": 11
+        }
       }
     },
     {
@@ -30,37 +41,43 @@
       "model": "deepseek-v4-pro",
       "attempt": 1,
       "status": "success",
-      "durationMs": 28017,
+      "durationMs": 57377,
       "usage": {
-        "prompt_tokens": 1174,
-        "completion_tokens": 2636,
-        "total_tokens": 3810,
-        "prompt_cache_hit_tokens": 0,
-        "prompt_cache_miss_tokens": 1174,
+        "prompt_tokens": 1350,
+        "completion_tokens": 3893,
+        "total_tokens": 5243,
         "prompt_tokens_details": {
           "cached_tokens": 0
         },
         "completion_tokens_details": {
-          "reasoning_tokens": 1784
+          "reasoning_tokens": 2831
         }
       }
     }
   ],
-  "recoveries": [],
+  "recoveries": [
+    {
+      "task": "select-top-10",
+      "strategy": "supervisor",
+      "model": "glm-5.2",
+      "trigger": "OpenCode: Upstream request failed: [invalid_request_error] Prompt must contain the word 'json' in some form to use 'response_format' of type 'json_object'. (request_id: 1dbd36b0-4f47-4b16-b46b-9abcc27889d0)",
+      "recoveredAt": "2026-10-05T15:52:45.774Z"
+    }
+  ],
   "output": {
-    "slug": "ai-signal-2026-10-04",
+    "slug": "ai-signal-2026-10-05",
     "sources": 10,
     "languages": [
       "en"
     ]
   },
-  "finishedAt": "2026-10-04T13:08:48.280Z",
-  "durationMs": 38499,
+  "finishedAt": "2026-10-05T15:53:43.561Z",
+  "durationMs": 72029,
   "error": null,
   "metrics": {
-    "modelCalls": 2,
-    "failedAttempts": 0,
-    "supervisedRecoveries": 0,
-    "totalTokens": 10064
+    "modelCalls": 3,
+    "failedAttempts": 1,
+    "supervisedRecoveries": 1,
+    "totalTokens": 8220
   }
 }
