@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "system": "ai-signal",
-  "startedAt": "2026-10-12T16:40:12.043Z",
+  "startedAt": "2026-10-13T14:56:59.255Z",
   "status": "healthy",
   "models": {
     "selection": "deepseek-v4-flash",
@@ -16,7 +16,7 @@
       "model": "deepseek-v4-flash",
       "attempt": 1,
       "status": "failed",
-      "durationMs": 3933,
+      "durationMs": 2527,
       "error": "OpenCode: HTTP 400"
     },
     {
@@ -25,16 +25,13 @@
       "model": "glm-5.2",
       "attempt": 1,
       "status": "success",
-      "durationMs": 7404,
+      "durationMs": 10808,
       "usage": {
-        "prompt_tokens": 2360,
-        "completion_tokens": 557,
-        "total_tokens": 2917,
+        "prompt_tokens": 2412,
+        "completion_tokens": 558,
+        "total_tokens": 2970,
         "prompt_tokens_details": {
-          "cached_tokens": 8
-        },
-        "completion_tokens_details": {
-          "reasoning_tokens": 0
+          "cached_tokens": 11
         }
       }
     },
@@ -44,18 +41,18 @@
       "model": "deepseek-v4-pro",
       "attempt": 1,
       "status": "success",
-      "durationMs": 36031,
+      "durationMs": 30104,
       "usage": {
-        "prompt_tokens": 1194,
-        "completion_tokens": 3222,
-        "total_tokens": 4416,
+        "prompt_tokens": 1196,
+        "completion_tokens": 2361,
+        "total_tokens": 3557,
         "prompt_cache_hit_tokens": 0,
-        "prompt_cache_miss_tokens": 1194,
+        "prompt_cache_miss_tokens": 1196,
         "prompt_tokens_details": {
           "cached_tokens": 0
         },
         "completion_tokens_details": {
-          "reasoning_tokens": 1981
+          "reasoning_tokens": 1606
         }
       }
     }
@@ -66,23 +63,23 @@
       "strategy": "supervisor",
       "model": "glm-5.2",
       "trigger": "OpenCode: HTTP 400",
-      "recoveredAt": "2026-10-12T16:40:24.183Z"
+      "recoveredAt": "2026-10-13T14:57:13.225Z"
     }
   ],
   "output": {
-    "slug": "ai-signal-2026-10-12",
+    "slug": "ai-signal-2026-10-13",
     "sources": 10,
     "languages": [
       "en"
     ]
   },
-  "finishedAt": "2026-10-12T16:41:00.578Z",
-  "durationMs": 48535,
+  "finishedAt": "2026-10-13T14:57:43.429Z",
+  "durationMs": 44174,
   "error": null,
   "metrics": {
     "modelCalls": 3,
     "failedAttempts": 1,
     "supervisedRecoveries": 1,
-    "totalTokens": 7333
+    "totalTokens": 6527
   }
 }

@@ -1,7 +1,113 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-12T16:41:00.519Z",
+  "generatedAt": "2026-10-13T14:57:43.379Z",
   "articles": [
+    {
+      "slug": "ai-signal-2026-10-13",
+      "date": "2026-10-13",
+      "generatedAt": "2026-10-13T14:57:43.379Z",
+      "categories": [
+        "AI",
+        "Work & business",
+        "Finance & investment",
+        "AI & law"
+      ],
+      "readingMinutes": 4,
+      "content": {
+        "en": {
+          "title": "AI Surge: Public Wariness Meets Unprecedented Investment",
+          "dek": "Americans worry AI is developing too fast, even as capital floods into the sector. From legal billing to data centers, the technology is rewriting jobs and markets.",
+          "intro": "On October 13, 2026, the AI landscape is defined by a stark paradox: public anxiety over the pace of change coexists with record-breaking investment and forecasts of trade-led growth. Today's edition connects signals across markets, education, work, regulation, and technology, exploring the tensions, opportunities, and limits of this moment.",
+          "sections": [
+            {
+              "heading": "Public Wariness vs. Investment Frenzy",
+              "body": "A new AP-NORC poll finds most Americans believe AI is developing too fast, a sentiment that could influence future regulation. Yet the financial world is moving full speed ahead: SoftBank is seeking $100 billion from Gulf investors for AI expansion, and the IMF reports AI investment is keeping global growth around 3% while acknowledging massive disruption. The WTO even forecasts the fastest global trade growth since the financial crisis, driven by AI spending. This divergence between public concern and capital deployment creates a volatile backdrop for policy and business decisions."
+            },
+            {
+              "heading": "Education and Workforce in Flux",
+              "body": "Georgia Tech has announced a new online Master's degree in Artificial Intelligence, offering professionals a remote pathway to formal credentials. Meanwhile, students at Cal Poly Pomona are questioning their job prospects as AI advances, and Tech.co has compiled a list of companies that have already replaced workers with AI in 2025 and 2026. The IMF's warning about 'massive disruption' underscores the urgency for workers to adapt, even as educational institutions rush to meet demand."
+            },
+            {
+              "heading": "The Legal Profession Grapples with AI's Double Edge",
+              "body": "AI is transforming legal work: CNBC reports the technology is pressuring the traditional billable hour, forcing firms to rethink pricing models. But Law.com raises a critical liability issue: when AI agents share client data, who is responsible? This privacy problem adds regulatory risk to efficiency gains, highlighting the need for clear safeguards before widespread adoption."
+            },
+            {
+              "heading": "Data Centers: The Next Real Estate Bet with Hidden Risks",
+              "body": "Wall Street is pitching data centers as a major real estate opportunity, but CNBC warns that risks are piling up. The AI investment boom depends on massive infrastructure, yet investors must scrutinize power constraints, land costs, and potential overbuilding. SoftBank's $100 billion quest and the WTO's trade forecast assume uninterrupted expansion, but the data center gamble could be the first domino if sentiment shifts."
+            }
+          ],
+          "takeaways": [
+            "Workers should pursue AI-focused education (e.g., Georgia Tech's new online master's) to stay competitive as job displacement rises.",
+            "Investors should approach data center plays with caution, given CNBC's warning about accumulating risks.",
+            "Legal professionals must adopt clear data-sharing policies for AI agents to mitigate liability before deploying them.",
+            "Policymakers face pressure to regulate AI speed, as public concern could spark intervention despite economic incentives."
+          ],
+          "closing": "The AI signal today is one of high stakes and competing forces. Public unease, massive capital inflows, workforce anxiety, and legal uncertainty all point to a technology that is simultaneously promising and perilous. The path forward will require balancing innovation with safeguards, and the signals suggest that the window for proactive adaptation is narrowing."
+        }
+      },
+      "sources": [
+        {
+          "title": "Most Americans think artificial intelligence is developing too fast, a new AP-NORC poll finds - AP News",
+          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNUktxTDdUVUhnU0ZOdmxHY2NwODkxQzNhQmlRVlZJclBpbmF1TzdKVktxVjFNUTdJdGhCdmNMVmdteTRVUkV5eEZRNmtMSDFxWTN3Y2tFUFhLZndYeWpJZFg5ZUZyemY3SU9VMGxwVmxka1FOdXJMNmNxWGwxNXRENGswdGFObVM3Rnk4Vy1DeGdKYWlJSE9LLS1BY01mN05DUzRRTzhCYkZyS284TmtYb2E2ZmR4bHAxWFhn?oc=5",
+          "category": "AI",
+          "publishedAt": "2026-10-08T10:23:00.000Z"
+        },
+        {
+          "title": "Georgia Tech Announces New Online Master’s Degree in Artificial Intelligence - Georgia Tech News Center",
+          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPcXRtclE5eHgxeG55N2gxTDlGbzI0d1EzTXVEOWRNSUxZRzdwb28wd1BaemhwY0JkRTBWcnV6Y3ZkTmRZZXhZeFd5ZmktUXZHdjNXT2NpeXpWSWlkUkhTYXJlOE5vYkdIbktpd29ocWZraFFGVm1ES3NwZWdNV0pEbjBEejNndjBKM29vajhWcWNsSnhsR0lRZTdmTF8yNnZxOWtmLTlGblA1cFhITEVuTXdn?oc=5",
+          "category": "AI",
+          "publishedAt": "2026-10-06T19:32:43.000Z"
+        },
+        {
+          "title": "AI advances raise questions about the future of jobs for CPP students - The Poly Post",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQSVJFWkF4Nmpnc2ZYdmJLcXhMRWs0SllrYktoVGlWUnRRWlRkb3MyeWc1RVZld3pyT3FDZkpXWjZnaENZMWZWWThnLXZUSEVtNHVuOVR3STdPSTRCUm5PcjJfXzFIMEt4dEFkVEJVMnFrU05oUGN1QnAyVHpHeHRBbl8zSkd3d2E4Mk1IaXNpR1piYkpEMGl0YjdoRVZaZ0gtTW5QRjlYdjRuNXp1NW9hVXZjUVnSAbQBQVVfeXFMUElSRVpBeDZqZ3NmWHZiS3F4TEVrNEpZa2JLaFRpVlJ0UVpUZG9zMnlnNUVWZXd6ck9xQ2ZKV1o2Z2hDWTFmVlk4Zy12VEhFbTR1bjlUd0k3T0k0QlJuT3IyX18xSDBLeHRBZFRCVTJxa1NOaFBjdUJwMlR6R3h0QW5fM0pHd3dhODJNSGlzaUdaYmJKRDBpdGI3aEVWWmdILU1uUEY5WHY0bjV6dTVvYVV2Y1FZ?oc=5",
+          "category": "Work & business",
+          "publishedAt": "2026-10-13T06:21:46.000Z"
+        },
+        {
+          "title": "Companies That Have Replaced Workers with AI in 2025 and 2026 - Tech.co",
+          "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE16Z2F6UTBYdkJVakc5M3dYemU5cDlUdi1TTllYUVItM1FJMXRnWFZtczRNRnBCWE1wVVVZTHUzLUxNNlFieWFxOUV6WElYYUhud3ptMm9VN09UaWtMNFh1SU1kOFk?oc=5",
+          "category": "Work & business",
+          "publishedAt": "2026-10-09T16:47:26.000Z"
+        },
+        {
+          "title": "IMF says AI investment keeps global growth around 3% but brings massive disruption - Reuters",
+          "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxONXItVGZaTjNISE9iMlVzZzhlV2ZmYzFDR29feFhfWFRhRzJFdWlwYXk5QkZpUHQ3WVhLZEZId2xobTNmc1E2Y25FN2c1TTg1eldiR3RLR003ajh2RUpSN1RxYXVzYjJ4TW5ZMW1ZcVljRndfSUpoNVVlLUE3eWc1MkhqUUtGQTdYdC1zVUxIbnNJWVJYb2ZIcVN1S3QzWWhQUmdsQ3VFVG9xSEs4NDVvOTZ5dHJRZUNNaUtsazVSMThYQQ?oc=5",
+          "category": "Finance & investment",
+          "publishedAt": "2026-10-12T03:50:00.000Z"
+        },
+        {
+          "title": "SoftBank seeks $100 billion from Gulf investors for AI expansion - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPRDhTdDE5NzdLSVExNHppcnhoTDI4Z2NiTXJaZ0xzM3NiTjdHT05rYnFHVVR6RmFIN3ZzaGpWLUdqODU2enNJYnctdHNKUGNkWHp4VmZqWG15SDRQN21rbVpMSVEzM08xSHJ3TWlucDdsRVI5LWl3ZW5uenpGTWFfVXAwWnU4SVpyWDVqOG1hQkROUzFodzNzUV96QQ?oc=5",
+          "category": "Finance & investment",
+          "publishedAt": "2026-10-09T13:28:00.000Z"
+        },
+        {
+          "title": "Wall Street is pitching data centers as a major real estate bet. The risks are piling up - CNBC",
+          "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBETGdiVXF1QThoMXRiRUFXNWVmQUxJNHFaM051T0VjR2Y3eDVGVEppOUw2QXgtNmRxMmNMTXBNdHI0b2o4TkFqTVV3MnduUGl5ZFUzUDJKc181MkNyTmpBY01vS2JtdWk3TGlLbF9fTdIBdEFVX3lxTE45SmdXdF92d2V2NUw3Z19rLVo0Wk9rNGRURlJReGRuYXlEbHNVSEFZNURYc1VDb1F6TEViVEJfVE0yeUR3X0VhTEQ2SnJhVWlDaXMtcEpDYjEyUTBMaGQtUUJpTktKNEFuaUlXbHNVdTl0R0Zj?oc=5",
+          "category": "Finance & investment",
+          "publishedAt": "2026-10-09T13:45:01.000Z"
+        },
+        {
+          "title": "AI Investment Boom to Drive Fastest Global Trade Growth Since Financial Crisis, WTO Forecasts - WSJ",
+          "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNQjBPR29zbHdyZTVja2ExUVd3SVl4LTdVZld5bXhKTTRQdllBYmlEWmNrcGN1aG1LVk1ZX2pQWkZoRzlSWVRTZW9pNFBOUTd2d210VmdteDNiUkpkS3pCM2J0TWtuSV9ycXYxNXd4bWNpZ0RHRm5GZC1od1duMk1IdjZ6ZG5mNG5HN0xXNDFPQ21DUG41Ylo3cmxaZ1V2QXJRWUt6QnF5Q3FUenA2UjhpdVR0ekxNWUdoUkw4eHVPRG5SenJJaVRHcFp0RjlYSnRU?oc=5",
+          "category": "Finance & investment",
+          "publishedAt": "2026-10-08T13:10:00.000Z"
+        },
+        {
+          "title": "AI is changing how lawyers work — and putting the billable hour under pressure - CNBC",
+          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQZ2hidGI0TGJ6T2V2a0tHemdJa0hDLVdPM2pwUzlBQ0dURmZVaXhhRHRlZXA4ZTFCdUxSa0ZqVUlMYzlDVGwzTVFqaWIwS245bERiLTdTRnEwTUx2NGdfQ0RDbDdBdENMUTZrOVUySXVvZS12WmFFcVg2ZEJxd25YNtIBhgFBVV95cUxOMUx6eWE0TzFibnprdkhJZ2FxSUM3MjEtVkhsOExPZVBRVjJDWnhYMllmdDk4OE96aXhCa2d5TGxReXBkV0NCb3p5UlJneTV4MF9xVEhudWNNQ0NlV1FiM21nQzlSbHhJb0IzQ1RwWHZwcVQxbzMwN3phZ01VTXhDMVlhWmR0Zw?oc=5",
+          "category": "AI & law",
+          "publishedAt": "2026-10-10T05:00:01.000Z"
+        },
+        {
+          "title": "The AI Agent Privacy Problem: Who’s Liable When Your Legal AI Shares Client Data? - Law.com",
+          "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNbkVxME1ZSkZDV25kOU82OWREcGxnVEVMSTBkRkZ6M2JSMEozTEN3cm4tYUluYm9uVldZSmMzUXBjTnllcjJXQTh6QnB6cXVuMVlPaC1HVnVpVTdiTUVnN1FaZHpidVY5eGlwUzJHdHlIR0s4VUJTejViLVRhODZ6NGpfYzRrUFRmcXhxMXk3S0t0MlktZHFRcUpCamFDYWVSM3NsZVBWaHFhVEFPV3VGWG01cG42TjJpYm9ha19TZ0Mtdw?oc=5",
+          "category": "AI & law",
+          "publishedAt": "2026-10-12T16:45:00.000Z"
+        }
+      ]
+    },
     {
       "slug": "ai-signal-2026-10-12",
       "date": "2026-10-12",
