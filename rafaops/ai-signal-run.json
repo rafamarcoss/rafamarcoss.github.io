@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "system": "ai-signal",
-  "startedAt": "2026-10-13T14:56:59.255Z",
+  "startedAt": "2026-10-14T12:48:56.397Z",
   "status": "healthy",
   "models": {
     "selection": "deepseek-v4-flash",
@@ -16,7 +16,7 @@
       "model": "deepseek-v4-flash",
       "attempt": 1,
       "status": "failed",
-      "durationMs": 2527,
+      "durationMs": 2526,
       "error": "OpenCode: HTTP 400"
     },
     {
@@ -25,13 +25,18 @@
       "model": "glm-5.2",
       "attempt": 1,
       "status": "success",
-      "durationMs": 10808,
+      "durationMs": 8746,
       "usage": {
-        "prompt_tokens": 2412,
-        "completion_tokens": 558,
-        "total_tokens": 2970,
+        "prompt_tokens": 2476,
+        "completion_tokens": 545,
+        "total_tokens": 3021,
         "prompt_tokens_details": {
-          "cached_tokens": 11
+          "cached_tokens": 8
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null
         }
       }
     },
@@ -41,18 +46,18 @@
       "model": "deepseek-v4-pro",
       "attempt": 1,
       "status": "success",
-      "durationMs": 30104,
+      "durationMs": 41694,
       "usage": {
-        "prompt_tokens": 1196,
-        "completion_tokens": 2361,
-        "total_tokens": 3557,
+        "prompt_tokens": 1181,
+        "completion_tokens": 2563,
+        "total_tokens": 3744,
         "prompt_cache_hit_tokens": 0,
-        "prompt_cache_miss_tokens": 1196,
+        "prompt_cache_miss_tokens": 1181,
         "prompt_tokens_details": {
           "cached_tokens": 0
         },
         "completion_tokens_details": {
-          "reasoning_tokens": 1606
+          "reasoning_tokens": 1705
         }
       }
     }
@@ -63,23 +68,23 @@
       "strategy": "supervisor",
       "model": "glm-5.2",
       "trigger": "OpenCode: HTTP 400",
-      "recoveredAt": "2026-10-13T14:57:13.225Z"
+      "recoveredAt": "2026-10-14T12:49:08.624Z"
     }
   ],
   "output": {
-    "slug": "ai-signal-2026-10-13",
+    "slug": "ai-signal-2026-10-14",
     "sources": 10,
     "languages": [
       "en"
     ]
   },
-  "finishedAt": "2026-10-13T14:57:43.429Z",
-  "durationMs": 44174,
+  "finishedAt": "2026-10-14T12:49:50.610Z",
+  "durationMs": 54213,
   "error": null,
   "metrics": {
     "modelCalls": 3,
     "failedAttempts": 1,
     "supervisedRecoveries": 1,
-    "totalTokens": 6527
+    "totalTokens": 6765
   }
 }
