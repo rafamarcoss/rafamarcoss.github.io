@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "system": "ai-signal",
-  "startedAt": "2026-10-14T12:48:56.397Z",
+  "startedAt": "2026-10-15T12:36:24.556Z",
   "status": "healthy",
   "models": {
     "selection": "deepseek-v4-flash",
@@ -16,8 +16,8 @@
       "model": "deepseek-v4-flash",
       "attempt": 1,
       "status": "failed",
-      "durationMs": 2526,
-      "error": "OpenCode: HTTP 400"
+      "durationMs": 725,
+      "error": "OpenCode: Upstream request failed: [invalid_request_error] Prompt must contain the word 'json' in some form to use 'response_format' of type 'json_object'. (request_id: 47e16387-2440-4d7e-9825-ad868427bcfd)"
     },
     {
       "task": "select-top-10",
@@ -25,13 +25,13 @@
       "model": "glm-5.2",
       "attempt": 1,
       "status": "success",
-      "durationMs": 8746,
+      "durationMs": 11371,
       "usage": {
-        "prompt_tokens": 2476,
-        "completion_tokens": 545,
-        "total_tokens": 3021,
+        "prompt_tokens": 2390,
+        "completion_tokens": 590,
+        "total_tokens": 2980,
         "prompt_tokens_details": {
-          "cached_tokens": 8
+          "cached_tokens": 11
         },
         "completion_tokens_details": {
           "accepted_prediction_tokens": null,
@@ -46,18 +46,16 @@
       "model": "deepseek-v4-pro",
       "attempt": 1,
       "status": "success",
-      "durationMs": 41694,
+      "durationMs": 46129,
       "usage": {
-        "prompt_tokens": 1181,
-        "completion_tokens": 2563,
-        "total_tokens": 3744,
-        "prompt_cache_hit_tokens": 0,
-        "prompt_cache_miss_tokens": 1181,
+        "prompt_tokens": 1322,
+        "completion_tokens": 2914,
+        "total_tokens": 4236,
         "prompt_tokens_details": {
           "cached_tokens": 0
         },
         "completion_tokens_details": {
-          "reasoning_tokens": 1705
+          "reasoning_tokens": 1995
         }
       }
     }
@@ -67,24 +65,24 @@
       "task": "select-top-10",
       "strategy": "supervisor",
       "model": "glm-5.2",
-      "trigger": "OpenCode: HTTP 400",
-      "recoveredAt": "2026-10-14T12:49:08.624Z"
+      "trigger": "OpenCode: Upstream request failed: [invalid_request_error] Prompt must contain the word 'json' in some form to use 'response_format' of type 'json_object'. (request_id: 47e16387-2440-4d7e-9825-ad868427bcfd)",
+      "recoveredAt": "2026-10-15T12:36:37.312Z"
     }
   ],
   "output": {
-    "slug": "ai-signal-2026-10-14",
+    "slug": "ai-signal-2026-10-15",
     "sources": 10,
     "languages": [
       "en"
     ]
   },
-  "finishedAt": "2026-10-14T12:49:50.610Z",
-  "durationMs": 54213,
+  "finishedAt": "2026-10-15T12:37:23.523Z",
+  "durationMs": 58967,
   "error": null,
   "metrics": {
     "modelCalls": 3,
     "failedAttempts": 1,
     "supervisedRecoveries": 1,
-    "totalTokens": 6765
+    "totalTokens": 7216
   }
 }

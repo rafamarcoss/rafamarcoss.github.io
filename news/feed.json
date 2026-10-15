@@ -1,7 +1,111 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-14T12:49:50.494Z",
+  "generatedAt": "2026-10-15T12:37:23.471Z",
   "articles": [
+    {
+      "slug": "ai-signal-2026-10-15",
+      "date": "2026-10-15",
+      "generatedAt": "2026-10-15T12:37:23.471Z",
+      "categories": [
+        "AI",
+        "Work & business",
+        "Finance & investment",
+        "AI & law",
+        "AI & education"
+      ],
+      "readingMinutes": 4,
+      "content": {
+        "en": {
+          "title": "AI Moves From Pilot to Practice as Job and Market Risks Surface",
+          "dek": "New courses, legal tools and SMB spending show widening adoption, while regulators collect governance feedback. Job cuts and systemic-risk warnings indicate the transition carries costs that current practices may not fully address.",
+          "intro": "The October 15 AI Signal edition tracks a single tension: adoption is accelerating across finance, education, legal work and small business, but the supporting governance, labor and market safeguards are still catching up. Reports this week describe concrete deployments and investments alongside layoffs, pricing pressure and an explicit warning that the AI investment boom itself could trigger the next financial crisis.",
+          "sections": [
+            {
+              "heading": "Financial stability: responsible practices meet boom-cycle risk",
+              "body": "The Financial Stability Board published an overview of consultation responses on sound practices for responsible AI adoption in finance on October 15. The document is framed as a way for financial institutions to align AI governance with international stability expectations. Reuters reported on October 14 that as Wall Street banks finance and adopt AI, risks are mounting on both fronts, alerting executives and investors to dual credit and operational risks. A South China Morning Post Macroscope column went further on October 15, arguing the AI investment boom could spark the next financial crisis. There is a material difference in emphasis between the FSB's consultative governance work and the SCMP's systemic warning: the former assumes sound practices can contain risk, while the latter points to concentration risk in AI-related assets that governance alone may not resolve."
+            },
+            {
+              "heading": "Education and work: new skills arrive while headcount shifts",
+              "body": "Reuters reported on October 12 that companies are cutting jobs as investments shift toward AI, signaling where workforce reductions are occurring. On October 13, The Poly Post examined how AI advances raise questions about the future of jobs for Cal Poly Pomona students, helping students and educators gauge which career paths are most exposed. In parallel, two public universities announced concrete education responses: UTEP launched a new finance course that puts AI tools directly in students' hands on October 15, and UTPB received $3 million to improve teaching and learning with AI on October 14. The practical value is concrete but limited: these are specific examples of retraining and curriculum adaptation, not evidence that job losses are being offset at scale."
+            },
+            {
+              "heading": "Small business and legal markets: growth and pricing pressure",
+              "body": "The National Law Review reported on October 13 that the AI market in small and medium businesses is growing, with projections reaching $162.7 billion, offering SMB owners and vendors a benchmark for AI spending. AT&T's use of AI to reduce reliance on law firms, described in an October 8 Reuters commentary, shows corporate legal teams a possible path to cut outside counsel spend. CNBC reported on October 10 that AI is changing how lawyers work and putting the billable hour under pressure, indicating law firms should rethink pricing models as AI compresses time. These reports agree on direction but differ in beneficiary: vendors and SMBs see a growth opportunity, while traditional law firm pricing faces disruption."
+            }
+          ],
+          "takeaways": [
+            "Financial institutions can use the FSB overview to align AI governance with international stability expectations, but it does not eliminate the boom-cycle risks flagged by SCMP.",
+            "Companies and workers should expect job cuts to continue where AI investment is replacing roles, not just augmenting them.",
+            "Students and educators can look to UTEP's finance course and UTPB's $3 million teaching initiative as concrete models, but their scale is limited.",
+            "SMB owners can benchmark AI adoption against a market projected to reach $162.7 billion; law firms should prepare for pressure on the billable hour.",
+            "Corporate legal teams can study AT&T's approach to reducing outside counsel spend, but reported lessons are company-specific."
+          ],
+          "closing": "The week's reports do not offer a settled answer. They show AI embedding faster in banking, classrooms and legal workflows, while regulators gather feedback and some observers warn the financial system may be concentrating risk in the same assets funding the transition. For practitioners, the most defensible moves are narrow: benchmark spending, audit governance, retrain where concrete programs exist, and treat both growth projections and crisis warnings as scenarios rather than forecasts."
+        }
+      },
+      "sources": [
+        {
+          "title": "Sound Practices for Responsible Adoption of Artificial Intelligence (AI): Overview of consultation responses - Financial Stability Board",
+          "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOTFl6MzRpNks5bGt0cE1adGdqbVhEX1hpUFBwSGlsSnhnM1FTd0RNUXVYZ3NqRjdrZDduazBRR1VFa2xhdElsdnRkTjlJLTI0VVlFMFFfd2RCOU1DM2RDUms0bmhLT0p3YVdIX0psdkFXT181dVM1TzBpS05LeHJvblRfXzY2V290TmRGUTNLWXFtOHB5d0RQaHFqckxfNzRjOXdyR0d2aFBud0tGRkVhQVQ0RnRnZ196czJSb2pobEpTeGpjLWR0ZFZSZWNwUVE?oc=5",
+          "category": "AI",
+          "publishedAt": "2026-10-15T04:00:07.000Z"
+        },
+        {
+          "title": "Companies cutting jobs as investments shift toward AI - Reuters",
+          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPYmowdG1sVXFFOTdIcEZRY1l2OGcyUHdKZHZ4VlN3ZWJKX0dKbzlUQ29HNFNzc0hFTHRtNDFmQVZfOHg1aDlDbXFCcHM0RVJvSWcxVEVKWGZXSG5obnh3OGF1M0xfYWZYMDdmcDNTTzFoYkZvekdURU9ZS3hlbWlJeGc5UDhYOEMweVlwLVhrMEFka0FySzZWRE90eXNhZHFWV1pxdXVBQzB5d2xpRXc?oc=5",
+          "category": "Work & business",
+          "publishedAt": "2026-10-12T07:00:00.000Z"
+        },
+        {
+          "title": "AI advances raise questions about the future of jobs for CPP students - The Poly Post",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQSVJFWkF4Nmpnc2ZYdmJLcXhMRWs0SllrYktoVGlWUnRRWlRkb3MyeWc1RVZld3pyT3FDZkpXWjZnaENZMWZWWThnLXZUSEVtNHVuOVR3STdPSTRCUm5PcjJfXzFIMEt4dEFkVEJVMnFrU05oUGN1QnAyVHpHeHRBbl8zSkd3d2E4Mk1IaXNpR1piYkpEMGl0YjdoRVZaZ0gtTW5QRjlYdjRuNXp1NW9hVXZjUVnSAbQBQVVfeXFMUElSRVpBeDZqZ3NmWHZiS3F4TEVrNEpZa2JLaFRpVlJ0UVpUZG9zMnlnNUVWZXd6ck9xQ2ZKV1o2Z2hDWTFmVlk4Zy12VEhFbTR1bjlUd0k3T0k0QlJuT3IyX18xSDBLeHRBZFRCVTJxa1NOaFBjdUJwMlR6R3h0QW5fM0pHd3dhODJNSGlzaUdaYmJKRDBpdGI3aEVWWmdILU1uUEY5WHY0bjV6dTVvYVV2Y1FZ?oc=5",
+          "category": "Work & business",
+          "publishedAt": "2026-10-13T06:21:46.000Z"
+        },
+        {
+          "title": "The Artificial Intelligence Market in Small and Medium Businesses is Growing, Projections Reaching $162.7 Billion - The National Law Review",
+          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPNldNTG9uTnZLdy1jWlFnTEtNZkRhN3FkWklmVzRUdFBjU0R6VzIzSnZ5LV94TE5acTR1M2F2YzdscFd2Rk5sRWVsaHppRWpma2VfSEpZXzdjYkhEMXcyWkxoMUhkcFJPVGdnU2EyRnFmcE5vSWgybUVCWWgzc051cU1EeXdJaUo0dERFVldmV1cwYlpiYl9qQ2NpVWhZX05zN3BQUnRYdmhsdw?oc=5",
+          "category": "Work & business",
+          "publishedAt": "2026-10-13T06:41:21.000Z"
+        },
+        {
+          "title": "New Finance Course Puts AI Tools in Students’ Hands - The University of Texas at El Paso - UTEP",
+          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOb2Jxa2s4N25sV0dUZDdUb0EzRTZvQTlOcUQ1bl9rWHhIbUIzczdNQnBNeTBGV0NDaWdfTTlPRUJZME44bHZSdVdFazVmdzBUNFNIQl9mUGNqV25ja2NmZWFrazZQY1hLQ3JVUllEWDJVZmQ2a085Ykh6U0MwVU1lbUc1R05TeFhoNGdLaExlTGdEQXh1eGVmei1QT2FkZlZZM0xF?oc=5",
+          "category": "Finance & investment",
+          "publishedAt": "2026-10-15T06:42:42.000Z"
+        },
+        {
+          "title": "As Wall Street banks finance and adopt AI, risks mount on both fronts - Reuters",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQZDh1RnYtQmd3b0ZLYjh6dVd0cllieVhyUkpCbHB3SjdLMFc0N3FKOFVDbm1ISVhGNVVnY3ktVUVxcmszWjZacjJ5TkNLWVkyOHJpQTUzaEg5M0RsdXBvRXBqaWlWVFdHSU8wSGRWdi1kMkVmaGZjSVVEZWIzQnI3U21vTHBzS3VzRE5qckVzOVg4NXcwR1JpTDMyT083cTRYb1NWWWFIY1ZUd3h6MklfamVTNEw?oc=5",
+          "category": "Finance & investment",
+          "publishedAt": "2026-10-14T17:47:43.000Z"
+        },
+        {
+          "title": "Macroscope | Why the AI investment boom could spark the next financial crisis - South China Morning Post",
+          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPeGw2dV91UTc1c19rcDM4ZHRsX2UwUFBSZjU3a3B3TzV6RDdyczA3d0JEb3IyODBINy1KdE5ZWWhEVWRBV01GbTR6NXRLUmlCWWxwbmRHZnVFZG5XdVdZRndSRXBFWWNrYm9YVDBLTUFVOG1aeHZIQ1p5MzU0VUJRYzJuamZ4eWxnTEVMQmhpc3d2UlgySVNTVXhsTlpTYzFQX014dWJzLXFHS0NyZTN0RVpOaG1Od9IBtgFBVV95cUxNVko3MHlDd3VvMlVUX2tXTWU4djBCZkd6cmZCRWJnSU5rYVFMVFRVamhvNkRIbUd1SFFaTHNfN0txMWZ0TVFRSkY2a19ic0RQWnV5TElNZW5FVzE2SVp4WWFKZXgxODZ3VmwySjMtVWNfY1ptUVZTMGVVdWJQTVdFOXp5dENwMUppRWpvSDNjbnJ5VlAxVlQ2OXlPaG1VMlJJM19RYXM3M2U1djdkSUlrZ3h5NzlZUQ?oc=5",
+          "category": "Finance & investment",
+          "publishedAt": "2026-10-15T08:30:05.000Z"
+        },
+        {
+          "title": "COMMENTARY: How AT&T is using AI to reduce its reliance on law firms - Reuters",
+          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPbHRKcklmNGswT3UzcGpwRFFScnpSSlFlRFY0OW1mb2RtekZtcmx4dmJPc05JcGZ1SC1xZUxLTkotd0E4a2lQYzRPY1o4RHNZR043ZDhFcGZ2UUtRVW1OZHgwVUpJUUtyZlktb0VTcUJfMk1lWk9uNk9UOUdZdE1mVXFrOXRXN1RpRE1MS3g3dk80bnZ2amFyQWo1cGtCbWZDZlZqcHg0Uk4?oc=5",
+          "category": "AI & law",
+          "publishedAt": "2026-10-08T13:08:10.000Z"
+        },
+        {
+          "title": "AI is changing how lawyers work — and putting the billable hour under pressure - CNBC",
+          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQZ2hidGI0TGJ6T2V2a0tHemdJa0hDLVdPM2pwUzlBQ0dURmZVaXhhRHRlZXA4ZTFCdUxSa0ZqVUlMYzlDVGwzTVFqaWIwS245bERiLTdTRnEwTUx2NGdfQ0RDbDdBdENMUTZrOVUySXVvZS12WmFFcVg2ZEJxd25YNtIBhgFBVV95cUxOMUx6eWE0TzFibnprdkhJZ2FxSUM3MjEtVkhsOExPZVBRVjJDWnhYMllmdDk4OE96aXhCa2d5TGxReXBkV0NCb3p5UlJneTV4MF9xVEhudWNNQ0NlV1FiM21nQzlSbHhJb0IzQ1RwWHZwcVQxbzMwN3phZ01VTXhDMVlhWmR0Zw?oc=5",
+          "category": "AI & law",
+          "publishedAt": "2026-10-10T05:00:01.000Z"
+        },
+        {
+          "title": "UTPB Receives $3M to Improve Teaching and Learning With AI - GovTech",
+          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOT3JxT3kzN0JmQjIyUlRMX3FIMi1VSG9IZFdvSUk4M3N1d2dzRmV5QzVOa1FySjV5eC1kdW5rbWJwbmRhMFEtdmN1UWI2U09Zakh6UmpqdWN6SDV2VVhqbHNJSGdXNmRsNXpGNGYwUVpVb0JFRkxDQTNSdXpLcHBWTms5TUhWOUtvcUxpNUJ4ejBWclRDUVJ4QnBSdU9xbXpFSHpZ?oc=5",
+          "category": "AI & education",
+          "publishedAt": "2026-10-14T20:43:25.000Z"
+        }
+      ]
+    },
     {
       "slug": "ai-signal-2026-10-14",
       "date": "2026-10-14",
