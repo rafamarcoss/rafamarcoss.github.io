@@ -5,7 +5,7 @@ const ROOT = process.cwd();
 const articleDirs = readdirSync('articles').filter((dir) => dir !== 'index.html' && existsSync(join('articles', dir, 'index.html')));
 const newsDirs = readdirSync('news').filter((dir) => dir !== 'index.html' && dir !== 'archive' && existsSync(join('news', dir, 'index.html')));
 const projectFiles = ['projects/portfolio-automation/index.html'];
-const normalFiles = ['index.html', 'articles/index.html', 'copywriting/index.html', 'labs/index.html', 'news/index.html', 'news/archive/index.html', 'rafaops/index.html', ...projectFiles, ...articleDirs.map((dir) => `articles/${dir}/index.html`), ...newsDirs.map((dir) => `news/${dir}/index.html`)];
+const normalFiles = ['index.html', 'articles/index.html', 'copywriting/index.html', 'samples/index.html', 'labs/index.html', 'news/index.html', 'news/archive/index.html', 'rafaops/index.html', ...projectFiles, ...articleDirs.map((dir) => `articles/${dir}/index.html`), ...newsDirs.map((dir) => `news/${dir}/index.html`)];
 
 const hrefRegex = /href=["']([^"']+)["']/g;
 const priorityArticles = [
@@ -46,7 +46,7 @@ export function validateSite(log = console.log) {
     const desc = html.includes('name="description"');
     const v2Nav = html.includes('class="v2-nav"') && html.includes('Start a project') && html.includes('data-nav-toggle') && html.includes('aria-expanded="false"');
     const legacyNav = html.includes('data-site-nav') && html.includes('data-site-nav-i18n="services"') && html.includes('data-site-nav-i18n="cta"') && html.includes('data-site-nav-lang="en"') && html.includes('data-site-nav-toggle') && html.includes('aria-expanded="false"');
-    const globalNav = (file === 'index.html' || file.startsWith('articles/') || file.startsWith('news/') || file === 'copywriting/index.html' || file === 'labs/index.html' || file === 'rafaops/index.html' || file.startsWith('projects/')) ? v2Nav : legacyNav;
+    const globalNav = (file === 'index.html' || file.startsWith('articles/') || file.startsWith('news/') || file === 'copywriting/index.html' || file === 'samples/index.html' || file === 'labs/index.html' || file === 'rafaops/index.html' || file.startsWith('projects/')) ? v2Nav : legacyNav;
     const good = h1 === 1 && canonical && jsonld && og && desc && globalNav;
     if (!good) ok = false;
     log(`${good ? 'OK  ' : 'FAIL'} h1=${h1} canonical=${canonical} jsonld=${jsonld} og=${og} desc=${desc} nav=${globalNav} | ${file}`);

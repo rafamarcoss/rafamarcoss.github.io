@@ -334,6 +334,7 @@ function sitemapXml(articles) {
   const urls = [
     ['', '1.0', '2026-08-25'],
     ['copywriting/', '0.6', '2026-08-28'],
+    ['samples/', '0.8', '2026-10-19'],
     ['articles/', '0.9', '2026-08-25'],
     ['news/', '0.6', '2026-08-25'],
     ['news/archive/', '0.6', '2026-08-25'],
