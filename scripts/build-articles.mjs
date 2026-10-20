@@ -228,6 +228,9 @@ function articleDiagram(slug) {
     'ai-agent-observability': ['Trigger', 'Run and trace', 'Tools and validation', 'Outcome or handoff'],
     'crm-automation-7-workflows': ['Lead or event', 'CRM rule', 'Action', 'Audit trail'],
     'what-is-saas-automation': ['Source app', 'Webhook or API', 'Workflow', 'System of record'],
+    'casino-bonus-wagering-ev-math': ['Bonus terms', 'Rollover x House edge', 'Game weighting', 'Net player EV'],
+    'slot-rtp-volatility-hit-frequency-audit': ['RNG seed', 'Certified RTP tier', 'Variance & hit rate', 'Bonus tail payout'],
+    'sportsbook-overround-odds-margin-guide': ['True probability', 'Bookmaker overround', 'Market odds (1X2/AH)', 'Player EV check'],
   };
   const steps = diagrams[slug];
   if (!steps) return '';
@@ -247,7 +250,7 @@ function svgTitle(text) {
 }
 
 function ogSvg(article) {
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630"><rect width="1200" height="630" fill="#F2F4EE"/><circle cx="1060" cy="70" r="300" fill="#B0DFAA" opacity=".8"/><circle cx="1030" cy="560" r="290" fill="#24969B" opacity=".2"/><rect x="70" y="64" width="142" height="42" rx="21" fill="#0B0E0F"/><text x="94" y="91" fill="#F2F4EE" font-family="Arial, sans-serif" font-size="19" font-weight="700">RAFAEL MARCOS</text><text x="70" y="190" fill="#24969B" font-family="Arial, sans-serif" font-size="22" font-weight="700">${escapeHtml(article.data.category).toUpperCase()}</text><text x="70" y="275" fill="#0B0E0F" font-family="Arial, sans-serif" font-size="62" font-weight="700">${svgTitle(article.data.title)}</text></svg>`;
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630"><rect width="1200" height="630" fill="#F2F4EE"/><circle cx="1060" cy="70" r="300" fill="#B0DFAA" opacity=".8"/><circle cx="1030" cy="560" r="290" fill="#24969B" opacity=".2"/><rect x="70" y="64" width="142" height="42" rx="21" fill="#0B0E0F"/><text x="94" y="91" fill="#F2F4EE" font-family="Arial, sans-serif" font-size="19" font-weight="700">RAFAEL MARCOS</text><text x="70" y="190" fill="#24969B" font-family="Arial, sans-serif" font-size="22" font-weight="700">${escapeHtml(String(article.data.category || '').toUpperCase())}</text><text x="70" y="275" fill="#0B0E0F" font-family="Arial, sans-serif" font-size="62" font-weight="700">${svgTitle(article.data.title)}</text></svg>`;
 }
 
 function writeOgPng(svg, filename) {
@@ -332,14 +335,12 @@ function sitemapXml(articles) {
   // submitting thin pages with no search demand wastes crawl budget on the pages
   // that actually need indexing. Keep them out until the content earns its place.
   const urls = [
-    ['', '1.0', '2026-08-25'],
-    ['copywriting/', '0.6', '2026-08-28'],
-    ['samples/', '0.8', '2026-10-19'],
-    ['articles/', '0.9', '2026-08-25'],
-    ['news/', '0.6', '2026-08-25'],
-    ['news/archive/', '0.6', '2026-08-25'],
-    ['rafaops/', '0.7', '2026-08-25'],
-    ['projects/portfolio-automation/', '0.8', '2026-08-25'],
+    ['', '1.0', '2026-10-20'],
+    ['copywriting/', '0.8', '2026-10-20'],
+    ['samples/', '0.9', '2026-10-20'],
+    ['articles/', '0.9', '2026-10-20'],
+    ['rafaops/', '0.7', '2026-10-20'],
+    ['projects/portfolio-automation/', '0.8', '2026-10-20'],
     ...articles.map((a) => [`articles/${a.data.slug}/`, '0.8', a.data.updated || a.data.date]),
   ];
   const entries = urls.map(([path, prio, lastmod]) => `  <url><loc>${SITE}/${path}</loc><lastmod>${lastmod}</lastmod><changefreq>monthly</changefreq><priority>${prio}</priority></url>`).join('\n');

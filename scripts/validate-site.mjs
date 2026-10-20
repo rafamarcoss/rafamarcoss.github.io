@@ -12,6 +12,9 @@ const priorityArticles = [
   'eu-ai-act-ai-agents-2026',
   'ai-agent-observability',
   'ai-agents-for-customer-support',
+  'casino-bonus-wagering-ev-math',
+  'slot-rtp-volatility-hit-frequency-audit',
+  'sportsbook-overround-odds-margin-guide',
 ];
 
 export function internalHrefCandidates(href) {

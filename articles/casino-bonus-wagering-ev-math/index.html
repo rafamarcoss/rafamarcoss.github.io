@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Casino Bonus Wagering &amp; Expected Value (EV) Math Guide</title>
+<meta name="description" content="A technical breakdown of online casino bonus mathematics: Expected Value (EV) formulas, Bonus-only vs Deposit+Bonus rollover, non-sticky parachute rules and US Sweepstakes SC playthrough.">
+<meta name="author" content="Rafael Marcos">
+<meta name="theme-color" content="#F4F5EF">
+<link rel="canonical" href="https://rafaelmarcos.tech/articles/casino-bonus-wagering-ev-math/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Casino Bonus Wagering &amp; Expected Value (EV) Math Guide">
+<meta property="og:description" content="A technical breakdown of online casino bonus mathematics: Expected Value (EV) formulas, Bonus-only vs Deposit+Bonus rollover, non-sticky parachute rules and US Sweepstakes SC playthrough.">
+<meta property="og:url" content="https://rafaelmarcos.tech/articles/casino-bonus-wagering-ev-math/">
+<meta property="og:site_name" content="Rafael Marcos">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://rafaelmarcos.tech/assets/og/casino-bonus-wagering-ev-math.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-10-20">
+<meta property="article:modified_time" content="2026-10-20">
+<meta property="article:author" content="Rafael Marcos">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://rafaelmarcos.tech/assets/og/casino-bonus-wagering-ev-math.png">
+<meta name="twitter:title" content="Casino Bonus Wagering &amp; Expected Value (EV) Math Guide">
+<meta name="twitter:description" content="A technical breakdown of online casino bonus mathematics: Expected Value (EV) formulas, Bonus-only vs Deposit+Bonus rollover, non-sticky parachute rules and US Sweepstakes SC playthrough.">
+<link rel="icon" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400..800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","headline":"Casino Bonus Wagering & Expected Value (EV) Math: How Rollover Really Works","description":"A technical breakdown of online casino bonus mathematics: Expected Value (EV) formulas, Bonus-only vs Deposit+Bonus rollover, non-sticky parachute rules and US Sweepstakes SC playthrough.","inLanguage":"en","datePublished":"2026-10-20","dateModified":"2026-10-20","mainEntityOfPage":{"@type":"WebPage","@id":"https://rafaelmarcos.tech/articles/casino-bonus-wagering-ev-math/"},"author":{"@type":"Person","name":"Rafael Marcos","url":"https://rafaelmarcos.tech/"},"publisher":{"@type":"Person","name":"Rafael Marcos"}}
+</script>
+<link rel="stylesheet" href="/assets/v2.css">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="v2-nav">
+    <div class="v2-shell v2-nav-in">
+      <a href="/" class="v2-brand">RafaelMarcos<em>_</em></a>
+      <nav class="v2-links" aria-label="Primary navigation">
+        <a href="/#systems">Systems</a>
+        <a href="/articles/" aria-current="page">Writing</a>
+        <a href="/labs/">Lab</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+      <div class="v2-nav-cta">
+        <a href="mailto:rafaelmarcos2604@gmail.com?subject=Project%20enquiry" class="btn btn-primary">Start a project <span class="arrow">↗</span></a>
+        <button class="v2-menu-toggle" type="button" data-nav-toggle data-label-open="Open menu" data-label-close="Close menu" aria-expanded="false" aria-controls="v2-mobile-nav" aria-label="Open menu">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="v2-mobile-nav" class="v2-mobile" hidden>
+      <a href="/#systems">Systems</a>
+      <a href="/articles/">Writing</a>
+      <a href="/labs/">Lab</a>
+      <a href="/#contact">Contact</a>
+      <div class="sep" role="presentation"></div>
+      <a href="/articles/">Articles</a>
+      <a href="/news/">AI Signal</a>
+      <a href="/copywriting/">Copywriting</a>
+    </div>
+  </header>
+
+<main id="main-content" class="skip-target" tabindex="-1">
+  <article class="v2-shell" lang="en">
+    <nav class="art-crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/articles/">Articles</a><span>/</span><span>iGaming &amp; Casino SEO</span></nav>
+    <header class="art-head">
+      <p class="cat-chip">iGaming &amp; Casino SEO</p>
+      <h1>Casino Bonus Wagering &amp; Expected Value (EV) Math: How Rollover Really Works</h1>
+      <p class="art-dek">A technical breakdown of online casino bonus mathematics: Expected Value (EV) formulas, Bonus-only vs Deposit+Bonus rollover, non-sticky parachute rules and US Sweepstakes SC playthrough.</p>
+      <div class="art-meta"><time datetime="2026-10-20">20 October 2026</time><span>·</span><span>7 min read</span><span>·</span><span>Rafael Marcos</span></div>
+      <div class="art-tags"><span>casino bonus ev</span><span>wagering requirements</span><span>rollover math</span><span>non-sticky bonus</span><span>sweepstakes casinos</span><span>igaming seo</span></div>
+    </header>
+
+    <figure class="art-hero"><img src="/assets/articles/casino-bonus-wagering-ev-math.webp" alt="Casino Bonus Wagering &amp; Expected Value (EV) Math: How Rollover Really Works" width="1600" height="900" loading="eager" decoding="async" fetchpriority="high"></figure>
+    <aside class="insight" aria-label="Human insight"><span class="k">Human insight</span><p>A 200% match bonus with 40x Deposit+Bonus wagering costs more to clear than the bonus is worth. Real casino reviews calculate Expected Value before recommending a promotion.</p></aside>
+    <div class="art-layout">
+      <div class="prose"><figure class="diagram" aria-label="Bonus terms to Rollover x House edge to Game weighting to Net player EV"><div class="diagram-step"><span class="diagram-label">1</span>Bonus terms</div><div class="diagram-step"><span class="diagram-label">2</span>Rollover x House edge</div><div class="diagram-step"><span class="diagram-label">3</span>Game weighting</div><div class="diagram-step"><span class="diagram-label">4</span>Net player EV</div></figure><p>Headline casino promotions are designed to look generous at first glance. A banner offering <strong>100% up to $500 + 100 Free Spins</strong> tells a player what enters the bonus balance, but it hides what it costs mathematically to turn that balance into withdrawable cash.</p>
+<p>For iGaming affiliates, operators and serious players, evaluating a promotion requires moving past marketing copy and auditing four contractual variables: the <strong>wagering base</strong> (<code>Bonus Only</code> versus <code>Deposit + Bonus</code>), the <strong>game contribution table</strong>, the <strong>bonus structure</strong> (<code>non-sticky</code> versus <code>sticky</code>), and the <strong>certified RTP profile</strong> of the eligible slots. You can test these variables live in our <a href="/samples/">interactive bilingual iGaming sample and EV calculator</a>.</p>
+<blockquote>A casino bonus has positive mathematical expectation only when the bonus credit exceeds the product of total required wagering and the effective house edge.</blockquote>
+<h2 id="sec-1">The core Expected Value (EV) formula for casino bonuses</h2>
+<p>Every wager placed on a certified casino game carries a theoretical cost equal to the house edge (<code>1 - RTP</code>). When an operator attaches a wagering requirement (also called *rollover* or *playthrough*) to a promotion, the player is committing to a fixed volume of action before a withdrawal unlocks.</p>
+<p>The baseline formula for calculating the <strong>Expected Value (EV)</strong> of a cashable match bonus is:</p>
+<p><code>EV = Bonus Amount - (Effective Wagering Volume × House Edge)</code></p>
+<p>Where:</p>
+<ul><li><strong>House Edge</strong> = <code>1 - (Slot RTP / 100)</code>. On a slot certified at <code>96.50% RTP</code>, the house edge is <code>3.50%</code> (<code>0.035</code>).</li><li><strong>Effective Wagering Volume</strong> = <code>(Required Turnover) / (Game Contribution Weight)</code>.</li></ul>
+<h3>Bonus-Only vs. Deposit + Bonus wagering</h3>
+<p>The single largest trap in online casino Terms and Conditions is whether the multiplier applies only to the bonus credit or to the combined deposit and bonus.</p>
+<p>Suppose a player deposits <strong>$100</strong> to claim a <strong>100% match bonus ($100)</strong> and plays a video slot running at <strong>96.50% RTP</strong> (<code>3.50%</code> house edge) with <code>100%</code> wagering contribution:</p>
+<ol><li><strong>Case A — 35x Bonus Only:</strong> The player must wager <code>$100 × 35 = $3,500</code>. Multiplying <code>$3,500 × 0.035</code> produces an expected wagering loss of <strong>$122.50</strong>. Subtracted from the <code>$100</code> bonus, the net Expected Value is <strong>-$22.50</strong>.</li><li><strong>Case B — 35x (Deposit + Bonus):</strong> The wagering base doubles to <code>$200</code>. The player must now wager <code>$200 × 35 = $7,000</code>. At the same <code>3.50%</code> house edge, the expected loss doubles to <strong>$245.00</strong>, dropping net EV to <strong>-$145.00</strong>.</li></ol>
+<div class="table-wrap"><table><thead><tr><th>Promotion Type</th><th>Wagering Rule</th><th>Active Slot RTP</th><th>Required Turnover</th><th>Expected Loss</th><th>Net Player EV</th></tr></thead><tbody><tr><td>$100 Sweepstakes / Cashback</td><td>1x Bonus</td><td>96.50% (3.50% edge)</td><td>$100</td><td>$3.50</td><td><strong>+$96.50</strong></td></tr><tr><td>$100 Reload Bonus</td><td>25x Bonus Only</td><td>96.50% (3.50% edge)</td><td>$2,500</td><td>$87.50</td><td><strong>+$12.50</strong></td></tr><tr><td>$100 Welcome Match</td><td>35x Bonus Only</td><td>96.50% (3.50% edge)</td><td>$3,500</td><td>$122.50</td><td><strong>-$22.50</strong></td></tr><tr><td>$100 Welcome Match</td><td>35x (Deposit + Bonus)</td><td>96.50% (3.50% edge)</td><td>$7,000</td><td>$245.00</td><td><strong>-$145.00</strong></td></tr><tr><td>$100 Welcome Match</td><td>40x (Deposit + Bonus)</td><td>94.00% (6.00% edge)</td><td>$8,000</td><td>$480.00</td><td><strong>-$380.00</strong></td></tr></tbody></table></div>
+<p>As the table shows, a <code>35x (Deposit + Bonus)</code> requirement is mathematically identical to a <strong>70x Bonus-Only</strong> requirement on a 100% match. How operators configure lower RTP tiers to widen this margin is covered in <a href="/articles/slot-rtp-volatility-hit-frequency-audit/">how to audit slot RTP tiers and volatility</a>.</p>
+<h2 id="sec-2">Game contribution weights and effective house edge</h2>
+<p>Players often look at a low-house-edge table game like single-zero European Roulette (<code>97.30% RTP</code>, <code>2.70%</code> house edge) or classic Blackjack (<code>99.50% RTP</code>, <code>0.50%</code> house edge) and assume it is the cheapest way to clear a rollover.</p>
+<p>Operators prevent this through <strong>game weighting (contribution percentages)</strong>. When a game contributes <code>10%</code> toward wagering, only <code>$0.10</code> of every <code>$1.00</code> staked reduces the rollover meter. That multiplies the required turnover—and the effective house edge—by a factor of 10:</p>
+<div class="table-wrap"><table><thead><tr><th>Game Category</th><th>Typical RTP</th><th>House Edge</th><th>Bonus Contribution</th><th>Effective Turnover ($100 at 35x)</th><th>Theoretical Clearing Cost</th></tr></thead><tbody><tr><td>Standard Video Slots</td><td>96.50%</td><td>3.50%</td><td>100%</td><td>$3,500</td><td><strong>$122.50</strong></td></tr><tr><td>Crash &amp; Instant Games</td><td>97.00%</td><td>3.00%</td><td>20%</td><td>$17,500</td><td><strong>$525.00</strong></td></tr><tr><td>Live Dealer Roulette</td><td>97.30%</td><td>2.70%</td><td>10%</td><td>$35,000</td><td><strong>$945.00</strong></td></tr><tr><td>Live Blackjack</td><td>99.50%</td><td>0.50%</td><td>10%</td><td>$35,000</td><td><strong>$175.00</strong></td></tr><tr><td>High-RTP / Jackpot Slots</td><td>98.00%+</td><td>2.00%</td><td>0% (Excluded)</td><td>Cannot clear</td><td><strong>Disqualification risk</strong></td></tr></tbody></table></div>
+<h2 id="sec-3">Non-sticky (Parachute) vs. Sticky bonuses</h2>
+<p>The simple linear EV formula (<code>Bonus - Turnover × Edge</code>) assumes the player must complete the full wagering requirement regardless of what happens early in the session. In practice, bonus accounting follows one of two models:</p>
+<h3>1. Non-sticky (Forfeitable / Parachute) bonuses</h3>
+<p>In regulated European markets (especially under UKGC and MGA frameworks), many operators offer <strong>non-sticky bonuses</strong>. Real-money funds and bonus funds sit in separate wallets:</p>
+<ul><li>You always wager your <strong>real-money deposit first</strong>.</li><li>If you hit a significant win while playing with your real-money balance, you can <strong>forfeit the untouched bonus</strong> and withdraw your cash profit immediately without completing a single dollar of rollover.</li><li>The <code>35x</code> wagering requirement only activates if your real-money balance drops to zero and you dip into the bonus wallet (the "parachute" opens).</li></ul>
+<p>Because you retain the upside of early variance on your cash balance without being locked into wagering, a non-sticky bonus has a substantially higher real EV than a sticky bonus with the same nominal multiplier.</p>
+<h3>2. Sticky and mixed-wagering bonuses</h3>
+<p>In a sticky or mixed-wagering model, your real-money deposit and bonus credit are locked together from the first spin. Any withdrawal request before reaching <code>100%</code> on the wagering progress bar voids both the bonus and any winnings generated with your own deposit.</p>
+<h2 id="sec-4">Max bet caps, win ceilings and US Sweepstakes rules</h2>
+<p>Even when the rollover math looks reasonable, three secondary clauses determine whether a bonus is playable:</p>
+<ol><li><strong>Maximum Bet Cap During Rollover:</strong> Almost all casino bonuses cap stakes at <strong>$5.00 / €5.00 per spin</strong> (or <code>$0.50</code> per line) while wagering is active. Exceeding this limit—even accidentally via a slot's *Double Chance / Ante Bet* toggle or a *Bonus Buy* feature—gives the operator contractual grounds to confiscate winnings.</li><li><strong>Maximum Conversion Cap:</strong> No-deposit bonuses and free-spin packages frequently cap cashout at <strong>$50–$100</strong> or <code>5x</code> the bonus amount. Capping the right tail of a high-volatility slot destroys the mathematical RTP of the session.</li><li><strong>US Sweepstakes Playthrough (GC vs. SC):</strong> In US social and sweepstakes casinos operating under promotional contest laws, players purchase <strong>Gold Coins (GC)</strong> for entertainment and receive free <strong>Sweeps Coins (SC)</strong> via bundle bonuses, daily login rewards, or mail-in <strong>AMOE (Alternative Method of Entry)</strong> cards. Unlike offshore real-money casinos demanding <code>40x</code> rollover, legitimate sweepstakes operators attach a <strong>1x to 3x playthrough requirement</strong> on Sweeps Coins before redemption via ACH, Skrill, or crypto rails.</li></ol>
+<h2 id="sec-5">Bilingual SEO reference: English vs. Spanish (Spain &amp; LATAM) terminology</h2>
+<p>When localizing casino bonus guides and affiliate comparison tables between English and Spanish markets, literal translation fails. Search intent and regulatory vocabulary differ across Spain (DGOJ), Mexico (SEGOB), Colombia (Coljuegos), Peru (MINCETUR), and Argentina:</p>
+<div class="table-wrap"><table><thead><tr><th>Concept (English)</th><th>Spain (DGOJ)</th><th>LATAM (MX / CO / PE / AR)</th><th>SEO &amp; Compliance Nuance</th></tr></thead><tbody><tr><td>Wagering requirement</td><td>Requisitos de apuesta / Rollover</td><td>Rollover / Playthrough</td><td>Always specify whether it applies to *solo bono* or *depósito + bono*.</td></tr><tr><td>Non-sticky bonus</td><td>Bono no pegajoso / Bono cancelable</td><td>Bono liberable / Bono paracaídas</td><td>Clarify that real-money balance (<code>saldo real</code>) is wagered before <code>saldo de bono</code>.</td></tr><tr><td>Free Spins</td><td>Giros gratis / Tiradas gratis</td><td>Giros gratis / Jugadas gratis</td><td>Check whether winnings pay as real cash (<code>efectivo</code>) or bonus credit (<code>bono</code>).</td></tr><tr><td>Max conversion cap</td><td>Ganancia máxima liberada</td><td>Tope de retiro / Conversión máxima</td><td>Mandatory disclosure in Spain (RD 958/2020) and UKGC CAP Code.</td></tr><tr><td>Game weighting</td><td>Contribución por juego</td><td>Porcentaje de contribución</td><td>Slots usually count <code>100%</code>; live roulette (<code>ruleta en vivo</code>) counts <code>5%–10%</code>.</td></tr></tbody></table></div>
+<p>For sportsbook promotions—where rollover rules also include <strong>minimum odds thresholds</strong> (such as <code>1.50</code> or <code>-200</code>) and excluded markets like Asian Handicaps—see <a href="/articles/sportsbook-overround-odds-margin-guide/">how bookmaker overround and odds margins work</a>. If you need bilingual iGaming or technical SEO content built with this level of mathematical precision, explore my <a href="/copywriting/">technical copywriting and SEO services</a>.</p></div>
+      <aside class="art-rail"><div class="rail-card"><h3>On this page</h3><nav class="toc" aria-label="Table of contents"><a href="#sec-1">The core Expected Value (EV) formula for casino bonuses</a><a href="#sec-2">Game contribution weights and effective house edge</a><a href="#sec-3">Non-sticky (Parachute) vs. Sticky bonuses</a><a href="#sec-4">Max bet caps, win ceilings and US Sweepstakes rules</a><a href="#sec-5">Bilingual SEO reference: English vs. Spanish (Spain &amp; LATAM) terminology</a></nav></div><div class="rail-card"><h3>Continue reading</h3><div class="rel-list"><a href="/articles/slot-rtp-volatility-hit-frequency-audit/">Slot RTP Tiers, Volatility &amp; Hit Frequency: How to Audit Online Slot Mechanics</a><a href="/articles/sportsbook-overround-odds-margin-guide/">Sportsbook Overround, Implied Probability &amp; Vig: How Bookmakers Price Betting Markets</a></div></div></aside>
+    </div>
+    <section class="cta-band">
+      <div>
+        <h2>Need technical content that actually understands the product?</h2>
+        <p>I write SEO content for SaaS, AI and automation companies — grounded in how the tech actually works.</p>
+      </div>
+      <a class="btn" href="/copywriting/">Technical content <span class="arrow">↗</span></a>
+    </section>
+  </article>
+</main>
+
+<footer class="v2-shell v2-footer">
+    <span>© 2026 Rafael Marcos Serrano</span>
+    <nav aria-label="Footer links">
+      <a href="https://linkedin.com/in/rafael-marcos-serrano" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/rafamarcoss" target="_blank" rel="noopener">GitHub</a>
+      <a href="/articles/">Articles</a>
+      <a href="/news/">News</a>
+      <a href="/copywriting/">Copywriting</a>
+      <a href="/rafaops/">RafaOps</a>
+      <a href="/labs/">Lab</a>
+      <a href="/upwork-match/">Opportunity Match</a>
+    </nav>
+  </footer>
+<script src="/assets/v2.js"></script>
+</body>
+</html>

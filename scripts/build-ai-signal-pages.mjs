@@ -149,6 +149,7 @@ function indexPage(articles) {
     title: 'AI Signal | Daily AI briefing',
     description: schema.description,
     canonical: url,
+    robots: 'noindex,follow',
     schema,
     body: `<section class="v2-shell signal-index-hero">
       <p class="eyebrow">AI Signal</p>
@@ -179,6 +180,7 @@ function archivePage(articles) {
     title: 'AI Signal archive',
     description: 'Every AI Signal edition: linked-source daily briefings on AI, software and business.',
     canonical: url,
+    robots: 'noindex,follow',
     schema,
     body: `<section class="v2-shell idx-head signal-archive-head"><p class="eyebrow">AI Signal</p><h1>Every daily briefing, in one archive.</h1><p class="section-copy">Static editions with their original source links. New editions are added by the same publishing workflow.</p><a class="signal-back" href="/news/">← Back to the latest edition</a></section><section class="v2-shell v2-section"><div class="signal-rows signal-rows-full">${archiveRows(articles)}</div></section>`,
   });
