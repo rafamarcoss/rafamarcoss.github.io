@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "system": "ai-signal",
-  "startedAt": "2026-10-19T14:35:06.004Z",
+  "startedAt": "2026-10-20T12:39:51.192Z",
   "status": "failed",
   "models": {
     "selection": "deepseek-v4-flash",
@@ -16,7 +16,7 @@
       "model": "deepseek-v4-flash",
       "attempt": 1,
       "status": "failed",
-      "durationMs": 165,
+      "durationMs": 132,
       "error": "OpenCode: This API key has expired. Create a new API key in OpenCode Console and replace it in your client or secret store. Signing in again will not renew this key."
     },
     {
@@ -25,13 +25,13 @@
       "model": "glm-5.2",
       "attempt": 1,
       "status": "failed",
-      "durationMs": 125,
+      "durationMs": 153,
       "error": "OpenCode: This API key has expired. Create a new API key in OpenCode Console and replace it in your client or secret store. Signing in again will not renew this key."
     }
   ],
   "recoveries": [],
-  "finishedAt": "2026-10-19T14:35:06.980Z",
-  "durationMs": 976,
+  "finishedAt": "2026-10-20T12:39:52.123Z",
+  "durationMs": 931,
   "error": {
     "message": "[select-top-10] worker, supervisor and fallback failed: OpenCode: This API key has expired. Create a new API key in OpenCode Console and replace it in your client or secret store. Signing in again will not renew this key."
   },
