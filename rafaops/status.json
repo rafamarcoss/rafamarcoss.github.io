@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-20T01:04:51.056Z",
+  "generatedAt": "2026-10-20T09:22:46.087Z",
   "health": "incident",
   "summary": "RafaOps ha detectado un incidente que requiere revisión.",
   "metrics": {
-    "availability": 25,
-    "healthyChecks": 1,
+    "availability": 50,
+    "healthyChecks": 2,
     "totalChecks": 5,
-    "openIncidents": 3,
+    "openIncidents": 2,
     "supervisedRecoveries": 0,
     "modelCalls": 2,
     "totalTokens": 0,
@@ -21,18 +21,18 @@
       "critical": true,
       "status": "healthy",
       "detail": "HTML y marca verificados",
-      "latencyMs": 1384,
-      "checkedAt": "2026-10-20T01:04:52.441Z"
+      "latencyMs": 282,
+      "checkedAt": "2026-10-20T09:22:46.369Z"
     },
     {
       "id": "news-page",
       "name": "AI Signal",
       "url": "https://rafaelmarcos.tech/news/",
       "critical": true,
-      "status": "failed",
-      "detail": "fetch failed",
-      "latencyMs": 724,
-      "checkedAt": "2026-10-20T01:04:52.205Z"
+      "status": "healthy",
+      "detail": "Archivo de noticias disponible",
+      "latencyMs": 226,
+      "checkedAt": "2026-10-20T09:22:46.367Z"
     },
     {
       "id": "feed-integrity",
@@ -40,9 +40,9 @@
       "url": "https://rafaelmarcos.tech/news/feed.json",
       "critical": true,
       "status": "failed",
-      "detail": "Última edición con 62 h de antigüedad",
+      "detail": "Última edición con 70 h de antigüedad",
       "latencyMs": 0,
-      "checkedAt": "2026-10-20T01:04:51.482Z"
+      "checkedAt": "2026-10-20T09:22:46.142Z"
     },
     {
       "id": "github-actions",
@@ -50,8 +50,8 @@
       "critical": false,
       "status": "failed",
       "detail": "Última ejecución: failure",
-      "latencyMs": 994,
-      "checkedAt": "2026-10-20T01:04:52.476Z",
+      "latencyMs": 330,
+      "checkedAt": "2026-10-20T09:22:46.472Z",
       "url": "https://github.com/rafamarcoss/rafamarcoss.github.io/actions/runs/39270254306"
     },
     {
@@ -61,7 +61,7 @@
       "status": "private",
       "detail": "Runtime aislado; conector local pendiente",
       "latencyMs": null,
-      "checkedAt": "2026-10-20T01:04:51.056Z",
+      "checkedAt": "2026-10-20T09:22:46.087Z",
       "url": null
     }
   ],
@@ -173,9 +173,10 @@
       "title": "AI Signal necesita atención",
       "detail": "fetch failed",
       "severity": "critical",
-      "status": "open",
+      "status": "resolved",
       "detectedAt": "2026-10-20T01:04:51.056Z",
-      "recovery": "RafaOps volverá a comprobar el servicio en la siguiente ronda."
+      "recovery": "RafaOps volverá a comprobar el servicio en la siguiente ronda.",
+      "resolvedAt": "2026-10-20T09:22:46.087Z"
     },
     {
       "id": "github-actions-1792420520707",
@@ -331,6 +332,42 @@
     }
   ],
   "runs": [
+    {
+      "id": "39400217197",
+      "source": "schedule",
+      "startedAt": "2026-10-20T09:22:46.086Z",
+      "finishedAt": "2026-10-20T09:22:46.087Z",
+      "durationMs": 387,
+      "status": "incident",
+      "checks": [
+        {
+          "id": "website",
+          "status": "healthy",
+          "latencyMs": 282
+        },
+        {
+          "id": "news-page",
+          "status": "healthy",
+          "latencyMs": 226
+        },
+        {
+          "id": "feed-integrity",
+          "status": "failed",
+          "latencyMs": 0
+        },
+        {
+          "id": "github-actions",
+          "status": "failed",
+          "latencyMs": 330
+        },
+        {
+          "id": "n8n-private",
+          "status": "private",
+          "latencyMs": null
+        }
+      ],
+      "url": "https://github.com/rafamarcoss/rafamarcoss.github.io/actions/runs/39400217197"
+    },
     {
       "id": "39351372001",
       "source": "schedule",
@@ -1014,42 +1051,6 @@
         }
       ],
       "url": "https://github.com/rafamarcoss/rafamarcoss.github.io/actions/runs/38986284446"
-    },
-    {
-      "id": "38955595572",
-      "source": "schedule",
-      "startedAt": "2026-10-16T19:31:58.461Z",
-      "finishedAt": "2026-10-16T19:31:58.462Z",
-      "durationMs": 360,
-      "status": "degraded",
-      "checks": [
-        {
-          "id": "website",
-          "status": "healthy",
-          "latencyMs": 341
-        },
-        {
-          "id": "news-page",
-          "status": "healthy",
-          "latencyMs": 286
-        },
-        {
-          "id": "feed-integrity",
-          "status": "healthy",
-          "latencyMs": 0
-        },
-        {
-          "id": "github-actions",
-          "status": "failed",
-          "latencyMs": 304
-        },
-        {
-          "id": "n8n-private",
-          "status": "private",
-          "latencyMs": null
-        }
-      ],
-      "url": "https://github.com/rafamarcoss/rafamarcoss.github.io/actions/runs/38955595572"
     }
   ]
 }
