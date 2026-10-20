@@ -52,6 +52,7 @@ jobs:
 
       - name: Surface critical incident
         if: steps.monitor.outputs.health == 'incident'
+        continue-on-error: true
         run: |
-          echo "RafaOps detected a critical incident"
+          echo "::error title=RafaOps::Critical incident detected, see rafaops/status.json"
           exit 1
