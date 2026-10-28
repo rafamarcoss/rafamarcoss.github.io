@@ -1,17 +1,17 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-28T11:17:50.988Z",
+  "generatedAt": "2026-10-28T15:01:33.933Z",
   "health": "incident",
   "summary": "RafaOps ha detectado un incidente que requiere revisión.",
   "metrics": {
-    "availability": 50,
+    "availability": 66.7,
     "healthyChecks": 2,
     "totalChecks": 5,
-    "openIncidents": 2,
+    "openIncidents": 1,
     "supervisedRecoveries": 0,
     "modelCalls": 2,
     "totalTokens": 0,
-    "lastRunDurationMs": 784
+    "lastRunDurationMs": 1029
   },
   "checks": [
     {
@@ -21,8 +21,8 @@
       "critical": true,
       "status": "healthy",
       "detail": "HTML y marca verificados",
-      "latencyMs": 355,
-      "checkedAt": "2026-10-28T11:17:51.343Z"
+      "latencyMs": 289,
+      "checkedAt": "2026-10-28T15:01:34.223Z"
     },
     {
       "id": "news-page",
@@ -31,8 +31,8 @@
       "critical": true,
       "status": "healthy",
       "detail": "Archivo de noticias disponible",
-      "latencyMs": 263,
-      "checkedAt": "2026-10-28T11:17:51.341Z"
+      "latencyMs": 324,
+      "checkedAt": "2026-10-28T15:01:34.299Z"
     },
     {
       "id": "feed-integrity",
@@ -40,19 +40,19 @@
       "url": "https://rafaelmarcos.tech/news/feed.json",
       "critical": true,
       "status": "failed",
-      "detail": "Última edición con 264 h de antigüedad",
+      "detail": "Última edición con 267 h de antigüedad",
       "latencyMs": 0,
-      "checkedAt": "2026-10-28T11:17:51.079Z"
+      "checkedAt": "2026-10-28T15:01:33.976Z"
     },
     {
       "id": "github-actions",
       "name": "GitHub Actions",
       "critical": false,
-      "status": "failed",
-      "detail": "Última ejecución: failure",
-      "latencyMs": 351,
-      "checkedAt": "2026-10-28T11:17:51.430Z",
-      "url": "https://github.com/rafamarcoss/rafamarcoss.github.io/actions/runs/40520280649"
+      "status": "running",
+      "detail": "Ejecución in_progress",
+      "latencyMs": 305,
+      "checkedAt": "2026-10-28T15:01:34.281Z",
+      "url": "https://github.com/rafamarcoss/rafamarcoss.github.io/actions/runs/40711736575"
     },
     {
       "id": "n8n-private",
@@ -61,7 +61,7 @@
       "status": "private",
       "detail": "Runtime aislado; conector local pendiente",
       "latencyMs": null,
-      "checkedAt": "2026-10-28T11:17:50.988Z",
+      "checkedAt": "2026-10-28T15:01:33.933Z",
       "url": null
     }
   ],
@@ -125,7 +125,7 @@
   "latestAgentRun": {
     "schemaVersion": 1,
     "system": "ai-signal",
-    "startedAt": "2026-10-27T14:21:13.355Z",
+    "startedAt": "2026-10-28T15:01:32.852Z",
     "status": "failed",
     "models": {
       "selection": "deepseek-v4-flash",
@@ -140,7 +140,7 @@
         "model": "deepseek-v4-flash",
         "attempt": 1,
         "status": "failed",
-        "durationMs": 48,
+        "durationMs": 122,
         "error": "OpenCode: Model deepseek-v4-flash has been deprecated."
       },
       {
@@ -149,13 +149,13 @@
         "model": "glm-5.2",
         "attempt": 1,
         "status": "failed",
-        "durationMs": 63,
+        "durationMs": 116,
         "error": "OpenCode: This API key has expired. Create a new API key in OpenCode Console and replace it in your client or secret store. Signing in again will not renew this key."
       }
     ],
     "recoveries": [],
-    "finishedAt": "2026-10-27T14:21:14.139Z",
-    "durationMs": 784,
+    "finishedAt": "2026-10-28T15:01:33.881Z",
+    "durationMs": 1029,
     "error": {
       "message": "[select-top-10] worker, supervisor and fallback failed: OpenCode: This API key has expired. Create a new API key in OpenCode Console and replace it in your client or secret store. Signing in again will not renew this key."
     },
@@ -173,9 +173,10 @@
       "title": "GitHub Actions necesita atención",
       "detail": "Última ejecución: failure",
       "severity": "warning",
-      "status": "open",
+      "status": "resolved",
       "detectedAt": "2026-10-27T14:21:30.493Z",
-      "recovery": "RafaOps volverá a comprobar el servicio en la siguiente ronda."
+      "recovery": "RafaOps volverá a comprobar el servicio en la siguiente ronda.",
+      "resolvedAt": "2026-10-28T15:01:33.933Z"
     },
     {
       "id": "github-actions-1793027205418",
@@ -387,6 +388,42 @@
     }
   ],
   "runs": [
+    {
+      "id": "40711736575",
+      "source": "schedule",
+      "startedAt": "2026-10-28T15:01:33.932Z",
+      "finishedAt": "2026-10-28T15:01:33.933Z",
+      "durationMs": 368,
+      "status": "incident",
+      "checks": [
+        {
+          "id": "website",
+          "status": "healthy",
+          "latencyMs": 289
+        },
+        {
+          "id": "news-page",
+          "status": "healthy",
+          "latencyMs": 324
+        },
+        {
+          "id": "feed-integrity",
+          "status": "failed",
+          "latencyMs": 0
+        },
+        {
+          "id": "github-actions",
+          "status": "running",
+          "latencyMs": 305
+        },
+        {
+          "id": "n8n-private",
+          "status": "private",
+          "latencyMs": null
+        }
+      ],
+      "url": "https://github.com/rafamarcoss/rafamarcoss.github.io/actions/runs/40711736575"
+    },
     {
       "id": "40678822025",
       "source": "schedule",
@@ -1070,42 +1107,6 @@
         }
       ],
       "url": "https://github.com/rafamarcoss/rafamarcoss.github.io/actions/runs/40146172767"
-    },
-    {
-      "id": "40122180456",
-      "source": "schedule",
-      "startedAt": "2026-10-24T18:45:47.863Z",
-      "finishedAt": "2026-10-24T18:45:47.865Z",
-      "durationMs": 531,
-      "status": "incident",
-      "checks": [
-        {
-          "id": "website",
-          "status": "healthy",
-          "latencyMs": 465
-        },
-        {
-          "id": "news-page",
-          "status": "healthy",
-          "latencyMs": 337
-        },
-        {
-          "id": "feed-integrity",
-          "status": "failed",
-          "latencyMs": 0
-        },
-        {
-          "id": "github-actions",
-          "status": "failed",
-          "latencyMs": 402
-        },
-        {
-          "id": "n8n-private",
-          "status": "private",
-          "latencyMs": null
-        }
-      ],
-      "url": "https://github.com/rafamarcoss/rafamarcoss.github.io/actions/runs/40122180456"
     }
   ]
 }
