@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "system": "ai-signal",
-  "startedAt": "2026-10-29T15:10:08.550Z",
+  "startedAt": "2026-10-30T14:59:18.957Z",
   "status": "failed",
   "models": {
     "selection": "deepseek-v4-flash",
@@ -16,7 +16,7 @@
       "model": "deepseek-v4-flash",
       "attempt": 1,
       "status": "failed",
-      "durationMs": 90,
+      "durationMs": 143,
       "error": "OpenCode: Upstream request failed: Model is unavailable."
     },
     {
@@ -25,13 +25,13 @@
       "model": "glm-5.2",
       "attempt": 1,
       "status": "failed",
-      "durationMs": 105,
+      "durationMs": 139,
       "error": "OpenCode: This API key has expired. Create a new API key in OpenCode Console and replace it in your client or secret store. Signing in again will not renew this key."
     }
   ],
   "recoveries": [],
-  "finishedAt": "2026-10-29T15:10:09.532Z",
-  "durationMs": 982,
+  "finishedAt": "2026-10-30T14:59:20.012Z",
+  "durationMs": 1055,
   "error": {
     "message": "[select-top-10] worker, supervisor and fallback failed: OpenCode: This API key has expired. Create a new API key in OpenCode Console and replace it in your client or secret store. Signing in again will not renew this key."
   },
