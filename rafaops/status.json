@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-26T18:20:53.619Z",
+  "generatedAt": "2026-11-26T18:21:08.669Z",
   "health": "incident",
   "summary": "RafaOps ha detectado un incidente que requiere revisión.",
   "metrics": {
-    "availability": 66.7,
+    "availability": 50,
     "healthyChecks": 2,
     "totalChecks": 5,
-    "openIncidents": 1,
+    "openIncidents": 2,
     "supervisedRecoveries": 0,
     "modelCalls": 2,
     "totalTokens": 0,
@@ -21,8 +21,8 @@
       "critical": true,
       "status": "healthy",
       "detail": "HTML y marca verificados",
-      "latencyMs": 214,
-      "checkedAt": "2026-11-26T18:20:53.833Z"
+      "latencyMs": 286,
+      "checkedAt": "2026-11-26T18:21:08.955Z"
     },
     {
       "id": "news-page",
@@ -31,8 +31,8 @@
       "critical": true,
       "status": "healthy",
       "detail": "Archivo de noticias disponible",
-      "latencyMs": 171,
-      "checkedAt": "2026-11-26T18:20:53.831Z"
+      "latencyMs": 234,
+      "checkedAt": "2026-11-26T18:21:08.954Z"
     },
     {
       "id": "feed-integrity",
@@ -42,16 +42,16 @@
       "status": "failed",
       "detail": "Última edición con 967 h de antigüedad",
       "latencyMs": 0,
-      "checkedAt": "2026-11-26T18:20:53.661Z"
+      "checkedAt": "2026-11-26T18:21:08.721Z"
     },
     {
       "id": "github-actions",
       "name": "GitHub Actions",
       "critical": false,
-      "status": "running",
-      "detail": "Ejecución in_progress",
-      "latencyMs": 368,
-      "checkedAt": "2026-11-26T18:20:54.029Z",
+      "status": "failed",
+      "detail": "Última ejecución: failure",
+      "latencyMs": 412,
+      "checkedAt": "2026-11-26T18:21:09.133Z",
       "url": "https://github.com/rafamarcoss/rafamarcoss.github.io/actions/runs/45875170253"
     },
     {
@@ -61,7 +61,7 @@
       "status": "private",
       "detail": "Runtime aislado; conector local pendiente",
       "latencyMs": null,
-      "checkedAt": "2026-11-26T18:20:53.619Z",
+      "checkedAt": "2026-11-26T18:21:08.669Z",
       "url": null
     }
   ],
@@ -167,6 +167,16 @@
     }
   },
   "incidents": [
+    {
+      "id": "github-actions-1795717269133",
+      "checkId": "github-actions",
+      "title": "GitHub Actions necesita atención",
+      "detail": "Última ejecución: failure",
+      "severity": "warning",
+      "status": "open",
+      "detectedAt": "2026-11-26T18:21:08.669Z",
+      "recovery": "RafaOps volverá a comprobar el servicio en la siguiente ronda."
+    },
     {
       "id": "github-actions-1795631793036",
       "checkId": "github-actions",
@@ -374,20 +384,45 @@
       "status": "open",
       "detectedAt": "2026-11-07T20:50:56.408Z",
       "recovery": "El supervisor reintentará con otro modelo en la siguiente generación."
-    },
-    {
-      "id": "github-actions-1794063068688",
-      "checkId": "github-actions",
-      "title": "GitHub Actions necesita atención",
-      "detail": "Última ejecución: failure",
-      "severity": "warning",
-      "status": "resolved",
-      "detectedAt": "2026-11-07T14:51:08.328Z",
-      "recovery": "RafaOps volverá a comprobar el servicio en la siguiente ronda.",
-      "resolvedAt": "2026-11-08T14:59:44.427Z"
     }
   ],
   "runs": [
+    {
+      "id": "45875202261",
+      "source": "workflow_run",
+      "startedAt": "2026-11-26T18:21:08.667Z",
+      "finishedAt": "2026-11-26T18:21:08.669Z",
+      "durationMs": 466,
+      "status": "incident",
+      "checks": [
+        {
+          "id": "website",
+          "status": "healthy",
+          "latencyMs": 286
+        },
+        {
+          "id": "news-page",
+          "status": "healthy",
+          "latencyMs": 234
+        },
+        {
+          "id": "feed-integrity",
+          "status": "failed",
+          "latencyMs": 0
+        },
+        {
+          "id": "github-actions",
+          "status": "failed",
+          "latencyMs": 412
+        },
+        {
+          "id": "n8n-private",
+          "status": "private",
+          "latencyMs": null
+        }
+      ],
+      "url": "https://github.com/rafamarcoss/rafamarcoss.github.io/actions/runs/45875202261"
+    },
     {
       "id": "45875170253",
       "source": "schedule",
@@ -1071,42 +1106,6 @@
         }
       ],
       "url": "https://github.com/rafamarcoss/rafamarcoss.github.io/actions/runs/45026626490"
-    },
-    {
-      "id": "44978929515",
-      "source": "schedule",
-      "startedAt": "2026-11-22T03:04:30.800Z",
-      "finishedAt": "2026-11-22T03:04:30.802Z",
-      "durationMs": 339,
-      "status": "incident",
-      "checks": [
-        {
-          "id": "website",
-          "status": "healthy",
-          "latencyMs": 201
-        },
-        {
-          "id": "news-page",
-          "status": "healthy",
-          "latencyMs": 146
-        },
-        {
-          "id": "feed-integrity",
-          "status": "failed",
-          "latencyMs": 0
-        },
-        {
-          "id": "github-actions",
-          "status": "failed",
-          "latencyMs": 280
-        },
-        {
-          "id": "n8n-private",
-          "status": "private",
-          "latencyMs": null
-        }
-      ],
-      "url": "https://github.com/rafamarcoss/rafamarcoss.github.io/actions/runs/44978929515"
     }
   ]
 }
